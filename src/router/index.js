@@ -7,6 +7,11 @@ Vue.use(Router)
 export default new Router({
     routes: [
         {
+            path: '/',
+            name: 'index',
+            redirect: '/login'
+        },
+        {
             path: '/login',
             name: 'LoginPage',
             component: LoginPage
