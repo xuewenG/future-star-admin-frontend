@@ -1,32 +1,28 @@
 <template>
     <div class="bigdiv">
-        <div class="bigbackground"></div>
-        <el-carousel class="powerpoint" height="850px" arrow="never" :interval="intervalNum">
-            <el-carousel-item v-for="item in 1" :key="item"/>
-        </el-carousel>
         <title-bar/>
         <div class="loginpage">
                 <table class="logintable">
                     <tr>
-                        <td colspan="2">
+                        <td>
                             <img src="../assets/EdStarsLogo.jpg" class="logo"  />
                             <span class="loginlabel">管理人员登录平台</span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="smallfont">您的账号:</td>
                         <td>
+                            <span class="smallfont">请输入账号:</span>
                             <input class="inputbox" type="text" name="name" autofocus="autofocus" v-model="admin_name" />
                         </td>
                     </tr>
                     <tr>
-                        <td class="smallfont">您的密码:</td>
                         <td>
+                            <span class="smallfont">请输入密码:</span>
                             <input class="inputbox" type="password" name="password" v-model="admin_password" />
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" class="login" align="center">
+                        <td colspan="2" class="login">
                             <input id="login" type="submit" name="login" value="登录" @click="loginevent" />
                         </td>
                     </tr>
@@ -39,91 +35,82 @@
 </script>
 
 <style scoped type="type/css">
-    .bigbackground {
-        position: absolute;
+    .bigdiv {
         height: 100%;
         width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    .bigdiv {
-        position: relative;
-        height: 100%;
+        background-image: url("../assets/tileBackground1.jpg");
+        background-repeat: repeat;
     }
     .loginpage {
         display: flex;
         position: relative;
         margin: auto;
-        width: 1000px;
-        height: 700px;
+        width: 800px;
+        height: 750px;
     }
     .loginlabel {
-        font-family: "Microsoft YaHei";
-        font-size: 30px;
+        font-family: "PingFang SC";
+        font-size: 20px;
         color: #383838;
         position: relative;
-        margin: 10px 20px 50px 20px;
-        width: 700px;
-        height: 350px;
-    }
-    /*
-    .logo {
-        position: relative;
-        margin: auto;
-    }*/
-    .logodiv {
-        position: relative;
-        float: left;
-        width: 700px;
+        margin-left: 15px;
+        width: 600px;
         height: 350px;
     }
     .logintable {
-        width: 500px;
-        height: 380px;
-        background-color: rgba(256, 256, 256, 0.5);
+        width: 450px;
+        height: 300px;
+        margin: auto;
+        background-color: rgba(256, 256, 256, 0.85);
         color: #383838;
         position: relative;
-        margin: auto;
         text-align: center;
         border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     }
     .inputbox {
-        width: 230px;
+        width: 250px;
         height: 30px;
-        margin-left: -30px;
-        border: 0 none;
+        padding: 5px 8px;
+        font-family: "PingFang SC";
+        font-size: 15px;
+        border: 0;
         border-radius: 5px;
         outline: none;
+        -moz-box-shadow: inset 0 0 10px #CCCCCC;
+        -webkit-box-shadow: inset 0 0 10px #CCCCCC;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     }
     #login {
         width: 150px;
-        height: 33px;
-        background-color: rgba(0, 173, 169, 0.45);
+        height: 40px;
+        background: #2188E9;
         border: 0;
-        margin-bottom: 20px;
-        color: rgb(255, 255, 255);
-        cursor: pointer;
         border-radius: 5px;
+        font-family: "PingFang SC";
+        font-size: 15px;
+        margin-bottom: 20px;
+        color: #FFFFFF;
+        cursor: pointer;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     }
     .login {
         width: 100px;
         height: 40px;
+        text-align: center;
     }
     .smallfont {
-        font: 20px '微软雅黑';
+        font-family: "PingFang SC";
+        color: #383838;
+        font-size: 13px;
         text-align: right;
+        position: relative;
+        margin-right: 10px;
     }
     .logo {
         position: relative;
-        height: 120px;
-        width: 132px;
-    }
-    .el-carousel__item:nth-child(1) {
-        background-image: url(../assets/backgroundImage1.jpg);
-    }
-    .powerpoint {
-        position: absolute;
-        width: 100%;
-        z-index: -100;
+        left: -15px;
+        height: 60px;
+        width: 66px;
     }
 </style>
