@@ -1,6 +1,5 @@
 <template>
     <div class="bigdiv">
-        <title-bar/>
         <div class="loginpage">
                 <table class="logintable">
                     <tr>
@@ -23,7 +22,7 @@
                     </tr>
                     <tr>
                         <td colspan="2" class="login">
-                            <input id="login" type="submit" name="login" value="登录" @click="loginevent" />
+                            <input id="login" type="submit" name="login" value="登录" />
                         </td>
                     </tr>
                 </table>
