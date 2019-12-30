@@ -1,11 +1,3 @@
 module.exports = {
-    verbose: true,
-    moduleFileExtensions: ['js', 'json', 'vue'],
-    moduleNameMapper: {
-        '^@/(.*)$': '<rootDir>/src/$1'
-    },
-    transform: {
-        '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
-        '.*\\.(vue)$': '<rootDir>/node_modules/vue-jest'
-    },
+  preset: '@vue/cli-plugin-unit-jest'
 }

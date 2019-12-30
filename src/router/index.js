@@ -1,20 +1,24 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import LoginPage from '../pages/LoginPage'
+import VueRouter from 'vue-router'
+import LoginPage from '../page/LoginPage'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
-    routes: [
-        {
-            path: '/',
-            name: 'index',
-            redirect: '/login'
-        },
-        {
-            path: '/login',
-            name: 'LoginPage',
-            component: LoginPage
-        }
-    ]
+const routes = [
+  {
+    path: '/',
+    name: 'index',
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    name: 'LoginPage',
+    component: LoginPage
+  }
+]
+
+const router = new VueRouter({
+  routes
 })
+
+export default router
