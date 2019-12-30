@@ -1,18 +1,15 @@
 <template>
   <div>
-    <router-view></router-view>
+    活动管理
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'ActivityManagementPage'
 }
 </script>
 
-<style>
-* {
-  padding: 0;
-  margin: 0;
-}
+<style scoped>
+
 </style>

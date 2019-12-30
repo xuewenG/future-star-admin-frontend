@@ -25,5 +25,15 @@ yarn test:unit
 yarn lint
 ```
 
+### Lints js
+```
+yarn lint:script
+```
+
+### Lints css
+```
+yarn lint:style
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
