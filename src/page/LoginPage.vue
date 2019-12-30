@@ -1,47 +1,55 @@
 <template>
-    <div class="bigdiv">
-        <div class="loginpage">
-                <table class="logintable">
-                    <tr>
-                        <td>
-                            <img src="../assets/EdStarsLogo.jpg" class="logo"  />
-                            <span class="loginlabel">管理人员登录平台</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="smallfont">请输入账号:</span>
-                            <input class="inputbox" type="text" name="name" autofocus="autofocus" v-model="admin_name" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="smallfont">请输入密码:</span>
-                            <input class="inputbox" type="password" name="password" v-model="admin_password" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="login">
-                            <input id="login" type="submit" name="login" value="登录" />
-                        </td>
-                    </tr>
-                </table>
+    <div class="big-div">
+        <div class="login-page">
+            <table class="login-table">
+                <tr>
+                    <td>
+                        <img src="../assets/EdStarsLogo.jpg" class="logo"  />
+                        <span class="login-label">管理人员登录平台</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="small-font">请输入账号:</span>
+                        <input class="input-box" type="text" name="name" autofocus="autofocus" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="small-font">请输入密码:</span>
+                        <input class="input-box" type="password" name="password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="login">
+                        <input id="login" type="submit" name="login" value="登录" @click="login"/>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </template>
 
 <script>
+export default {
+  name: 'LoginPage',
+  methods: {
+    login: function () {
+      this.$router.push('/home')
+    }
+  }
+}
 </script>
 
 <style scoped type="type/css">
-  .bigdiv {
+  .big-div {
     width: 100%;
     height: 100%;
     background-image: url("../assets/tileBackground1.jpg");
     background-repeat: repeat;
   }
 
-  .loginpage {
+  .login-page {
     position: relative;
     display: flex;
     width: 800px;
@@ -49,7 +57,7 @@
     margin: auto;
   }
 
-  .loginlabel {
+  .login-label {
     position: relative;
     width: 600px;
     height: 350px;
@@ -59,7 +67,7 @@
     color: #383838;
   }
 
-  .logintable {
+  .login-table {
     position: relative;
     width: 450px;
     height: 300px;
@@ -71,7 +79,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
   }
 
-  .inputbox {
+  .input-box {
     width: 250px;
     height: 30px;
     padding: 5px 8px;
@@ -103,7 +111,7 @@
     text-align: center;
   }
 
-  .smallfont {
+  .small-font {
     position: relative;
     margin-right: 10px;
     font-size: 13px;
