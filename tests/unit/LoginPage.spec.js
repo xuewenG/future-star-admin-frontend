@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils/types'
+import { mount } from '@vue/test-utils'
 import LoginPage from '../../src/page/LoginPage'
 
 describe('LoginPage', () => {

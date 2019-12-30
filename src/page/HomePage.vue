@@ -44,7 +44,7 @@
             </el-col>
             <el-col :span="4">
               <router-link to="/home/alumni-management">
-                <el-menu-item index="4">校友管理</el-menu-item>
+                <el-menu-item index="4">校友资料管理</el-menu-item>
               </router-link>
             </el-col>
             <el-col :span="4">
@@ -91,28 +91,34 @@ export default {
 
 <style scoped>
   .el-header {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
+
   .el-menu-item {
-    font-family: 'Microsoft YaHei', SansSerif;
-    font-size: 20px;
     font-weight: bold;
+    font-size: 20px;
+    font-family: 'Microsoft YaHei', Serif;
   }
+
   a {
     text-decoration: none;
   }
+
   .widget-in-menu {
-    font-family: 'Microsoft YaHei', SansSerif;
+    font-family: 'Microsoft YaHei', Serif;
   }
+
   .hint-info > h3 {
     margin-top: 18px;
   }
+
   .hint-info > button {
     margin-top: 15px;
   }
+
   .hint-info-row {
-    background-color: #f9fafc;
     height: 60px;
+    background-color: #f9fafc;
   }
 </style>
