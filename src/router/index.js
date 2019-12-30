@@ -7,6 +7,7 @@ import CourseManagementPage from '../page/CourseManagementPage'
 import ActivityManagementPage from '../page/ActivityManagementPage'
 import AlumniManagementPage from '../page/AlumniManagementPage'
 import AuthorityManagementPage from '../page/AuthorityManagementPage'
+import CreateActivityPage from '../page/CreateActivityPage'
 
 Vue.use(VueRouter)
 
@@ -52,6 +53,11 @@ const routes = [
         component: AuthorityManagementPage
       }
     ]
+  },
+  {
+    path: '/activity-management/create-activity',
+    name: 'CreateActivityPage',
+    component: CreateActivityPage
   }
 ]
 
