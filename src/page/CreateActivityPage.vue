@@ -1,8 +1,5 @@
 <template>
   <el-container>
-    <el-header>
-      <home-page/>
-    </el-header>
     <el-main>
       <el-page-header @back="goBack()" content="新建校友活动"></el-page-header>
       <el-divider/>
@@ -76,10 +73,13 @@
 </template>
 
 <script>
-import HomePage from './HomePage'
 export default {
   name: 'CreateActivityPage',
-  components: { HomePage }
+  methods: {
+    goBack: function () {
+      this.$router.push('home/activity-management')
+    }
+  }
 }
 </script>
 

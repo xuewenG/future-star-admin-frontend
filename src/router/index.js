@@ -55,7 +55,7 @@ const routes = [
     ]
   },
   {
-    path: '/activity-management/create-activity',
+    path: '/create-activity',
     name: 'CreateActivityPage',
     component: CreateActivityPage
   }
