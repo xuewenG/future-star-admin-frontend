@@ -10,6 +10,7 @@ import AuthorityManagementPage from '../page/AuthorityManagementPage'
 import CreateActivityPage from '../page/CreateActivityPage'
 import AddAdministrator from '../page/AddAdministrator'
 import WelcomePage from '../page/WelcomPage'
+import AddNewSemesterPage from '../page/AddNewSemesterPage'
 
 Vue.use(VueRouter)
 
@@ -71,6 +72,11 @@ const routes = [
     path: '/create-activity',
     name: 'CreateActivityPage',
     component: CreateActivityPage
+  },
+  {
+    path: '/add-new-semester',
+    name: 'AddNewSemester',
+    component: AddNewSemesterPage
   }
 ]
 
