@@ -122,6 +122,47 @@ export default {
     }
   },
   methods: {
+    goBack: function () {
+      this.$router.go(-1)
+    },
+    addAdministrator (administrator) {
+      this.$message({
+        type: 'success',
+        message: '添加成功',
+        duration: 1000
+      })
+    },
+    clearText: function (administrator) {
+      administrator.name = ''
+      administrator.account = ''
+      administrator.password = ''
+      administrator.hasEnrollmentManagementPermission = false
+      administrator.hasCourseManagementPermission = false
+      administrator.hasActivityManagementPermission = false
+      administrator.hasDatumManagementPermission = false
+    },
+    clearTextAll: function () {
+      this.administrators = [{
+        name: '',
+        account: '',
+        password: '',
+        hasEnrollmentManagementPermission: false,
+        hasCourseManagementPermission: false,
+        hasActivityManagementPermission: false,
+        hasDatumManagementPermission: false
+      }]
+    },
+    insertInfoArea: function () {
+      this.administrators.push({
+        name: '',
+        account: '',
+        password: '',
+        hasEnrollmentManagementPermission: false,
+        hasCourseManagementPermission: false,
+        hasActivityManagementPermission: false,
+        hasDatumManagementPermission: false
+      })
+    }
   }
 }
 </script>
