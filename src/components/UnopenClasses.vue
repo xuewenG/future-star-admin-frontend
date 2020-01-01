@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h4 v-if="classes.length === 0">暂无待招生班级</h4>
     <el-card v-for="(item) in classes" :key="item.id">
       <div slot="header">
         <span>{{ item.className }}</span>
@@ -78,10 +79,6 @@ export default {
   div {
     padding: 0;
     margin: 0;
-  }
-
-  .el-header {
-    padding: 0;
   }
 
   .el-card {
