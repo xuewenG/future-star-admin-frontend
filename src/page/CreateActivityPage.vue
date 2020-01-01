@@ -77,7 +77,7 @@ export default {
   name: 'CreateActivityPage',
   methods: {
     goBack: function () {
-      this.$router.push('home/activity-management')
+      this.$router.go(-1)
     }
   }
 }
