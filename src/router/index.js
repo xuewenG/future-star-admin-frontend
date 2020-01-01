@@ -10,6 +10,7 @@ import AuthorityManagementPage from '../page/AuthorityManagementPage'
 import CreateActivityPage from '../page/CreateActivityPage'
 import AddAdministrator from '../page/AddAdministrator'
 import WelcomePage from '../page/WelcomPage'
+import ShowAlumniInformationPage from '../page/ShowAlumniInformationPage'
 import AddNewSemesterPage from '../page/AddNewSemesterPage'
 import AddClassPage from '../page/AddClassPage'
 
@@ -73,6 +74,11 @@ const routes = [
     path: '/create-activity',
     name: 'CreateActivityPage',
     component: CreateActivityPage
+  },
+  {
+    path: '/show-all-information',
+    name: 'ShowAlumniInformationPage',
+    component: ShowAlumniInformationPage
   },
   {
     path: '/add-new-semester',

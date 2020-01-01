@@ -94,6 +94,7 @@
               type="primary"
               size="small"
               icon="el-icon-more"
+              @click="showAllInfo()"
               circle>
             </el-button>
             <el-button
@@ -287,6 +288,9 @@ export default {
   methods: {
     deleteAlumni (index) {
       this.tableData.splice(index, 1)
+    },
+    showAllInfo () {
+      this.$router.push('/show-all-information')
     },
     handleSizeChange (val) {
       console.log(`每页 ${val} 条`)
