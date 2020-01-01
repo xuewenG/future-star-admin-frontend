@@ -1,36 +1,36 @@
 <template>
   <el-container>
     <el-header>
-      <el-row>
-        <el-col :span="3">
-          <h3>已有管理员列表</h3>
-        </el-col>
-          <el-col :span="2">
-            <router-link to="/home/add-administrator">
-              <el-button type="primary">添加管理员</el-button>
-            </router-link>
-          </el-col>
-      </el-row>
+      <el-page-header @back="goBack" content="添加管理员"></el-page-header>
     </el-header>
     <el-main>
       <el-table
-        :data="tableData"
+        :data="administrators"
         stripe>
         <el-table-column
           fixed
           prop="name"
           label="姓名"
           :width="infoWidth">
+          <template slot-scope="scope">
+            <el-input placeholder="请输入姓名" v-model="scope.row.name"></el-input>
+          </template>
         </el-table-column>
         <el-table-column
           prop="account"
           label="账号"
           :width="infoWidth">
+          <template slot-scope="scope">
+            <el-input placeholder="请输入账号" v-model="scope.row.account"></el-input>
+          </template>
         </el-table-column>
         <el-table-column
           prop="password"
           label="密码"
           :width="infoWidth">
+          <template slot-scope="scope">
+            <el-input placeholder="请输入密码" v-model="scope.row.password" show-password></el-input>
+          </template>
         </el-table-column>
         <el-table-column
           label="招生管理权限"
@@ -77,72 +77,42 @@
           </template>
         </el-table-column>
         <el-table-column
-          align="center"
           label="操作"
+          align="center"
           :width="operationWidth">
           <template slot-scope="scope">
-            <el-button
-              type="primary"
-              size="small"
-              icon="el-icon-edit"
-              @click="editInfo(scope.$index)"
-              circle>
-            </el-button>
-            <el-button
-              type="danger"
-              size="small"
-              icon="el-icon-delete"
-              @click="deleteManager(scope.$index)"
-              circle>
-            </el-button>
+            <el-button type="primary" size="small" @click="addAdministrator(row)" round>提交</el-button>
+            <el-button type="plain" size="small" @click="clearText(scope.row)" round>清空</el-button>
           </template>
         </el-table-column>
       </el-table>
     </el-main>
+    <el-footer>
+      <el-row type="flex" justify="center">
+        <el-button type="primary" size="medium" round>一键提交</el-button>
+        <el-button type="plain" size="medium" @click="clearTextAll()" round>一键清空</el-button>
+      </el-row>
+      <el-row type="flex" justify="center">
+        <el-button type="primary" size="medium" @click="insertInfoArea()" round>继续添加</el-button>
+      </el-row>
+    </el-footer>
   </el-container>
 </template>
 
 <script>
 export default {
-  name: 'AuthorityManagementPage',
+  name: 'AddAdministrator',
   data () {
     return {
-      permissionWidth: 205,
-      infoWidth: 150,
-      operationWidth: 120,
+      permissionWidth: 180,
+      infoWidth: 160,
+      operationWidth: 180,
       permissionActiveColor: '#13ce66',
-      tableData: [
+      administrators: [
         {
           name: '王小虎',
           account: 'M123456',
           password: '123456',
-          hasEnrollmentManagementPermission: true,
-          hasCourseManagementPermission: true,
-          hasActivityManagementPermission: true,
-          hasDatumManagementPermission: true
-        },
-        {
-          name: '王小龙',
-          account: 'M1234567',
-          password: '1234567',
-          hasEnrollmentManagementPermission: true,
-          hasCourseManagementPermission: true,
-          hasActivityManagementPermission: true,
-          hasDatumManagementPermission: true
-        },
-        {
-          name: '王小龙',
-          account: 'M1234567',
-          password: '1234567',
-          hasEnrollmentManagementPermission: true,
-          hasCourseManagementPermission: true,
-          hasActivityManagementPermission: true,
-          hasDatumManagementPermission: true
-        },
-        {
-          name: '王小龙',
-          account: 'M1234567',
-          password: '1234567',
           hasEnrollmentManagementPermission: true,
           hasCourseManagementPermission: true,
           hasActivityManagementPermission: true,
@@ -152,23 +122,10 @@ export default {
     }
   },
   methods: {
-    deleteManager (index) {
-      this.tableData.splice(index, 1)
-    },
-    editInfo () {
-    }
   }
 }
 </script>
 
 <style scoped>
-  .el-main {
-    padding: 0;
-    margin: 0;
-  }
 
-  .el-header {
-    padding: 0;
-    margin: 0;
-  }
 </style>
