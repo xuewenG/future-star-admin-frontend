@@ -8,6 +8,7 @@ import ActivityManagementPage from '../page/ActivityManagementPage'
 import AlumniManagementPage from '../page/AlumniManagementPage'
 import AuthorityManagementPage from '../page/AuthorityManagementPage'
 import CreateActivityPage from '../page/CreateActivityPage'
+import AddAdministrator from '../page/AddAdministrator'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
         path: 'authority-management',
         name: 'AuthorityManagementPage',
         component: AuthorityManagementPage
+      },
+      {
+        path: 'add-administrator',
+        name: 'AddAdministrator',
+        component: AddAdministrator
       }
     ]
   },
