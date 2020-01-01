@@ -6,13 +6,13 @@
     <el-main class="main-in-enrollment">
       <el-tabs v-model="activeName">
         <el-tab-pane label="待开课" name="first">
-          ss
+          <wait-for-start-classes></wait-for-start-classes>
         </el-tab-pane>
         <el-tab-pane label="进行中" name="second">
-          ss
+          <underway-classes></underway-classes>
       </el-tab-pane>
         <el-tab-pane label="已结束" name="third">
-          ss
+          <ended-classes></ended-classes>
         </el-tab-pane>
       </el-tabs>
     </el-main>
@@ -20,9 +20,15 @@
 </template>
 
 <script>
+import WaitForStartClasses from '../components/WaitForStartClasses'
+import UnderwayClasses from '../components/UnderwayClasses'
+import EndedClasses from '../components/EndedClasses'
 export default {
   name: 'CoursementManagementPage',
   components: {
+    WaitForStartClasses,
+    UnderwayClasses,
+    EndedClasses
   },
   data () {
     return {

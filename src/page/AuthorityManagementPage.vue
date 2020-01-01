@@ -63,10 +63,9 @@
       </template>
     </el-table-column>
     <el-table-column
-      fixed="right"
       align="center"
       label="操作"
-      width="100">
+      :width="operationWidth">
       <template slot-scope="scope">
         <el-button
           type="danger"
@@ -87,6 +86,7 @@ export default {
     return {
       permissionWidth: 220,
       infoWidth: 150,
+      operationWidth: 100,
       permissionActiveColor: '#13ce66',
       tableData: [
         {
@@ -141,4 +141,7 @@ export default {
     width: 100%;
   }
 
+  .el-button {
+    margin-right: 24px;
+  }
 </style>

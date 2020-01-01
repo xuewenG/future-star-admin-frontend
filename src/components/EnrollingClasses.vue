@@ -4,6 +4,7 @@
     <el-card v-for="(item) in classes" :key="item.id">
       <div slot="header">
         <span>{{ item.className }}</span>
+        <el-button type="text"></el-button>
         <el-button type="text">删除</el-button>
         <el-button type="text">编辑</el-button>
         <el-button type="text">查看</el-button>
@@ -87,7 +88,5 @@ export default {
 
   .el-button {
     float: right;
-    padding: 0;
-    margin-left: 10px;
   }
 </style>
