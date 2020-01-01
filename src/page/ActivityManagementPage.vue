@@ -6,7 +6,7 @@
         <img class="add-activity" src="../assets/addIcon.png">
       </router-link>
       <el-divider/>
-      <el-tabs v-model="activeName" @tab-click="handleClick">
+      <el-tabs v-model="activeName">
         <el-tab-pane label="正在报名中" name="first">
           <activity-in-enrollment/>
         </el-tab-pane>
@@ -27,7 +27,12 @@ import ActivityInProgress from '../components/ActivityInProgress'
 import ActivityCompleted from '../components/ActivityCompleted'
 export default {
   name: 'ActivityManagementPage',
-  components: { ActivityCompleted, ActivityInProgress, ActivityInEnrollment }
+  components: { ActivityCompleted, ActivityInProgress, ActivityInEnrollment },
+  data () {
+    return {
+      activeName: 'first'
+    }
+  }
 }
 </script>
 
