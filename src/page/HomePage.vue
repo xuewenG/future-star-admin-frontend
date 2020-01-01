@@ -24,7 +24,7 @@
     </el-header>
     <el-container>
       <el-header>
-        <el-menu :default-active="activeIndex" mode="horizontal" :background-color="backgroundColor"
+        <el-menu mode="horizontal" :background-color="backgroundColor"
                  :active-text-color="activeTextColor" :text-color="textColor" align="middle">
           <el-row type="flex" justify="space-around">
             <el-col :span="4">
@@ -67,7 +67,6 @@ export default {
   name: 'HomePage',
   data () {
     return {
-      activeIndex: '1',
       textColor: '#0069A0',
       activeTextColor: '#738ab9',
       backgroundColor: '#00ADA9'

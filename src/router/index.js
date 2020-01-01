@@ -9,6 +9,7 @@ import AlumniManagementPage from '../page/AlumniManagementPage'
 import AuthorityManagementPage from '../page/AuthorityManagementPage'
 import CreateActivityPage from '../page/CreateActivityPage'
 import AddAdministrator from '../page/AddAdministrator'
+import WelcomePage from '../page/WelcomPage'
 
 Vue.use(VueRouter)
 
@@ -27,7 +28,13 @@ const routes = [
     path: '/home',
     name: 'HomePage',
     component: HomePage,
+    redirect: '/home/welcome',
     children: [
+      {
+        path: 'welcome',
+        name: 'WelcomePage',
+        component: WelcomePage
+      },
       {
         path: 'enrollment-management',
         name: 'EnrollmentManagementPage',
