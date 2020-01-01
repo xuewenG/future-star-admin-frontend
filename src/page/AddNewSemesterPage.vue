@@ -16,7 +16,7 @@
             <el-input
               v-model="semester.introduction"
               placeholder="请输入本学期介绍"
-              :autosize="{ minRows: 6, maxRows: 50}"
+              :autosize="{ minRows: 6, maxRows: 30}"
               class="long-text"
               type="textarea">
             </el-input>
