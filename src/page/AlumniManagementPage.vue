@@ -22,16 +22,6 @@
             </el-option>
           </el-select>
         </el-col>
-        <el-col :span="4">
-          <el-select class="selection" v-model="course" filterable placeholder="请选择课程">
-            <el-option
-              v-for="item in courseOptions"
-              :key="item.course"
-              :label="item.label"
-              :value="item.course">
-            </el-option>
-          </el-select>
-        </el-col>
         <el-col :span="8">
           <el-input class='search-input' placeholder="请输入搜索内容"/>
         </el-col>
@@ -134,7 +124,6 @@ export default {
       currentPage: 1,
       clazz: '',
       semester: '',
-      course: '',
       tableData: [
         {
           name: '张邦鑫',
@@ -267,20 +256,6 @@ export default {
         {
           clazz: '2',
           label: '教育信息化专题班'
-        }
-      ],
-      courseOptions: [
-        {
-          course: '1',
-          label: '初心课'
-        },
-        {
-          course: '2',
-          label: '未来课'
-        },
-        {
-          course: '3',
-          label: '创业课'
         }
       ]
     }
