@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="新建班级"></el-page-header>
+      <el-page-header @back="goBack()" content="修改班级信息"></el-page-header>
       <el-divider/>
       <el-card class="activity-card" shadow="always">
         <el-form class="activity-table" label-width="150px">
@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'ModifyCourseClass',
+  name: 'ModifyCourseClassInfo',
   data () {
     return {
       newClass: {
