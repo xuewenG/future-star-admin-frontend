@@ -5,7 +5,7 @@
       <div slot="header">
         <span>{{ item.activityName }}</span>
         <el-button type="text" class="btn">结束活动</el-button>
-        <el-button type="text" class="btn">查看已参加校友名单</el-button>
+        <el-button type="text" class="btn" @click="showParticipants()">查看已参加校友名单</el-button>
         <el-button type="text" class="btn">编辑活动信息</el-button>
         <el-button type="text" class="btn">查看活动信息</el-button>
       </div>
@@ -62,6 +62,11 @@ export default {
           state: '进行中'
         }
       ]
+    }
+  },
+  methods: {
+    showParticipants () {
+      this.$router.push('/show-participants')
     }
   },
   filters: {

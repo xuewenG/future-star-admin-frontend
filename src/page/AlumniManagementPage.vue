@@ -56,19 +56,19 @@
           :width="shortInfoWidth">
         </el-table-column>
         <el-table-column
-          prop="birth"
+          prop="birthday"
           align="center"
           label="出生日期"
           :width="longInfoWidth">
         </el-table-column>
         <el-table-column
-          prop="phone"
+          prop="phone_number"
           align="center"
           label="联系电话"
           :width="longInfoWidth">
         </el-table-column>
         <el-table-column
-          prop="wechat"
+          prop="wx"
           align="center"
           label="微信号"
           :width="longInfoWidth">
@@ -139,108 +139,108 @@ export default {
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '1',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '1',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '2',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '2',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '3',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '3',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '4',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '4',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '5',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '5',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '6',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '6',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '7',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '7',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '8',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '8',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '9',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '9',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '10',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '10',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '11',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '11',
           email: 'edstars@100tal.com',
           city: '北京'
         },
         {
           name: '张邦鑫',
           gender: '男',
-          birth: '1980/10/01',
-          phone: '12345678901',
-          wechat: '12',
+          birthday: '1980/10/01',
+          phone_number: '12345678901',
+          wx: '12',
           email: 'edstars@100tal.com',
           city: '北京'
         }
