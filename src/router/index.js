@@ -1,101 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import LoginPage from '../page/LoginPage'
-import HomePage from '../page/HomePage'
-import EnrollmentManagementPage from '../page/EnrollmentManagementPage'
-import CourseManagementPage from '../page/CourseManagementPage'
-import ActivityManagementPage from '../page/ActivityManagementPage'
-import AlumniManagementPage from '../page/AlumniManagementPage'
-import AuthorityManagementPage from '../page/AuthorityManagementPage'
-import CreateActivityPage from '../page/CreateActivityPage'
-import AddAdministrator from '../page/AddAdministrator'
-import WelcomePage from '../page/WelcomPage'
-import ShowAlumniInformationPage from '../page/ShowAlumniInformationPage'
-import AddNewSemesterPage from '../page/AddNewSemesterPage'
-import AddClassPage from '../page/AddClassPage'
-import ShowActivityParticipantsPage from '../page/ShowActivityParticipantsPage'
+import activity from './activity'
+import enrollment from './enrollment'
+import course from './course'
+import common from './common'
+import datum from './datum'
+import authority from './authority'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Root',
-    redirect: '/login'
-  },
-  {
-    path: '/login',
-    name: 'LoginPage',
-    component: LoginPage
-  },
-  {
-    path: '/home',
-    name: 'HomePage',
-    component: HomePage,
-    redirect: '/home/welcome',
-    children: [
-      {
-        path: 'welcome',
-        name: 'WelcomePage',
-        component: WelcomePage
-      },
-      {
-        path: 'enrollment-management',
-        name: 'EnrollmentManagementPage',
-        component: EnrollmentManagementPage
-      },
-      {
-        path: 'course-management',
-        name: 'CourseManagementPage',
-        component: CourseManagementPage
-      },
-      {
-        path: 'activity-management',
-        name: 'ActivityManagementPage',
-        component: ActivityManagementPage
-      },
-      {
-        path: 'alumni-management',
-        name: 'AlumniManagementPage',
-        component: AlumniManagementPage
-      },
-      {
-        path: 'authority-management',
-        name: 'AuthorityManagementPage',
-        component: AuthorityManagementPage
-      },
-      {
-        path: 'add-administrator',
-        name: 'AddAdministrator',
-        component: AddAdministrator
-      }
-    ]
-  },
-  {
-    path: '/create-activity',
-    name: 'CreateActivityPage',
-    component: CreateActivityPage
-  },
-  {
-    path: '/show-all-information',
-    name: 'ShowAlumniInformationPage',
-    component: ShowAlumniInformationPage
-  },
-  {
-    path: '/add-new-semester',
-    name: 'AddNewSemester',
-    component: AddNewSemesterPage
-  },
-  {
-    path: '/add-class',
-    name: 'AddClassPage',
-    component: AddClassPage
-  },
-  {
-    path: '/show-participants',
-    name: 'ShowActivityParticipantsPage',
-    component: ShowActivityParticipantsPage
-  }
+  ...activity,
+  ...enrollment,
+  ...course,
+  ...common,
+  ...datum,
+  ...authority
 ]
 
 const router = new VueRouter({
