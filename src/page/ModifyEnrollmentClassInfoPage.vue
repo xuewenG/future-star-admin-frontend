@@ -36,8 +36,8 @@
               type="textarea"/>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary">立即创建</el-button>
-            <el-button>取消</el-button>
+            <el-button type="primary">修改</el-button>
+            <el-button type="plain">清空</el-button>
           </el-form-item>
         </el-form>
       </el-card>
@@ -47,7 +47,22 @@
 
 <script>
 export default {
-  name: 'ModifyEnrollmentClassInfoPage'
+  name: 'ModifyEnrollmentClassInfoPage',
+  data () {
+    return {
+      newClass: {
+        className: '',
+        classIntroduction: '',
+        timeRange: '',
+        limitsOfStudent: ''
+      }
+    }
+  },
+  methods: {
+    goBack: function () {
+      this.$router.go(-1)
+    }
+  }
 }
 </script>
 
