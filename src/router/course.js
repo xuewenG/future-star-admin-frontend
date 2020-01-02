@@ -1,6 +1,7 @@
 import AddNewSemesterPage from '../page/AddNewSemesterPage'
 import AddClassPage from '../page/AddClassPage'
 import ClassDetailPage from '../page/ClassDetailPage'
+import ModifyCourseClassInfo from '../page/ModifyCourseClassInfo'
 
 export default [
   {
@@ -17,5 +18,10 @@ export default [
     path: '/class-detail',
     name: 'ClassDetailPage',
     component: ClassDetailPage
+  },
+  {
+    path: '/modify-course-class-info',
+    name: 'ModifyCourseClassInfo',
+    component: ModifyCourseClassInfo
   }
 ]

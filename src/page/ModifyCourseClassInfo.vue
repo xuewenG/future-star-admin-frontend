@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'ModifyEnrollmentClassInfoPage',
+  name: 'ModifyCourseClassInfo',
   data () {
     return {
       newClass: {
