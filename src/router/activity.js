@@ -2,6 +2,7 @@ import CreateActivityPage from '../page/CreateActivityPage'
 import ShowAlumniInformationPage from '../page/ShowAlumniInformationPage'
 import ShowActivityParticipantsPage from '../page/ShowActivityParticipantsPage'
 import EditExistingActivityPage from '../page/EditExistingActivityPage'
+import ShowActivityInformationPage from '../page/ShowActivityInformationPage'
 
 export default [
   {
@@ -23,5 +24,10 @@ export default [
     path: '/edit-activity',
     name: 'EditExistingActivityPage',
     component: EditExistingActivityPage
+  },
+  {
+    path: '/show-activity-details',
+    name: 'ShowActivityInformationPage',
+    component: ShowActivityInformationPage
   }
 ]

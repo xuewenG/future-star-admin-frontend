@@ -6,7 +6,7 @@
         <span>{{ item.activityName }}</span>
         <el-button type="text" class="btn" @click="showParticipants()">查看已报名校友名单</el-button>
         <el-button type="text" class="btn" @click="editDetails()">编辑活动信息</el-button>
-        <el-button type="text" class="btn">查看活动信息</el-button>
+        <el-button type="text" class="btn" @click="showDetails()">查看活动信息</el-button>
       </div>
       <el-row>
         起止日期：{{ item.activityStartTime }} ——— {{ item.activityEndTime }}
@@ -69,6 +69,9 @@ export default {
     },
     editDetails () {
       this.$router.push('/edit-activity')
+    },
+    showDetails () {
+      this.$router.push('/show-activity-details')
     }
   },
   filters: {
