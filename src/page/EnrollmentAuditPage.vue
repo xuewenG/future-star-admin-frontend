@@ -278,4 +278,8 @@ export default {
   .pagination {
     margin-left: 250px;
   }
+
+  .el-main {
+    margin: 0 auto;
+  }
 </style>
