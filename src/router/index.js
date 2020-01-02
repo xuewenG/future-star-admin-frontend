@@ -13,6 +13,7 @@ import WelcomePage from '../page/WelcomPage'
 import ShowAlumniInformationPage from '../page/ShowAlumniInformationPage'
 import AddNewSemesterPage from '../page/AddNewSemesterPage'
 import AddClassPage from '../page/AddClassPage'
+import ShowActivityParticipantsPage from '../page/ShowActivityParticipantsPage'
 
 Vue.use(VueRouter)
 
@@ -89,6 +90,11 @@ const routes = [
     path: '/add-class',
     name: 'AddClassPage',
     component: AddClassPage
+  },
+  {
+    path: '/show-participants',
+    name: 'ShowActivityParticipantsPage',
+    component: ShowActivityParticipantsPage
   }
 ]
 
