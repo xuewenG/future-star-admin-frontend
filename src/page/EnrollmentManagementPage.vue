@@ -1,4 +1,4 @@
-<template>
+git <template>
   <el-container>
     <el-header>
       <h2>{{ semester }}</h2>

@@ -4,6 +4,7 @@ import ClassDetailPage from '../page/ClassDetailPage'
 import ModifyCourseClassInfo from '../page/ModifyCourseClassInfo'
 import ModifySemesterInfoPage from '../page/ModifySemesterInfoPage'
 import GraduationAuditPage from '../page/GraduationAuditPage'
+import SemesterDetail from '../page/SemesterDetailPage'
 
 export default [
   {
@@ -30,6 +31,11 @@ export default [
     path: '/modify-semester-info',
     name: 'ModifySemesterInfoPage',
     component: ModifySemesterInfoPage
+  },
+  {
+    path: '/semester-detail',
+    name: 'SemesterDetail',
+    component: SemesterDetail
   },
   {
     path: '/graduation-audit',
