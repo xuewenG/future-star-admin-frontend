@@ -5,6 +5,7 @@ import ModifyCourseClassInfo from '../page/ModifyCourseClassInfo'
 import ModifySemesterInfoPage from '../page/ModifySemesterInfoPage'
 import GraduationAuditPage from '../page/GraduationAuditPage'
 import SemesterDetail from '../page/SemesterDetailPage'
+import CourseClassDetailPage from '../page/CourseClassDetailPage'
 
 export default [
   {
@@ -41,5 +42,10 @@ export default [
     path: '/graduation-audit',
     name: 'GraduationAuditPage',
     component: GraduationAuditPage
+  },
+  {
+    path: '/course-class-detail',
+    name: 'CourseClassDetailPage',
+    component: CourseClassDetailPage
   }
 ]
