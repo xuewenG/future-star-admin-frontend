@@ -1,18 +1,10 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="资料详情"/>
+      <el-page-header @back="goBack()" content="修改历史详情"/>
       <el-divider/>
       <el-card v-for="(item) in info"  :key="item.id" class="info-card" shadow="always">
         <el-form class="info-table" label-width="130px">
-          <el-row>
-            <el-col :span="4" :offset="8">
-              <el-button type="primary" icon="el-icon-edit" @click="editInfo()">编辑</el-button>
-            </el-col>
-            <el-col :span="4" >
-              <el-button type="primary" icon="el-icon-time" @click="showHistory()">查看编辑历史</el-button>
-            </el-col>
-          </el-row>
           <el-divider></el-divider>
           <el-row>
             <el-col :span="8">
@@ -155,7 +147,7 @@
 
 <script>
 export default {
-  name: 'ShowAlumniInformationPage',
+  name: 'ShowAlumniHistoryInformationPage',
   data () {
     return {
       info: [
@@ -191,12 +183,6 @@ export default {
   methods: {
     goBack: function () {
       this.$router.go(-1)
-    },
-    editInfo () {
-      this.$router.push('/edit-alumni-information')
-    },
-    showHistory () {
-      this.$router.push('/show-edit-history')
     }
   }
 }
