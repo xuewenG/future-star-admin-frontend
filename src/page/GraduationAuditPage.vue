@@ -105,7 +105,7 @@
 
 <script>
 export default {
-  name: 'GratuationAuditPage',
+  name: 'GraduationAuditPage',
   data () {
     return {
       shortInfoWidth: 115,
