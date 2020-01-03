@@ -6,8 +6,8 @@
         <span>{{ item.className }}</span>
         <el-button type="text"></el-button>
         <el-button type="text">删除</el-button>
-        <el-button type="text">编辑</el-button>
-        <el-button type="text">查看</el-button>
+        <el-button type="text" @click="editClassInfo()">编辑</el-button>
+        <el-button type="text" @click="lookOverClassDetail()">查看</el-button>
         <el-button type="text">结课</el-button>
       </div>
       <el-row>
@@ -62,6 +62,14 @@ export default {
           state: '进行中'
         }
       ]
+    }
+  },
+  methods: {
+    editClassInfo: function () {
+      this.$router.push('/edit-class-info')
+    },
+    lookOverClassDetail: function () {
+      this.$router.push('/class-detail')
     }
   },
   filters: {

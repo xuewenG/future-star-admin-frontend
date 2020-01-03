@@ -1,9 +1,9 @@
 import DetailOfSemesterPage from '../page/course-common/DetailOfSemesterPage'
 import DetailOfClassPage from '../page/course-common/DetailOfClassPage'
 import DetailOfCoursePage from '../page/course-common/DetailOfCoursePage'
-import ModifySemesterInfoPage from '../page/course-common/ModifySemesterInfoPage'
-import ModifyClassInfoPage from '../page/course-common/ModifyClassInfoPage'
-import ModifyCourseInfoPage from '../page/course-common/ModifyCourseInfoPage'
+import EditSemesterInfoPage from '../page/course-common/EditSemesterInfoPage'
+import EditClassInfoPage from '../page/course-common/EditClassInfoPage'
+import EditCourseInfoPage from '../page/course-common/EditCourseInfoPage'
 import AddCourseResourcePage from '../page/course-common/AddCourseResourcePage'
 
 export default [
@@ -23,23 +23,23 @@ export default [
     component: DetailOfCoursePage
   },
   {
-    path: '/modify-semester-info',
-    name: 'ModifySemesterInfoPage',
-    component: ModifySemesterInfoPage
+    path: '/edit-semester-info',
+    name: 'EditSemesterInfoPage',
+    component: EditSemesterInfoPage
   },
   {
-    path: '/modify-class-info',
-    name: 'ModifyClassInfoPage',
-    component: ModifyClassInfoPage
+    path: '/edit-class-info',
+    name: 'EditClassInfoPage',
+    component: EditClassInfoPage
   },
   {
-    path: '/modify-course-info',
-    name: 'ModifyCourseInfoPage',
-    component: ModifyCourseInfoPage
+    path: '/edit-course-info',
+    name: 'EditCourseInfoPage',
+    component: EditCourseInfoPage
   },
   {
     path: '/add-course-resource',
     name: 'AddCourseResourcePage',
     component: AddCourseResourcePage
-  },
+  }
 ]
