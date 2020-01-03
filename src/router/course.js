@@ -7,6 +7,7 @@ import GraduationAuditPage from '../page/GraduationAuditPage'
 import SemesterDetail from '../page/SemesterDetailPage'
 import CourseClassDetailPage from '../page/CourseClassDetailPage'
 import AddCourseResourcePage from '../page/AddCourseResourcePage'
+import CourseDetailPage from '../page/CourseDetailPage'
 
 export default [
   {
@@ -53,5 +54,10 @@ export default [
     path: '/add-course-resource',
     name: 'AddCourseResourcePage',
     component: AddCourseResourcePage
+  },
+  {
+    path: '/course-detail',
+    name: 'CourseDetailPage',
+    component: CourseDetailPage
   }
 ]
