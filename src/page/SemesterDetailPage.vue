@@ -21,8 +21,8 @@ export default {
   data () {
     return {
       semester: {
-        gist: '',
-        introduction: ''
+        gist: '第九期创新院',
+        introduction: '这是一期很好的课程'
       }
     }
   },
