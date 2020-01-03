@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import WaitForStartClasses from '../components/WaitForStartClasses'
-import UnderwayClasses from '../components/UnderwayClasses'
-import EndedClasses from '../components/EndedClasses'
+import WaitForStartClasses from '../../components/class/WaitForStartClasses'
+import UnderwayClasses from '../../components/class/UnderwayClasses'
+import EndedClasses from '../../components/class/EndedClasses'
 export default {
   name: 'CoursementManagementPage',
   components: {

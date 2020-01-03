@@ -17,8 +17,8 @@ git <template>
 </template>
 
 <script>
-import UnopenClasses from '../components/UnopenClasses'
-import EnrollingClasses from '../components/EnrollingClasses'
+import UnopenClasses from '../../components/class/UnopenClasses'
+import EnrollingClasses from '../../components/class/EnrollingClasses'
 export default {
   name: 'EnrollmentManagementPage',
   components: {

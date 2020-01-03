@@ -1,7 +1,7 @@
-import CreateActivityPage from '../page/CreateActivityPage'
-import ShowActivityParticipantsPage from '../page/ShowActivityParticipantsPage'
-import EditExistingActivityPage from '../page/EditExistingActivityPage'
-import ShowActivityInformationPage from '../page/ShowActivityInformationPage'
+import CreateActivityPage from '../page/activity-management/CreateActivityPage'
+import ShowActivityParticipantsPage from '../page/activity-management/ShowActivityParticipantsPage'
+import EditExistingActivityPage from '../page/activity-management/EditExistingActivityPage'
+import ShowActivityInformationPage from '../page/activity-management/ShowActivityInformationPage'
 
 export default [
   {

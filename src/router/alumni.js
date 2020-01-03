@@ -1,7 +1,7 @@
-import ShowAlumniInformationPage from '../page/ShowAlumniInformationPage'
-import EditAlumniInformationPage from '../page/EditAlumniInformationPage'
-import ShowAlumniEditHistoryPage from '../page/ShowAlumniEditHistoryPage'
-import ShowAlumniHistoryInformationPage from '../page/ShowAlumniHistoryInformationPage'
+import ShowAlumniInformationPage from '../page/alumni-management/ShowAlumniInformationPage'
+import EditAlumniInformationPage from '../page/alumni-management/EditAlumniInformationPage'
+import ShowAlumniEditHistoryPage from '../page/alumni-management/ShowAlumniEditHistoryPage'
+import ShowAlumniHistoryInformationPage from '../page/alumni-management/ShowAlumniHistoryInformationPage'
 
 export default [
   {

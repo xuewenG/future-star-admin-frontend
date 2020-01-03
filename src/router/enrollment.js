@@ -1,6 +1,6 @@
-import ModifyEnrollmentClassInfoPage from '../page/ModifyEnrollmentClassInfoPage'
-import AddNewCoursePage from '../page/AddNewCoursePage'
-import EnrollmentAuditPage from '../page/EnrollmentAuditPage'
+import ModifyEnrollmentClassInfoPage from '../page/enrollment-management/ModifyEnrollmentClassInfoPage'
+import AddNewCoursePage from '../page/course-common/AddNewCoursePage'
+import EnrollmentAuditPage from '../page/enrollment-management/EnrollmentAuditPage'
 
 export default [
   {
