@@ -1,27 +1,30 @@
 <template>
   <div>
     <h4 v-if="activities.length === 0">暂无进行中活动</h4>
-    <el-card v-for="(item) in activities" :key="item.id" class="activity-card">
-      <div slot="header">
-        <span>{{ item.activityName }}</span>
-        <el-button type="text" class="btn">结束活动</el-button>
-        <el-button type="text" class="btn" @click="showParticipants()">查看已参加校友名单</el-button>
-        <el-button type="text" class="btn" @click="editDetails()">编辑活动信息</el-button>
-        <el-button type="text" class="btn" @click="showDetails()">查看活动信息</el-button>
-      </div>
-      <el-row>
-        起止日期：{{ item.activityStartTime }} ——— {{ item.activityEndTime }}
-      </el-row>
-      <el-row>
-        活动人数：{{ item.currentAmountOfParticipants }} / {{ item.capacity }}
-      </el-row>
-      <el-row>
-        活动状态：{{ item.state }}
-      </el-row>
-      <el-row>
-        活动简介：{{ item.activityIntroduction | ellipsis }}
-      </el-row>
-    </el-card>
+    <el-col :span="12" v-for="(item) in activities" :key="item.id" >
+      <h4 v-if="activities.length === 0">暂无进行中的活动</h4>
+      <el-card class="activity-card">
+        <div slot="header">
+          <span>{{ item.activityName }}</span>
+          <el-button type="text"></el-button>
+          <el-button type="primary" size="mini" class="btn" icon="el-icon-s-custom" @click="showParticipants()" circle></el-button>
+          <el-button type="primary" size="mini" class="btn" icon="el-icon-edit-outline" @click="editDetails()" circle></el-button>
+          <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="showDetails()" circle></el-button>
+        </div>
+        <el-row>
+          起止日期：{{ item.activityStartTime }} —— {{ item.activityEndTime }}
+        </el-row>
+        <el-row>
+          活动人数：{{ item.currentAmountOfParticipants }} / {{ item.capacity }}
+        </el-row>
+        <el-row>
+          活动状态：{{ item.state }}
+        </el-row>
+        <el-row>
+          活动简介：{{ item.activityIntroduction | ellipsis }}
+        </el-row>
+      </el-card>
+    </el-col>
   </div>
 </template>
 
@@ -98,6 +101,7 @@ export default {
   }
 
   .activity-card {
-    margin-bottom: 15px;
+    padding: 14px;
+    margin: 14px;
   }
 </style>

@@ -1,27 +1,30 @@
 <template>
-  <div>
-    <h4 v-if="activities.length === 0">暂无已结束的活动</h4>
-    <el-card v-for="(item) in activities" :key="item.id" class="activity-card">
-      <div slot="header">
-        <span>{{ item.activityName }}</span>
-        <el-button type="text" class="btn" @click="showParticipants()">查看已报名校友名单</el-button>
-        <el-button type="text" class="btn" @click="editDetails()">编辑活动信息</el-button>
-        <el-button type="text" class="btn" @click="showDetails()">查看活动信息</el-button>
-      </div>
-      <el-row>
-        起止日期：{{ item.activityStartTime }} ——— {{ item.activityEndTime }}
-      </el-row>
-      <el-row>
-        活动人数：{{ item.currentAmountOfParticipants }} / {{ item.capacity }}
-      </el-row>
-      <el-row>
-        活动状态：{{ item.state }}
-      </el-row>
-      <el-row>
-        活动简介：{{ item.activityIntroduction | ellipsis }}
-      </el-row>
-    </el-card>
-  </div>
+  <el-row>
+    <el-col :span="12" v-for="(item) in activities" :key="item.id" >
+      <h4 v-if="activities.length === 0">暂无已结束的活动</h4>
+      <el-card class="activity-card">
+        <div slot="header">
+          <span>{{ item.activityName }}</span>
+          <el-button type="text"></el-button>
+          <el-button type="primary" size="mini" class="btn" icon="el-icon-s-custom" @click="showParticipants()" circle></el-button>
+          <el-button type="primary" size="mini" class="btn" icon="el-icon-edit-outline" @click="editDetails()" circle></el-button>
+          <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="showDetails()" circle></el-button>
+        </div>
+        <el-row>
+          起止日期：{{ item.activityStartTime }} —— {{ item.activityEndTime }}
+        </el-row>
+        <el-row>
+          活动人数：{{ item.currentAmountOfParticipants }} / {{ item.capacity }}
+        </el-row>
+        <el-row>
+          活动状态：{{ item.state }}
+        </el-row>
+        <el-row>
+          活动简介：{{ item.activityIntroduction | ellipsis }}
+        </el-row>
+      </el-card>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
@@ -52,6 +55,36 @@ export default {
         },
         {
           id: '3',
+          activityName: '大蜀山一日游',
+          activityIntroduction: '这里是一个加了长文本省略号替代的活动介绍',
+          activityStartTime: '2019/12/21',
+          activityEndTime: '2019/12/22',
+          currentAmountOfParticipants: '13',
+          capacity: '15',
+          state: '已结束'
+        },
+        {
+          id: '4',
+          activityName: '大蜀山一日游',
+          activityIntroduction: '这里是一个加了长文本省略号替代的活动介绍',
+          activityStartTime: '2019/12/21',
+          activityEndTime: '2019/12/22',
+          currentAmountOfParticipants: '13',
+          capacity: '15',
+          state: '已结束'
+        },
+        {
+          id: '5',
+          activityName: '大蜀山一日游',
+          activityIntroduction: '这里是一个加了长文本省略号替代的活动介绍',
+          activityStartTime: '2019/12/21',
+          activityEndTime: '2019/12/22',
+          currentAmountOfParticipants: '13',
+          capacity: '15',
+          state: '已结束'
+        },
+        {
+          id: '6',
           activityName: '大蜀山一日游',
           activityIntroduction: '这里是一个加了长文本省略号替代的活动介绍',
           activityStartTime: '2019/12/21',
@@ -97,6 +130,7 @@ export default {
   }
 
   .activity-card {
-    margin-bottom: 15px;
+    padding: 14px;
+    margin: 14px;
   }
 </style>
