@@ -1,21 +1,21 @@
-import ModifyEnrollmentClassInfoPage from '../page/enrollment-management/ModifyEnrollmentClassInfoPage'
-import AddNewCoursePage from '../page/course-common/AddNewCoursePage'
 import EnrollmentAuditPage from '../page/enrollment-management/EnrollmentAuditPage'
+import AddSemesterPage from '../page/enrollment-management/AddSemesterPage'
+import AddClassPage from '../page/enrollment-management/AddClassPage'
 
 export default [
-  {
-    path: '/modify-enrollment-class-info',
-    name: 'ModifyEnrollmentClassInfoPage',
-    component: ModifyEnrollmentClassInfoPage
-  },
-  {
-    path: '/add-new-course',
-    name: 'AddNewCoursePage',
-    component: AddNewCoursePage
-  },
   {
     path: '/enrollment-audit',
     name: 'EnrollmentAuditPage',
     component: EnrollmentAuditPage
+  },
+  {
+    path: '/add-semester',
+    name: 'AddSemesterPage',
+    component: AddSemesterPage
+  },
+  {
+    path: '/add-class',
+    name: 'AddClassPage',
+    component: AddClassPage
   }
 ]

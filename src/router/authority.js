@@ -1,9 +1,9 @@
-import AddAdministrator from '../page/authority-management/AddAdministrator'
+import AddAdministratorPage from '../page/authority-management/AddAdministratorPage'
 
 export default [
   {
-    path: 'add-administrator',
-    name: 'AddAdministrator',
-    component: AddAdministrator
+    path: '/add-administrator',
+    name: 'AddAdministratorPage',
+    component: AddAdministratorPage
   }
 ]

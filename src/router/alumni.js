@@ -1,18 +1,13 @@
 import ShowAlumniInformationPage from '../page/alumni-management/ShowAlumniInformationPage'
-import EditAlumniInformationPage from '../page/alumni-management/EditAlumniInformationPage'
 import ShowAlumniEditHistoryPage from '../page/alumni-management/ShowAlumniEditHistoryPage'
 import ShowAlumniHistoryInformationPage from '../page/alumni-management/ShowAlumniHistoryInformationPage'
+import EditAlumniInformationPage from '../page/alumni-management/EditAlumniInformationPage'
 
 export default [
   {
     path: '/show-all-information',
     name: 'ShowAlumniInformationPage',
     component: ShowAlumniInformationPage
-  },
-  {
-    path: '/edit-alumni-information',
-    name: 'EditAlumniInformationPage',
-    component: EditAlumniInformationPage
   },
   {
     path: '/show-edit-history',
@@ -23,5 +18,10 @@ export default [
     path: '/show-history-information',
     name: 'ShowAlumniHistoryInformationPage',
     component: ShowAlumniHistoryInformationPage
+  },
+  {
+    path: '/edit-alumni-information',
+    name: 'EditAlumniInformationPage',
+    component: EditAlumniInformationPage
   }
 ]

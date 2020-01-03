@@ -5,7 +5,7 @@ import courseCommon from './course-common'
 import enrollment from './enrollment'
 import course from './course'
 import activity from './activity'
-import datum from './alumni'
+import alumni from './alumni'
 import authority from './authority'
 
 Vue.use(VueRouter)
@@ -16,7 +16,7 @@ const routes = [
   ...enrollment,
   ...course,
   ...activity,
-  ...datum,
+  ...alumni,
   ...authority
 ]
 

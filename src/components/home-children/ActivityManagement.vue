@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import ActivityInEnrollment from '../../components/activity/ActivityInEnrollment'
-import ActivityInProgress from '../../components/activity/ActivityInProgress'
-import ActivityCompleted from '../../components/activity/ActivityCompleted'
+import ActivityInEnrollment from '../activity/ActivityInEnrollment'
+import ActivityInProgress from '../activity/ActivityInProgress'
+import ActivityCompleted from '../activity/ActivityCompleted'
 export default {
   name: 'ActivityManagementPage',
   components: { ActivityCompleted, ActivityInProgress, ActivityInEnrollment },

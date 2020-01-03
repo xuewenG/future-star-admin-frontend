@@ -1,39 +1,39 @@
-import EnrollmentManagementPage from '../page/enrollment-management/EnrollmentManagementPage'
-import CourseManagementPage from '../page/course-common/CourseManagementPage'
-import ActivityManagementPage from '../page/activity-management/ActivityManagementPage'
-import AlumniManagementPage from '../page/alumni-management/AlumniManagementPage'
-import AuthorityManagementPage from '../page/authority-management/AuthorityManagementPage'
-import WelcomePage from '../page/WelcomPage'
+import EnrollmentManagement from '../components/home-children/EnrollmentManagement'
+import CourseManagement from '../components/home-children/CourseManagement'
+import ActivityManagement from '../components/home-children/ActivityManagement'
+import AlumniManagement from '../components/home-children/AlumniManagement'
+import AuthorityManagement from '../components/home-children/AuthorityManagement'
+import Welcome from '../components/home-children/Welcome'
 
 export default [
   {
     path: 'welcome',
-    name: 'WelcomePage',
-    component: WelcomePage
+    name: 'Welcome',
+    component: Welcome
   },
   {
-    path: 'enrollment-management',
-    name: 'EnrollmentManagementPage',
-    component: EnrollmentManagementPage
+    path: 'enrollment',
+    name: 'EnrollmentManagement',
+    component: EnrollmentManagement
   },
   {
-    path: 'course-management',
-    name: 'CourseManagementPage',
-    component: CourseManagementPage
+    path: 'course',
+    name: 'CourseManagement',
+    component: CourseManagement
   },
   {
-    path: 'activity-management',
-    name: 'ActivityManagementPage',
-    component: ActivityManagementPage
+    path: 'activity',
+    name: 'ActivityManagement',
+    component: ActivityManagement
   },
   {
-    path: 'alumni-management',
-    name: 'AlumniManagementPage',
-    component: AlumniManagementPage
+    path: 'alumni',
+    name: 'AlumniManagement',
+    component: AlumniManagement
   },
   {
-    path: 'authority-management',
-    name: 'AuthorityManagementPage',
-    component: AuthorityManagementPage
+    path: 'authority',
+    name: 'AuthorityManagement',
+    component: AuthorityManagement
   }
 ]
