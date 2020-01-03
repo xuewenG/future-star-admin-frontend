@@ -5,9 +5,14 @@
       <el-divider/>
       <el-card v-for="(item) in info"  :key="item.id" class="info-card" shadow="always">
         <el-form class="info-table" label-width="130px">
-          <el-form-item class="edit-btn">
-            <el-button type="primary" icon="el-icon-edit" @click="editInfo()">编辑</el-button>
-          </el-form-item>
+          <el-row>
+            <el-col :span="4" :offset="8">
+              <el-button type="primary" icon="el-icon-edit" @click="editInfo()">编辑</el-button>
+            </el-col>
+            <el-col :span="4" >
+              <el-button type="primary" icon="el-icon-time" @click="showHistory()">查看编辑历史</el-button>
+            </el-col>
+          </el-row>
           <el-divider></el-divider>
           <el-row>
             <el-col :span="8">
@@ -189,6 +194,9 @@ export default {
     },
     editInfo () {
       this.$router.push('/edit-alumni-information')
+    },
+    showHistory () {
+      this.$router.push('/show-edit-history')
     }
   }
 }
@@ -202,9 +210,5 @@ export default {
 
   .info-table {
     margin: 40px 20px;
-  }
-
-  .edit-btn {
-    margin-left: 230px;
   }
 </style>
