@@ -4,10 +4,12 @@
       <el-page-header @back="goBack()" content="活动详情"/>
       <el-divider/>
       <el-card v-for="(item) in info"  :key="item.id" class="info-card" shadow="always">
-        <el-form class="info-table" label-width="130px">
-          <el-form-item class="edit-btn">
-            <el-button type="primary" icon="el-icon-edit" @click="editDetails()">编辑</el-button>
-          </el-form-item>
+        <el-form label-width="130px">
+          <el-row>
+            <el-col :span="4" :offset="11">
+              <el-button type="primary" icon="el-icon-edit" @click="editDetails()">编辑</el-button>
+            </el-col>
+          </el-row>
           <el-divider></el-divider>
           <el-row>
             <el-col :span="12">
@@ -107,5 +109,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .info-card {
+    width: 80%;
+    margin: auto;
+  }
 </style>
