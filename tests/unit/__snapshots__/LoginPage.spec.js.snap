@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage 快照测试 1`] = `
+<div class="big-div">
+  <div class="login-page">
+    <table class="login-table">
+      <tr>
+        <td><img src="../assets/EdStarsLogo.jpg" class="logo"> <span class="login-label">管理人员登录平台</span></td>
+      </tr>
+      <tr>
+        <td><span class="small-font">请输入账号:</span> <input type="text" name="name" autofocus="autofocus" class="input-box"></td>
+      </tr>
+      <tr>
+        <td><span class="small-font">请输入密码:</span> <input type="password" name="password" class="input-box"></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="login"><input id="login" type="submit" name="login" value="登录"></td>
+      </tr>
+    </table>
+  </div>
+</div>
+`;
