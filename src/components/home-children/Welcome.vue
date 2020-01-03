@@ -16,10 +16,10 @@ export default {
   data () {
     return {
       imageAddressArray: [
-        require('../assets/backgroundImage1.jpg'),
-        require('../assets/backgroundImage2.jpg'),
-        require('../assets/backgroundImage3.jpg'),
-        require('../assets/backgroundImage4.jpg')
+        require('../../assets/backgroundImage1.jpg'),
+        require('../../assets/backgroundImage2.jpg'),
+        require('../../assets/backgroundImage3.jpg'),
+        require('../../assets/backgroundImage4.jpg')
       ]
     }
   }

@@ -3,7 +3,7 @@
     <el-main>
       <el-divider/>
       <router-link to="/create-activity">
-        <img class="add-activity" src="../assets/addIcon.png">
+        <img class="add-activity" src="../../assets/addIcon.png">
       </router-link>
       <el-divider/>
       <el-tabs v-model="activeName">
@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import ActivityInEnrollment from '../components/ActivityInEnrollment'
-import ActivityInProgress from '../components/ActivityInProgress'
-import ActivityCompleted from '../components/ActivityCompleted'
+import ActivityInEnrollment from '../activity/ActivityInEnrollment'
+import ActivityInProgress from '../activity/ActivityInProgress'
+import ActivityCompleted from '../activity/ActivityCompleted'
 export default {
   name: 'ActivityManagementPage',
   components: { ActivityCompleted, ActivityInProgress, ActivityInEnrollment },

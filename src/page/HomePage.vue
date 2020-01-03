@@ -28,27 +28,27 @@
                  :active-text-color="activeTextColor" :text-color="textColor" align="middle">
           <el-row type="flex" justify="space-around">
             <el-col :span="4">
-              <router-link to="/home/enrollment-management">
+              <router-link to="/home/enrollment">
                 <el-menu-item index="1">招生管理</el-menu-item>
               </router-link>
             </el-col>
             <el-col :span="4">
-              <router-link to="/home/course-management">
+              <router-link to="/home/course">
                 <el-menu-item index="2">课程管理</el-menu-item>
               </router-link>
             </el-col>
             <el-col :span="4">
-              <router-link to="/home/activity-management">
+              <router-link to="/home/activity">
                 <el-menu-item index="3">活动管理</el-menu-item>
               </router-link>
             </el-col>
             <el-col :span="4">
-              <router-link to="/home/alumni-management">
+              <router-link to="/home/alumni">
                 <el-menu-item index="4">校友资料管理</el-menu-item>
               </router-link>
             </el-col>
             <el-col :span="4">
-              <router-link to="/home/authority-management">
+              <router-link to="/home/authority">
                 <el-menu-item index="5">权限管理</el-menu-item>
               </router-link>
             </el-col>

@@ -1,20 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import activity from './activity'
+import common from './common'
+import courseCommon from './course-common'
 import enrollment from './enrollment'
 import course from './course'
-import common from './common'
-import datum from './datum'
+import activity from './activity'
+import alumni from './alumni'
 import authority from './authority'
 
 Vue.use(VueRouter)
 
 const routes = [
-  ...activity,
+  ...common,
+  ...courseCommon,
   ...enrollment,
   ...course,
-  ...common,
-  ...datum,
+  ...activity,
+  ...alumni,
   ...authority
 ]
 

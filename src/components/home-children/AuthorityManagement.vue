@@ -6,7 +6,7 @@
           <h3>已有管理员列表</h3>
         </el-col>
           <el-col :span="2">
-            <router-link to="/home/add-administrator">
+            <router-link to="/add-administrator">
               <el-button type="primary">添加管理员</el-button>
             </router-link>
           </el-col>

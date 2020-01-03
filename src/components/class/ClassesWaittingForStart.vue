@@ -1,13 +1,14 @@
 <template>
   <div>
-    <h4 v-if="classes.length === 0">暂无已结束班级</h4>
+    <h4 v-if="classes.length === 0">暂待开课班级</h4>
     <el-card v-for="(item) in classes" :key="item.id">
       <div slot="header">
         <span>{{ item.className }}</span>
         <el-button type="text"></el-button>
         <el-button type="text">删除</el-button>
-        <el-button type="text">编辑</el-button>
-        <el-button type="text">查看</el-button>
+        <el-button type="text" @click="editClassInfo()">编辑</el-button>
+        <el-button type="text" @click="lookOverClassDetail()">查看</el-button>
+        <el-button type="text">开课</el-button>
       </div>
       <el-row>
         起止日期：{{ item.classStartTime }}—— {{ item.classEndTime }}
@@ -26,7 +27,7 @@
 </template>
 <script>
 export default {
-  name: 'EndedClasses',
+  name: 'WaitForStartClasses',
   data () {
     return {
       classes: [
@@ -38,7 +39,7 @@ export default {
           classEndTime: '2019/12/21',
           currentAmountOfStudent: '13',
           capacity: '15',
-          state: '已结束'
+          state: '待开课'
         },
         {
           id: '1',
@@ -48,7 +49,7 @@ export default {
           classEndTime: '2019/12/21',
           currentAmountOfStudent: '12',
           capacity: '15',
-          state: '已结束'
+          state: '待开课'
         },
         {
           id: '3',
@@ -58,9 +59,17 @@ export default {
           classEndTime: '2019/12/21',
           currentAmountOfStudent: '11',
           capacity: '15',
-          state: '已结束'
+          state: '待开课'
         }
       ]
+    }
+  },
+  methods: {
+    editClassInfo: function () {
+      this.$router.push('/edit-class-info')
+    },
+    lookOverClassDetail: function () {
+      this.$router.push('/class-detail')
     }
   },
   filters: {
