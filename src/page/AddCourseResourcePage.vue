@@ -1,0 +1,48 @@
+<template>
+  <el-upload
+    ref="upload"
+    action="https://jsonplaceholder.typicode.com/posts/"
+    :on-preview="handlePreview"
+    :on-remove="handleRemove"
+    :file-list="fileList"
+    :auto-upload="false">
+    <el-button slot="trigger" size="small" type="primary">选取课程资料</el-button>
+    <el-button size="small" type="success" @click="submitUpload">上传到服务器</el-button>
+  </el-upload>
+</template>
+
+<script>
+export default {
+  name: 'AddCourseResourcePage',
+  data () {
+    return {
+      // eslint-disable-next-line standard/object-curly-even-spacing
+      fileList: [
+        {
+          name: 'food.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
+        },
+        {
+          name: 'food2.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
+        }
+      ]
+    }
+  },
+  methods: {
+    submitUpload () {
+      this.$refs.upload.submit()
+    },
+    handleRemove (file, fileList) {
+      console.log(file, fileList)
+    },
+    handlePreview (file) {
+      console.log(file)
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
