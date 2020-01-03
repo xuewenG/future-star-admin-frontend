@@ -1,6 +1,7 @@
 import ShowAlumniInformationPage from '../page/ShowAlumniInformationPage'
 import EditAlumniInformationPage from '../page/EditAlumniInformationPage'
 import ShowAlumniEditHistoryPage from '../page/ShowAlumniEditHistoryPage'
+import ShowAlumniHistoryInformationPage from '../page/ShowAlumniHistoryInformationPage'
 
 export default [
   {
@@ -17,5 +18,10 @@ export default [
     path: '/show-edit-history',
     name: 'ShowAlumniEditHistoryPage',
     component: ShowAlumniEditHistoryPage
+  },
+  {
+    path: '/show-history-information',
+    name: 'ShowAlumniHistoryInformationPage',
+    component: ShowAlumniHistoryInformationPage
   }
 ]
