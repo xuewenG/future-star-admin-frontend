@@ -8,6 +8,7 @@ import SemesterDetail from '../page/SemesterDetailPage'
 import CourseClassDetailPage from '../page/CourseClassDetailPage'
 import AddCourseResourcePage from '../page/AddCourseResourcePage'
 import CourseDetailPage from '../page/CourseDetailPage'
+import ModifyCourseInfoPage from '../page/ModifyCourseInfoPage'
 
 export default [
   {
@@ -59,5 +60,10 @@ export default [
     path: '/course-detail',
     name: 'CourseDetailPage',
     component: CourseDetailPage
+  },
+  {
+    path: '/modify-course-info',
+    name: 'ModifyCourseInfoPage',
+    component: ModifyCourseInfoPage
   }
 ]
