@@ -6,7 +6,7 @@
       <el-card v-for="(item) in info"  :key="item.id" class="info-card" shadow="always">
         <el-form class="info-table" label-width="130px">
           <el-form-item class="edit-btn">
-            <el-button type="primary" icon="el-icon-edit">编辑</el-button>
+            <el-button type="primary" icon="el-icon-edit" @click="editInfo()">编辑</el-button>
           </el-form-item>
           <el-divider></el-divider>
           <el-row>
@@ -186,6 +186,9 @@ export default {
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    editInfo () {
+      this.$router.push('/edit-alumni-information')
     }
   }
 }
