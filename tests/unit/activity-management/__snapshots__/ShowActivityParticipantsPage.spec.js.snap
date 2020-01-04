@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowActivityParticipantsPage 快照测试 1`] = `
+<el-container>
+  <el-main>
+    <el-page-header content="已参与校友名单"></el-page-header>
+    <el-divider></el-divider>
+    <el-input placeholder="请输入搜索内容" class="search-input"></el-input>
+    <el-button type="primary" icon="el-icon-search">搜索</el-button>
+    <el-divider></el-divider>
+    <el-table data="[object Object],[object Object],[object Object],[object Object],[object Object]" stripe="">
+      <el-table-column prop="name" align="center" label="姓名"></el-table-column>
+      <el-table-column prop="gender" align="center" label="性别"></el-table-column>
+      <el-table-column prop="phone_number" align="center" label="联系电话"></el-table-column>
+      <el-table-column prop="wx" align="center" label="微信号"></el-table-column>
+      <el-table-column align="center" label="操作">
+        <el-button type="primary" size="small" icon="el-icon-more" circle=""></el-button>
+      </el-table-column>
+    </el-table>
+  </el-main>
+  <el-footer>
+    <el-pagination current-page="1" page-sizes="10,20,30,40" page-size="10" layout="total, sizes, prev, pager, next, jumper" total="5" class="pagination"></el-pagination>
+  </el-footer>
+</el-container>
+`;
