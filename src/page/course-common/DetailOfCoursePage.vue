@@ -24,6 +24,9 @@
           <el-divider>课程资料</el-divider>
           <el-tree :data="resourceData" :props="defaultProps">
           </el-tree>
+        <el-row type="flex" justify="center">
+          <el-button type="primary" size="small" @click="addCourseResource" round>添加课程资料</el-button>
+        </el-row>
           <el-divider>讲师信息</el-divider>
           <div v-for="teacher in course.courseTeachers" :key="teacher.teacherId">
             <el-row>
@@ -107,6 +110,9 @@ export default {
     },
     editCourseInfo: function () {
       this.$router.push('/edit-course-info')
+    },
+    addCourseResource: function () {
+      this.$router.push('/add-course-resource')
     }
   }
 }
