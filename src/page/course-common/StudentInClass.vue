@@ -1,9 +1,8 @@
 <template>
   <el-container>
-    <el-header>
-      <el-divider content-position="center">毕业审核界面</el-divider>
-    </el-header>
     <el-main>
+      <el-page-header @back="goBack()" content="班级学员"></el-page-header>
+      <el-divider content-position="center">报名审核界面</el-divider>
       <el-row>
         <el-col :span="8" :push="8">
           <el-input class='search-input' placeholder="请输入搜索内容"/>
@@ -62,26 +61,12 @@
           align="center"
           label="操作"
           :width="operationWidth">
-          <template slot-scope="scope">
+          <template>
             <el-button
               type="primary"
               size="small"
               icon="el-icon-more"
               @click="showAllInfo()"
-              circle>
-            </el-button>
-            <el-button
-              type="success"
-              size="small"
-              icon="el-icon-check"
-              @click="deleteAlumni(scope.$index)"
-              circle>
-            </el-button>
-            <el-button
-              type="danger"
-              size="small"
-              icon="el-icon-close"
-              @click="deleteAlumni(scope.$index)"
               circle>
             </el-button>
           </template>
@@ -263,6 +248,9 @@ export default {
     },
     handleCurrentChange (val) {
       console.log(`当前页: ${val}`)
+    },
+    goBack: function () {
+      this.$router.go(-1)
     }
   }
 }

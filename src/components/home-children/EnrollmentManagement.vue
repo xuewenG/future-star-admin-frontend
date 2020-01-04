@@ -1,5 +1,18 @@
-git <template>
-  <el-container>
+<template>
+  <el-container v-if="semesterState==='0'">
+    <el-header>
+      <el-row>
+        <h3>暂无进行中学期，点击下方按钮添加新学期</h3>
+      </el-row>
+    </el-header>
+    <el-main>
+      <router-link to="/add-semester">
+        <el-image :src="require('../../assets/addIcon.png')">
+        </el-image>
+      </router-link>
+    </el-main>
+  </el-container>
+  <el-container v-else-if="semesterState==='1'">
     <el-header>
       <el-row type="flex" align="middle">
         <el-col :span="5">
@@ -35,7 +48,8 @@ export default {
   data () {
     return {
       activeName: 'first',
-      semester: '第九期未来之星创新院'
+      semester: '第九期未来之星创新院',
+      semesterState: '1'
     }
   },
   methods: {

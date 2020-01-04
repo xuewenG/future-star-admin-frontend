@@ -1,9 +1,8 @@
 <template>
   <el-container>
-    <el-header>
-      <el-divider content-position="center">报名审核界面</el-divider>
-    </el-header>
     <el-main>
+      <el-page-header @back="goBack()" content="报名审核"></el-page-header>
+      <el-divider content-position="center">报名审核界面</el-divider>
       <el-row>
         <el-col :span="8" :push="8">
           <el-input class='search-input' placeholder="请输入搜索内容"/>
@@ -67,7 +66,7 @@
               type="primary"
               size="small"
               icon="el-icon-more"
-              @click="showAllInfo()"
+              @click="showAllInfo"
               circle>
             </el-button>
             <el-button
@@ -252,17 +251,20 @@ export default {
     }
   },
   methods: {
-    deleteAlumni (index) {
+    deleteAlumni: function (index) {
       this.tableData.splice(index, 1)
     },
-    showAllInfo () {
+    showAllInfo: function () {
       this.$router.push('/show-all-information')
     },
-    handleSizeChange (val) {
+    handleSizeChange: function (val) {
       console.log(`每页 ${val} 条`)
     },
-    handleCurrentChange (val) {
+    handleCurrentChange: function (val) {
       console.log(`当前页: ${val}`)
+    },
+    goBack: function () {
+      this.$router.go(-1)
     }
   }
 }

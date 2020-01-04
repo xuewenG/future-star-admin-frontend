@@ -10,7 +10,7 @@
           <el-button type="success" size="small" icon="el-icon-check" circle></el-button>
         </el-col>
         <el-col :span="1">
-          <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail()" circle></el-button>
+          <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail" circle></el-button>
         </el-col>
         <el-col :span="1">
           <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>

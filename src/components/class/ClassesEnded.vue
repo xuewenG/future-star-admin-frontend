@@ -3,17 +3,20 @@
     <h4 v-if="classes.length === 0">暂无已结束班级</h4>
     <el-card v-for="(item) in classes" :key="item.id">
       <el-row slot="header" type="flex" align="middle">
-        <el-col :span="20">
+        <el-col :span="19">
           {{ item.className }}
         </el-col>
         <el-col :span="1">
           <el-button type="success" size="small" icon="el-icon-check" circle></el-button>
         </el-col>
         <el-col :span="1">
-          <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail()" circle></el-button>
+          <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail" circle></el-button>
         </el-col>
         <el-col :span="1">
           <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="primary" size="small" icon="el-icon-s-custom" @click="lookOverStudentInClass" circle></el-button>
         </el-col>
         <el-col :span="1">
           <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
@@ -79,6 +82,9 @@ export default {
     },
     lookOverClassDetail: function () {
       this.$router.push('/class-detail')
+    },
+    lookOverStudentInClass: function () {
+      this.$router.push('/student-in-class')
     }
   },
   filters: {
