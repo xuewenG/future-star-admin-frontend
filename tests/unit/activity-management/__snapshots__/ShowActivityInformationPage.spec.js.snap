@@ -1,78 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ShowActivityInformationPage 快照测试 1`] = `
-<el-container>
-  <el-main>
-    <el-page-header content="活动详情"></el-page-header>
-    <el-divider></el-divider>
-    <el-card shadow="always" class="info-card">
-      <el-form label-width="130px">
-        <el-row>
-          <el-col span="4" offset="11">
-            <el-button type="primary" icon="el-icon-edit">编辑</el-button>
-          </el-col>
-        </el-row>
-        <el-divider></el-divider>
-        <el-row>
-          <el-col span="12">
-            <el-form-item label="活动标题：">
-              xx讲座
-            </el-form-item>
-          </el-col>
-          <el-col span="12">
-            <el-form-item label="活动项目：">
-              xx讲座
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col span="12">
-            <el-form-item label="活动时间：">
-              2020-02-01
-            </el-form-item>
-          </el-col>
-          <el-col span="12">
-            <el-form-item label="活动地点：">
-              hf
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="限制人数：">
-              20
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="收费情况：">
-              100/人
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="活动内容描述：">
-              平平无奇的活动
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="主办方信息：">
-              郑小鸽
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="主办方联系方式：">
-              1231231234
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="报名截止时间：">
-              2020-01-23
-            </el-form-item>
-          </el-col>
-        </el-row>
-      </el-form>
-    </el-card>
-  </el-main>
-</el-container>
+<section class="el-container">
+  <main class="el-main">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">活动详情</div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-card info-card is-always-shadow">
+      <!---->
+      <div class="el-card__body">
+        <form class="el-form">
+          <div class="el-row">
+            <div class="el-col el-col-4 el-col-offset-11"><button type="button" class="el-button el-button--primary">
+                <!----><i class="el-icon-edit"></i><span>编辑</span></button></div>
+          </div>
+          <div class="el-divider el-divider--horizontal">
+            <!---->
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-12">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">活动标题：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  xx讲座
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-12">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">活动项目：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  xx讲座
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-12">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">活动时间：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  2020-02-01
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-12">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">活动地点：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  hf
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">限制人数：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  20
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">收费情况：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  100/人
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">活动内容描述：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  平平无奇的活动
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">主办方信息：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  郑小鸽
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">主办方联系方式：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  1231231234
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">报名截止时间：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  2020-01-23
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</section>
 `;

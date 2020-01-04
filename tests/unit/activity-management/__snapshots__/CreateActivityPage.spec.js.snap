@@ -1,65 +1,161 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CreateActivityPage 快照测试 1`] = `
-<el-container>
-  <el-main>
-    <el-page-header content="新建校友活动"></el-page-header>
-    <el-divider></el-divider>
-    <el-card shadow="always" class="activity-card">
-      <el-form label-width="150px" class="activity-table">
-        <el-form-item label="活动标题：" class="activity-title">
-          <el-input class="short-text"></el-input>
-        </el-form-item>
-        <el-form-item label="活动项目：">
-          <el-input class="short-text"></el-input>
-        </el-form-item>
-        <el-row>
-          <el-col span="12">
-            <el-form-item label="活动时间：">
-              <el-date-picker type="datetime" placeholder="选择日期时间"></el-date-picker>
-            </el-form-item>
-          </el-col>
-          <el-col span="12">
-            <el-form-item label="活动地点：">
-              <el-input class="short-text"></el-input>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="面向人群：">
-              <el-input class="short-text"></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="限制人数：">
-              <el-input class="short-text"></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="收费情况：">
-              <el-input class="short-text"></el-input>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-form-item label="活动内容描述：">
-          <el-input type="textarea" class="long-text"></el-input>
-        </el-form-item>
-        <el-form-item label="组织单位信息：">
-          <el-input type="textarea" class="long-text"></el-input>
-        </el-form-item>
-        <el-form-item label="组织单位联系方式：">
-          <el-input type="textarea" class="long-text"></el-input>
-        </el-form-item>
-        <el-form-item label="报名截止时间：">
-          <el-date-picker type="datetimerange" start-placeholder="开始日期" end-placeholder="结束日期" default-time="12:00:00"></el-date-picker>
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary">立即创建</el-button>
-          <el-button>取消</el-button>
-        </el-form-item>
-      </el-form>
-    </el-card>
-  </el-main>
-</el-container>
+<section class="el-container">
+  <main class="el-main">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">新建校友活动</div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-card activity-card is-always-shadow">
+      <!---->
+      <div class="el-card__body">
+        <form class="el-form activity-table">
+          <div class="el-form-item activity-title"><label class="el-form-item__label" style="width: 150px;">活动标题：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="short-text el-input">
+                <!----><input type="text" autocomplete="off" class="el-input__inner">
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">活动项目：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="short-text el-input">
+                <!----><input type="text" autocomplete="off" class="el-input__inner">
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-12">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">活动时间：</label>
+                <div class="el-form-item__content" style="margin-left: 150px;">
+                  <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--datetime">
+                    <!----><input type="text" autocomplete="off" name="" placeholder="选择日期时间" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-time"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----><!----><!----><!----></span>
+                    <!----></span>
+                    <!---->
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-12">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">活动地点：</label>
+                <div class="el-form-item__content" style="margin-left: 150px;">
+                  <div class="short-text el-input">
+                    <!----><input type="text" autocomplete="off" class="el-input__inner">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">面向人群：</label>
+                <div class="el-form-item__content" style="margin-left: 150px;">
+                  <div class="short-text el-input">
+                    <!----><input type="text" autocomplete="off" class="el-input__inner">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">限制人数：</label>
+                <div class="el-form-item__content" style="margin-left: 150px;">
+                  <div class="short-text el-input">
+                    <!----><input type="text" autocomplete="off" class="el-input__inner">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">收费情况：</label>
+                <div class="el-form-item__content" style="margin-left: 150px;">
+                  <div class="short-text el-input">
+                    <!----><input type="text" autocomplete="off" class="el-input__inner">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">活动内容描述：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="long-text el-textarea"><textarea autocomplete="off" class="el-textarea__inner" style="min-height: -4px;"></textarea>
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">组织单位信息：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="long-text el-textarea"><textarea autocomplete="off" class="el-textarea__inner" style="min-height: -4px;"></textarea>
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">组织单位联系方式：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="long-text el-textarea"><textarea autocomplete="off" class="el-textarea__inner" style="min-height: -4px;"></textarea>
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">报名截止时间：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="el-date-editor el-range-editor el-input__inner el-date-editor--datetimerange"><i class="el-input__icon el-range__icon el-icon-time"></i><input autocomplete="off" placeholder="开始日期" name="" class="el-range-input"><span class="el-range-separator">-</span><input autocomplete="off" placeholder="结束日期" name="" class="el-range-input"><i class="el-input__icon el-range__close-icon"></i></div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-form-item">
+            <!---->
+            <div class="el-form-item__content" style="margin-left: 150px;"><button type="button" class="el-button el-button--primary">
+                <!---->
+                <!----><span>立即创建</span></button> <button type="button" class="el-button el-button--default">
+                <!---->
+                <!----><span>取消</span></button>
+              <!---->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</section>
 `;
