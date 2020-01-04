@@ -1,7 +1,14 @@
 <template>
   <el-container>
     <el-header>
-      <h2>{{ semester }}</h2>
+      <el-row type="flex" align="middle">
+        <el-col :span="5">
+          <h2>{{ semester }}</h2>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="lookOverSemesterDetail()" circle></el-button>
+        </el-col>
+      </el-row>
     </el-header>
     <el-main class="main-in-enrollment">
       <el-tabs v-model="activeName">
@@ -34,6 +41,11 @@ export default {
     return {
       activeName: 'first',
       semester: '第九期未来之星创新院'
+    }
+  },
+  methods: {
+    lookOverSemesterDetail: function () {
+      this.$router.push('/semester-detail')
     }
   }
 }
