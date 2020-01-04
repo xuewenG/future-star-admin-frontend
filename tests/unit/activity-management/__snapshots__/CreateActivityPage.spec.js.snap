@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateActivityPage 快照测试 1`] = `
+<el-container>
+  <el-main>
+    <el-page-header content="新建校友活动"></el-page-header>
+    <el-divider></el-divider>
+    <el-card shadow="always" class="activity-card">
+      <el-form label-width="150px" class="activity-table">
+        <el-form-item label="活动标题：" class="activity-title">
+          <el-input class="short-text"></el-input>
+        </el-form-item>
+        <el-form-item label="活动项目：">
+          <el-input class="short-text"></el-input>
+        </el-form-item>
+        <el-row>
+          <el-col span="12">
+            <el-form-item label="活动时间：">
+              <el-date-picker type="datetime" placeholder="选择日期时间"></el-date-picker>
+            </el-form-item>
+          </el-col>
+          <el-col span="12">
+            <el-form-item label="活动地点：">
+              <el-input class="short-text"></el-input>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col span="8">
+            <el-form-item label="面向人群：">
+              <el-input class="short-text"></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col span="8">
+            <el-form-item label="限制人数：">
+              <el-input class="short-text"></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col span="8">
+            <el-form-item label="收费情况：">
+              <el-input class="short-text"></el-input>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-form-item label="活动内容描述：">
+          <el-input type="textarea" class="long-text"></el-input>
+        </el-form-item>
+        <el-form-item label="组织单位信息：">
+          <el-input type="textarea" class="long-text"></el-input>
+        </el-form-item>
+        <el-form-item label="组织单位联系方式：">
+          <el-input type="textarea" class="long-text"></el-input>
+        </el-form-item>
+        <el-form-item label="报名截止时间：">
+          <el-date-picker type="datetimerange" start-placeholder="开始日期" end-placeholder="结束日期" default-time="12:00:00"></el-date-picker>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary">立即创建</el-button>
+          <el-button>取消</el-button>
+        </el-form-item>
+      </el-form>
+    </el-card>
+  </el-main>
+</el-container>
+`;
