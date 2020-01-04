@@ -3,8 +3,8 @@ import ShowAlumniInformationPage from '../../../src/page/alumni-management/ShowA
 import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import VueRouter from 'vue-router'
-import store from '../../src/store'
-import router from '../../src/router'
+import store from '../../../src/store'
+import router from '../../../src/router'
 
 describe('ShowAlumniInformationPage', () => {
   const localVue = createLocalVue()
@@ -23,7 +23,7 @@ describe('ShowAlumniInformationPage', () => {
     await expect(wrapper.isVueInstance()).toBeTruthy()
   })
   test('按钮', async () => {
-    const header = wrapper.find('el-page-header')
-    await expect(header.attributes('content')).toBe('资料详情')
+    const header = wrapper.find('.el-page-header')
+    await expect(header.props('content')).toBe('资料详情')
   })
 })

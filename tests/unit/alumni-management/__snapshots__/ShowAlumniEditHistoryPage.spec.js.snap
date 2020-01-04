@@ -1,24 +1,236 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
-<el-container>
-  <el-main>
-    <el-page-header content="资料详情"></el-page-header>
-    <el-divider></el-divider>
-    <el-table data="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" stripe="" class="history-table">
-      <el-table-column prop="id" align="center" label="编号"></el-table-column>
-      <el-table-column prop="time" align="center" label="时间"></el-table-column>
-      <el-table-column align="center" label="操作">
-        <el-button type="primary" size="small" icon="el-icon-more" circle=""></el-button>
-      </el-table-column>
-    </el-table>
-  </el-main>
-  <el-footer>
-    <el-row>
-      <el-col span="8" offset="8">
-        <el-pagination current-page="1" page-sizes="10,20,30,40" page-size="10" layout="total, sizes, prev, pager, next, jumper" total="10" class="pagination"></el-pagination>
-      </el-col>
-    </el-row>
-  </el-footer>
-</el-container>
+<section class="el-container is-vertical">
+  <main class="el-main">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">资料详情</div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-table history-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition">
+      <div class="hidden-columns">
+        <div></div>
+        <div></div>
+        <div><button type="button" class="el-button el-button--primary el-button--small is-circle">
+            <!----><i class="el-icon-more"></i>
+            <!----></button></div>
+      </div>
+      <div class="el-table__header-wrapper">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 240px;">
+          <colgroup>
+            <col name="el-table_1_column_1" width="80">
+            <col name="el-table_1_column_2" width="80">
+            <col name="el-table_1_column_3" width="80">
+          </colgroup>
+          <thead class="">
+            <tr class="">
+              <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf">
+                <div class="cell">编号</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf">
+                <div class="cell">时间</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf">
+                <div class="cell">操作</div>
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="el-table__body-wrapper is-scrolling-left">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 240px;">
+          <colgroup>
+            <col name="el-table_1_column_1" width="80">
+            <col name="el-table_1_column_2" width="80">
+            <col name="el-table_1_column_3" width="80">
+          </colgroup>
+          <tbody>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">1</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:36:18</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">2</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:36:24</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">3</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:36:30</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">4</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:36:37</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">5</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:36:41</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">6</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:37:13</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">7</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:37:21</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">8</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:37:41</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">9</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:38:02</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">10</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">2020年1月3日14:41:13</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <!---->
+          </tbody>
+        </table>
+        <!---->
+        <!---->
+      </div>
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+      <div class="el-table__column-resize-proxy" style="display: none;"></div>
+    </div>
+  </main>
+  <footer class="el-footer" style="height: 60px;">
+    <div class="el-row">
+      <div class="el-col el-col-8 el-col-offset-8">
+        <div class="pagination el-pagination"><span class="el-pagination__total">共 10 条</span><span class="el-pagination__sizes"><div class="el-select el-select--mini"><!----><div class="el-input el-input--mini el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span>
+          <!----></span>
+          <!---->
+          <!---->
+        </div>
+        <div class="el-select-dropdown el-popper" style="display: none;">
+          <div class="el-scrollbar" style="">
+            <div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+              <ul class="el-scrollbar__view el-select-dropdown__list">
+                <!---->
+                <li class="el-select-dropdown__item selected"><span>10条/页</span></li>
+                <li class="el-select-dropdown__item"><span>20条/页</span></li>
+                <li class="el-select-dropdown__item"><span>30条/页</span></li>
+                <li class="el-select-dropdown__item"><span>40条/页</span></li>
+              </ul>
+            </div>
+            <div class="el-scrollbar__bar is-horizontal">
+              <div class="el-scrollbar__thumb" style="transform: translateX(0%); webkit-transform: translateX(0%);"></div>
+            </div>
+            <div class="el-scrollbar__bar is-vertical">
+              <div class="el-scrollbar__thumb" style="transform: translateY(0%); webkit-transform: translateY(0%);"></div>
+            </div>
+          </div>
+          <!---->
+        </div>
+      </div></span><button type="button" disabled="disabled" class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+      <ul class="el-pager">
+        <li class="number active">1</li>
+        <!---->
+        <!---->
+        <!---->
+      </ul><button type="button" disabled="disabled" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button><span class="el-pagination__jump">前往<div class="el-input el-pagination__editor is-in-pagination"><!----><input type="number" autocomplete="off" min="1" max="1" class="el-input__inner"><!----><!----><!----><!----></div>页</span>
+    </div>
+    </div>
+    </div>
+  </footer>
+</section>
 `;

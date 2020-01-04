@@ -3,8 +3,8 @@ import EditAlumniInformationPage from '../../../src/page/alumni-management/EditA
 import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import VueRouter from 'vue-router'
-import store from '../../src/store'
-import router from '../../src/router'
+import store from '../../../src/store'
+import router from '../../../src/router'
 
 describe('EditAlumniInformationPage', () => {
   const localVue = createLocalVue()
@@ -23,7 +23,7 @@ describe('EditAlumniInformationPage', () => {
     await expect(wrapper.isVueInstance()).toBeTruthy()
   })
   test('按钮', async () => {
-    const header = wrapper.find('el-page-header')
-    await expect(header.attributes('content')).toBe('修改校友信息')
+    const header = wrapper.find('.el-page-header')
+    await expect(header.props('content')).toBe('修改校友信息')
   })
 })
