@@ -2,14 +2,26 @@
   <div>
     <h4 v-if="classes.length === 0">暂无招生中班级</h4>
     <el-card v-for="(item) in classes" :key="item.id">
-      <div slot="header">
-        <span>{{ item.className }}</span>
-        <el-button type="text"></el-button>
-        <el-button type="text">删除</el-button>
-        <el-button type="text" @click="editClassInfo()">编辑</el-button>
-        <el-button type="text" @click="lookOverClassDetail()">查看</el-button>
-        <el-button type="text">结束</el-button>
-      </div>
+      <el-row slot="header" type="flex" align="middle">
+        <el-col :span="19">
+          {{ item.className }}
+        </el-col>
+        <el-col :span="1">
+          <el-button type="success" size="small" icon="el-icon-check" circle></el-button>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail" circle></el-button>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="primary" size="small" icon="el-icon-s-custom" @click="enrollmentAudit" circle></el-button>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
+        </el-col>
+      </el-row>
       <el-row>
         起止日期：{{ item.classStartTime }}—— {{ item.classEndTime }}
       </el-row>
@@ -70,6 +82,9 @@ export default {
     },
     lookOverClassDetail: function () {
       this.$router.push('/class-detail')
+    },
+    enrollmentAudit: function () {
+      this.$router.push('/enrollment-audit')
     }
   },
   filters: {

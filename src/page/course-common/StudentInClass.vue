@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="报名审核"></el-page-header>
+      <el-page-header @back="goBack()" content="班级学员"></el-page-header>
       <el-divider content-position="center">报名审核界面</el-divider>
       <el-row>
         <el-col :span="8" :push="8">
@@ -61,26 +61,12 @@
           align="center"
           label="操作"
           :width="operationWidth">
-          <template slot-scope="scope">
+          <template>
             <el-button
               type="primary"
               size="small"
               icon="el-icon-more"
-              @click="showAllInfo"
-              circle>
-            </el-button>
-            <el-button
-              type="success"
-              size="small"
-              icon="el-icon-check"
-              @click="deleteAlumni(scope.$index)"
-              circle>
-            </el-button>
-            <el-button
-              type="danger"
-              size="small"
-              icon="el-icon-close"
-              @click="deleteAlumni(scope.$index)"
+              @click="showAllInfo()"
               circle>
             </el-button>
           </template>
@@ -104,7 +90,7 @@
 
 <script>
 export default {
-  name: 'EnrollmentAuditPage',
+  name: 'StudentInClass',
   data () {
     return {
       shortInfoWidth: 115,
@@ -251,16 +237,16 @@ export default {
     }
   },
   methods: {
-    deleteAlumni: function (index) {
+    deleteAlumni (index) {
       this.tableData.splice(index, 1)
     },
-    showAllInfo: function () {
+    showAllInfo () {
       this.$router.push('/show-all-information')
     },
-    handleSizeChange: function (val) {
+    handleSizeChange (val) {
       console.log(`每页 ${val} 条`)
     },
-    handleCurrentChange: function (val) {
+    handleCurrentChange (val) {
       console.log(`当前页: ${val}`)
     },
     goBack: function () {

@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="修改课程信息"></el-page-header>
+      <el-page-header @back="goBack" content="修改课程信息"></el-page-header>
       <el-divider/>
       <el-card shadow="always">
         <el-form label-width="150px">
@@ -105,6 +105,11 @@ export default {
           }
         ]
       }
+    }
+  },
+  methods: {
+    goBack: function () {
+      this.$router.go(-1)
     }
   }
 }

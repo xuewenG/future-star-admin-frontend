@@ -1,9 +1,8 @@
 <template>
   <el-container>
-    <el-header>
-      <el-divider content-position="center">毕业审核界面</el-divider>
-    </el-header>
     <el-main>
+      <el-page-header @back="goBack()" content="毕业审核"></el-page-header>
+      <el-divider content-position="center">毕业审核界面</el-divider>
       <el-row>
         <el-col :span="8" :push="8">
           <el-input class='search-input' placeholder="请输入搜索内容"/>
@@ -263,6 +262,9 @@ export default {
     },
     handleCurrentChange (val) {
       console.log(`当前页: ${val}`)
+    },
+    goBack: function () {
+      this.$router.go(-1)
     }
   }
 }

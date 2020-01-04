@@ -5,7 +5,12 @@
       <el-divider/>
       <el-card class="activity-card" shadow="always">
         <el-row>
-          班级名称： {{ newClass.className }}
+          <el-col :span="23">
+            班级名称： {{ newClass.className }}
+          </el-col>
+          <el-col :span="1">
+            <el-button type="primary" size="mini" icon="el-icon-edit-outline" circle></el-button>
+          </el-col>
         </el-row>
         <el-row>
           起止时间： {{ newClass.startTime }} ---- {{ newClass.endTime }}
@@ -19,45 +24,23 @@
         <el-divider content-position="center">课程详情</el-divider>
         <el-card v-for="course in newClass.courses" :key="course.courseId">
           <el-row>
-            课程名：{{ course.courseName }}
+            <el-col :span="21">
+              课程名：{{ course.courseName }}
+            </el-col>
+            <el-col :span="1">
+              <el-button type="primary" size="mini" icon="el-icon-more" @click="lookOverCourseDetail" circle></el-button>
+            </el-col>
+            <el-col :span="1">
+              <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editCourseInfo" circle></el-button>
+            </el-col>
+            <el-col :span="1">
+            <el-button type="danger" size="mini" icon="el-icon-delete" circle></el-button>
+          </el-col>
           </el-row>
-          <el-row>
-            课程名：{{ course.coursePlace }}
-          </el-row>
-          <el-row>
-            起止时间：{{ course.courseStartTime }} / {{ course.courseEndTime }}
-          </el-row>
-          <el-row>
-            上课地点：{{ course.coursePlace }}
-          </el-row>
-          <el-row>
-            课程介绍： {{ course.courseIntroduction }}
-          </el-row>
-          <el-divider content-position="center">子课程</el-divider>
-          <el-card>
-            <el-row v-for="(subCourse, index) in course.subCourses" :key="subCourse.subCourseId">
-              {{ index }}： {{ subCourse.subCourseName }}
-            </el-row>
-          </el-card>
-          <el-divider content-position="center">讲师</el-divider>
-          <el-card>
-            <div v-for="teacher in course.courseTeachers" :key="teacher.teacherId">
-              <el-row>
-                讲师头像： {{ teacher.teacherAvatar }}
-              </el-row>
-              <el-row>
-                {{ teacher.teacherName }} ： {{ teacher.teacherTitle }}
-              </el-row>
-              <el-row>
-                联系方式：{{ teacher.teacherContactInformation }}
-              </el-row>
-              <el-row>
-                讲师简介：{{ teacher.teacherBriefIntroduction }}
-              </el-row>
-              <el-divider></el-divider>
-            </div>
-          </el-card>
         </el-card>
+        <el-row type="flex" justify="center">
+          <el-button type="primary" @click="addCourse" round>添加课程</el-button>
+        </el-row>
       </el-card>
     </el-main>
   </el-container>
@@ -191,6 +174,15 @@ export default {
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    addCourse: function () {
+      this.$router.push('/add-course')
+    },
+    lookOverCourseDetail: function () {
+      this.$router.push('/course-detail')
+    },
+    editCourseInfo: function () {
+      this.$router.push('/edit-course-info')
     }
   }
 }

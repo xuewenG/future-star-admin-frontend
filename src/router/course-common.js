@@ -4,7 +4,9 @@ import DetailOfCoursePage from '../page/course-common/DetailOfCoursePage'
 import EditSemesterInfoPage from '../page/course-common/EditSemesterInfoPage'
 import EditClassInfoPage from '../page/course-common/EditClassInfoPage'
 import EditCourseInfoPage from '../page/course-common/EditCourseInfoPage'
+import AddCoursePage from '../page/course-common/AddCoursePage'
 import AddCourseResourcePage from '../page/course-common/AddCourseResourcePage'
+import StudentInClass from '../page/course-common/StudentInClass'
 
 export default [
   {
@@ -38,8 +40,18 @@ export default [
     component: EditCourseInfoPage
   },
   {
+    path: '/add-course',
+    name: 'AddCoursePage',
+    component: AddCoursePage
+  },
+  {
     path: '/add-course-resource',
     name: 'AddCourseResourcePage',
     component: AddCourseResourcePage
+  },
+  {
+    path: '/student-in-class',
+    name: 'StudentInClass',
+    component: StudentInClass
   }
 ]

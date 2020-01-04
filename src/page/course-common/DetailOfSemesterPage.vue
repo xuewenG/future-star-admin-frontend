@@ -5,7 +5,12 @@
       <el-divider/>
       <el-card class="activity-card" shadow="always">
        <el-row>
-         学期主题：{{ semester.gist }}
+         <el-col :span="23">
+           学期主题：{{ semester.gist }}
+         </el-col>
+         <el-col :span="1">
+           <el-button type="primary" size="mini" class="btn" icon="el-icon-edit-outline" @click="editSemesterInfo()" circle></el-button>
+         </el-col>
        </el-row>
         <el-row>
           学期介绍： {{ semester.introduction }}
@@ -29,6 +34,9 @@ export default {
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    editSemesterInfo: function () {
+      this.$router.push('/edit-semester-info')
     }
   }
 }
