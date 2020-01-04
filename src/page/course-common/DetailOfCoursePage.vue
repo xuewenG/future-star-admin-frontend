@@ -5,7 +5,12 @@
       <el-divider/>
       <el-card shadow="always">
           <el-row>
-            课程名称： {{ course.courseName }}
+            <el-col :span="23">
+              课程名称： {{ course.courseName }}
+            </el-col>
+            <el-col :span="1">
+              <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editCourseInfo" circle></el-button>
+            </el-col>
           </el-row>
           <el-row>
             课程起止时间： {{ course.courseStartTime }} ---- {{ course.courseEndTime }}
@@ -16,12 +21,9 @@
           <el-row>
             课程介绍： {{ course.courseIntroduction }}
           </el-row>
-          <el-divider>子课程信息</el-divider>
-          <div v-for="subCourse in course.subCourses" :key="subCourse.subCourseId">
-            <el-row>
-              子课程名： {{ subCourse.subCourseName }}
-            </el-row>
-          </div>
+          <el-divider>课程资料</el-divider>
+          <el-tree :data="resourceData" :props="defaultProps">
+          </el-tree>
           <el-divider>讲师信息</el-divider>
           <div v-for="teacher in course.courseTeachers" :key="teacher.teacherId">
             <el-row>
@@ -50,6 +52,23 @@ export default {
   name: 'CourseDetailPage',
   data () {
     return {
+      defaultProps: {
+        children: 'children',
+        label: 'label'
+      },
+      resourceData: [
+        {
+          label: '课程一',
+          children: [
+            {
+              label: '资料一'
+            },
+            {
+              label: '资料二'
+            }
+          ]
+        }
+      ],
       course: {
         courseName: '滴滴滴滴滴大',
         courseIntroduction: '这是一门xxxxk课',
@@ -61,7 +80,12 @@ export default {
           {
             subCourseId: '',
             subCourseName: '现状分析',
-            subCourseBriefIntroduction: ''
+            subCourseBriefIntroduction: '',
+            subCourseResource: [
+              '资料一',
+              '资料二',
+              '资料三'
+            ]
           }
         ],
         courseTeachers: [
@@ -80,6 +104,9 @@ export default {
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    editCourseInfo: function () {
+      this.$router.push('/edit-course-info')
     }
   }
 }
