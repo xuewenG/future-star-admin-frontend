@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowActivityInformationPage 快照测试 1`] = `
+<el-container>
+  <el-main>
+    <el-page-header content="活动详情"></el-page-header>
+    <el-divider></el-divider>
+    <el-card shadow="always" class="info-card">
+      <el-form label-width="130px">
+        <el-row>
+          <el-col span="4" offset="11">
+            <el-button type="primary" icon="el-icon-edit">编辑</el-button>
+          </el-col>
+        </el-row>
+        <el-divider></el-divider>
+        <el-row>
+          <el-col span="12">
+            <el-form-item label="活动标题：">
+              xx讲座
+            </el-form-item>
+          </el-col>
+          <el-col span="12">
+            <el-form-item label="活动项目：">
+              xx讲座
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col span="12">
+            <el-form-item label="活动时间：">
+              2020-02-01
+            </el-form-item>
+          </el-col>
+          <el-col span="12">
+            <el-form-item label="活动地点：">
+              hf
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col span="8">
+            <el-form-item label="限制人数：">
+              20
+            </el-form-item>
+          </el-col>
+          <el-col span="8">
+            <el-form-item label="收费情况：">
+              100/人
+            </el-form-item>
+          </el-col>
+          <el-col span="8">
+            <el-form-item label="活动内容描述：">
+              平平无奇的活动
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col span="8">
+            <el-form-item label="主办方信息：">
+              郑小鸽
+            </el-form-item>
+          </el-col>
+          <el-col span="8">
+            <el-form-item label="主办方联系方式：">
+              1231231234
+            </el-form-item>
+          </el-col>
+          <el-col span="8">
+            <el-form-item label="报名截止时间：">
+              2020-01-23
+            </el-form-item>
+          </el-col>
+        </el-row>
+      </el-form>
+    </el-card>
+  </el-main>
+</el-container>
+`;
