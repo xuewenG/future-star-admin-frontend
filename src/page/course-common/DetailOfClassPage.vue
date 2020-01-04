@@ -5,7 +5,12 @@
       <el-divider/>
       <el-card class="activity-card" shadow="always">
         <el-row>
-          班级名称： {{ newClass.className }}
+          <el-col :span="23">
+            班级名称： {{ newClass.className }}
+          </el-col>
+          <el-col :span="1">
+            <el-button type="primary" size="mini" icon="el-icon-edit-outline" circle></el-button>
+          </el-col>
         </el-row>
         <el-row>
           起止时间： {{ newClass.startTime }} ---- {{ newClass.endTime }}
@@ -19,7 +24,18 @@
         <el-divider content-position="center">课程详情</el-divider>
         <el-card v-for="course in newClass.courses" :key="course.courseId">
           <el-row>
-            课程名：{{ course.courseName }}
+            <el-col :span="21">
+              课程名：{{ course.courseName }}
+            </el-col>
+            <el-col :span="1">
+              <el-button type="primary" size="mini" icon="el-icon-more" @click="lookOverCourseDetail" circle></el-button>
+            </el-col>
+            <el-col :span="1">
+              <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editCourseInfo" circle></el-button>
+            </el-col>
+            <el-col :span="1">
+            <el-button type="danger" size="mini" icon="el-icon-delete" circle></el-button>
+          </el-col>
           </el-row>
         </el-card>
         <el-row type="flex" justify="center">
@@ -161,6 +177,12 @@ export default {
     },
     addCourse: function () {
       this.$router.push('/add-course')
+    },
+    lookOverCourseDetail: function () {
+      this.$router.push('/course-detail')
+    },
+    editCourseInfo: function () {
+      this.$router.push('/edit-course-info')
     }
   }
 }
