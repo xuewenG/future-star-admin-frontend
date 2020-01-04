@@ -1,156 +1,239 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ShowAlumniInformationPage 快照测试 1`] = `
-<el-container>
-  <el-main>
-    <el-page-header content="资料详情"></el-page-header>
-    <el-divider></el-divider>
-    <el-card shadow="always" class="info-card">
-      <el-form label-width="130px" class="info-table">
-        <el-row>
-          <el-col span="4" offset="8">
-            <el-button type="primary" icon="el-icon-edit">编辑</el-button>
-          </el-col>
-          <el-col span="4">
-            <el-button type="primary" icon="el-icon-time">查看编辑历史</el-button>
-          </el-col>
-        </el-row>
-        <el-divider></el-divider>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="姓名：">
-              郑小鸽
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="性别：">
-              男
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="生日：">
-              2019/10/01
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="联系电话：">
-              15256530000
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="微信：">
-              6028
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="邮箱：">
-              zls@gugugu.com
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="城市：">
-              福建
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="最高学历：">
-              phD
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="毕业院校：">
-              HFUT
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-divider></el-divider>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="创业前所在公司：">
-              阿里
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="创业前职位：">
-              CWO
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-divider></el-divider>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="当前公司名称：">
-              郑总的公司
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="公司官网：">
-              zheng.com
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="公司公众号：">
-              zheng
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="成立时间：">
-              2020-01-01
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="公司所在城市：">
-              合肥
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="公司总人数：">
-              6
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="职位：">
-              2020-01-01
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="公司简介：">
-              这是郑总的公司
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="运营数据：">
-              10E
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col span="8">
-            <el-form-item label="收入规模：">
-              收入1E
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="融资情况：">
-              others
-            </el-form-item>
-          </el-col>
-          <el-col span="8">
-            <el-form-item label="当前估值：">
-              100E
-            </el-form-item>
-          </el-col>
-        </el-row>
-      </el-form>
-    </el-card>
-  </el-main>
-</el-container>
+<section class="el-container">
+  <main class="el-main">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">资料详情</div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-card info-card is-always-shadow">
+      <!---->
+      <div class="el-card__body">
+        <form class="el-form info-table">
+          <div class="el-row">
+            <div class="el-col el-col-4 el-col-offset-8"><button type="button" class="el-button el-button--primary">
+                <!----><i class="el-icon-edit"></i><span>编辑</span></button></div>
+            <div class="el-col el-col-4"><button type="button" class="el-button el-button--primary">
+                <!----><i class="el-icon-time"></i><span>查看编辑历史</span></button></div>
+          </div>
+          <div class="el-divider el-divider--horizontal">
+            <!---->
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">姓名：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  郑小鸽
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">性别：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  男
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">生日：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  2019/10/01
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">联系电话：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  15256530000
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">微信：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  6028
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">邮箱：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  zls@gugugu.com
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">城市：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  福建
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">最高学历：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  phD
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">毕业院校：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  HFUT
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-divider el-divider--horizontal">
+            <!---->
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">创业前所在公司：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  阿里
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">创业前职位：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  CWO
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-divider el-divider--horizontal">
+            <!---->
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">当前公司名称：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  郑总的公司
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">公司官网：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  zheng.com
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">公司公众号：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  zheng
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">成立时间：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  2020-01-01
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">公司所在城市：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  合肥
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">公司总人数：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  6
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">职位：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  2020-01-01
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">公司简介：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  这是郑总的公司
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">运营数据：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  10E
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row">
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">收入规模：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  收入1E
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">融资情况：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  others
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-col el-col-8">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 130px;">当前估值：</label>
+                <div class="el-form-item__content" style="margin-left: 130px;">
+                  100E
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</section>
 `;
