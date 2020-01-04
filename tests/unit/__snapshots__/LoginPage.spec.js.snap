@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage 快照测试 1`] = `
+<el-container>
+  <el-main>
+    <el-card shadow="always" class="login-card">
+      <el-row type="flex" justify="center" class="hint">
+        <el-col span="4"><img src="../assets/EdStarsLogo.jpg" class="logo"></el-col>
+        <el-col span="8" class="login-hint">
+          管理人员登录平台
+        </el-col>
+      </el-row>
+      <el-form label-width="90px">
+        <el-form-item label="请输入账号:">
+          <el-input type="text" autofocus="autofocus" class="input-text"></el-input>
+        </el-form-item>
+        <el-form-item label="请输入密码:">
+          <el-input type="password" class="input-text"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-row type="flex" justify="center">
+            <el-col push="4">
+              <el-button type="primary" class="login-button">登录</el-button>
+            </el-col>
+          </el-row>
+        </el-form-item>
+      </el-form>
+    </el-card>
+  </el-main>
+</el-container>
+`;
