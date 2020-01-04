@@ -1,33 +1,35 @@
 <template>
-    <div class="big-div">
-        <div class="login-page">
-            <table class="login-table">
-                <tr>
-                    <td>
-                        <img src="../assets/EdStarsLogo.jpg" class="logo"  />
-                        <span class="login-label">管理人员登录平台</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="small-font">请输入账号:</span>
-                        <input class="input-box" type="text" name="name" autofocus="autofocus" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="small-font">请输入密码:</span>
-                        <input class="input-box" type="password" name="password" />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="login">
-                        <input id="login" type="submit" name="login" value="登录" @click="login"/>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
+  <el-container>
+    <el-main>
+      <el-card
+        class="login-card"
+        shadow="always">
+        <el-row type="flex" justify="center" class="hint">
+          <el-col :span="4">
+            <img src="../assets/EdStarsLogo.jpg" class="logo"/>
+          </el-col>
+          <el-col :span="8" class="login-hint">
+            管理人员登录平台
+          </el-col>
+        </el-row>
+        <el-form label-width="90px">
+          <el-form-item label="请输入账号:">
+              <el-input type="text" autofocus="autofocus" class="input-text"/>
+            </el-form-item>
+          <el-form-item label="请输入密码:">
+              <el-input type="password" class="input-text"/>
+            </el-form-item>
+          <el-form-item>
+            <el-row type="flex" justify="center">
+              <el-col :push="4">
+                <el-button type="primary" @click="login()" class="login-button">登录</el-button>
+              </el-col>
+            </el-row>
+          </el-form-item>
+        </el-form>
+      </el-card>
+    </el-main>
+  </el-container>
 </template>
 
 <script>
@@ -42,88 +44,32 @@ export default {
 </script>
 
 <style scoped type="type/css">
-  .big-div {
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/tileBackground1.jpg");
-    background-repeat: repeat;
+  .hint {
+    margin-top: 5px;
   }
 
-  .login-page {
-    position: relative;
-    display: flex;
-    width: 800px;
-    height: 750px;
-    margin: auto;
-  }
-
-  .login-label {
-    position: relative;
-    width: 600px;
-    height: 350px;
+  .login-hint {
+    margin-top: 15px;
     margin-left: 15px;
-    font-size: 20px;
-    font-family: "PingFang SC", serif;
-    color: #383838;
-  }
-
-  .login-table {
-    position: relative;
-    width: 450px;
-    height: 300px;
-    margin: auto;
-    border-radius: 5px;
-    text-align: center;
-    color: #383838;
-    background-color: rgba(256, 256, 256, .85);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5);
-  }
-
-  .input-box {
-    width: 250px;
-    height: 30px;
-    padding: 5px 8px;
-    border: 0;
-    border-radius: 5px;
-    outline: none;
-    font-size: 15px;
-    font-family: "PingFang SC", serif;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, .5);
-  }
-
-  #login {
-    width: 150px;
-    height: 40px;
-    margin-bottom: 20px;
-    border: 0;
-    border-radius: 5px;
-    font-size: 15px;
-    font-family: "PingFang SC", serif;
-    color: #fff;
-    background: #2188e9;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
-    cursor: pointer;
-  }
-
-  .login {
-    width: 100px;
-    height: 40px;
-    text-align: center;
-  }
-
-  .small-font {
-    position: relative;
-    margin-right: 10px;
-    font-size: 13px;
-    font-family: "PingFang SC", serif;
-    text-align: right;
-    color: #383838;
   }
 
   .logo {
-    position: relative;
-    left: -15px;
     width: 66px;
     height: 60px;
+  }
+
+  .login-card {
+    width: 38%;
+    padding: 0;
+    margin: 90px auto 80px;
+  }
+
+  .input-text {
+    width: 300px;
+    margin-left: 5px;
+  }
+
+  .login-button {
+    width: 150px;
   }
 </style>
