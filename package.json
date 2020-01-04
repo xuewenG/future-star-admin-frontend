@@ -8,8 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "lint:script": "eslint .",
-    "lint:style": "stylelint src/**/*.vue",
-    "precommit": "lint-staged"
+    "lint:style": "stylelint src/**/*.vue"
   },
   "lint-staged": {
     "src/**/*.{js, vue}": [
@@ -54,5 +53,10 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^3.1.1",
     "vue-template-compiler": "^2.6.10"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
