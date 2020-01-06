@@ -1,0 +1,529 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EnrollmentAuditPage 快照测试 1`] = `
+<section class="el-container is-vertical">
+  <main class="el-main">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">报名审核</div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <div class="el-divider__text is-center">报名审核界面</div>
+    </div>
+    <div class="el-row">
+      <div class="el-col el-col-8 el-col-push-8">
+        <div class="search-input el-input">
+          <!----><input type="text" autocomplete="off" placeholder="请输入搜索内容" class="el-input__inner">
+          <!---->
+          <!---->
+          <!---->
+          <!---->
+        </div>
+      </div>
+      <div class="el-col el-col-4 el-col-push-8"><button type="button" class="el-button el-button--primary">
+          <!----><i class="el-icon-search"></i><span>搜索</span></button></div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition">
+      <div class="hidden-columns">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="el-table__header-wrapper">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1265px;">
+          <colgroup>
+            <col name="el-table_1_column_1" width="115">
+            <col name="el-table_1_column_2" width="115">
+            <col name="el-table_1_column_3" width="170">
+            <col name="el-table_1_column_4" width="170">
+            <col name="el-table_1_column_5" width="170">
+            <col name="el-table_1_column_6" width="210">
+            <col name="el-table_1_column_7" width="115">
+            <col name="el-table_1_column_8" width="200">
+          </colgroup>
+          <thead class="">
+            <tr class="">
+              <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf">
+                <div class="cell">姓名</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf">
+                <div class="cell">性别</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf">
+                <div class="cell">出生日期</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
+                <div class="cell">联系电话</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
+                <div class="cell">微信号</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf">
+                <div class="cell">邮箱</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf">
+                <div class="cell">所在城市</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-leaf">
+                <div class="cell">操作</div>
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="el-table__body-wrapper is-scrolling-left">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1265px;">
+          <colgroup>
+            <col name="el-table_1_column_1" width="115">
+            <col name="el-table_1_column_2" width="115">
+            <col name="el-table_1_column_3" width="170">
+            <col name="el-table_1_column_4" width="170">
+            <col name="el-table_1_column_5" width="170">
+            <col name="el-table_1_column_6" width="210">
+            <col name="el-table_1_column_7" width="115">
+            <col name="el-table_1_column_8" width="200">
+          </colgroup>
+          <tbody>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">1</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">2</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">3</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">4</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">5</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">6</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">7</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">8</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">9</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">10</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">11</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <tr class="el-table__row el-table__row--striped">
+              <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+                <div class="cell">张邦鑫</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
+                <div class="cell">男</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
+                <div class="cell">1980/10/01</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
+                <div class="cell">12345678901</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
+                <div class="cell">12</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
+                <div class="cell">edstars@100tal.com</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
+                <div class="cell">北京</div>
+              </td>
+              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
+                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                    <!----><i class="el-icon-more"></i>
+                    <!----></button> <button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <!----><i class="el-icon-check"></i>
+                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                    <!----><i class="el-icon-close"></i>
+                    <!----></button></div>
+              </td>
+            </tr>
+            <!---->
+          </tbody>
+        </table>
+        <!---->
+        <!---->
+      </div>
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+      <div class="el-table__column-resize-proxy" style="display: none;"></div>
+    </div>
+  </main>
+  <footer class="el-footer" style="height: 60px;">
+    <div class="pagination el-pagination"><span class="el-pagination__total">共 12 条</span><span class="el-pagination__sizes"><div class="el-select el-select--mini"><!----><div class="el-input el-input--mini el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span>
+      <!----></span>
+      <!---->
+      <!---->
+    </div>
+    <div class="el-select-dropdown el-popper" style="display: none;">
+      <div class="el-scrollbar" style="">
+        <div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+          <ul class="el-scrollbar__view el-select-dropdown__list">
+            <!---->
+            <li class="el-select-dropdown__item selected"><span>10条/页</span></li>
+            <li class="el-select-dropdown__item"><span>20条/页</span></li>
+            <li class="el-select-dropdown__item"><span>30条/页</span></li>
+            <li class="el-select-dropdown__item"><span>40条/页</span></li>
+          </ul>
+        </div>
+        <div class="el-scrollbar__bar is-horizontal">
+          <div class="el-scrollbar__thumb" style="transform: translateX(0%); webkit-transform: translateX(0%);"></div>
+        </div>
+        <div class="el-scrollbar__bar is-vertical">
+          <div class="el-scrollbar__thumb" style="transform: translateY(0%); webkit-transform: translateY(0%);"></div>
+        </div>
+      </div>
+      <!---->
+    </div>
+    </div></span><button type="button" disabled="disabled" class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+    <ul class="el-pager">
+      <li class="number active">1</li>
+      <!---->
+      <!---->
+      <li class="number">2</li>
+    </ul><button type="button" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button><span class="el-pagination__jump">前往<div class="el-input el-pagination__editor is-in-pagination"><!----><input type="number" autocomplete="off" min="1" max="2" class="el-input__inner"><!----><!----><!----><!----></div>页</span></div>
+  </footer>
+</section>
+`;
