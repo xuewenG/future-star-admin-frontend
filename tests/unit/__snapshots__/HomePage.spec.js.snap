@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage 快照测试 1`] = `
+<section class="el-container is-vertical">
+  <header class="el-header" style="height: 60px;">
+    <div class="hint-info-row el-row is-justify-center is-align-middle">
+      <div class="el-col el-col-2 el-col-push-1"><img src="../assets/EdStarsLogo.jpg" height="50px"></div>
+      <div class="hint-info el-col el-col-5 el-col-push-1">
+        <h3>欢迎来到未来之星管理系统</h3>
+      </div>
+      <div class="hint-info el-col el-col-1 el-col-push-9">
+        <h3>管理员</h3>
+      </div>
+      <div class="hint-info el-col el-col-2 el-col-push-9">
+        <h3>，陈某某某</h3>
+      </div>
+      <div class="hint-info el-col el-col-2 el-col-push-9"><button type="button" class="el-button el-button--warning el-button--small is-round">
+          <!---->
+          <!----><span>修改密码</span></button></div>
+      <div class="hint-info el-col el-col-2 el-col-push-9"><button type="button" class="el-button el-button--danger el-button--small is-round">
+          <!---->
+          <!----><span>账号登出</span></button></div>
+    </div>
+  </header>
+  <section class="el-container is-vertical">
+    <header class="el-header" style="height: 60px;">
+      <ul role="menubar" class="el-menu--horizontal el-menu" style="background-color: rgb(0, 173, 169);" align="middle">
+        <div class="el-row is-justify-space-around el-row--flex" tabindex="0">
+          <div class="el-col el-col-4"><a href="#/home/enrollment" class="">
+              <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(0, 105, 160); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">招生管理</li>
+            </a></div>
+          <div class="el-col el-col-4"><a href="#/home/course" class="">
+              <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(0, 105, 160); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">课程管理</li>
+            </a></div>
+          <div class="el-col el-col-4"><a href="#/home/activity" class="">
+              <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(0, 105, 160); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">活动管理</li>
+            </a></div>
+          <div class="el-col el-col-4"><a href="#/home/alumni" class="">
+              <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(0, 105, 160); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">校友资料管理</li>
+            </a></div>
+          <div class="el-col el-col-4"><a href="#/home/authority" class="">
+              <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(0, 105, 160); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">权限管理</li>
+            </a></div>
+        </div>
+      </ul>
+    </header>
+    <main class="el-main">
+      <section class="el-container">
+        <main class="el-main">
+          <div class="el-card login-card is-always-shadow">
+            <!---->
+            <div class="el-card__body">
+              <div class="hint el-row is-justify-center el-row--flex">
+                <div class="el-col el-col-4"><img src="../assets/EdStarsLogo.jpg" class="logo"></div>
+                <div class="login-hint el-col el-col-8">
+                  管理人员登录平台
+                </div>
+              </div>
+              <form class="el-form">
+                <div class="el-form-item"><label class="el-form-item__label" style="width: 90px;">请输入账号:</label>
+                  <div class="el-form-item__content" style="margin-left: 90px;">
+                    <div class="input-text el-input">
+                      <!----><input type="text" autocomplete="off" autofocus="autofocus" class="el-input__inner">
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+                <div class="el-form-item"><label class="el-form-item__label" style="width: 90px;">请输入密码:</label>
+                  <div class="el-form-item__content" style="margin-left: 90px;">
+                    <div class="input-text el-input">
+                      <!----><input type="password" autocomplete="off" class="el-input__inner">
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+                <div class="el-form-item">
+                  <!---->
+                  <div class="el-form-item__content" style="margin-left: 90px;">
+                    <div class="el-row is-justify-center el-row--flex">
+                      <div class="el-col el-col-24 el-col-push-4"><button type="button" class="el-button login-button el-button--primary">
+                          <!---->
+                          <!----><span>登录</span></button></div>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
+      </section>
+    </main>
+  </section>
+</section>
+`;
