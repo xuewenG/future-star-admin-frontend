@@ -1,7 +1,7 @@
 <template>
   <el-carousel :interval="4000" type="card" height="500px">
-    <el-carousel-item v-for="imageAddress in imageAddressArray" :key="imageAddress">
-      <el-image :src="imageAddress" fit="fill">
+    <el-carousel-item v-for="imageAddress in imageAddressArray" :key="imageAddress.id">
+      <el-image :src="imageAddress.address" fit="fill">
         <div slot="error" class="image-slot">
           <i class="el-icon-picture-outline"></i>
         </div>
@@ -12,14 +12,26 @@
 
 <script>
 export default {
-  name: 'WelcomePage',
+  name: 'Welcome',
   data () {
     return {
       imageAddressArray: [
-        require('../../assets/backgroundImage1.jpg'),
-        require('../../assets/backgroundImage2.jpg'),
-        require('../../assets/backgroundImage3.jpg'),
-        require('../../assets/backgroundImage4.jpg')
+        {
+          id: '1',
+          address: require('../../assets/backgroundImage1.jpg')
+        },
+        {
+          id: '2',
+          address: require('../../assets/backgroundImage2.jpg')
+        },
+        {
+          id: '3',
+          address: require('../../assets/backgroundImage3.jpg')
+        },
+        {
+          id: '4',
+          address: require('../../assets/backgroundImage4.jpg')
+        }
       ]
     }
   }

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddCourseResourcePage 快照测试 1`] = `
+<section class="el-container is-vertical">
+  <div class="el-divider el-divider--horizontal">
+    <div class="el-divider__text is-center">添加课程资料</div>
+  </div>
+  <header class="el-header" style="height: 60px;">
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="el-select">
+        <!---->
+        <div class="el-input el-input--suffix">
+          <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择要添加资料的课程" class="el-input__inner">
+          <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span>
+          <!----></span>
+          <!---->
+          <!---->
+        </div>
+        <div class="el-select-dropdown el-popper" style="display: none;">
+          <div class="el-scrollbar" style="">
+            <div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+              <ul class="el-scrollbar__view el-select-dropdown__list">
+                <!---->
+                <li class="el-select-dropdown__item"><span>一</span></li>
+                <li class="el-select-dropdown__item"><span>二</span></li>
+              </ul>
+            </div>
+            <div class="el-scrollbar__bar is-horizontal">
+              <div class="el-scrollbar__thumb" style="transform: translateX(0%); webkit-transform: translateX(0%);"></div>
+            </div>
+            <div class="el-scrollbar__bar is-vertical">
+              <div class="el-scrollbar__thumb" style="transform: translateY(0%); webkit-transform: translateY(0%);"></div>
+            </div>
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="el-main">
+    <div class="el-divider el-divider--horizontal">
+      <div class="el-divider__text is-center">资料上传区</div>
+    </div>
+    <div class="el-row is-justify-center el-row--flex">
+      <div>
+        <div tabindex="0" class="el-upload el-upload--text"><button type="button" class="el-button el-button--primary el-button--small">
+            <!---->
+            <!----><span>选取课程资料</span></button><input type="file" name="file" class="el-upload__input"></div> <button type="button" class="el-button el-button--success el-button--small">
+          <!---->
+          <!----><span>上传到服务器</span></button>
+        <ul class="el-upload-list el-upload-list--text">
+          <li tabindex="0" class="el-upload-list__item is-success">
+            <!----><a class="el-upload-list__item-name"><i class="el-icon-document"></i>food.jpeg
+            </a><label class="el-upload-list__item-status-label"><i class="el-icon-upload-success el-icon-circle-check"></i></label><i class="el-icon-close"></i><i class="el-icon-close-tip">按 delete 键可删除</i>
+            <!---->
+            <!---->
+          </li>
+          <li tabindex="0" class="el-upload-list__item is-success">
+            <!----><a class="el-upload-list__item-name"><i class="el-icon-document"></i>food2.jpeg
+            </a><label class="el-upload-list__item-status-label"><i class="el-icon-upload-success el-icon-circle-check"></i></label><i class="el-icon-close"></i><i class="el-icon-close-tip">按 delete 键可删除</i>
+            <!---->
+            <!---->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</section>
+`;

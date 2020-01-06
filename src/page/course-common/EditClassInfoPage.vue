@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'ModifyCourseClassInfo',
+  name: 'EditCourseInfoPage',
   data () {
     return {
       newClass: {

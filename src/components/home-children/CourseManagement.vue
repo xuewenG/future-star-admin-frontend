@@ -31,7 +31,7 @@ import WaitForStartClasses from '../class/ClassesWaittingForStart'
 import UnderwayClasses from '../class/ClassesUnderway'
 import EndedClasses from '../class/ClassesEnded'
 export default {
-  name: 'CoursementManagementPage',
+  name: 'CourseManagementPage',
   components: {
     WaitForStartClasses,
     UnderwayClasses,

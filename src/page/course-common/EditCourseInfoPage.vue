@@ -79,7 +79,7 @@
 
 <script>
 export default {
-  name: 'ModifyCourseInfoPage',
+  name: 'EditCourseInfoPage',
   data () {
     return {
       course: {
@@ -89,14 +89,27 @@ export default {
         courseTimeRange: '',
         subCourses: [
           {
-            subCourseId: '',
+            subCourseId: '1',
+            subCourseName: '现状分析',
+            subCourseBriefIntroduction: ''
+          },
+          {
+            subCourseId: '2',
             subCourseName: '现状分析',
             subCourseBriefIntroduction: ''
           }
         ],
         courseTeachers: [
           {
-            teacherId: '',
+            teacherId: '3',
+            teacherName: '',
+            teacherAvatar: '',
+            teacherTitle: '',
+            teacherBriefIntroduction: '',
+            teacherContactInformation: ''
+          },
+          {
+            teacherId: '4',
             teacherName: '',
             teacherAvatar: '',
             teacherTitle: '',

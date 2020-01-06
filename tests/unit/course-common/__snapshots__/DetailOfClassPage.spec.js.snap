@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailOfClassPage 快照测试 1`] = `
+<section class="el-container">
+  <main class="el-main">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">班级详情</div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-card activity-card is-always-shadow">
+      <!---->
+      <div class="el-card__body">
+        <div class="el-row">
+          <div class="el-col el-col-23">
+            班级名称： 素质教育专题班
+          </div>
+          <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+              <!----><i class="el-icon-edit-outline"></i>
+              <!----></button></div>
+        </div>
+        <div class="el-row">
+          起止时间： 2019-12-10 ---- 2019-12-31
+        </div>
+        <div class="el-row">
+          班级人数： 2 / 46
+        </div>
+        <div class="el-row">
+          班级介绍： 如何体系化的进行素质教育类产品设计与开发？
+
+          如何实现素质教育的效果外化和用户感知？
+
+          如何高效获客并延长客户生命周期？
+
+          如何实现规模化发展及标准化运营？
+
+          如何提升客户亲密度与客户满意度，赢得客户口碑？
+
+          如何做好人才体系搭建、团队管理与有效激励？
+
+          大数据、人工智能、直播技术、智能硬件等如何与素质教育相结合？
+        </div>
+        <div class="el-divider el-divider--horizontal">
+          <div class="el-divider__text is-center">课程详情</div>
+        </div>
+        <div class="el-card is-always-shadow">
+          <!---->
+          <div class="el-card__body">
+            <div class="el-row">
+              <div class="el-col el-col-21">
+                课程名：素质教育行业现状分析与未来展望
+              </div>
+              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+                  <!----><i class="el-icon-more"></i>
+                  <!----></button></div>
+              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+                  <!----><i class="el-icon-edit-outline"></i>
+                  <!----></button></div>
+              <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
+                  <!----><i class="el-icon-delete"></i>
+                  <!----></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="el-card is-always-shadow">
+          <!---->
+          <div class="el-card__body">
+            <div class="el-row">
+              <div class="el-col el-col-21">
+                课程名：素质教育行业现状分析与未来展望
+              </div>
+              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+                  <!----><i class="el-icon-more"></i>
+                  <!----></button></div>
+              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+                  <!----><i class="el-icon-edit-outline"></i>
+                  <!----></button></div>
+              <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
+                  <!----><i class="el-icon-delete"></i>
+                  <!----></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="el-card is-always-shadow">
+          <!---->
+          <div class="el-card__body">
+            <div class="el-row">
+              <div class="el-col el-col-21">
+                课程名：素质教育行业现状分析与未来展望
+              </div>
+              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+                  <!----><i class="el-icon-more"></i>
+                  <!----></button></div>
+              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+                  <!----><i class="el-icon-edit-outline"></i>
+                  <!----></button></div>
+              <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
+                  <!----><i class="el-icon-delete"></i>
+                  <!----></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary is-round">
+            <!---->
+            <!----><span>添加课程</span></button></div>
+      </div>
+    </div>
+  </main>
+</section>
+`;

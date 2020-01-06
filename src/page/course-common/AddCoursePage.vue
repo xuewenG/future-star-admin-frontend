@@ -79,7 +79,7 @@
 
 <script>
 export default {
-  name: 'AddNewCoursePage',
+  name: 'AddCoursePage',
   data () {
     return {
       course: {
@@ -89,14 +89,14 @@ export default {
         courseTimeRange: '',
         subCourses: [
           {
-            subCourseId: '',
+            subCourseId: '1',
             subCourseName: '现状分析',
             subCourseBriefIntroduction: ''
           }
         ],
         courseTeachers: [
           {
-            teacherId: '',
+            teacherId: '2',
             teacherName: '',
             teacherAvatar: '',
             teacherTitle: '',

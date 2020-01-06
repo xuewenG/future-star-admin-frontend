@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddCoursePage 快照测试 1`] = `
+<section class="el-container">
+  <main class="el-main">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">新建课程</div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-card is-always-shadow">
+      <!---->
+      <div class="el-card__body">
+        <form class="el-form">
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">课程名称：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="el-input">
+                <!----><input type="text" autocomplete="off" class="el-input__inner">
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">课程起止时间：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="el-date-editor el-range-editor el-input__inner el-date-editor--timerange"><i class="el-input__icon el-range__icon el-icon-time"></i><input autocomplete="off" placeholder="开始时间" name="" class="el-range-input"><span class="el-range-separator">至</span><input autocomplete="off" placeholder="结束时间" name="" class="el-range-input"><i class="el-input__icon el-range__close-icon"></i></div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">课程地点：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="el-input">
+                <!----><input type="text" autocomplete="off" class="el-input__inner">
+                <!---->
+                <!---->
+                <!---->
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">课程介绍：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="el-textarea"><textarea autocomplete="off" class="el-textarea__inner" style="min-height: -24px; height: -120px;"></textarea>
+                <!---->
+              </div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-divider el-divider--horizontal">
+            <div class="el-divider__text is-center">子课程信息</div>
+          </div>
+          <div class="el-row">
+            <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">子课程名：</label>
+              <div class="el-form-item__content" style="margin-left: 150px;">
+                <div class="el-input">
+                  <!----><input type="text" autocomplete="off" class="el-input__inner">
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div class="el-row"><button type="button" class="el-button el-button--primary">
+              <!---->
+              <!----><span>添加子课程</span></button></div>
+          <div class="el-divider el-divider--horizontal">
+            <div class="el-divider__text is-center">讲师信息</div>
+          </div>
+          <div>
+            <div class="el-row">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">讲师名：</label>
+                <div class="el-form-item__content" style="margin-left: 150px;">
+                  <div class="el-input">
+                    <!----><input type="text" autocomplete="off" class="el-input__inner">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">讲师头像：</label>
+              <div class="el-form-item__content" style="margin-left: 150px;">
+                <div class="el-input">
+                  <!----><input type="text" autocomplete="off" class="el-input__inner">
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div class="el-row">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">讲师头衔：</label>
+                <div class="el-form-item__content" style="margin-left: 150px;">
+                  <div class="el-input">
+                    <!----><input type="text" autocomplete="off" class="el-input__inner">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">讲师简介：</label>
+              <div class="el-form-item__content" style="margin-left: 150px;">
+                <div class="el-input">
+                  <!----><input type="text" autocomplete="off" class="el-input__inner">
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div class="el-row">
+              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">讲师联系方式：</label>
+                <div class="el-form-item__content" style="margin-left: 150px;">
+                  <div class="el-input">
+                    <!----><input type="text" autocomplete="off" class="el-input__inner">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-row"><button type="button" class="el-button el-button--primary">
+              <!---->
+              <!----><span>添加老师</span></button></div>
+          <div class="el-form-item">
+            <!---->
+            <div class="el-form-item__content" style="margin-left: 150px;"><button type="button" class="el-button el-button--primary">
+                <!---->
+                <!----><span>立即创建</span></button> <button type="button" class="el-button el-button--default">
+                <!---->
+                <!----><span>取消</span></button>
+              <!---->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</section>
+`;
