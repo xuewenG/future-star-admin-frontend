@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailOfSemesterPage 快照测试 1`] = `
+<section class="el-container">
+  <main class="el-main">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">学期信息</div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-card activity-card is-always-shadow">
+      <!---->
+      <div class="el-card__body">
+        <div class="el-row">
+          <div class="el-col el-col-23">
+            学期主题：第九期创新院
+          </div>
+          <div class="el-col el-col-1"><button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
+              <!----><i class="el-icon-edit-outline"></i>
+              <!----></button></div>
+        </div>
+        <div class="el-row">
+          学期介绍： 这是一期很好的课程
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+`;
