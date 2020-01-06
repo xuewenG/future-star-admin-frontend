@@ -44,6 +44,12 @@ export default {
 </script>
 
 <style scoped type="type/css">
+  .el-container {
+    height: 600px;
+    background-image: url('../assets/tileBackground1.jpg');
+    background-repeat: repeat-x;
+  }
+
   .hint {
     margin-top: 5px;
   }
