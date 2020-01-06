@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'ActivityInProgress',
+  name: 'ActivityCompleted',
   data () {
     return {
       activities: [

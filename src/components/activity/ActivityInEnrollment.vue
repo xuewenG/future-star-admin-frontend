@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: 'ActivityInProgress',
+  name: 'ActivityInEnrollment',
   data () {
     return {
       activities: [
