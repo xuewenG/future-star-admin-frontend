@@ -1,0 +1,391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseManagement 快照测试 1`] = `
+<section class="el-container is-vertical">
+  <header class="el-header" style="height: 60px;">
+    <div class="el-row is-align-middle el-row--flex">
+      <div class="el-col el-col-5">
+        <h2>第九期未来之星创新院</h2>
+      </div>
+      <div class="el-col el-col-1"><button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
+          <!----><i class="el-icon-more"></i>
+          <!----></button></div>
+    </div>
+  </header>
+  <main class="el-main main-in-enrollment">
+    <div class="el-tabs el-tabs--top">
+      <div class="el-tabs__header is-top">
+        <div class="el-tabs__nav-wrap is-top">
+          <div class="el-tabs__nav-scroll">
+            <div role="tablist" class="el-tabs__nav is-top" style="transform: translateX(-0px);">
+              <div class="el-tabs__active-bar is-top" style="width: 0px; transform: translateX(NaNpx); webkit-transform: translateX(NaNpx);"></div>
+              <div id="tab-first" aria-controls="pane-first" role="tab" aria-selected="true" tabindex="0" class="el-tabs__item is-top is-active">待开课</div>
+              <div id="tab-second" aria-controls="pane-second" role="tab" tabindex="-1" class="el-tabs__item is-top">进行中</div>
+              <div id="tab-third" aria-controls="pane-third" role="tab" tabindex="-1" class="el-tabs__item is-top">已结束</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="el-tabs__content">
+        <div role="tabpanel" id="pane-first" aria-labelledby="tab-first" class="el-tab-pane">
+          <div>
+            <!---->
+            <div class="el-card is-always-shadow">
+              <div class="el-card__header">
+                <div class="el-row is-align-middle el-row--flex">
+                  <div class="el-col el-col-19">
+                    素质教育专题班
+                  </div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                      <!----><i class="el-icon-check"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-more"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-edit-outline"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-s-custom"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!----><i class="el-icon-delete"></i>
+                      <!----></button></div>
+                </div>
+              </div>
+              <div class="el-card__body">
+                <div class="el-row">
+                  起止日期：2019/12/20—— 2019/12/21
+                </div>
+                <div class="el-row">
+                  招生人数：13 / 15
+                </div>
+                <div class="el-row">
+                  班级状态：待开课
+                </div>
+                <div class="el-row">
+                  班级简介：这里是一个加了长文本省略号替代的班级介绍
+                </div>
+              </div>
+            </div>
+            <div class="el-card is-always-shadow">
+              <div class="el-card__header">
+                <div class="el-row is-align-middle el-row--flex">
+                  <div class="el-col el-col-19">
+                    素质教育专题班
+                  </div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                      <!----><i class="el-icon-check"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-more"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-edit-outline"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-s-custom"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!----><i class="el-icon-delete"></i>
+                      <!----></button></div>
+                </div>
+              </div>
+              <div class="el-card__body">
+                <div class="el-row">
+                  起止日期：2019/12/20—— 2019/12/21
+                </div>
+                <div class="el-row">
+                  招生人数：12 / 15
+                </div>
+                <div class="el-row">
+                  班级状态：待开课
+                </div>
+                <div class="el-row">
+                  班级简介：这里是一个加了长文本省略号替代的班级介绍
+                </div>
+              </div>
+            </div>
+            <div class="el-card is-always-shadow">
+              <div class="el-card__header">
+                <div class="el-row is-align-middle el-row--flex">
+                  <div class="el-col el-col-19">
+                    素质教育专题班
+                  </div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                      <!----><i class="el-icon-check"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-more"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-edit-outline"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-s-custom"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!----><i class="el-icon-delete"></i>
+                      <!----></button></div>
+                </div>
+              </div>
+              <div class="el-card__body">
+                <div class="el-row">
+                  起止日期：2019/12/20—— 2019/12/21
+                </div>
+                <div class="el-row">
+                  招生人数：11 / 15
+                </div>
+                <div class="el-row">
+                  班级状态：待开课
+                </div>
+                <div class="el-row">
+                  班级简介：这里是一个加了长文本省略号替代的班级介绍
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" aria-hidden="true" id="pane-second" aria-labelledby="tab-second" class="el-tab-pane" style="display: none;">
+          <div>
+            <!---->
+            <div class="el-card is-always-shadow">
+              <div class="el-card__header">
+                <div class="el-row is-align-middle el-row--flex">
+                  <div class="el-col el-col-19">
+                    素质教育专题班
+                  </div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                      <!----><i class="el-icon-check"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-more"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-edit-outline"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-s-custom"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!----><i class="el-icon-delete"></i>
+                      <!----></button></div>
+                </div>
+              </div>
+              <div class="el-card__body">
+                <div class="el-row">
+                  起止日期：2019/12/20—— 2019/12/21
+                </div>
+                <div class="el-row">
+                  招生人数：13 / 15
+                </div>
+                <div class="el-row">
+                  班级状态：进行中
+                </div>
+                <div class="el-row">
+                  班级简介：这里是一个加了长文本省略号替代的班级介绍
+                </div>
+              </div>
+            </div>
+            <div class="el-card is-always-shadow">
+              <div class="el-card__header">
+                <div class="el-row is-align-middle el-row--flex">
+                  <div class="el-col el-col-19">
+                    素质教育专题班
+                  </div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                      <!----><i class="el-icon-check"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-more"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-edit-outline"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-s-custom"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!----><i class="el-icon-delete"></i>
+                      <!----></button></div>
+                </div>
+              </div>
+              <div class="el-card__body">
+                <div class="el-row">
+                  起止日期：2019/12/20—— 2019/12/21
+                </div>
+                <div class="el-row">
+                  招生人数：12 / 15
+                </div>
+                <div class="el-row">
+                  班级状态：进行中
+                </div>
+                <div class="el-row">
+                  班级简介：这里是一个加了长文本省略号替代的班级介绍
+                </div>
+              </div>
+            </div>
+            <div class="el-card is-always-shadow">
+              <div class="el-card__header">
+                <div class="el-row is-align-middle el-row--flex">
+                  <div class="el-col el-col-19">
+                    素质教育专题班
+                  </div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                      <!----><i class="el-icon-check"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-more"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-edit-outline"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-s-custom"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!----><i class="el-icon-delete"></i>
+                      <!----></button></div>
+                </div>
+              </div>
+              <div class="el-card__body">
+                <div class="el-row">
+                  起止日期：2019/12/20—— 2019/12/21
+                </div>
+                <div class="el-row">
+                  招生人数：11 / 15
+                </div>
+                <div class="el-row">
+                  班级状态：进行中
+                </div>
+                <div class="el-row">
+                  班级简介：这里是一个加了长文本省略号替代的班级介绍
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" aria-hidden="true" id="pane-third" aria-labelledby="tab-third" class="el-tab-pane" style="display: none;">
+          <div>
+            <!---->
+            <div class="el-card is-always-shadow">
+              <div class="el-card__header">
+                <div class="el-row is-align-middle el-row--flex">
+                  <div class="el-col el-col-19">
+                    素质教育专题班
+                  </div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                      <!----><i class="el-icon-check"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-more"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-edit-outline"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-s-custom"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!----><i class="el-icon-delete"></i>
+                      <!----></button></div>
+                </div>
+              </div>
+              <div class="el-card__body">
+                <div class="el-row">
+                  起止日期：2019/12/20—— 2019/12/21
+                </div>
+                <div class="el-row">
+                  招生人数：13 / 15
+                </div>
+                <div class="el-row">
+                  班级状态：已结束
+                </div>
+                <div class="el-row">
+                  班级简介：这里是一个加了长文本省略号替代的班级介绍
+                </div>
+              </div>
+            </div>
+            <div class="el-card is-always-shadow">
+              <div class="el-card__header">
+                <div class="el-row is-align-middle el-row--flex">
+                  <div class="el-col el-col-19">
+                    素质教育专题班
+                  </div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                      <!----><i class="el-icon-check"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-more"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-edit-outline"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-s-custom"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!----><i class="el-icon-delete"></i>
+                      <!----></button></div>
+                </div>
+              </div>
+              <div class="el-card__body">
+                <div class="el-row">
+                  起止日期：2019/12/20—— 2019/12/21
+                </div>
+                <div class="el-row">
+                  招生人数：12 / 15
+                </div>
+                <div class="el-row">
+                  班级状态：已结束
+                </div>
+                <div class="el-row">
+                  班级简介：这里是一个加了长文本省略号替代的班级介绍
+                </div>
+              </div>
+            </div>
+            <div class="el-card is-always-shadow">
+              <div class="el-card__header">
+                <div class="el-row is-align-middle el-row--flex">
+                  <div class="el-col el-col-19">
+                    素质教育专题班
+                  </div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                      <!----><i class="el-icon-check"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-more"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-edit-outline"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                      <!----><i class="el-icon-s-custom"></i>
+                      <!----></button></div>
+                  <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!----><i class="el-icon-delete"></i>
+                      <!----></button></div>
+                </div>
+              </div>
+              <div class="el-card__body">
+                <div class="el-row">
+                  起止日期：2019/12/20—— 2019/12/21
+                </div>
+                <div class="el-row">
+                  招生人数：11 / 15
+                </div>
+                <div class="el-row">
+                  班级状态：已结束
+                </div>
+                <div class="el-row">
+                  班级简介：这里是一个加了长文本省略号替代的班级介绍
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+`;
