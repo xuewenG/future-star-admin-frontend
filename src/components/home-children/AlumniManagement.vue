@@ -209,6 +209,25 @@ export default {
       })
     },
     search () {
+      let that = this
+      let params = {
+        page_size: that.page_size,
+        page: that.currentAlumniPage,
+        name: that.keyword,
+        semester_id: that.semester,
+        clazz_id: that.clazz
+      }
+      that.axios.get('/student/student', { params }).then(function (response) {
+        that.tableData = response.data.data.results
+        for (let i = 0; i < that.tableData.length; i++) {
+          if (that.tableData[i].gender === 0) {
+            that.tableData[i].gender = '男'
+          } else {
+            that.tableData[i].gender = '女'
+          }
+        }
+        that.$forceUpdate()
+      })
     },
     handleCurrentChange (currentAlumniPage) {
       this.currentAlumniPage = currentAlumniPage
