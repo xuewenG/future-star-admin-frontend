@@ -16,6 +16,9 @@
       <el-main>
         <el-table
           :data="tableData"
+          :highlight-current-row="true"
+          :fit="true"
+          id="table-center"
           stripe>
           <el-table-column
             fixed
@@ -117,7 +120,7 @@ export default {
       infoWidth: 150,
       operationWidth: 120,
       permissionActiveColor: '#13ce66',
-      pageSize: 3,
+      pageSize: 10,
       currentPage: 1,
       total: 0,
       tableData: [
