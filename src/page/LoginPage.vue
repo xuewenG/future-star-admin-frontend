@@ -14,10 +14,10 @@
         </el-row>
         <el-form label-width="90px">
           <el-form-item label="请输入账号:">
-              <el-input type="text" autofocus="autofocus" class="input-text"/>
+              <el-input type="text" v-model="username" autofocus="autofocus" class="input-text"/>
             </el-form-item>
           <el-form-item label="请输入密码:">
-              <el-input type="password" class="input-text"/>
+              <el-input type="password" v-model="password" class="input-text"/>
             </el-form-item>
           <el-form-item>
             <el-row type="flex" justify="center">
@@ -35,9 +35,22 @@
 <script>
 export default {
   name: 'LoginPage',
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  },
   methods: {
     login: function () {
-      this.$router.push('/home')
+      this.$axios.post('/administrator/login', this.$qs.stringify({
+        account: this.username,
+        password: this.password
+      })).then(function (response) {
+        console.log(response)
+      }).catch(function (error) {
+        console.log(error)
+      })
     }
   }
 }
