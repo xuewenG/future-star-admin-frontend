@@ -13,12 +13,11 @@ exports[`CourseManagement 快照测试 1`] = `
     </div>
   </header>
   <main class="el-main main-in-enrollment">
-    <div class="el-tabs el-tabs--top">
+    <div class="el-tabs el-tabs--top el-tabs--border-card">
       <div class="el-tabs__header is-top">
         <div class="el-tabs__nav-wrap is-top">
           <div class="el-tabs__nav-scroll">
             <div role="tablist" class="el-tabs__nav is-top" style="transform: translateX(-0px);">
-              <div class="el-tabs__active-bar is-top" style="width: 0px; transform: translateX(NaNpx); webkit-transform: translateX(NaNpx);"></div>
               <div id="tab-first" aria-controls="pane-first" role="tab" aria-selected="true" tabindex="0" class="el-tabs__item is-top is-active">待开课</div>
               <div id="tab-second" aria-controls="pane-second" role="tab" tabindex="-1" class="el-tabs__item is-top">进行中</div>
               <div id="tab-third" aria-controls="pane-third" role="tab" tabindex="-1" class="el-tabs__item is-top">已结束</div>
@@ -37,7 +36,7 @@ exports[`CourseManagement 快照测试 1`] = `
                     <div class="el-col el-col-14">
                       素质教育专题班
                     </div>
-                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
                         <!----><i class="el-icon-check"></i>
                         <!----></button></div>
                     <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
@@ -77,7 +76,7 @@ exports[`CourseManagement 快照测试 1`] = `
                     <div class="el-col el-col-14">
                       素质教育专题班
                     </div>
-                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
                         <!----><i class="el-icon-check"></i>
                         <!----></button></div>
                     <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
@@ -117,7 +116,7 @@ exports[`CourseManagement 快照测试 1`] = `
                     <div class="el-col el-col-14">
                       素质教育专题班
                     </div>
-                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
                         <!----><i class="el-icon-check"></i>
                         <!----></button></div>
                     <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
@@ -162,7 +161,7 @@ exports[`CourseManagement 快照测试 1`] = `
                     <div class="el-col el-col-14">
                       素质教育专题班
                     </div>
-                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
                         <!----><i class="el-icon-check"></i>
                         <!----></button></div>
                     <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
@@ -202,7 +201,7 @@ exports[`CourseManagement 快照测试 1`] = `
                     <div class="el-col el-col-14">
                       素质教育专题班
                     </div>
-                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
                         <!----><i class="el-icon-check"></i>
                         <!----></button></div>
                     <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
@@ -242,7 +241,7 @@ exports[`CourseManagement 快照测试 1`] = `
                     <div class="el-col el-col-14">
                       素质教育专题班
                     </div>
-                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--success el-button--small is-circle">
+                    <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
                         <!----><i class="el-icon-check"></i>
                         <!----></button></div>
                     <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">

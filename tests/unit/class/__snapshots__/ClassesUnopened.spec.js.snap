@@ -10,7 +10,7 @@ exports[`ClassesUnopened 快照测试 1`] = `
           <div class="el-col el-col-16">
             素质教育专题班
           </div>
-          <div class="el-col el-col-2"><button type="button" class="el-button el-button--success el-button--small is-circle">
+          <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
               <!----><i class="el-icon-check"></i>
               <!----></button></div>
           <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
@@ -47,7 +47,7 @@ exports[`ClassesUnopened 快照测试 1`] = `
           <div class="el-col el-col-16">
             素质教育专题班
           </div>
-          <div class="el-col el-col-2"><button type="button" class="el-button el-button--success el-button--small is-circle">
+          <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
               <!----><i class="el-icon-check"></i>
               <!----></button></div>
           <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
@@ -84,7 +84,7 @@ exports[`ClassesUnopened 快照测试 1`] = `
           <div class="el-col el-col-16">
             素质教育专题班
           </div>
-          <div class="el-col el-col-2"><button type="button" class="el-button el-button--success el-button--small is-circle">
+          <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">
               <!----><i class="el-icon-check"></i>
               <!----></button></div>
           <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-circle">

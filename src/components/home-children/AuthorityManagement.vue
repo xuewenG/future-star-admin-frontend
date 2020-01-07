@@ -139,7 +139,9 @@ export default {
   },
   created () {
     let that = this
-    that.getManagers()
+    if (that.axios) {
+      that.getManagers()
+    }
   },
   methods: {
     getManagers: function () {

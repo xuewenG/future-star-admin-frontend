@@ -12,531 +12,110 @@ exports[`AuthorityManagement 快照测试 1`] = `
             <!----><span>添加管理员</span></button></a></div>
     </div>
   </header>
-  <main class="el-main">
-    <div class="el-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-transition">
-      <div class="hidden-columns">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="el-table__header-wrapper">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1390px;">
-          <colgroup>
-            <col name="el-table_1_column_1" width="150">
-            <col name="el-table_1_column_2" width="150">
-            <col name="el-table_1_column_3" width="150">
-            <col name="el-table_1_column_4" width="205">
-            <col name="el-table_1_column_5" width="205">
-            <col name="el-table_1_column_6" width="205">
-            <col name="el-table_1_column_7" width="205">
-            <col name="el-table_1_column_8" width="120">
-          </colgroup>
-          <thead class="">
-            <tr class="">
-              <th colspan="1" rowspan="1" class="el-table_1_column_1     is-hidden is-leaf">
-                <div class="cell">姓名</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_2     is-leaf">
-                <div class="cell">账号</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_3     is-leaf">
-                <div class="cell">密码</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
-                <div class="cell">招生管理权限</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
-                <div class="cell">课程管理权限</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf">
-                <div class="cell">校友活动管理权限</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf">
-                <div class="cell">校友资料管理权限</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-leaf">
-                <div class="cell">操作</div>
-              </th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-      <div class="el-table__body-wrapper is-scrolling-left">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1390px;">
-          <colgroup>
-            <col name="el-table_1_column_1" width="150">
-            <col name="el-table_1_column_2" width="150">
-            <col name="el-table_1_column_3" width="150">
-            <col name="el-table_1_column_4" width="205">
-            <col name="el-table_1_column_5" width="205">
-            <col name="el-table_1_column_6" width="205">
-            <col name="el-table_1_column_7" width="205">
-            <col name="el-table_1_column_8" width="120">
-          </colgroup>
-          <tbody>
-            <tr class="el-table__row">
-              <td rowspan="1" colspan="1" class="el-table_1_column_1   is-hidden">
-                <div class="cell">王小虎</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
-                <div class="cell">M123456</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
-                <div class="cell">123456</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-edit"></i>
-                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                    <!----><i class="el-icon-delete"></i>
-                    <!----></button></div>
-              </td>
-            </tr>
-            <tr class="el-table__row el-table__row--striped">
-              <td rowspan="1" colspan="1" class="el-table_1_column_1   is-hidden">
-                <div class="cell">王小龙</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
-                <div class="cell">M1234567</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
-                <div class="cell">1234567</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-edit"></i>
-                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                    <!----><i class="el-icon-delete"></i>
-                    <!----></button></div>
-              </td>
-            </tr>
-            <tr class="el-table__row">
-              <td rowspan="1" colspan="1" class="el-table_1_column_1   is-hidden">
-                <div class="cell">王小龙</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
-                <div class="cell">M1234567</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
-                <div class="cell">1234567</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-edit"></i>
-                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                    <!----><i class="el-icon-delete"></i>
-                    <!----></button></div>
-              </td>
-            </tr>
-            <tr class="el-table__row el-table__row--striped">
-              <td rowspan="1" colspan="1" class="el-table_1_column_1   is-hidden">
-                <div class="cell">王小龙</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
-                <div class="cell">M1234567</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
-                <div class="cell">1234567</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
-                <div class="cell">
-                  <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-edit"></i>
-                    <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                    <!----><i class="el-icon-delete"></i>
-                    <!----></button></div>
-              </td>
-            </tr>
-            <!---->
-          </tbody>
-        </table>
-        <!---->
-        <!---->
-      </div>
-      <!---->
-      <div class="el-table__fixed" style="width: 150px;">
-        <div class="el-table__fixed-header-wrapper">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1390px;">
+  <div class="el-row">
+    <main class="el-main">
+      <div class="el-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-transition" id="table-center">
+        <div class="hidden-columns">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="el-table__header-wrapper">
+          <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1240px;">
             <colgroup>
               <col name="el-table_1_column_1" width="150">
               <col name="el-table_1_column_2" width="150">
-              <col name="el-table_1_column_3" width="150">
+              <col name="el-table_1_column_3" width="205">
               <col name="el-table_1_column_4" width="205">
               <col name="el-table_1_column_5" width="205">
               <col name="el-table_1_column_6" width="205">
-              <col name="el-table_1_column_7" width="205">
-              <col name="el-table_1_column_8" width="120">
+              <col name="el-table_1_column_7" width="120">
             </colgroup>
             <thead class="">
               <tr class="">
-                <th colspan="1" rowspan="1" class="el-table_1_column_1     is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_1     is-hidden is-leaf">
                   <div class="cell">姓名</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_2     is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_2     is-leaf">
                   <div class="cell">账号</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_3     is-hidden is-leaf">
-                  <div class="cell">密码</div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf">
                   <div class="cell">招生管理权限</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
                   <div class="cell">课程管理权限</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
                   <div class="cell">校友活动管理权限</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf">
                   <div class="cell">校友资料管理权限</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf">
                   <div class="cell">操作</div>
                 </th>
               </tr>
             </thead>
           </table>
         </div>
-        <div class="el-table__fixed-body-wrapper" style="top: 0px;">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1390px;">
+        <div class="el-table__body-wrapper is-scrolling-left">
+          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1240px;">
             <colgroup>
               <col name="el-table_1_column_1" width="150">
               <col name="el-table_1_column_2" width="150">
-              <col name="el-table_1_column_3" width="150">
+              <col name="el-table_1_column_3" width="205">
               <col name="el-table_1_column_4" width="205">
               <col name="el-table_1_column_5" width="205">
               <col name="el-table_1_column_6" width="205">
-              <col name="el-table_1_column_7" width="205">
-              <col name="el-table_1_column_8" width="120">
+              <col name="el-table_1_column_7" width="120">
             </colgroup>
             <tbody>
               <tr class="el-table__row">
-                <td rowspan="1" colspan="1" class="el-table_1_column_1  ">
-                  <div class="cell">王小虎</div>
+                <td rowspan="1" colspan="1" class="el-table_1_column_1   is-hidden">
+                  <div class="cell"></div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_2   is-hidden">
-                  <div class="cell">M123456</div>
+                <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
+                  <div class="cell"></div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_3   is-hidden">
-                  <div class="cell">123456</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
                   <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
+                    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                      <!----><span class="el-switch__core" style="width: 40px;"></span>
                       <!---->
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
                   <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
+                    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                      <!----><span class="el-switch__core" style="width: 40px;"></span>
                       <!---->
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
                   <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
+                    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                      <!----><span class="el-switch__core" style="width: 40px;"></span>
                       <!---->
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
                   <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
+                    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                      <!----><span class="el-switch__core" style="width: 40px;"></span>
                       <!---->
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
                   <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                      <!----><i class="el-icon-edit"></i>
-                      <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                      <!----><i class="el-icon-delete"></i>
-                      <!----></button></div>
-                </td>
-              </tr>
-              <tr class="el-table__row el-table__row--striped">
-                <td rowspan="1" colspan="1" class="el-table_1_column_1  ">
-                  <div class="cell">王小龙</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_2   is-hidden">
-                  <div class="cell">M1234567</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_3   is-hidden">
-                  <div class="cell">1234567</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center  is-hidden">
-                  <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                      <!----><i class="el-icon-edit"></i>
-                      <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                      <!----><i class="el-icon-delete"></i>
-                      <!----></button></div>
-                </td>
-              </tr>
-              <tr class="el-table__row">
-                <td rowspan="1" colspan="1" class="el-table_1_column_1  ">
-                  <div class="cell">王小龙</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_2   is-hidden">
-                  <div class="cell">M1234567</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_3   is-hidden">
-                  <div class="cell">1234567</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center  is-hidden">
-                  <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                      <!----><i class="el-icon-edit"></i>
-                      <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                      <!----><i class="el-icon-delete"></i>
-                      <!----></button></div>
-                </td>
-              </tr>
-              <tr class="el-table__row el-table__row--striped">
-                <td rowspan="1" colspan="1" class="el-table_1_column_1  ">
-                  <div class="cell">王小龙</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_2   is-hidden">
-                  <div class="cell">M1234567</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_3   is-hidden">
-                  <div class="cell">1234567</div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center  is-hidden">
-                  <div class="cell">
-                    <div role="switch" aria-checked="true" class="el-switch is-checked"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px; border-color: #13ce66; background-color: rgb(19, 206, 102);"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center  is-hidden">
-                  <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                      <!----><i class="el-icon-edit"></i>
+                      <!----><i class="el-icon-check"></i>
                       <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
                       <!----><i class="el-icon-delete"></i>
                       <!----></button></div>
@@ -546,13 +125,129 @@ exports[`AuthorityManagement 快照测试 1`] = `
             </tbody>
           </table>
           <!---->
+          <!---->
         </div>
         <!---->
+        <div class="el-table__fixed" style="width: 150px;">
+          <div class="el-table__fixed-header-wrapper">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1240px;">
+              <colgroup>
+                <col name="el-table_1_column_1" width="150">
+                <col name="el-table_1_column_2" width="150">
+                <col name="el-table_1_column_3" width="205">
+                <col name="el-table_1_column_4" width="205">
+                <col name="el-table_1_column_5" width="205">
+                <col name="el-table_1_column_6" width="205">
+                <col name="el-table_1_column_7" width="120">
+              </colgroup>
+              <thead class="">
+                <tr class="">
+                  <th colspan="1" rowspan="1" class="el-table_1_column_1     is-leaf">
+                    <div class="cell">姓名</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_2     is-hidden is-leaf">
+                    <div class="cell">账号</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-hidden is-leaf">
+                    <div class="cell">招生管理权限</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-hidden is-leaf">
+                    <div class="cell">课程管理权限</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-hidden is-leaf">
+                    <div class="cell">校友活动管理权限</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-hidden is-leaf">
+                    <div class="cell">校友资料管理权限</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-hidden is-leaf">
+                    <div class="cell">操作</div>
+                  </th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="el-table__fixed-body-wrapper" style="top: 0px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1240px;">
+              <colgroup>
+                <col name="el-table_1_column_1" width="150">
+                <col name="el-table_1_column_2" width="150">
+                <col name="el-table_1_column_3" width="205">
+                <col name="el-table_1_column_4" width="205">
+                <col name="el-table_1_column_5" width="205">
+                <col name="el-table_1_column_6" width="205">
+                <col name="el-table_1_column_7" width="120">
+              </colgroup>
+              <tbody>
+                <tr class="el-table__row">
+                  <td rowspan="1" colspan="1" class="el-table_1_column_1  ">
+                    <div class="cell"></div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_2   is-hidden">
+                    <div class="cell"></div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center  is-hidden">
+                    <div class="cell">
+                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                        <!----><span class="el-switch__core" style="width: 40px;"></span>
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center  is-hidden">
+                    <div class="cell">
+                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                        <!----><span class="el-switch__core" style="width: 40px;"></span>
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center  is-hidden">
+                    <div class="cell">
+                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                        <!----><span class="el-switch__core" style="width: 40px;"></span>
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center  is-hidden">
+                    <div class="cell">
+                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                        <!----><span class="el-switch__core" style="width: 40px;"></span>
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center  is-hidden">
+                    <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+                        <!----><i class="el-icon-check"></i>
+                        <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                        <!----><i class="el-icon-delete"></i>
+                        <!----></button></div>
+                  </td>
+                </tr>
+                <!---->
+              </tbody>
+            </table>
+            <!---->
+          </div>
+          <!---->
+        </div>
+        <!---->
+        <!---->
+        <div class="el-table__column-resize-proxy" style="display: none;"></div>
       </div>
-      <!---->
-      <!---->
-      <div class="el-table__column-resize-proxy" style="display: none;"></div>
+    </main>
+  </div>
+  <div class="el-row is-justify-center el-row--flex">
+    <div class="el-pagination"><button type="button" disabled="disabled" class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+      <ul class="el-pager">
+        <li class="number active">1</li>
+        <!---->
+        <!---->
+        <!---->
+      </ul><button type="button" disabled="disabled" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button><span class="el-pagination__jump">前往<div class="el-input el-pagination__editor is-in-pagination"><!----><input type="number" autocomplete="off" min="1" max="1" class="el-input__inner"><!----><!----><!----><!----></div>页</span>
     </div>
-  </main>
+  </div>
 </section>
 `;
