@@ -138,6 +138,24 @@ export default {
   },
   methods: {
     findAllAlumni: function () {
+      let that = this
+      let params = {
+        page_size: that.page_size,
+        page: that.currentAlumniPage
+      }
+      that.axios.get('/student/student', { params }).then(function (response) {
+        if (response.data.code === '2000') {
+          that.tableData = response.data.data.results
+          for (let i = 0; i < that.tableData.length; i++) {
+            if (that.tableData[i].gender === 0) {
+              that.tableData[i].gender = '男'
+            } else {
+              that.tableData[i].gender = '女'
+            }
+          }
+          that.$forceUpdate()
+        }
+      })
     },
     findAllSemester: function () {
     },
