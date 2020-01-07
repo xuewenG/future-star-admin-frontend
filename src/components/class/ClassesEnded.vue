@@ -1,40 +1,39 @@
 <template>
   <div>
     <h4 v-if="classes.length === 0">暂无已结束班级</h4>
-    <el-card v-for="(item) in classes" :key="item.id">
-      <el-row slot="header" type="flex" align="middle">
-        <el-col :span="19">
-          {{ item.className }}
-        </el-col>
-        <el-col :span="1">
-          <el-button type="success" size="small" icon="el-icon-check" circle></el-button>
-        </el-col>
-        <el-col :span="1">
-          <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail" circle></el-button>
-        </el-col>
-        <el-col :span="1">
-          <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
-        </el-col>
-        <el-col :span="1">
-          <el-button type="primary" size="small" icon="el-icon-s-custom" @click="lookOverStudentInClass" circle></el-button>
-        </el-col>
-        <el-col :span="1">
-          <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
-        </el-col>
-      </el-row>
-      <el-row>
-        起止日期：{{ item.classStartTime }}—— {{ item.classEndTime }}
-      </el-row>
-      <el-row>
-        招生人数：{{ item.currentAmountOfStudent }} / {{ item.capacity }}
-      </el-row>
-      <el-row>
-        班级状态：{{ item.state }}
-      </el-row>
-      <el-row>
-        班级简介：{{ item.classIntroduction | ellipsis }}
-      </el-row>
-    </el-card>
+    <el-col :span="12" v-for="(item) in classes" :key="item.id">
+      <el-card>
+        <el-row slot="header" type="flex" align="middle">
+          <el-col :span="16">
+            {{ item.className }}
+          </el-col>
+          <el-col :span="2">
+            <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail" circle></el-button>
+          </el-col>
+          <el-col :span="2">
+            <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
+          </el-col>
+          <el-col :span="2">
+            <el-button type="primary" size="small" icon="el-icon-s-custom" @click="lookOverStudentInClass" circle></el-button>
+          </el-col>
+          <el-col :span="2">
+            <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
+          </el-col>
+        </el-row>
+        <el-row>
+          起止日期：{{ item.classStartTime }}—— {{ item.classEndTime }}
+        </el-row>
+        <el-row>
+          招生人数：{{ item.currentAmountOfStudent }} / {{ item.capacity }}
+        </el-row>
+        <el-row>
+          班级状态：{{ item.state }}
+        </el-row>
+        <el-row>
+          班级简介：{{ item.classIntroduction | ellipsis }}
+        </el-row>
+      </el-card>
+    </el-col>
   </div>
 </template>
 <script>

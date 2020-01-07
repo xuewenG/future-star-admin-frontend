@@ -44,12 +44,12 @@ export default {
   methods: {
     login: function () {
       let that = this
-      that.$axios.post('/administrator/login', that.$qs.stringify({
+      that.axios.post('/administrator/login', that.$qs.stringify({
         account: that.account,
         password: that.password
       })).then(function (response) {
         if (response.data.code === '2000') {
-          localStorage.setItem('user', response.data.data)
+          sessionStorage.setItem('user', JSON.stringify(response.data.data))
           that.$router.push('/home')
         } else {
           that.$message({

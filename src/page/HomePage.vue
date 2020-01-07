@@ -67,26 +67,26 @@ export default {
   name: 'HomePage',
   data () {
     return {
-      textColor: '#0069A0',
-      activeTextColor: '#738ab9',
+      textColor: '#ffffff',
+      activeTextColor: '#0069A0',
       backgroundColor: '#00ADA9',
       identityName: '',
       name: ''
     }
   },
   created () {
-    console.log(localStorage.getItem('user'))
-    let user = localStorage.getItem('user')
+    let user = JSON.parse(sessionStorage.getItem('user'))
     this.name = user.name
     this.identityName = user.identityName
   },
   methods: {
     signOut: function () {
       let that = this
-      that.$axios.post('/administrator/logout'
+      that.axios.post('/administrator/logout'
       ).then(function (response) {
+        console.log(response)
         if (response.data.code === '2000') {
-          localStorage.setItem('user', '')
+          sessionStorage.setItem('user', '')
           that.$router.push('/login')
         } else {
           that.$message({

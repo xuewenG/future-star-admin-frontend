@@ -10,10 +10,14 @@ Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) => {
   const whiteList = ['/login']
-  let userInfo = JSON.parse(sessionStorage.getItem('user'))
   if (whiteList.indexOf(to.path) < 0) {
-    if (userInfo.name !== undefined) {
-      next()
+    let userInfo = JSON.parse(sessionStorage.getItem('user'))
+    if (userInfo) {
+      if (userInfo.name !== undefined) {
+        next()
+      } else {
+        next('/login')
+      }
     } else {
       next('/login')
     }
