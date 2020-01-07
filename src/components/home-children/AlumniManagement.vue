@@ -133,8 +133,11 @@ export default {
     }
   },
   created () {
-    this.findAllAlumni()
-    this.findAllSemester()
+    let that = this
+    if (that.axios) {
+      this.findAllAlumni()
+      this.findAllSemester()
+    }
   },
   methods: {
     findAllAlumni: function () {
