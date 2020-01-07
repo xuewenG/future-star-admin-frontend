@@ -47,12 +47,10 @@ export default {
       that.$axios.post('/administrator/login', that.$qs.stringify({
         account: that.account,
         password: that.password
-      })).then(async function (response) {
+      })).then(function (response) {
         if (response.data.code === '2000') {
-          await that.$store.dispatch('setUser', response.data.data)
-          console.log(that.$store.getters.user)
-          console.log(response.data.data)
-          await that.$router.push('/home')
+          localStorage.setItem('user', response.data.data)
+          that.$router.push('/home')
         } else {
           that.$message({
             type: 'error',
@@ -62,6 +60,11 @@ export default {
         }
       }).catch(function (error) {
         console.log(error)
+        that.$message({
+          type: 'error',
+          message: '服务器内部错误',
+          duration: 2000
+        })
       })
     }
   }
@@ -70,9 +73,8 @@ export default {
 
 <style scoped type="type/css">
   .el-container {
-    height: 600px;
+    height: 800px;
     background-image: url('../assets/tileBackground1.jpg');
-    background-repeat: repeat-x;
   }
 
   .hint {
@@ -92,7 +94,7 @@ export default {
   .login-card {
     width: 38%;
     padding: 0;
-    margin: 90px auto 80px;
+    margin: 180px auto 80px;
   }
 
   .input-text {

@@ -9,7 +9,7 @@
             <h3>欢迎来到未来之星管理系统</h3>
           </el-col>
           <el-col :span="3" :push="8"  class="hint-info">
-            <h3>{{ identity }}</h3>
+            <h3>{{ identityName }}</h3>
           </el-col>
           <el-col :span="2" :push="7"  class="hint-info">
             <h3>，{{ name }}</h3>
@@ -69,21 +69,43 @@ export default {
     return {
       textColor: '#0069A0',
       activeTextColor: '#738ab9',
-      backgroundColor: '#00ADA9'
+      backgroundColor: '#00ADA9',
+      identityName: '',
+      name: ''
     }
+  },
+  created () {
+    console.log(localStorage.getItem('user'))
+    let user = localStorage.getItem('user')
+    this.name = user.name
+    this.identityName = user.identityName
   },
   methods: {
     signOut: function () {
-      this.$router.push('/login')
+      let that = this
+      that.$axios.post('/administrator/logout'
+      ).then(function (response) {
+        if (response.data.code === '2000') {
+          localStorage.setItem('user', '')
+          that.$router.push('/login')
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求出错',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '服务器内部错误',
+          duration: 2000
+        })
+      })
     }
   },
   computed: {
-    identity: function () {
-      return '亲爱的' + this.$store.getters.identity
-    },
-    name: function () {
-      return this.$store.getters.name
-    }
   }
 }
 </script>
