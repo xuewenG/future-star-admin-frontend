@@ -8,16 +8,13 @@
           <el-col :span="5" :push="1" class="hint-info">
             <h3>欢迎来到未来之星管理系统</h3>
           </el-col>
-          <el-col :span="3" :push="8"  class="hint-info">
-            <h3>{{ identityName }}</h3>
+          <el-col :span="4" :push="10"  class="hint-info">
+            <h3>{{ identityName }} , {{ name }}</h3>
           </el-col>
-          <el-col :span="2" :push="7"  class="hint-info">
-            <h3>，{{ name }}</h3>
-          </el-col>
-          <el-col :span="2" :push="7"  class="hint-info">
+          <el-col :span="2" :push="9"  class="hint-info">
               <el-button type="warning" size="small" round>修改密码</el-button>
           </el-col>
-          <el-col :span="2" :push="7"  class="hint-info">
+          <el-col :span="2" :push="9"  class="hint-info">
             <el-button type="danger" size="small" @click="signOut" round>账号登出</el-button>
           </el-col>
       </el-row>
@@ -77,7 +74,11 @@ export default {
   created () {
     let user = JSON.parse(sessionStorage.getItem('user'))
     this.name = user.name
-    this.identityName = user.identityName
+    if (user.privilege.super === 1) {
+      this.identityName = '超级管理员'
+    } else {
+      this.identityName = '管理员'
+    }
   },
   methods: {
     signOut: function () {
@@ -141,5 +142,9 @@ export default {
   .hint-info-row {
     height: 60px;
     background-color: #f9fafc;
+  }
+
+  .identity-name {
+    text-align: left;
   }
 </style>
