@@ -72,12 +72,14 @@ export default {
     }
   },
   created () {
-    let user = JSON.parse(sessionStorage.getItem('user'))
-    this.name = user.name
-    if (user.privilege.super === 1) {
-      this.identityName = '超级管理员'
-    } else {
-      this.identityName = '管理员'
+    if (JSON.parse(sessionStorage.getItem('user') !== null)) {
+      let user = JSON.parse(sessionStorage.getItem('user'))
+      this.name = user.name
+      if (user.privilege.super === 1) {
+        this.identityName = '超级管理员'
+      } else {
+        this.identityName = '管理员'
+      }
     }
   },
   methods: {

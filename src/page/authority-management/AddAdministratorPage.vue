@@ -38,7 +38,7 @@
           :width="permissionWidth">
           <template slot-scope="scope">
             <el-switch
-              v-model="scope.row.hasEnrollmentManagementPermission"
+              v-model="scope.row.privilege.enrollment"
               :active-color="permissionActiveColor">
             </el-switch>
           </template>
@@ -49,7 +49,7 @@
           :width="permissionWidth">
           <template slot-scope="scope">
             <el-switch
-              v-model="scope.row.hasCourseManagementPermission"
+              v-model="scope.row.privilege.semester"
               :active-color="permissionActiveColor">
             </el-switch>
           </template>
@@ -60,7 +60,7 @@
           :width="permissionWidth">
           <template slot-scope="scope">
             <el-switch
-              v-model="scope.row.hasActivityManagementPermission"
+              v-model="scope.row.privilege.activity"
               :active-color="permissionActiveColor">
             </el-switch>
           </template>
@@ -71,7 +71,7 @@
           :width="permissionWidth">
           <template slot-scope="scope">
             <el-switch
-              v-model="scope.row.hasDatumManagementPermission"
+              v-model="scope.row.privilege.student"
               :active-color="permissionActiveColor">
             </el-switch>
           </template>
@@ -81,7 +81,7 @@
           align="center"
           :width="operationWidth">
           <template slot-scope="scope">
-            <el-button type="primary" size="small" @click="addAdministrator(row)" round>提交</el-button>
+            <el-button type="primary" size="small" @click="addAdministrator(scope.row)" round>提交</el-button>
             <el-button type="plain" size="small" @click="clearText(scope.row)" round>清空</el-button>
           </template>
         </el-table-column>
@@ -89,7 +89,7 @@
     </el-main>
     <el-footer>
       <el-row type="flex" justify="center">
-        <el-button type="primary" size="medium" round>一键提交</el-button>
+        <el-button type="primary" size="medium" @click="addAll()" round>一键提交</el-button>
         <el-button type="plain" size="medium" @click="clearTextAll()" round>一键清空</el-button>
       </el-row>
       <el-row type="flex" justify="center">
@@ -110,15 +110,25 @@ export default {
       permissionActiveColor: '#13ce66',
       administrators: [
         {
-          name: '王小虎',
-          account: 'M123456',
-          password: '123456',
-          hasEnrollmentManagementPermission: true,
-          hasCourseManagementPermission: true,
-          hasActivityManagementPermission: true,
-          hasDatumManagementPermission: true
+          name: '',
+          account: '',
+          password: '',
+          privilege: {
+            enrollment: 2,
+            semester: 2,
+            activity: 2,
+            student: 2
+          }
         }
       ]
+    }
+  },
+  created () {
+    for (let i = 0; i < this.administrators.length; i++) {
+      this.administrators[i].privilege.enrollment = this.administrators[i].privilege.enrollment === 1
+      this.administrators[i].privilege.semester = this.administrators[i].privilege.semester === 1
+      this.administrators[i].privilege.activity = this.administrators[i].privilege.activity === 1
+      this.administrators[i].privilege.student = this.administrators[i].privilege.student === 1
     }
   },
   methods: {
@@ -126,30 +136,76 @@ export default {
       this.$router.go(-1)
     },
     addAdministrator (administrator) {
-      this.$message({
-        type: 'success',
-        message: '添加成功',
-        duration: 1000
+      console.log(administrator)
+      administrator.privilege.enrollment = administrator.privilege.enrollment ? 1 : 2
+      administrator.privilege.semester = administrator.privilege.semester ? 1 : 2
+      administrator.privilege.activity = administrator.privilege.activity ? 1 : 2
+      administrator.privilege.student = administrator.privilege.student ? 1 : 2
+      let that = this
+      that.axios.post('/administrator/administrator', {
+        name: administrator.name,
+        account: administrator.account,
+        password: administrator.password,
+        privilege: {
+          enrollment: administrator.privilege.enrollment,
+          semester: administrator.privilege.semester,
+          activity: administrator.privilege.activity,
+          student: administrator.privilege.student
+        }
+      }).then(function (response) {
+        if (response.data.code === '2000') {
+          administrator = {
+            name: '',
+            account: '',
+            password: '',
+            privilege: {
+              enrollment: 2,
+              semester: 2,
+              activity: 2,
+              student: 2
+            }
+          }
+          that.$message({
+            type: 'success',
+            message: '添加成功',
+            duration: 2000
+          })
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求出错',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '服务器内部错误',
+          duration: 2000
+        })
       })
     },
     clearText: function (administrator) {
       administrator.name = ''
       administrator.account = ''
       administrator.password = ''
-      administrator.hasEnrollmentManagementPermission = false
-      administrator.hasCourseManagementPermission = false
-      administrator.hasActivityManagementPermission = false
-      administrator.hasDatumManagementPermission = false
+      administrator.privilege.enrollment = false
+      administrator.privilege.semester = false
+      administrator.privilege.activity = false
+      administrator.privilege.student = false
     },
     clearTextAll: function () {
       this.administrators = [{
         name: '',
         account: '',
         password: '',
-        hasEnrollmentManagementPermission: false,
-        hasCourseManagementPermission: false,
-        hasActivityManagementPermission: false,
-        hasDatumManagementPermission: false
+        privilege: {
+          enrollment: 2,
+          semester: 2,
+          activity: 2,
+          student: 2
+        }
       }]
     },
     insertInfoArea: function () {
@@ -157,11 +213,16 @@ export default {
         name: '',
         account: '',
         password: '',
-        hasEnrollmentManagementPermission: false,
-        hasCourseManagementPermission: false,
-        hasActivityManagementPermission: false,
-        hasDatumManagementPermission: false
+        privilege: {
+          enrollment: 2,
+          semester: 2,
+          activity: 2,
+          student: 2
+        }
       })
+    },
+    addAll: function () {
+
     }
   }
 }
