@@ -158,6 +158,27 @@ export default {
       })
     },
     findAllSemester: function () {
+      let that = this
+      let params = {
+        page_size: that.page_size,
+        page: that.currentSemesterPage
+      }
+      that.axios.get('/semester/semester', { params }).then(function (response) {
+        if (response.data.code === '2000') {
+          let results = response.data.data.results
+          that.semesterOptions[0] = {
+            semester: null,
+            label: '全部学期'
+          }
+          for (let i = 1; i < results.length + 1; i++) {
+            that.semesterOptions[i] = {
+              semester: results[i - 1]['period_semester'],
+              label: '第' + results[i - 1]['period_semester'] + '学期'
+            }
+          }
+          that.$forceUpdate()
+        }
+      })
     },
     clazzClear: function () {
     },
