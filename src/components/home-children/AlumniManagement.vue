@@ -181,6 +181,32 @@ export default {
       })
     },
     clazzClear: function () {
+      let that = this
+      if (that.semester === null) {
+        that.clazzOptions = []
+      }
+      that.$forceUpdate()
+    },
+    findAllClass: function () {
+      let that = this
+      that.clazzClear()
+      let params = {
+        page_size: that.page_size,
+        page: that.currentClassPage,
+        semester_id: that.semester
+      }
+      that.axios.get('/clazz/clazz', { params }).then(function (response) {
+        if (response.data.code === '2000') {
+          let results = response.data.data.results
+          for (let i = 0; i < results.length; i++) {
+            that.clazzOptions[i] = {
+              clazz: results[i]['id'],
+              label: results[i]['name']
+            }
+          }
+          that.$forceUpdate()
+        }
+      })
     },
     search () {
     },
