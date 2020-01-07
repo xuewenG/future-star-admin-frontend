@@ -222,7 +222,15 @@ export default {
       })
     },
     addAll: function () {
-
+      let that = this
+      for (let i = 0; i < this.administrators.length; i++) {
+        that.administrators[i].privilege.enrollment = that.administrators[i].privilege.enrollment === 1
+        that.administrators[i].privilege.semester = that.administrators[i].privilege.semester === 1
+        that.administrators[i].privilege.activity = that.administrators[i].privilege.activity === 1
+        that.administrators[i].privilege.student = that.administrators[i].privilege.student === 1
+        that.addAdministrator(that.administrators[i])
+        that.clearTextAll()
+      }
     }
   }
 }
