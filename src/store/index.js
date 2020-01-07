@@ -5,7 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: ''
+    user: {
+      id: '',
+      account: '',
+      name: '',
+      privilege: {
+        super: 2
+      }
+    }
   },
   mutations: {
     setUser: function (state, user) {
@@ -19,11 +26,7 @@ export default new Vuex.Store({
   },
   getters: {
     identity: function (state) {
-      if (state.user.privilege.super === 2) {
-        return '管理员'
-      } else if (state.user.privilege.super === 1) {
-        return '超级管理员'
-      }
+      return state.user.privilege.super === 2 ? '管理员' : '超级管理员'
     },
     name: function (state) {
       return state.user.name
