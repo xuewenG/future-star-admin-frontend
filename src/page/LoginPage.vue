@@ -48,7 +48,6 @@ export default {
         account: that.account,
         password: that.password
       })).then(function (response) {
-        console.log(response)
         if (response.data.code === '2000') {
           sessionStorage.setItem('user', JSON.stringify(response.data.data))
           that.$router.push('/home')

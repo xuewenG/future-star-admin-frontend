@@ -4,96 +4,103 @@
       <el-page-header @back="goBack" content="添加管理员"></el-page-header>
     </el-header>
     <el-main>
-      <el-table
-        :data="administrators"
-        stripe>
-        <el-table-column
-          fixed
-          prop="name"
-          label="姓名"
-          :width="infoWidth">
-          <template slot-scope="scope">
-            <el-input placeholder="请输入姓名" v-model="scope.row.name"></el-input>
-          </template>
-        </el-table-column>
-        <el-table-column
-          prop="account"
-          label="账号"
-          :width="infoWidth">
-          <template slot-scope="scope">
-            <el-input placeholder="请输入账号" v-model="scope.row.account"></el-input>
-          </template>
-        </el-table-column>
-        <el-table-column
-          prop="password"
-          label="密码"
-          :width="infoWidth">
-          <template slot-scope="scope">
-            <el-input placeholder="请输入密码" v-model="scope.row.password" show-password></el-input>
-          </template>
-        </el-table-column>
-        <el-table-column
-          label="招生管理权限"
-          align="center"
-          :width="permissionWidth">
-          <template slot-scope="scope">
-            <el-switch
-              v-model="scope.row.privilege.enrollment"
-              :active-color="permissionActiveColor">
-            </el-switch>
-          </template>
-        </el-table-column>
-        <el-table-column
-          label="课程管理权限"
-          align="center"
-          :width="permissionWidth">
-          <template slot-scope="scope">
-            <el-switch
-              v-model="scope.row.privilege.semester"
-              :active-color="permissionActiveColor">
-            </el-switch>
-          </template>
-        </el-table-column>
-        <el-table-column
-          label="校友活动管理权限"
-          align="center"
-          :width="permissionWidth">
-          <template slot-scope="scope">
-            <el-switch
-              v-model="scope.row.privilege.activity"
-              :active-color="permissionActiveColor">
-            </el-switch>
-          </template>
-        </el-table-column>
-        <el-table-column
-          label="校友资料管理权限"
-          align="center"
-          :width="permissionWidth">
-          <template slot-scope="scope">
-            <el-switch
-              v-model="scope.row.privilege.student"
-              :active-color="permissionActiveColor">
-            </el-switch>
-          </template>
-        </el-table-column>
-        <el-table-column
-          label="操作"
-          align="center"
-          :width="operationWidth">
-          <template slot-scope="scope">
-            <el-button type="primary" size="small" @click="addAdministrator(scope.row)" round>提交</el-button>
-            <el-button type="plain" size="small" @click="clearText(scope.row)" round>清空</el-button>
-          </template>
-        </el-table-column>
-      </el-table>
+      <div class="table-center">
+        <el-table
+          :data="administrators"
+          stripe>
+          <el-table-column
+            fixed
+            prop="name"
+            label="姓名"
+            :width="infoWidth">
+            <template slot-scope="scope">
+              <el-input placeholder="请输入姓名" v-model="scope.row.name"></el-input>
+            </template>
+          </el-table-column>
+          <el-table-column
+            prop="account"
+            label="账号"
+            :width="infoWidth">
+            <template slot-scope="scope">
+              <el-input placeholder="请输入账号" v-model="scope.row.account"></el-input>
+            </template>
+          </el-table-column>
+          <el-table-column
+            prop="password"
+            label="密码"
+            :width="infoWidth">
+            <template slot-scope="scope">
+              <el-input placeholder="请输入密码" v-model="scope.row.password" show-password></el-input>
+            </template>
+          </el-table-column>
+          <el-table-column
+            label="招生管理权限"
+            align="center"
+            :width="permissionWidth">
+            <template slot-scope="scope">
+              <el-switch
+                v-model="scope.row.privilege.enrollment"
+                :active-color="permissionActiveColor">
+              </el-switch>
+            </template>
+          </el-table-column>
+          <el-table-column
+            label="课程管理权限"
+            align="center"
+            :width="permissionWidth">
+            <template slot-scope="scope">
+              <el-switch
+                v-model="scope.row.privilege.semester"
+                :active-color="permissionActiveColor">
+              </el-switch>
+            </template>
+          </el-table-column>
+          <el-table-column
+            label="校友活动管理权限"
+            align="center"
+            :width="permissionWidth">
+            <template slot-scope="scope">
+              <el-switch
+                v-model="scope.row.privilege.activity"
+                :active-color="permissionActiveColor">
+              </el-switch>
+            </template>
+          </el-table-column>
+          <el-table-column
+            label="校友资料管理权限"
+            align="center"
+            :width="permissionWidth">
+            <template slot-scope="scope">
+              <el-switch
+                v-model="scope.row.privilege.student"
+                :active-color="permissionActiveColor">
+              </el-switch>
+            </template>
+          </el-table-column>
+          <el-table-column
+            label="操作"
+            align="center"
+            :width="operationWidth">
+            <template slot-scope="scope">
+              <el-button type="primary" size="small" @click="addAdministrator(scope.row)" round>提交</el-button>
+              <el-button type="plain" size="small" @click="clearText(scope.row)" round>清空</el-button>
+            </template>
+          </el-table-column>
+        </el-table>
+      </div>
     </el-main>
     <el-footer>
       <el-row type="flex" justify="center">
-        <el-button type="primary" size="medium" @click="addAll()" round>一键提交</el-button>
-        <el-button type="plain" size="medium" @click="clearTextAll()" round>一键清空</el-button>
+        <el-button type="primary" size="small" @click="insertInfoArea()" icon="el-icon-plus" circle></el-button>
       </el-row>
+      <el-divider></el-divider>
       <el-row type="flex" justify="center">
-        <el-button type="primary" size="medium" @click="insertInfoArea()" round>继续添加</el-button>
+        <el-col :span="6" :push="2">
+          <el-button type="primary" size="medium" @click="addAll()" round>一键提交</el-button>
+        </el-col>
+        <el-col :span="6" :push="2">
+          <el-button type="plain" size="medium" @click="clearTextAll()" round>一键清空</el-button>
+        </el-col>
       </el-row>
     </el-footer>
   </el-container>
@@ -136,7 +143,6 @@ export default {
       this.$router.go(-1)
     },
     addAdministrator (administrator) {
-      console.log(administrator)
       administrator.privilege.enrollment = administrator.privilege.enrollment ? 1 : 2
       administrator.privilege.semester = administrator.privilege.semester ? 1 : 2
       administrator.privilege.activity = administrator.privilege.activity ? 1 : 2

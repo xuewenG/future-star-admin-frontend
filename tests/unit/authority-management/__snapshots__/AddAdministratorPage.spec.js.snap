@@ -11,155 +11,19 @@ exports[`AddAdministratorPage 快照测试 1`] = `
     </div>
   </header>
   <main class="el-main">
-    <div class="el-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-transition">
-      <div class="hidden-columns">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="el-table__header-wrapper">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1380px;">
-          <colgroup>
-            <col name="el-table_1_column_1" width="160">
-            <col name="el-table_1_column_2" width="160">
-            <col name="el-table_1_column_3" width="160">
-            <col name="el-table_1_column_4" width="180">
-            <col name="el-table_1_column_5" width="180">
-            <col name="el-table_1_column_6" width="180">
-            <col name="el-table_1_column_7" width="180">
-            <col name="el-table_1_column_8" width="180">
-          </colgroup>
-          <thead class="">
-            <tr class="">
-              <th colspan="1" rowspan="1" class="el-table_1_column_1     is-hidden is-leaf">
-                <div class="cell">姓名</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_2     is-leaf">
-                <div class="cell">账号</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_3     is-leaf">
-                <div class="cell">密码</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
-                <div class="cell">招生管理权限</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
-                <div class="cell">课程管理权限</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf">
-                <div class="cell">校友活动管理权限</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf">
-                <div class="cell">校友资料管理权限</div>
-              </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-leaf">
-                <div class="cell">操作</div>
-              </th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-      <div class="el-table__body-wrapper is-scrolling-left">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1380px;">
-          <colgroup>
-            <col name="el-table_1_column_1" width="160">
-            <col name="el-table_1_column_2" width="160">
-            <col name="el-table_1_column_3" width="160">
-            <col name="el-table_1_column_4" width="180">
-            <col name="el-table_1_column_5" width="180">
-            <col name="el-table_1_column_6" width="180">
-            <col name="el-table_1_column_7" width="180">
-            <col name="el-table_1_column_8" width="180">
-          </colgroup>
-          <tbody>
-            <tr class="el-table__row">
-              <td rowspan="1" colspan="1" class="el-table_1_column_1   is-hidden">
-                <div class="cell">
-                  <div class="el-input">
-                    <!----><input type="text" autocomplete="off" placeholder="请输入姓名" class="el-input__inner">
-                    <!---->
-                    <!---->
-                    <!---->
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
-                <div class="cell">
-                  <div class="el-input">
-                    <!----><input type="text" autocomplete="off" placeholder="请输入账号" class="el-input__inner">
-                    <!---->
-                    <!---->
-                    <!---->
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
-                <div class="cell">
-                  <div class="el-input el-input--suffix">
-                    <!----><input type="password" autocomplete="off" placeholder="请输入密码" class="el-input__inner">
-                    <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><!----></span>
-                    <!----></span>
-                    <!---->
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
-                <div class="cell">
-                  <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px;"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
-                <div class="cell">
-                  <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px;"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
-                <div class="cell">
-                  <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px;"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
-                <div class="cell">
-                  <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                    <!----><span class="el-switch__core" style="width: 40px;"></span>
-                    <!---->
-                  </div>
-                </div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-round">
-                    <!---->
-                    <!----><span>提交</span></button> <button type="button" class="el-button el-button--plain el-button--small is-round">
-                    <!---->
-                    <!----><span>清空</span></button></div>
-              </td>
-            </tr>
-            <!---->
-          </tbody>
-        </table>
-        <!---->
-        <!---->
-      </div>
-      <!---->
-      <div class="el-table__fixed" style="width: 160px;">
-        <div class="el-table__fixed-header-wrapper">
+    <div class="table-center">
+      <div class="el-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-transition">
+        <div class="hidden-columns">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="el-table__header-wrapper">
           <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1380px;">
             <colgroup>
               <col name="el-table_1_column_1" width="160">
@@ -173,35 +37,35 @@ exports[`AddAdministratorPage 快照测试 1`] = `
             </colgroup>
             <thead class="">
               <tr class="">
-                <th colspan="1" rowspan="1" class="el-table_1_column_1     is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_1     is-hidden is-leaf">
                   <div class="cell">姓名</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_2     is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_2     is-leaf">
                   <div class="cell">账号</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_3     is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_3     is-leaf">
                   <div class="cell">密码</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
                   <div class="cell">招生管理权限</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
                   <div class="cell">课程管理权限</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf">
                   <div class="cell">校友活动管理权限</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf">
                   <div class="cell">校友资料管理权限</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-leaf">
                   <div class="cell">操作</div>
                 </th>
               </tr>
             </thead>
           </table>
         </div>
-        <div class="el-table__fixed-body-wrapper" style="top: 0px;">
+        <div class="el-table__body-wrapper is-scrolling-left">
           <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1380px;">
             <colgroup>
               <col name="el-table_1_column_1" width="160">
@@ -215,7 +79,7 @@ exports[`AddAdministratorPage 快照测试 1`] = `
             </colgroup>
             <tbody>
               <tr class="el-table__row">
-                <td rowspan="1" colspan="1" class="el-table_1_column_1  ">
+                <td rowspan="1" colspan="1" class="el-table_1_column_1   is-hidden">
                   <div class="cell">
                     <div class="el-input">
                       <!----><input type="text" autocomplete="off" placeholder="请输入姓名" class="el-input__inner">
@@ -226,7 +90,7 @@ exports[`AddAdministratorPage 快照测试 1`] = `
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_2   is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
                   <div class="cell">
                     <div class="el-input">
                       <!----><input type="text" autocomplete="off" placeholder="请输入账号" class="el-input__inner">
@@ -237,7 +101,7 @@ exports[`AddAdministratorPage 快照测试 1`] = `
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_3   is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
                   <div class="cell">
                     <div class="el-input el-input--suffix">
                       <!----><input type="password" autocomplete="off" placeholder="请输入密码" class="el-input__inner">
@@ -248,7 +112,7 @@ exports[`AddAdministratorPage 快照测试 1`] = `
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
                   <div class="cell">
                     <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
                       <!----><span class="el-switch__core" style="width: 40px;"></span>
@@ -256,7 +120,7 @@ exports[`AddAdministratorPage 快照测试 1`] = `
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
                   <div class="cell">
                     <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
                       <!----><span class="el-switch__core" style="width: 40px;"></span>
@@ -264,7 +128,7 @@ exports[`AddAdministratorPage 快照测试 1`] = `
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
                   <div class="cell">
                     <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
                       <!----><span class="el-switch__core" style="width: 40px;"></span>
@@ -272,7 +136,7 @@ exports[`AddAdministratorPage 快照测试 1`] = `
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
                   <div class="cell">
                     <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
                       <!----><span class="el-switch__core" style="width: 40px;"></span>
@@ -280,7 +144,7 @@ exports[`AddAdministratorPage 快照测试 1`] = `
                     </div>
                   </div>
                 </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center  is-hidden">
+                <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center ">
                   <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-round">
                       <!---->
                       <!----><span>提交</span></button> <button type="button" class="el-button el-button--plain el-button--small is-round">
@@ -292,23 +156,167 @@ exports[`AddAdministratorPage 快照测试 1`] = `
             </tbody>
           </table>
           <!---->
+          <!---->
         </div>
         <!---->
+        <div class="el-table__fixed" style="width: 160px;">
+          <div class="el-table__fixed-header-wrapper">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1380px;">
+              <colgroup>
+                <col name="el-table_1_column_1" width="160">
+                <col name="el-table_1_column_2" width="160">
+                <col name="el-table_1_column_3" width="160">
+                <col name="el-table_1_column_4" width="180">
+                <col name="el-table_1_column_5" width="180">
+                <col name="el-table_1_column_6" width="180">
+                <col name="el-table_1_column_7" width="180">
+                <col name="el-table_1_column_8" width="180">
+              </colgroup>
+              <thead class="">
+                <tr class="">
+                  <th colspan="1" rowspan="1" class="el-table_1_column_1     is-leaf">
+                    <div class="cell">姓名</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_2     is-hidden is-leaf">
+                    <div class="cell">账号</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_3     is-hidden is-leaf">
+                    <div class="cell">密码</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-hidden is-leaf">
+                    <div class="cell">招生管理权限</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-hidden is-leaf">
+                    <div class="cell">课程管理权限</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-hidden is-leaf">
+                    <div class="cell">校友活动管理权限</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-hidden is-leaf">
+                    <div class="cell">校友资料管理权限</div>
+                  </th>
+                  <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-hidden is-leaf">
+                    <div class="cell">操作</div>
+                  </th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="el-table__fixed-body-wrapper" style="top: 0px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1380px;">
+              <colgroup>
+                <col name="el-table_1_column_1" width="160">
+                <col name="el-table_1_column_2" width="160">
+                <col name="el-table_1_column_3" width="160">
+                <col name="el-table_1_column_4" width="180">
+                <col name="el-table_1_column_5" width="180">
+                <col name="el-table_1_column_6" width="180">
+                <col name="el-table_1_column_7" width="180">
+                <col name="el-table_1_column_8" width="180">
+              </colgroup>
+              <tbody>
+                <tr class="el-table__row">
+                  <td rowspan="1" colspan="1" class="el-table_1_column_1  ">
+                    <div class="cell">
+                      <div class="el-input">
+                        <!----><input type="text" autocomplete="off" placeholder="请输入姓名" class="el-input__inner">
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_2   is-hidden">
+                    <div class="cell">
+                      <div class="el-input">
+                        <!----><input type="text" autocomplete="off" placeholder="请输入账号" class="el-input__inner">
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_3   is-hidden">
+                    <div class="cell">
+                      <div class="el-input el-input--suffix">
+                        <!----><input type="password" autocomplete="off" placeholder="请输入密码" class="el-input__inner">
+                        <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><!----></span>
+                        <!----></span>
+                        <!---->
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center  is-hidden">
+                    <div class="cell">
+                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                        <!----><span class="el-switch__core" style="width: 40px;"></span>
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center  is-hidden">
+                    <div class="cell">
+                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                        <!----><span class="el-switch__core" style="width: 40px;"></span>
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center  is-hidden">
+                    <div class="cell">
+                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                        <!----><span class="el-switch__core" style="width: 40px;"></span>
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center  is-hidden">
+                    <div class="cell">
+                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
+                        <!----><span class="el-switch__core" style="width: 40px;"></span>
+                        <!---->
+                      </div>
+                    </div>
+                  </td>
+                  <td rowspan="1" colspan="1" class="el-table_1_column_8 is-center  is-hidden">
+                    <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-round">
+                        <!---->
+                        <!----><span>提交</span></button> <button type="button" class="el-button el-button--plain el-button--small is-round">
+                        <!---->
+                        <!----><span>清空</span></button></div>
+                  </td>
+                </tr>
+                <!---->
+              </tbody>
+            </table>
+            <!---->
+          </div>
+          <!---->
+        </div>
+        <!---->
+        <!---->
+        <div class="el-table__column-resize-proxy" style="display: none;"></div>
       </div>
-      <!---->
-      <!---->
-      <div class="el-table__column-resize-proxy" style="display: none;"></div>
     </div>
   </main>
   <footer class="el-footer" style="height: 60px;">
-    <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--medium is-round">
-        <!---->
-        <!----><span>一键提交</span></button> <button type="button" class="el-button el-button--plain el-button--medium is-round">
-        <!---->
-        <!----><span>一键清空</span></button></div>
-    <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--medium is-round">
-        <!---->
-        <!----><span>继续添加</span></button></div>
+    <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-circle">
+        <!----><i class="el-icon-plus"></i>
+        <!----></button></div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="el-col el-col-6 el-col-push-2"><button type="button" class="el-button el-button--primary el-button--medium is-round">
+          <!---->
+          <!----><span>一键提交</span></button></div>
+      <div class="el-col el-col-6 el-col-push-2"><button type="button" class="el-button el-button--plain el-button--medium is-round">
+          <!---->
+          <!----><span>一键清空</span></button></div>
+    </div>
   </footer>
 </section>
 `;
