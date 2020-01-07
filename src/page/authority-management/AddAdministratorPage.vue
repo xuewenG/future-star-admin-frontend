@@ -136,7 +136,6 @@ export default {
       this.$router.go(-1)
     },
     addAdministrator (administrator) {
-      console.log(administrator)
       administrator.privilege.enrollment = administrator.privilege.enrollment ? 1 : 2
       administrator.privilege.semester = administrator.privilege.semester ? 1 : 2
       administrator.privilege.activity = administrator.privilege.activity ? 1 : 2
