@@ -24,7 +24,7 @@
       </el-row>
     </el-header>
     <el-main class="main-in-enrollment">
-      <el-tabs v-model="activeName">
+      <el-tabs v-model="activeName" @tab-click="changeActiveName" type="border-card">
         <el-tab-pane label="未开放" name="first">
           <unopened-classes></unopened-classes>
         </el-tab-pane>
@@ -45,6 +45,9 @@ export default {
     UnopenedClasses,
     EnrollingClasses
   },
+  created () {
+    this.activeName = this.$store.getters.getActiveNameOfEnrollment
+  },
   data () {
     return {
       activeName: 'first',
@@ -55,6 +58,9 @@ export default {
   methods: {
     lookOverSemesterDetail: function () {
       this.$router.push('/semester-detail')
+    },
+    changeActiveName: function (tab) {
+      this.$store.dispatch('changeActiveNameOfEnrollment', tab.name)
     }
   }
 }
