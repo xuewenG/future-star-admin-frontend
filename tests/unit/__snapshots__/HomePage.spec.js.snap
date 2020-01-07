@@ -8,16 +8,16 @@ exports[`HomePage 快照测试 1`] = `
       <div class="hint-info el-col el-col-5 el-col-push-1">
         <h3>欢迎来到未来之星管理系统</h3>
       </div>
-      <div class="hint-info el-col el-col-1 el-col-push-9">
-        <h3>管理员</h3>
+      <div class="hint-info el-col el-col-3 el-col-push-8">
+        <h3>亲爱的管理员</h3>
       </div>
-      <div class="hint-info el-col el-col-2 el-col-push-9">
-        <h3>，陈某某某</h3>
+      <div class="hint-info el-col el-col-2 el-col-push-7">
+        <h3>，</h3>
       </div>
-      <div class="hint-info el-col el-col-2 el-col-push-9"><button type="button" class="el-button el-button--warning el-button--small is-round">
+      <div class="hint-info el-col el-col-2 el-col-push-7"><button type="button" class="el-button el-button--warning el-button--small is-round">
           <!---->
           <!----><span>修改密码</span></button></div>
-      <div class="hint-info el-col el-col-2 el-col-push-9"><button type="button" class="el-button el-button--danger el-button--small is-round">
+      <div class="hint-info el-col el-col-2 el-col-push-7"><button type="button" class="el-button el-button--danger el-button--small is-round">
           <!---->
           <!----><span>账号登出</span></button></div>
     </div>

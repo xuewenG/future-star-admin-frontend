@@ -8,16 +8,16 @@
           <el-col :span="5" :push="1" class="hint-info">
             <h3>欢迎来到未来之星管理系统</h3>
           </el-col>
-          <el-col :span="1" :push="9"  class="hint-info">
+          <el-col :span="3" :push="8"  class="hint-info">
             <h3>{{ identity }}</h3>
           </el-col>
-          <el-col :span="2" :push="9"  class="hint-info">
-            <h3>，{{ userName }}</h3>
+          <el-col :span="2" :push="7"  class="hint-info">
+            <h3>，{{ name }}</h3>
           </el-col>
-          <el-col :span="2" :push="9"  class="hint-info">
+          <el-col :span="2" :push="7"  class="hint-info">
               <el-button type="warning" size="small" round>修改密码</el-button>
           </el-col>
-          <el-col :span="2" :push="9"  class="hint-info">
+          <el-col :span="2" :push="7"  class="hint-info">
             <el-button type="danger" size="small" @click="signOut" round>账号登出</el-button>
           </el-col>
       </el-row>
@@ -79,10 +79,10 @@ export default {
   },
   computed: {
     identity: function () {
-      return this.$store.getters.identity
+      return '亲爱的' + this.$store.getters.identity
     },
-    userName: function () {
-      return this.$store.getters.userName
+    name: function () {
+      return this.$store.getters.name
     }
   }
 }

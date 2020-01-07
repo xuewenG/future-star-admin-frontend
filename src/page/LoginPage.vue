@@ -14,10 +14,10 @@
         </el-row>
         <el-form label-width="90px">
           <el-form-item label="请输入账号:">
-              <el-input type="text" autofocus="autofocus" class="input-text"/>
+              <el-input type="text" v-model="account" autofocus="autofocus" class="input-text"/>
             </el-form-item>
           <el-form-item label="请输入密码:">
-              <el-input type="password" class="input-text"/>
+              <el-input type="password" v-model="password" class="input-text"/>
             </el-form-item>
           <el-form-item>
             <el-row type="flex" justify="center">
@@ -35,9 +35,34 @@
 <script>
 export default {
   name: 'LoginPage',
+  data () {
+    return {
+      account: '',
+      password: ''
+    }
+  },
   methods: {
     login: function () {
-      this.$router.push('/home')
+      let that = this
+      that.$axios.post('/administrator/login', that.$qs.stringify({
+        account: that.account,
+        password: that.password
+      })).then(async function (response) {
+        if (response.data.code === '2000') {
+          await that.$store.dispatch('setUser', response.data.data)
+          console.log(that.$store.getters.user)
+          console.log(response.data.data)
+          await that.$router.push('/home')
+        } else {
+          that.$message({
+            type: 'error',
+            message: '用户名或密码错误',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+      })
     }
   }
 }
