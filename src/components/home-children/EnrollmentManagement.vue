@@ -74,6 +74,7 @@ export default {
   },
   methods: {
     lookOverSemesterDetail: function () {
+      this.$store.dispatch('changeCurrentSemester', this.semester)
       this.$router.push('/semester-detail')
     },
     changeActiveName: function (tab) {

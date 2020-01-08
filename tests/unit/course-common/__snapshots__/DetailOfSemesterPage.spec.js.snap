@@ -17,14 +17,14 @@ exports[`DetailOfSemesterPage 快照测试 1`] = `
       <div class="el-card__body">
         <div class="el-row">
           <div class="el-col el-col-23">
-            学期主题：第九期创新院
+            学期主题：
           </div>
           <div class="el-col el-col-1"><button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
               <!----><i class="el-icon-edit-outline"></i>
               <!----></button></div>
         </div>
         <div class="el-row">
-          学期介绍： 这是一期很好的课程
+          学期介绍：
         </div>
       </div>
     </div>
