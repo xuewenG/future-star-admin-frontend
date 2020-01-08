@@ -1,38 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Welcome 快照测试 1`] = `
-<div class="el-carousel el-carousel--horizontal el-carousel--card">
+<div class="el-carousel el-carousel--horizontal">
   <div class="el-carousel__container" style="height: 500px;"><button type="button" class="el-carousel__arrow el-carousel__arrow--left" style="display: none;"><i class="el-icon-arrow-left"></i></button><button type="button" class="el-carousel__arrow el-carousel__arrow--right" style="display: none;"><i class="el-icon-arrow-right"></i></button>
-    <div class="el-carousel__item is-active el-carousel__item--card is-in-stage" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
-      <div class="el-carousel__mask" style="display: none;"></div>
+    <div class="el-carousel__item is-active is-animating" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
+      <!---->
       <div class="el-image">
         <div class="el-image__placeholder"></div>
         <!---->
       </div>
     </div>
-    <div class="el-carousel__item el-carousel__item--card is-in-stage" style="transform: translateX(0px) scale(0.83); webkit-transform: translateX(0px) scale(0.83);">
-      <div class="el-carousel__mask"></div>
+    <div class="el-carousel__item" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
+      <!---->
       <div class="el-image">
         <div class="el-image__placeholder"></div>
         <!---->
       </div>
     </div>
-    <div class="el-carousel__item el-carousel__item--card" style="transform: translateX(0px) scale(0.83); webkit-transform: translateX(0px) scale(0.83);">
-      <div class="el-carousel__mask"></div>
+    <div class="el-carousel__item" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
+      <!---->
       <div class="el-image">
         <div class="el-image__placeholder"></div>
         <!---->
       </div>
     </div>
-    <div class="el-carousel__item el-carousel__item--card is-in-stage" style="transform: translateX(0px) scale(0.83); webkit-transform: translateX(0px) scale(0.83);">
-      <div class="el-carousel__mask"></div>
+    <div class="el-carousel__item" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
+      <!---->
       <div class="el-image">
         <div class="el-image__placeholder"></div>
         <!---->
       </div>
     </div>
   </div>
-  <ul class="el-carousel__indicators el-carousel__indicators--horizontal el-carousel__indicators--outside">
+  <ul class="el-carousel__indicators el-carousel__indicators--horizontal">
     <li class="el-carousel__indicator el-carousel__indicator--horizontal is-active"><button class="el-carousel__button">
         <!----></button></li>
     <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button class="el-carousel__button">

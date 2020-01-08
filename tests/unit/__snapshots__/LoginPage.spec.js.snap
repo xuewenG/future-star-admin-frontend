@@ -1,20 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginPage 快照测试 1`] = `
-<section class="el-container">
+<section class="el-container is-vertical">
+  <header class="el-header" style="height: 60px;">
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="el-image logo">
+        <div class="el-image__placeholder"></div>
+        <!---->
+      </div>
+    </div>
+  </header>
   <main class="el-main">
     <div class="el-card login-card is-always-shadow">
       <!---->
       <div class="el-card__body">
-        <div class="hint el-row is-justify-center el-row--flex">
-          <div class="el-col el-col-4"><img src="../assets/EdStarsLogo.jpg" class="logo"></div>
-          <div class="login-hint el-col el-col-8">
-            管理人员登录平台
-          </div>
-        </div>
-        <form class="el-form">
-          <div class="el-form-item"><label class="el-form-item__label" style="width: 90px;">请输入账号:</label>
-            <div class="el-form-item__content" style="margin-left: 90px;">
+        <form class="el-form el-form--label-top">
+          <div class="el-form-item"><label class="el-form-item__label">账号</label>
+            <div class="el-form-item__content">
               <div class="input-text el-input">
                 <!----><input type="text" autocomplete="off" autofocus="autofocus" class="el-input__inner">
                 <!---->
@@ -25,8 +27,8 @@ exports[`LoginPage 快照测试 1`] = `
               <!---->
             </div>
           </div>
-          <div class="el-form-item"><label class="el-form-item__label" style="width: 90px;">请输入密码:</label>
-            <div class="el-form-item__content" style="margin-left: 90px;">
+          <div class="el-form-item"><label class="el-form-item__label">密码</label>
+            <div class="el-form-item__content">
               <div class="input-text el-input">
                 <!----><input type="password" autocomplete="off" class="el-input__inner">
                 <!---->
@@ -39,7 +41,7 @@ exports[`LoginPage 快照测试 1`] = `
           </div>
           <div class="el-form-item">
             <!---->
-            <div class="el-form-item__content" style="margin-left: 90px;">
+            <div class="el-form-item__content">
               <div class="el-row is-justify-center el-row--flex">
                 <div class="el-col el-col-24 el-col-push-4"><button type="button" class="el-button login-button el-button--primary">
                     <!---->

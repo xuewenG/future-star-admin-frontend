@@ -5,76 +5,101 @@ exports[`App 快照测试 1`] = `
   <section class="el-container is-vertical">
     <header class="el-header" style="height: 60px;">
       <div class="hint-info-row el-row is-justify-center is-align-middle">
-        <div class="el-col el-col-2 el-col-push-1"><img src="../assets/EdStarsLogo.jpg" height="50px"></div>
-        <div class="hint-info el-col el-col-5 el-col-push-1">
-          <h3>欢迎来到未来之星管理系统</h3>
+        <div class="el-col el-col-1"><img src="../assets/EdStarsLogo.jpg" height="50px"></div>
+        <div class="el-col el-col-2 el-col-push-22">
+          <div class="el-dropdown">
+            <div class="el-col el-col-24 el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-786" role="button" tabindex="0"><span class="el-avatar el-avatar--circle" style="height: 50px; width: 50px; line-height: 50px;"></span>
+              <li class="el-icon-arrow-down"></li>
+            </div>
+            <ul class="el-dropdown-menu el-popper el-dropdown-menu--mini" style="display: none;" id="dropdown-menu-786">
+              <li tabindex="-1" class="el-dropdown-menu__item">
+                <!---->
+                <div class="avatar-pop-menu-item el-row">
+                  <h3></h3>
+                </div>
+                <div class="avatar-pop-menu-item el-row">
+                  @
+                </div>
+              </li>
+              <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
+                <!---->
+                <div class="avatar-pop-menu-item el-row">
+                  修改密码
+                </div>
+              </li>
+              <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
+                <!---->
+                <div class="avatar-pop-menu-item el-row">
+                  注销登录
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="hint-info el-col el-col-4 el-col-push-10">
-          <h3> , </h3>
-        </div>
-        <div class="hint-info el-col el-col-2 el-col-push-9"><button type="button" class="el-button el-button--warning el-button--small is-round">
-            <!---->
-            <!----><span>修改密码</span></button></div>
-        <div class="hint-info el-col el-col-2 el-col-push-9"><button type="button" class="el-button el-button--danger el-button--small is-round">
-            <!---->
-            <!----><span>账号登出</span></button></div>
       </div>
     </header>
-    <section class="el-container is-vertical">
-      <header class="el-header" style="height: 60px;">
-        <ul role="menubar" class="el-menu--horizontal el-menu" style="background-color: rgb(0, 173, 169);" align="middle">
-          <div class="el-row is-justify-space-around el-row--flex" tabindex="0">
-            <div class="el-col el-col-4"><a href="#/home/enrollment" class="">
-                <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(255, 255, 255); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">招生管理</li>
-              </a></div>
-            <div class="el-col el-col-4"><a href="#/home/course" class="">
-                <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(255, 255, 255); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">课程管理</li>
-              </a></div>
-            <div class="el-col el-col-4"><a href="#/home/activity" class="">
-                <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(255, 255, 255); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">活动管理</li>
-              </a></div>
-            <div class="el-col el-col-4"><a href="#/home/alumni" class="">
-                <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(255, 255, 255); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">校友资料管理</li>
-              </a></div>
-            <div class="el-col el-col-4"><a href="#/home/authority" class="">
-                <li role="menuitem" tabindex="-1" class="el-menu-item" style="color: rgb(255, 255, 255); border-bottom-color: transparent; background-color: rgb(0, 173, 169);">权限管理</li>
-              </a></div>
-          </div>
-        </ul>
-      </header>
+    <section class="el-container">
+      <aside class="el-aside" style="width: 202px;">
+        <ul role="menubar" class="el-menu" style="background-color: rgb(249, 250, 252);" align="middle"><a href="#/home/enrollment" class="">
+            <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 20px; color: rgb(112, 112, 112); background-color: rgb(249, 250, 252);">
+            <li class="el-icon-coordinate"></li>
+            招生管理
+            </li>
+          </a> <a href="#/home/course" class="">
+            <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 20px; color: rgb(112, 112, 112); background-color: rgb(249, 250, 252);">
+            <li class="el-icon-document"></li>
+            课程管理
+            </li>
+          </a> <a href="#/home/activity" class="">
+            <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 20px; color: rgb(112, 112, 112); background-color: rgb(249, 250, 252);">
+            <li class="el-icon-sunny"></li>
+            活动管理
+            </li>
+          </a> <a href="#/home/alumni" class="">
+            <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 20px; color: rgb(112, 112, 112); background-color: rgb(249, 250, 252);">
+            <li class="el-icon-user"></li>
+            校友管理
+            </li>
+          </a> <a href="#/home/authority" class="">
+            <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 20px; color: rgb(112, 112, 112); background-color: rgb(249, 250, 252);">
+            <li class="el-icon-key"></li>
+            权限管理
+            </li>
+          </a></ul>
+      </aside>
       <main class="el-main">
-        <div class="el-carousel el-carousel--horizontal el-carousel--card">
+        <div class="el-carousel el-carousel--horizontal">
           <div class="el-carousel__container" style="height: 500px;"><button type="button" class="el-carousel__arrow el-carousel__arrow--left" style="display: none;"><i class="el-icon-arrow-left"></i></button><button type="button" class="el-carousel__arrow el-carousel__arrow--right" style="display: none;"><i class="el-icon-arrow-right"></i></button>
-            <div class="el-carousel__item is-active el-carousel__item--card is-in-stage" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
-              <div class="el-carousel__mask" style="display: none;"></div>
+            <div class="el-carousel__item is-active is-animating" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
+              <!---->
               <div class="el-image">
                 <div class="el-image__placeholder"></div>
                 <!---->
               </div>
             </div>
-            <div class="el-carousel__item el-carousel__item--card is-in-stage" style="transform: translateX(0px) scale(0.83); webkit-transform: translateX(0px) scale(0.83);">
-              <div class="el-carousel__mask"></div>
+            <div class="el-carousel__item" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
+              <!---->
               <div class="el-image">
                 <div class="el-image__placeholder"></div>
                 <!---->
               </div>
             </div>
-            <div class="el-carousel__item el-carousel__item--card" style="transform: translateX(0px) scale(0.83); webkit-transform: translateX(0px) scale(0.83);">
-              <div class="el-carousel__mask"></div>
+            <div class="el-carousel__item" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
+              <!---->
               <div class="el-image">
                 <div class="el-image__placeholder"></div>
                 <!---->
               </div>
             </div>
-            <div class="el-carousel__item el-carousel__item--card is-in-stage" style="transform: translateX(0px) scale(0.83); webkit-transform: translateX(0px) scale(0.83);">
-              <div class="el-carousel__mask"></div>
+            <div class="el-carousel__item" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
+              <!---->
               <div class="el-image">
                 <div class="el-image__placeholder"></div>
                 <!---->
               </div>
             </div>
           </div>
-          <ul class="el-carousel__indicators el-carousel__indicators--horizontal el-carousel__indicators--outside">
+          <ul class="el-carousel__indicators el-carousel__indicators--horizontal">
             <li class="el-carousel__indicator el-carousel__indicator--horizontal is-active"><button class="el-carousel__button">
                 <!----></button></li>
             <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button class="el-carousel__button">
