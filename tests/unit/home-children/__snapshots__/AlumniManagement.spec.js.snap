@@ -35,8 +35,8 @@ exports[`AlumniManagement 快照测试 1`] = `
       <div class="el-col el-col-4">
         <div class="el-select selection">
           <!---->
-          <div class="el-input el-input--suffix">
-            <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择班级" class="el-input__inner">
+          <div class="el-input is-disabled el-input--suffix">
+            <!----><input type="text" disabled="disabled" readonly="readonly" autocomplete="off" placeholder="请选择班级" class="el-input__inner">
             <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span>
             <!----></span>
             <!---->
@@ -87,16 +87,16 @@ exports[`AlumniManagement 快照测试 1`] = `
         <div></div>
       </div>
       <div class="el-table__header-wrapper">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1180px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 640px;">
           <colgroup>
-            <col name="el-table_1_column_1" width="115">
-            <col name="el-table_1_column_2" width="115">
-            <col name="el-table_1_column_3" width="170">
-            <col name="el-table_1_column_4" width="170">
-            <col name="el-table_1_column_5" width="170">
-            <col name="el-table_1_column_6" width="210">
-            <col name="el-table_1_column_7" width="115">
-            <col name="el-table_1_column_8" width="115">
+            <col name="el-table_1_column_1" width="80">
+            <col name="el-table_1_column_2" width="80">
+            <col name="el-table_1_column_3" width="80">
+            <col name="el-table_1_column_4" width="80">
+            <col name="el-table_1_column_5" width="80">
+            <col name="el-table_1_column_6" width="80">
+            <col name="el-table_1_column_7" width="80">
+            <col name="el-table_1_column_8" width="80">
           </colgroup>
           <thead class="">
             <tr class="">
@@ -129,22 +129,22 @@ exports[`AlumniManagement 快照测试 1`] = `
         </table>
       </div>
       <div class="el-table__body-wrapper is-scrolling-left">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1180px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 640px;">
           <colgroup>
-            <col name="el-table_1_column_1" width="115">
-            <col name="el-table_1_column_2" width="115">
-            <col name="el-table_1_column_3" width="170">
-            <col name="el-table_1_column_4" width="170">
-            <col name="el-table_1_column_5" width="170">
-            <col name="el-table_1_column_6" width="210">
-            <col name="el-table_1_column_7" width="115">
-            <col name="el-table_1_column_8" width="115">
+            <col name="el-table_1_column_1" width="80">
+            <col name="el-table_1_column_2" width="80">
+            <col name="el-table_1_column_3" width="80">
+            <col name="el-table_1_column_4" width="80">
+            <col name="el-table_1_column_5" width="80">
+            <col name="el-table_1_column_6" width="80">
+            <col name="el-table_1_column_7" width="80">
+            <col name="el-table_1_column_8" width="80">
           </colgroup>
           <tbody>
             <!---->
           </tbody>
         </table>
-        <div class="el-table__empty-block" style="height: 100%; width: 1180px;"><span class="el-table__empty-text">暂无数据</span></div>
+        <div class="el-table__empty-block" style="height: 100%; width: 640px;"><span class="el-table__empty-text">暂无数据</span></div>
         <!---->
       </div>
       <!---->
