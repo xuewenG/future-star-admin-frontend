@@ -15,4 +15,8 @@ export default {
   padding: 0;
   margin: 0;
 }
+
+html {
+  background-color: #f9f9f9;
+}
 </style>

@@ -26,10 +26,6 @@ export default {
         },
         {
           id: '3',
-          address: require('../../assets/backgroundImage3.jpg')
-        },
-        {
-          id: '4',
           address: require('../../assets/backgroundImage4.jpg')
         }
       ]

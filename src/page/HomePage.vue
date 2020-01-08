@@ -5,8 +5,8 @@
           <el-col :span="1">
             <img src="../assets/EdStarsLogo.jpg" height="50px" />
           </el-col>
-          <el-col :span="2" :push="22">
-            <el-dropdown size="mini" placement="bottom-end">
+          <el-col :span="2" :push="21">
+            <el-dropdown size="mini" placement="bottom-end" @command="handleCommand">
               <el-col>
                 <el-avatar :size="50" :src="avatarUrl"></el-avatar>
                 <li class="el-icon-arrow-down"></li>
@@ -20,12 +20,12 @@
                     @{{ account }}
                   </el-row>
                 </el-dropdown-item>
-                <el-dropdown-item divided>
+                <el-dropdown-item command="a" divided>
                   <el-row class="avatar-pop-menu-item">
                     修改密码
                   </el-row>
                 </el-dropdown-item>
-                <el-dropdown-item divided>
+                <el-dropdown-item command="b" divided>
                   <el-row class="avatar-pop-menu-item">
                     注销登录
                   </el-row>
@@ -109,6 +109,13 @@ export default {
     that.defaultActive = that.$store.getters.getActiveIndexOfNavigation
   },
   methods: {
+    handleCommand (command) {
+      if (command === 'a') {
+        console.log('modify password')
+      } else if (command === 'b') {
+        this.signOut()
+      }
+    },
     changeDefaultActive (index) {
       let that = this
       that.$store.dispatch('changeActiveIndexOfNavigation', index)
@@ -164,7 +171,7 @@ export default {
   }
 
   .el-aside {
-    height: 700px;
+    height: 680px;
     background-color: #f9fafc;
   }
 
@@ -174,10 +181,6 @@ export default {
 
   .hint-info-row {
     padding-top: 5px;
-  }
-
-  .el-container {
-    height: 100%;
   }
 
   .avatar-pop-menu-item {

@@ -22,8 +22,4 @@ describe('LoginPage', () => {
   test('是一个 Vue 实例', async () => {
     await expect(wrapper.isVueInstance()).toBeTruthy()
   })
-  test('按钮', async () => {
-    const button = wrapper.find('.el-button')
-    await expect(button.text()).toBe('登录')
-  })
 })

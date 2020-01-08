@@ -10,49 +10,65 @@ exports[`LoginPage 快照测试 1`] = `
       </div>
     </div>
   </header>
+  <div class="el-divider el-divider--horizontal">
+    <!---->
+  </div>
   <main class="el-main">
-    <div class="el-card login-card is-always-shadow">
-      <!---->
-      <div class="el-card__body">
-        <form class="el-form el-form--label-top">
-          <div class="el-form-item"><label class="el-form-item__label">账号</label>
-            <div class="el-form-item__content">
-              <div class="input-text el-input">
-                <!----><input type="text" autocomplete="off" autofocus="autofocus" class="el-input__inner">
-                <!---->
-                <!---->
-                <!---->
-                <!---->
-              </div>
-              <!---->
-            </div>
-          </div>
-          <div class="el-form-item"><label class="el-form-item__label">密码</label>
-            <div class="el-form-item__content">
-              <div class="input-text el-input">
-                <!----><input type="password" autocomplete="off" class="el-input__inner">
-                <!---->
-                <!---->
-                <!---->
+    <div class="el-row is-justify-center el-row--flex"><span class="platform-name">未来之星管理平台</span></div>
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="el-card login-card is-always-shadow">
+        <!---->
+        <div class="el-card__body">
+          <form class="el-form el-form--label-top">
+            <div class="el-form-item"><label class="el-form-item__label">账号</label>
+              <div class="el-form-item__content">
+                <div class="el-input">
+                  <!----><input type="text" autocomplete="off" autofocus="autofocus" class="el-input__inner">
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </div>
                 <!---->
               </div>
-              <!---->
             </div>
-          </div>
-          <div class="el-form-item">
-            <!---->
-            <div class="el-form-item__content">
-              <div class="el-row is-justify-center el-row--flex">
-                <div class="el-col el-col-24 el-col-push-4"><button type="button" class="el-button login-button el-button--primary">
+            <div class="el-form-item forget-password"><label class="el-form-item__label">密码</label>
+              <div class="el-form-item__content">
+                <div class="el-input">
+                  <!----><input type="password" autocomplete="off" class="el-input__inner">
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </div>
+                <!---->
+              </div>
+            </div> <button type="button" class="el-button el-button--text el-button--mini">
+              <!---->
+              <!----><span>忘记密码？</span></button>
+            <div class="el-form-item">
+              <!---->
+              <div class="el-form-item__content">
+                <div class="el-row"><button type="button" class="el-button login-button el-button--success">
                     <!---->
                     <!----><span>登录</span></button></div>
+                <!---->
               </div>
-              <!---->
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </main>
+  <div class="el-divider el-divider--horizontal">
+    <!---->
+  </div>
+  <footer class="el-footer" style="height: 60px;">
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="hint-footer el-col el-col-3">
+        @copyright coo studio
+      </div>
+    </div>
+  </footer>
 </section>
 `;
