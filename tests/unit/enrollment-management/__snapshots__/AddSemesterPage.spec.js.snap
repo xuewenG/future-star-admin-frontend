@@ -12,13 +12,13 @@ exports[`AddSemesterPage 快照测试 1`] = `
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-card activity-card is-always-shadow">
+    <div class="el-card activity-card is-never-shadow">
       <!---->
       <div class="el-card__body">
         <form class="el-form activity-table">
-          <div class="el-form-item activity-title"><label class="el-form-item__label" style="width: 150px;">学期主题：</label>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">学期主题：</label>
             <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="short-text el-input">
+              <div class="el-input">
                 <!----><input type="text" autocomplete="off" placeholder="请输入本学期主题" class="el-input__inner">
                 <!---->
                 <!---->
@@ -30,7 +30,7 @@ exports[`AddSemesterPage 快照测试 1`] = `
           </div>
           <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">学期介绍：</label>
             <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="long-text el-textarea"><textarea autocomplete="off" placeholder="请输入本学期介绍" class="el-textarea__inner" style="min-height: -24px; height: -120px;"></textarea>
+              <div class="el-textarea"><textarea autocomplete="off" placeholder="请输入本学期介绍" class="el-textarea__inner" style="min-height: -24px; height: -120px;"></textarea>
                 <!---->
               </div>
               <!---->
@@ -38,11 +38,15 @@ exports[`AddSemesterPage 快照测试 1`] = `
           </div>
           <div class="el-form-item">
             <!---->
-            <div class="el-form-item__content" style="margin-left: 150px;"><button type="button" class="el-button el-button--primary">
-                <!---->
-                <!----><span>立即创建</span></button> <button type="button" class="el-button el-button--default">
-                <!---->
-                <!----><span>取消</span></button>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="operation-button el-row is-justify-center el-row--flex">
+                <div class="el-col el-col-8"><button type="button" class="el-button el-button--primary">
+                    <!---->
+                    <!----><span>创建</span></button></div>
+                <div class="el-col el-col-8"><button type="button" class="el-button el-button--default">
+                    <!---->
+                    <!----><span>清空</span></button></div>
+              </div>
               <!---->
             </div>
           </div>

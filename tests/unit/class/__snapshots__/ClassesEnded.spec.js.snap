@@ -4,7 +4,7 @@ exports[`ClassesEnded 快照测试 1`] = `
 <div>
   <!---->
   <div class="el-col el-col-12">
-    <div class="el-card is-always-shadow">
+    <div class="el-card is-never-shadow">
       <div class="el-card__header">
         <div class="el-row is-align-middle el-row--flex">
           <div class="el-col el-col-16">
@@ -41,7 +41,7 @@ exports[`ClassesEnded 快照测试 1`] = `
     </div>
   </div>
   <div class="el-col el-col-12">
-    <div class="el-card is-always-shadow">
+    <div class="el-card is-never-shadow">
       <div class="el-card__header">
         <div class="el-row is-align-middle el-row--flex">
           <div class="el-col el-col-16">
@@ -78,7 +78,7 @@ exports[`ClassesEnded 快照测试 1`] = `
     </div>
   </div>
   <div class="el-col el-col-12">
-    <div class="el-card is-always-shadow">
+    <div class="el-card is-never-shadow">
       <div class="el-card__header">
         <div class="el-row is-align-middle el-row--flex">
           <div class="el-col el-col-16">

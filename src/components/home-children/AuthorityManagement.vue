@@ -7,7 +7,7 @@
         </el-col>
           <el-col :span="2">
             <router-link to="/add-administrator">
-              <el-button type="primary">添加管理员</el-button>
+              <el-button type="primary" size="mini" class="el-icon-plus" circle=""></el-button>
             </router-link>
           </el-col>
       </el-row>
@@ -116,9 +116,9 @@ export default {
   name: 'AuthorityManagementPage',
   data () {
     return {
-      permissionWidth: 205,
-      infoWidth: 150,
-      operationWidth: 120,
+      permissionWidth: 200,
+      infoWidth: 145,
+      operationWidth: 142,
       permissionActiveColor: '#13ce66',
       pageSize: 10,
       currentPage: 1,
@@ -259,5 +259,9 @@ export default {
   .el-header {
     padding: 0;
     margin: 0;
+  }
+
+  h3 {
+    color: #707070;
   }
 </style>

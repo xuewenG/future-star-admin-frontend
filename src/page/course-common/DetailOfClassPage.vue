@@ -9,7 +9,7 @@
             班级名称： {{ newClass.className }}
           </el-col>
           <el-col :span="1">
-            <el-button type="primary" size="mini" icon="el-icon-edit-outline" circle></el-button>
+            <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
           </el-col>
         </el-row>
         <el-row>
@@ -183,6 +183,9 @@ export default {
     },
     editCourseInfo: function () {
       this.$router.push('/edit-course-info')
+    },
+    editClassInfo: function () {
+      this.$router.push('/edit-class-info')
     }
   }
 }

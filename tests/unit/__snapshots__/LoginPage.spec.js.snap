@@ -16,7 +16,7 @@ exports[`LoginPage 快照测试 1`] = `
   <main class="el-main">
     <div class="el-row is-justify-center el-row--flex"><span class="platform-name">未来之星管理平台</span></div>
     <div class="el-row is-justify-center el-row--flex">
-      <div class="el-card login-card is-always-shadow">
+      <div class="el-card login-card is-never-shadow">
         <!---->
         <div class="el-card__body">
           <form class="el-form el-form--label-top">
@@ -53,7 +53,7 @@ exports[`LoginPage 快照测试 1`] = `
             <div class="el-form-item">
               <!---->
               <div class="el-form-item__content">
-                <div class="el-row"><button type="button" class="el-button login-button el-button--success">
+                <div class="el-row"><button type="button" class="el-button login-button el-button--primary">
                     <!---->
                     <!----><span>登录</span></button></div>
                 <!---->

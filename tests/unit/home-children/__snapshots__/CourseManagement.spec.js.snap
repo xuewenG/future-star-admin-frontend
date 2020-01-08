@@ -4,8 +4,8 @@ exports[`CourseManagement 快照测试 1`] = `
 <section class="el-container is-vertical">
   <header class="el-header" style="height: 60px;">
     <div class="el-row is-align-middle el-row--flex">
-      <div class="el-col el-col-5">
-        <h2>第九期未来之星创新院</h2>
+      <div class="el-col el-col-4">
+        <h3>第九期未来之星创新院</h3>
       </div>
       <div class="el-col el-col-1"><button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
           <!----><i class="el-icon-more"></i>
@@ -13,11 +13,12 @@ exports[`CourseManagement 快照测试 1`] = `
     </div>
   </header>
   <main class="el-main main-in-enrollment">
-    <div class="el-tabs el-tabs--top el-tabs--border-card">
+    <div class="el-tabs el-tabs--top">
       <div class="el-tabs__header is-top">
         <div class="el-tabs__nav-wrap is-top">
           <div class="el-tabs__nav-scroll">
             <div role="tablist" class="el-tabs__nav is-top" style="transform: translateX(-0px);">
+              <div class="el-tabs__active-bar is-top" style="width: 0px; transform: translateX(NaNpx); webkit-transform: translateX(NaNpx);"></div>
               <div id="tab-first" aria-controls="pane-first" role="tab" aria-selected="true" tabindex="0" class="el-tabs__item is-top is-active">待开课</div>
               <div id="tab-second" aria-controls="pane-second" role="tab" tabindex="-1" class="el-tabs__item is-top">进行中</div>
               <div id="tab-third" aria-controls="pane-third" role="tab" tabindex="-1" class="el-tabs__item is-top">已结束</div>
@@ -30,7 +31,7 @@ exports[`CourseManagement 快照测试 1`] = `
           <div>
             <!---->
             <div class="el-col el-col-12">
-              <div class="el-card is-always-shadow">
+              <div class="el-card is-never-shadow">
                 <div class="el-card__header">
                   <div class="el-row is-align-middle el-row--flex">
                     <div class="el-col el-col-14">
@@ -70,7 +71,7 @@ exports[`CourseManagement 快照测试 1`] = `
               </div>
             </div>
             <div class="el-col el-col-12">
-              <div class="el-card is-always-shadow">
+              <div class="el-card is-never-shadow">
                 <div class="el-card__header">
                   <div class="el-row is-align-middle el-row--flex">
                     <div class="el-col el-col-14">
@@ -110,7 +111,7 @@ exports[`CourseManagement 快照测试 1`] = `
               </div>
             </div>
             <div class="el-col el-col-12">
-              <div class="el-card is-always-shadow">
+              <div class="el-card is-never-shadow">
                 <div class="el-card__header">
                   <div class="el-row is-align-middle el-row--flex">
                     <div class="el-col el-col-14">
@@ -155,7 +156,7 @@ exports[`CourseManagement 快照测试 1`] = `
           <div>
             <!---->
             <div class="el-col el-col-12">
-              <div class="el-card is-always-shadow">
+              <div class="el-card is-never-shadow">
                 <div class="el-card__header">
                   <div class="el-row is-align-middle el-row--flex">
                     <div class="el-col el-col-14">
@@ -195,7 +196,7 @@ exports[`CourseManagement 快照测试 1`] = `
               </div>
             </div>
             <div class="el-col el-col-12">
-              <div class="el-card is-always-shadow">
+              <div class="el-card is-never-shadow">
                 <div class="el-card__header">
                   <div class="el-row is-align-middle el-row--flex">
                     <div class="el-col el-col-14">
@@ -235,7 +236,7 @@ exports[`CourseManagement 快照测试 1`] = `
               </div>
             </div>
             <div class="el-col el-col-12">
-              <div class="el-card is-always-shadow">
+              <div class="el-card is-never-shadow">
                 <div class="el-card__header">
                   <div class="el-row is-align-middle el-row--flex">
                     <div class="el-col el-col-14">
@@ -280,7 +281,7 @@ exports[`CourseManagement 快照测试 1`] = `
           <div>
             <!---->
             <div class="el-col el-col-12">
-              <div class="el-card is-always-shadow">
+              <div class="el-card is-never-shadow">
                 <div class="el-card__header">
                   <div class="el-row is-align-middle el-row--flex">
                     <div class="el-col el-col-16">
@@ -317,7 +318,7 @@ exports[`CourseManagement 快照测试 1`] = `
               </div>
             </div>
             <div class="el-col el-col-12">
-              <div class="el-card is-always-shadow">
+              <div class="el-card is-never-shadow">
                 <div class="el-card__header">
                   <div class="el-row is-align-middle el-row--flex">
                     <div class="el-col el-col-16">
@@ -354,7 +355,7 @@ exports[`CourseManagement 快照测试 1`] = `
               </div>
             </div>
             <div class="el-col el-col-12">
-              <div class="el-card is-always-shadow">
+              <div class="el-card is-never-shadow">
                 <div class="el-card__header">
                   <div class="el-row is-align-middle el-row--flex">
                     <div class="el-col el-col-16">

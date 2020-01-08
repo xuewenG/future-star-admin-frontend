@@ -1,6 +1,8 @@
 import { createLocalVue, mount } from '@vue/test-utils'
 import AddSemesterPage from '../../../src/page/enrollment-management/AddSemesterPage'
 import Vuex from 'vuex'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import ElementUI from 'element-ui'
 import VueRouter from 'vue-router'
 import store from '../../../src/store'
@@ -11,6 +13,7 @@ describe('AddSemesterPage', () => {
   localVue.use(Vuex)
   localVue.use(ElementUI)
   localVue.use(VueRouter)
+  localVue.use(VueAxios, axios)
   const wrapper = mount(AddSemesterPage, {
     store,
     router,

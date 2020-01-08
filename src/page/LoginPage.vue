@@ -13,7 +13,7 @@
       <el-row type="flex" justify="center">
         <el-card
           class="login-card"
-          shadow="always">
+          shadow="never">
           <el-form label-width="90px" label-position="top">
             <el-form-item label="账号">
               <el-input type="text" v-model="account" autofocus="autofocus"></el-input>
@@ -33,7 +33,7 @@
             </el-row>
             <el-form-item>
               <el-row>
-                  <el-button type="success" @click="login()" class="login-button">登录</el-button>
+                  <el-button type="primary" @click="login()" class="login-button">登录</el-button>
               </el-row>
             </el-form-item>
           </el-form>
@@ -104,7 +104,7 @@ export default {
 
   .login-card {
     width: 300px;
-    height: 280px;
+    height: 290px;
     margin-top: 25px;
     margin-bottom: 25px;
   }
@@ -116,9 +116,9 @@ export default {
 
   .login-button {
     width: 260px;
+    margin-top: 15px;
     color: #fff;
-    background-image: linear-gradient(-180deg, #34d058, #28a745 90%);
-    background-color: #28a745;
+    background-color: #409eff;
   }
 
   .forget-password {

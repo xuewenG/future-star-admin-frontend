@@ -1,30 +1,32 @@
 <template>
-  <el-container v-if="semesterState==='0'">
+  <el-container v-if="semester.state===1">
     <el-header>
       <el-row>
         <h3>暂无进行中学期，点击下方按钮添加新学期</h3>
       </el-row>
     </el-header>
     <el-main>
-      <router-link to="/add-semester">
-        <el-image :src="require('../../assets/addIcon.png')">
-        </el-image>
-      </router-link>
+      <el-row type="flex" justify="center">
+        <router-link to="/add-semester">
+          <el-image :src="require('../../assets/addIcon.png')">
+          </el-image>
+        </router-link>
+      </el-row>
     </el-main>
   </el-container>
-  <el-container v-else-if="semesterState==='1'">
+  <el-container v-else-if="semester.state===0">
     <el-header>
       <el-row type="flex" align="middle">
-        <el-col :span="5">
-          <h2>{{ semester }}</h2>
+        <el-col :span="4">
+          <h3>{{ semester.subject }}</h3>
         </el-col>
         <el-col :span="1">
-          <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="lookOverSemesterDetail()" circle></el-button>
+          <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="lookOverSemesterDetail" circle></el-button>
         </el-col>
       </el-row>
     </el-header>
     <el-main class="main-in-enrollment">
-      <el-tabs v-model="activeName" @tab-click="changeActiveName" type="border-card">
+      <el-tabs v-model="activeName" @tab-click="changeActiveName">
         <el-tab-pane label="未开放" name="first">
           <unopened-classes></unopened-classes>
         </el-tab-pane>
@@ -45,15 +47,30 @@ export default {
     UnopenedClasses,
     EnrollingClasses
   },
-  created () {
-    this.activeName = this.$store.getters.getActiveNameOfEnrollment
-  },
   data () {
     return {
       activeName: 'first',
-      semester: '第九期未来之星创新院',
-      semesterState: '1'
+      semester: '',
+      currentPage: 1,
+      pageSize: 999999
     }
+  },
+  created () {
+    let that = this
+    that.activeName = that.$store.getters.getActiveNameOfEnrollment
+    that.axios.get('/semester/semester', {
+      params: {
+        page: that.currentPage,
+        page_size: that.pageSize
+      }
+    }).then(function (response) {
+      let semesters = response.data.data.results
+      console.log(response)
+      that.$store.dispatch('changeSemesters', semesters)
+      that.semester = semesters[semesters.length - 1]
+    }).catch(function (error) {
+      console.log(error)
+    })
   },
   methods: {
     lookOverSemesterDetail: function () {
@@ -74,5 +91,9 @@ export default {
 
   .el-header {
     padding: 0;
+  }
+
+  h3 {
+    color: #707070;
   }
 </style>
