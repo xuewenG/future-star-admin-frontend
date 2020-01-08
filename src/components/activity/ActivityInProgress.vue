@@ -7,9 +7,9 @@
         <div slot="header">
           <span>{{ item.activityName }}</span>
           <el-button type="text"></el-button>
-          <el-button type="primary" size="mini" class="btn" icon="el-icon-s-custom" @click="showParticipants()" circle></el-button>
-          <el-button type="primary" size="mini" class="btn" icon="el-icon-edit-outline" @click="editDetails()" circle></el-button>
-          <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="showDetails()" circle></el-button>
+          <el-button type="primary" size="small" class="btn" icon="el-icon-s-custom" @click="showParticipants()" circle></el-button>
+          <el-button type="primary" size="small" class="btn" icon="el-icon-edit-outline" @click="editDetails()" circle></el-button>
+          <el-button type="primary" size="small" class="btn" icon="el-icon-more" @click="showDetails()" circle></el-button>
         </div>
         <el-row>
           起止日期：{{ item.activityStartTime }} —— {{ item.activityEndTime }}
@@ -50,16 +50,6 @@ export default {
           activityIntroduction: '这里是一个加了长文本省略号替代的活动介绍',
           activityStartTime: '2019/12/20',
           activityEndTime: '2019/12/21',
-          currentAmountOfParticipants: '13',
-          capacity: '15',
-          state: '进行中'
-        },
-        {
-          id: '3',
-          activityName: '大蜀山一日游',
-          activityIntroduction: '这里是一个加了长文本省略号替代的活动介绍',
-          activityStartTime: '2019/12/21',
-          activityEndTime: '2019/12/22',
           currentAmountOfParticipants: '13',
           capacity: '15',
           state: '进行中'

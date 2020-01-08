@@ -9,172 +9,17 @@ exports[`ActivityCompleted 快照测试 1`] = `
         <div><span>大蜀山一日游</span> <button type="button" class="el-button el-button--text">
             <!---->
             <!---->
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
+            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--small is-circle">
             <!----><i class="el-icon-s-custom"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
+            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--small is-circle">
             <!----><i class="el-icon-edit-outline"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
+            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--small is-circle">
             <!----><i class="el-icon-more"></i>
             <!----></button></div>
       </div>
       <div class="el-card__body">
         <div class="el-row">
           起止日期：2019/12/19 —— 2019/12/21
-        </div>
-        <div class="el-row">
-          活动人数：13 / 15
-        </div>
-        <div class="el-row">
-          活动状态：已结束
-        </div>
-        <div class="el-row">
-          活动简介：这里是一个加了长文本省略号替代的活动介绍
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="el-col el-col-12">
-    <!---->
-    <div class="el-card activity-card is-always-shadow">
-      <div class="el-card__header">
-        <div><span>大蜀山一日游</span> <button type="button" class="el-button el-button--text">
-            <!---->
-            <!---->
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-s-custom"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-edit-outline"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-more"></i>
-            <!----></button></div>
-      </div>
-      <div class="el-card__body">
-        <div class="el-row">
-          起止日期：2019/12/20 —— 2019/12/21
-        </div>
-        <div class="el-row">
-          活动人数：13 / 15
-        </div>
-        <div class="el-row">
-          活动状态：已结束
-        </div>
-        <div class="el-row">
-          活动简介：这里是一个加了长文本省略号替代的活动介绍
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="el-col el-col-12">
-    <!---->
-    <div class="el-card activity-card is-always-shadow">
-      <div class="el-card__header">
-        <div><span>大蜀山一日游</span> <button type="button" class="el-button el-button--text">
-            <!---->
-            <!---->
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-s-custom"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-edit-outline"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-more"></i>
-            <!----></button></div>
-      </div>
-      <div class="el-card__body">
-        <div class="el-row">
-          起止日期：2019/12/21 —— 2019/12/22
-        </div>
-        <div class="el-row">
-          活动人数：13 / 15
-        </div>
-        <div class="el-row">
-          活动状态：已结束
-        </div>
-        <div class="el-row">
-          活动简介：这里是一个加了长文本省略号替代的活动介绍
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="el-col el-col-12">
-    <!---->
-    <div class="el-card activity-card is-always-shadow">
-      <div class="el-card__header">
-        <div><span>大蜀山一日游</span> <button type="button" class="el-button el-button--text">
-            <!---->
-            <!---->
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-s-custom"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-edit-outline"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-more"></i>
-            <!----></button></div>
-      </div>
-      <div class="el-card__body">
-        <div class="el-row">
-          起止日期：2019/12/21 —— 2019/12/22
-        </div>
-        <div class="el-row">
-          活动人数：13 / 15
-        </div>
-        <div class="el-row">
-          活动状态：已结束
-        </div>
-        <div class="el-row">
-          活动简介：这里是一个加了长文本省略号替代的活动介绍
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="el-col el-col-12">
-    <!---->
-    <div class="el-card activity-card is-always-shadow">
-      <div class="el-card__header">
-        <div><span>大蜀山一日游</span> <button type="button" class="el-button el-button--text">
-            <!---->
-            <!---->
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-s-custom"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-edit-outline"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-more"></i>
-            <!----></button></div>
-      </div>
-      <div class="el-card__body">
-        <div class="el-row">
-          起止日期：2019/12/21 —— 2019/12/22
-        </div>
-        <div class="el-row">
-          活动人数：13 / 15
-        </div>
-        <div class="el-row">
-          活动状态：已结束
-        </div>
-        <div class="el-row">
-          活动简介：这里是一个加了长文本省略号替代的活动介绍
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="el-col el-col-12">
-    <!---->
-    <div class="el-card activity-card is-always-shadow">
-      <div class="el-card__header">
-        <div><span>大蜀山一日游</span> <button type="button" class="el-button el-button--text">
-            <!---->
-            <!---->
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-s-custom"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-edit-outline"></i>
-            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
-            <!----><i class="el-icon-more"></i>
-            <!----></button></div>
-      </div>
-      <div class="el-card__body">
-        <div class="el-row">
-          起止日期：2019/12/21 —— 2019/12/22
         </div>
         <div class="el-row">
           活动人数：13 / 15
