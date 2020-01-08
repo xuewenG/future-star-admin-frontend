@@ -7,10 +7,10 @@ exports[`HomePage 快照测试 1`] = `
       <div class="el-col el-col-1"><img src="../assets/EdStarsLogo.jpg" height="50px"></div>
       <div class="el-col el-col-2 el-col-push-22">
         <div class="el-dropdown">
-          <div class="el-col el-col-24 el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-2347" role="button" tabindex="0"><span class="el-avatar el-avatar--circle" style="height: 50px; width: 50px; line-height: 50px;"></span>
+          <div class="el-col el-col-24 el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-8149" role="button" tabindex="0"><span class="el-avatar el-avatar--circle" style="height: 50px; width: 50px; line-height: 50px;"></span>
             <li class="el-icon-arrow-down"></li>
           </div>
-          <ul class="el-dropdown-menu el-popper el-dropdown-menu--mini" style="display: none;" id="dropdown-menu-2347">
+          <ul class="el-dropdown-menu el-popper el-dropdown-menu--mini" style="display: none;" id="dropdown-menu-8149">
             <li tabindex="-1" class="el-dropdown-menu__item">
               <!---->
               <div class="avatar-pop-menu-item el-row">
@@ -73,10 +73,10 @@ exports[`HomePage 快照测试 1`] = `
             <div class="el-col el-col-1"><img src="../assets/EdStarsLogo.jpg" height="50px"></div>
             <div class="el-col el-col-2 el-col-push-22">
               <div class="el-dropdown">
-                <div class="el-col el-col-24 el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-3174" role="button" tabindex="0"><span class="el-avatar el-avatar--circle" style="height: 50px; width: 50px; line-height: 50px;"></span>
+                <div class="el-col el-col-24 el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-8525" role="button" tabindex="0"><span class="el-avatar el-avatar--circle" style="height: 50px; width: 50px; line-height: 50px;"></span>
                   <li class="el-icon-arrow-down"></li>
                 </div>
-                <ul class="el-dropdown-menu el-popper el-dropdown-menu--mini" style="display: none;" id="dropdown-menu-3174">
+                <ul class="el-dropdown-menu el-popper el-dropdown-menu--mini" style="display: none;" id="dropdown-menu-8525">
                   <li tabindex="-1" class="el-dropdown-menu__item">
                     <!---->
                     <div class="avatar-pop-menu-item el-row">
