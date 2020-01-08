@@ -2,7 +2,7 @@
   <div>
     <h4 v-if="classes.length === 0">暂待开课班级</h4>
     <el-col :span="12" v-for="(item) in classes" :key="item.id">
-      <el-card>
+      <el-card shadow="never">
         <el-row slot="header" type="flex" align="middle">
           <el-col :span="14">
             {{ item.className }}

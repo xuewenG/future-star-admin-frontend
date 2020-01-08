@@ -2,8 +2,8 @@
   <el-container>
     <el-header>
       <el-row type="flex" align="middle">
-        <el-col :span="5">
-          <h2>{{ semester }}</h2>
+        <el-col :span="4">
+          <h3>{{ semester }}</h3>
         </el-col>
         <el-col :span="1">
           <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="lookOverSemesterDetail()" circle></el-button>
@@ -11,7 +11,7 @@
       </el-row>
     </el-header>
     <el-main class="main-in-enrollment">
-      <el-tabs v-model="activeName" @tab-click="changeActiveName" type="border-card">
+      <el-tabs v-model="activeName" @tab-click="changeActiveName">
         <el-tab-pane label="待开课" name="first">
           <wait-for-start-classes></wait-for-start-classes>
         </el-tab-pane>
@@ -78,5 +78,9 @@ export default {
 
   .el-header {
     padding: 0;
+  }
+
+  h3 {
+    color: #707070;
   }
 </style>

@@ -3,13 +3,12 @@
     <el-main>
       <el-page-header @back="goBack()" content="新建学期"></el-page-header>
       <el-divider/>
-      <el-card class="activity-card" shadow="always">
+      <el-card class="activity-card" shadow="never">
         <el-form class="activity-table" label-width="150px">
-          <el-form-item class="activity-title" label="学期主题：">
+          <el-form-item label="学期主题：">
             <el-input
-              v-model="semester.gist"
-              placeholder="请输入本学期主题"
-              class="short-text">
+              v-model="semester.subject"
+              placeholder="请输入本学期主题">
             </el-input>
           </el-form-item>
           <el-form-item label="学期介绍：">
@@ -17,13 +16,18 @@
               v-model="semester.introduction"
               placeholder="请输入本学期介绍"
               :autosize="{ minRows: 6, maxRows: 30}"
-              class="long-text"
               type="textarea">
             </el-input>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary">立即创建</el-button>
-            <el-button>取消</el-button>
+            <el-row type="flex" justify="center" class="operation-button">
+              <el-col :span="8">
+                <el-button type="primary" @click="addSemester">创建</el-button>
+              </el-col>
+              <el-col :span="8">
+                <el-button @click="clearText">清空</el-button>
+              </el-col>
+            </el-row>
           </el-form-item>
         </el-form>
       </el-card>
@@ -33,11 +37,25 @@
 
 <script>
 export default {
-  name: 'AddNewSemester',
+  name: 'AddNewSemesterPage',
+  created () {
+    let that = this
+    that.axios.get('/semester/semester', {
+      params: {
+        page: 1,
+        page_size: 999999
+      }
+    }).then(function (response) {
+      let semesters = response.data.data.results
+      that.$store.dispatch('changeSemesters', semesters)
+    }).catch(function (error) {
+      console.log(error)
+    })
+  },
   data () {
     return {
       semester: {
-        gist: '',
+        subject: '',
         introduction: ''
       }
     }
@@ -45,6 +63,40 @@ export default {
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    clearText: function () {
+      this.semester.subject = ''
+      this.semester.introduction = ''
+    },
+    addSemester: function () {
+      let that = this
+      that.axios.post('/semester/semester', {
+        period_semester: that.$store.getters.getSemesters.length + 1,
+        subject: that.semester.subject,
+        introduction: that.semester.introduction
+      }).then(function (response) {
+        if (response.data.code === '2000') {
+          that.$message({
+            type: 'success',
+            message: '创建新学期成功',
+            duration: 2000
+          })
+          that.$router.push('/home/enrollment')
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求失败',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '服务器内部错误',
+          duration: 2000
+        })
+      })
     }
   }
 }
@@ -58,5 +110,9 @@ export default {
 
   .activity-table {
     margin: 40px 20px;
+  }
+
+  .operation-button {
+    margin-top: 25px;
   }
 </style>

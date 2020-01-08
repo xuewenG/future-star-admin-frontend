@@ -1,14 +1,14 @@
 <template>
   <el-container>
-    <el-header>
+    <el-header height="45px">
       <el-row justify="center" align="middle" class="hint-info-row">
-          <el-col :span="1">
-            <img src="../assets/EdStarsLogo.jpg" height="50px" />
+          <el-col :span="23">
+            <img src="../assets/EdStarsLogo.jpg" height="30px" />
           </el-col>
-          <el-col :span="2" :push="21">
+          <el-col :span="1">
             <el-dropdown size="mini" placement="bottom-end" @command="handleCommand">
               <el-col>
-                <el-avatar :size="50" :src="avatarUrl"></el-avatar>
+                <el-avatar :size="30" :src="avatarUrl"></el-avatar>
                 <li class="el-icon-arrow-down"></li>
               </el-col>
               <el-dropdown-menu slot="dropdown">
@@ -35,6 +35,7 @@
           </el-col>
       </el-row>
     </el-header>
+    <el-divider></el-divider>
     <el-container>
       <el-aside width="202px">
         <el-menu :background-color="backgroundColor" :active-text-color="activeTextColor"
@@ -85,7 +86,7 @@ export default {
   data () {
     return {
       textColor: '#707070',
-      activeTextColor: '#393982',
+      activeTextColor: '#409eff',
       backgroundColor: '#f9fafc',
       defaultActive: '0',
       avatarUrl: require('../assets/avatar.jpg'),
@@ -184,9 +185,20 @@ export default {
   }
 
   .avatar-pop-menu-item {
-    width: 220px;
+    width: 160px;
     height: 40px;
     padding: 10px 12px;
-    font-size: 14px;
+    font-size: .875rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-align: left;
+  }
+
+  .el-divider {
+    margin: 0;
+  }
+
+  .sub-menu-item {
+    display: inline-block;
+    width: 29px;
   }
 </style>
