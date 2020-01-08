@@ -1,34 +1,53 @@
 <template>
   <el-container>
+    <el-header>
+      <el-row type="flex" justify="center">
+        <el-image :src="logoSrc" alt="未来之星" class="logo"></el-image>
+      </el-row>
+    </el-header>
+    <el-divider></el-divider>
     <el-main>
-      <el-card
-        class="login-card"
-        shadow="always">
-        <el-row type="flex" justify="center" class="hint">
-          <el-col :span="4">
-            <img src="../assets/EdStarsLogo.jpg" class="logo"/>
-          </el-col>
-          <el-col :span="8" class="login-hint">
-            管理人员登录平台
-          </el-col>
-        </el-row>
-        <el-form label-width="90px">
-          <el-form-item label="请输入账号:">
-              <el-input type="text" v-model="account" autofocus="autofocus" class="input-text"/>
+      <el-row type="flex" justify="center">
+          <span class="platform-name">未来之星管理平台</span>
+      </el-row>
+      <el-row type="flex" justify="center">
+        <el-card
+          class="login-card"
+          shadow="always">
+          <el-form label-width="90px" label-position="top">
+            <el-form-item label="账号">
+              <el-input type="text" v-model="account" autofocus="autofocus"></el-input>
             </el-form-item>
-          <el-form-item label="请输入密码:">
-              <el-input type="password" v-model="password" class="input-text"/>
+            <el-form-item label="密码">
+              <el-input type="password" v-model="password"></el-input>
             </el-form-item>
-          <el-form-item>
-            <el-row type="flex" justify="center">
-              <el-col :push="4">
-                <el-button type="primary" @click="login()" class="login-button">登录</el-button>
+            <el-row>
+              <el-col :span="17">
+                  <el-checkbox v-model="remember" label="记住账号"></el-checkbox>
+              </el-col>
+              <el-col :span="7">
+                <router-link to="/login" class="forget-password">
+                  忘记密码？
+                </router-link>
               </el-col>
             </el-row>
-          </el-form-item>
-        </el-form>
-      </el-card>
+            <el-form-item>
+              <el-row>
+                  <el-button type="success" @click="login()" class="login-button">登录</el-button>
+              </el-row>
+            </el-form-item>
+          </el-form>
+        </el-card>
+      </el-row>
     </el-main>
+    <el-divider></el-divider>
+    <el-footer>
+      <el-row type="flex" justify="center">
+        <el-col :span="4" class="hint-footer">
+          @copyright coo studio 2019
+        </el-col>
+      </el-row>
+    </el-footer>
   </el-container>
 </template>
 
@@ -38,7 +57,9 @@ export default {
   data () {
     return {
       account: '',
-      password: ''
+      password: '',
+      logoSrc: require('../assets/EdStarsLogo.jpg'),
+      remember: false
     }
   },
   methods: {
@@ -71,38 +92,71 @@ export default {
 }
 </script>
 
-<style scoped type="type/css">
-  .el-container {
-    height: 800px;
-    background-image: url('../assets/tileBackground1.jpg');
-  }
-
-  .hint {
-    margin-top: 5px;
-  }
-
-  .login-hint {
-    margin-top: 15px;
-    margin-left: 15px;
+<style scoped>
+  .el-header {
+    margin: 28px;
   }
 
   .logo {
-    width: 66px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
   .login-card {
-    width: 38%;
-    padding: 0;
-    margin: 180px auto 80px;
+    width: 300px;
+    height: 280px;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
-  .input-text {
-    width: 300px;
-    margin-left: 5px;
+  .platform-name {
+    font-weight: 300;
+    font-size: 24px;
   }
 
   .login-button {
-    width: 150px;
+    width: 260px;
+    color: #fff;
+    background-image: linear-gradient(-180deg, #34d058, #28a745 90%);
+    background-color: #28a745;
+  }
+
+  .forget-password {
+    display: inline-block;
+    padding-left: 5px;
+    margin: 0;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  a:link {
+    color: #409eff;
+  }
+
+  a:visited {
+    color: #409eff;
+  }
+
+  a:hover {
+    color: #409eff;
+  }
+
+  a:active {
+    color: #409eff;
+  }
+
+  .el-form-item {
+    padding: 0;
+    margin: 0;
+  }
+
+  .hint-footer {
+    font-size: 14px;
+    color: gray;
+  }
+
+  .el-checkbox {
+    padding-left: 0;
+    font-size: 12px;
   }
 </style>

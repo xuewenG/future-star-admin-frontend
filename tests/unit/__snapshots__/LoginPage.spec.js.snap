@@ -1,56 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoginPage 快照测试 1`] = `
-<section class="el-container">
+<section class="el-container is-vertical">
+  <header class="el-header" style="height: 60px;">
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="el-image logo">
+        <div class="el-image__placeholder"></div>
+        <!---->
+      </div>
+    </div>
+  </header>
+  <div class="el-divider el-divider--horizontal">
+    <!---->
+  </div>
   <main class="el-main">
-    <div class="el-card login-card is-always-shadow">
-      <!---->
-      <div class="el-card__body">
-        <div class="hint el-row is-justify-center el-row--flex">
-          <div class="el-col el-col-4"><img src="../assets/EdStarsLogo.jpg" class="logo"></div>
-          <div class="login-hint el-col el-col-8">
-            管理人员登录平台
-          </div>
-        </div>
-        <form class="el-form">
-          <div class="el-form-item"><label class="el-form-item__label" style="width: 90px;">请输入账号:</label>
-            <div class="el-form-item__content" style="margin-left: 90px;">
-              <div class="input-text el-input">
-                <!----><input type="text" autocomplete="off" autofocus="autofocus" class="el-input__inner">
-                <!---->
-                <!---->
-                <!---->
+    <div class="el-row is-justify-center el-row--flex"><span class="platform-name">未来之星管理平台</span></div>
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="el-card login-card is-always-shadow">
+        <!---->
+        <div class="el-card__body">
+          <form class="el-form el-form--label-top">
+            <div class="el-form-item"><label class="el-form-item__label">账号</label>
+              <div class="el-form-item__content">
+                <div class="el-input">
+                  <!----><input type="text" autocomplete="off" autofocus="autofocus" class="el-input__inner">
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </div>
                 <!---->
               </div>
-              <!---->
             </div>
-          </div>
-          <div class="el-form-item"><label class="el-form-item__label" style="width: 90px;">请输入密码:</label>
-            <div class="el-form-item__content" style="margin-left: 90px;">
-              <div class="input-text el-input">
-                <!----><input type="password" autocomplete="off" class="el-input__inner">
-                <!---->
-                <!---->
-                <!---->
+            <div class="el-form-item"><label class="el-form-item__label">密码</label>
+              <div class="el-form-item__content">
+                <div class="el-input">
+                  <!----><input type="password" autocomplete="off" class="el-input__inner">
+                  <!---->
+                  <!---->
+                  <!---->
+                  <!---->
+                </div>
                 <!---->
               </div>
-              <!---->
             </div>
-          </div>
-          <div class="el-form-item">
-            <!---->
-            <div class="el-form-item__content" style="margin-left: 90px;">
-              <div class="el-row is-justify-center el-row--flex">
-                <div class="el-col el-col-24 el-col-push-4"><button type="button" class="el-button login-button el-button--primary">
+            <div class="el-row">
+              <div class="el-col el-col-17"><label class="el-checkbox"><span class="el-checkbox__input"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="false" class="el-checkbox__original" value="记住账号"></span><span class="el-checkbox__label">记住账号</span></label></div>
+              <div class="el-col el-col-7"><a href="#/login" class="forget-password">
+                  忘记密码？
+                </a></div>
+            </div>
+            <div class="el-form-item">
+              <!---->
+              <div class="el-form-item__content">
+                <div class="el-row"><button type="button" class="el-button login-button el-button--success">
                     <!---->
                     <!----><span>登录</span></button></div>
+                <!---->
               </div>
-              <!---->
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   </main>
+  <div class="el-divider el-divider--horizontal">
+    <!---->
+  </div>
+  <footer class="el-footer" style="height: 60px;">
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="hint-footer el-col el-col-4">
+        @copyright coo studio 2019
+      </div>
+    </div>
+  </footer>
 </section>
 `;
