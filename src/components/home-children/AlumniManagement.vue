@@ -3,7 +3,7 @@
     <el-main>
       <el-row>
         <el-col :span="4">
-          <el-select class="selection" v-model="semester" filterable placeholder="请选择学期">
+          <el-select class="selection" v-model="semester" @change="findAllClass()" filterable placeholder="请选择学期">
             <el-option
               v-for="item in semesterOptions"
               :key="item.semester"
@@ -23,16 +23,17 @@
           </el-select>
         </el-col>
         <el-col :span="8">
-          <el-input class='search-input' placeholder="请输入搜索内容"/>
+          <el-input class='search-input' v-model="keyword" placeholder="请输入搜索内容"/>
         </el-col>
         <el-col :span="4">
-          <el-button type="primary" icon="el-icon-search">搜索</el-button>
+          <el-button type="primary" icon="el-icon-search" @click="search()">搜索</el-button>
         </el-col>
       </el-row>
       <el-divider/>
       <el-table
         :data="tableData"
-        stripe>
+        stripe
+        class="info-table">
         <el-table-column
           prop="name"
           align="center"
@@ -101,13 +102,10 @@
     <el-footer>
       <el-pagination
         class="pagination"
-        @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
-        :current-page="currentPage"
-        :page-sizes="[10, 20, 30, 40]"
-        :page-size="10"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="12">
+        :current-page="currentAlumniPage"
+        layout="prev, pager, next"
+        :page-count="totalPage">
       </el-pagination>
     </el-footer>
   </el-container>
@@ -121,163 +119,138 @@ export default {
       shortInfoWidth: 115,
       longInfoWidth: 170,
       emailWidth: 210,
-      currentPage: 1,
-      clazz: '',
-      semester: '',
-      tableData: [
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '1',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '2',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '3',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '4',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '5',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '6',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '7',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '8',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '9',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '10',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '11',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          birthday: '1980/10/01',
-          phone_number: '12345678901',
-          wx: '12',
-          email: 'edstars@100tal.com',
-          city: '北京'
-        }
-      ],
-      semesterOptions: [
-        {
-          semester: '1',
-          label: '第一期'
-        },
-        {
-          semester: '2',
-          label: '第二期'
-        },
-        {
-          semester: '3',
-          label: '第三期'
-        }
-      ],
-      clazzOptions: [
-        {
-          clazz: '1',
-          label: '素质教育专题班'
-        },
-        {
-          clazz: '2',
-          label: '教育信息化专题班'
-        }
-      ]
+      currentAlumniPage: 1,
+      currentSemesterPage: 1,
+      currentClassPage: 1,
+      totalPage: 1,
+      page_size: 20,
+      keyword: null,
+      clazz: null,
+      semester: null,
+      tableData: [],
+      semesterOptions: [],
+      clazzOptions: []
+    }
+  },
+  created () {
+    let that = this
+    if (that.axios) {
+      this.findAllAlumni()
+      this.findAllSemester()
     }
   },
   methods: {
+    findAllAlumni: function () {
+      let that = this
+      let params = {
+        page_size: that.page_size,
+        page: that.currentAlumniPage
+      }
+      that.axios.get('/student/student', { params }).then(function (response) {
+        if (response.data.code === '2000') {
+          that.tableData = response.data.data.results
+          for (let i = 0; i < that.tableData.length; i++) {
+            if (that.tableData[i].gender === 0) {
+              that.tableData[i].gender = '男'
+            } else {
+              that.tableData[i].gender = '女'
+            }
+          }
+          that.$forceUpdate()
+        }
+      })
+    },
+    findAllSemester: function () {
+      let that = this
+      let params = {
+        page_size: that.page_size,
+        page: that.currentSemesterPage
+      }
+      that.axios.get('/semester/semester', { params }).then(function (response) {
+        if (response.data.code === '2000') {
+          let results = response.data.data.results
+          that.semesterOptions[0] = {
+            semester: null,
+            label: '全部学期'
+          }
+          for (let i = 1; i < results.length + 1; i++) {
+            that.semesterOptions[i] = {
+              semester: results[i - 1]['period_semester'],
+              label: '第' + results[i - 1]['period_semester'] + '学期'
+            }
+          }
+          that.$forceUpdate()
+        }
+      })
+    },
+    clazzClear: function () {
+      let that = this
+      if (that.semester === null) {
+        that.clazzOptions = []
+      }
+      that.$forceUpdate()
+    },
+    findAllClass: function () {
+      let that = this
+      that.clazzClear()
+      let params = {
+        page_size: that.page_size,
+        page: that.currentClassPage,
+        semester_id: that.semester
+      }
+      that.axios.get('/clazz/clazz', { params }).then(function (response) {
+        if (response.data.code === '2000') {
+          let results = response.data.data.results
+          for (let i = 0; i < results.length; i++) {
+            that.clazzOptions[i] = {
+              clazz: results[i]['id'],
+              label: results[i]['name']
+            }
+          }
+          that.$forceUpdate()
+        }
+      })
+    },
+    search () {
+      let that = this
+      let params = {
+        page_size: that.page_size,
+        page: that.currentAlumniPage,
+        name: that.keyword,
+        semester_id: that.semester,
+        clazz_id: that.clazz
+      }
+      that.axios.get('/student/student', { params }).then(function (response) {
+        that.tableData = response.data.data.results
+        for (let i = 0; i < that.tableData.length; i++) {
+          if (that.tableData[i].gender === 0) {
+            that.tableData[i].gender = '男'
+          } else {
+            that.tableData[i].gender = '女'
+          }
+        }
+        that.$forceUpdate()
+      })
+    },
+    handleCurrentChange (currentAlumniPage) {
+      this.currentAlumniPage = currentAlumniPage
+      this.findAllAlumni()
+    },
     deleteAlumni (index) {
       this.tableData.splice(index, 1)
     },
     showAllInfo () {
       this.$router.push('/show-all-information')
-    },
-    handleSizeChange (val) {
-      console.log(`每页 ${val} 条`)
-    },
-    handleCurrentChange (val) {
-      console.log(`当前页: ${val}`)
     }
   }
 }
 </script>
 
 <style scoped>
+  .info-table {
+    margin: auto;
+  }
+
   .selection {
     margin-right: 20px;
   }
