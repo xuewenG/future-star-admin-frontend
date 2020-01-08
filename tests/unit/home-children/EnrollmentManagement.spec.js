@@ -3,6 +3,8 @@ import EnrollmentManagement from '../../../src/components/home-children/Enrollme
 import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import VueRouter from 'vue-router'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import store from '../../../src/store'
 import router from '../../../src/router'
 
@@ -11,6 +13,7 @@ describe('EnrollmentManagement', () => {
   localVue.use(Vuex)
   localVue.use(ElementUI)
   localVue.use(VueRouter)
+  localVue.use(VueAxios, axios)
   const wrapper = mount(EnrollmentManagement, {
     store,
     router,

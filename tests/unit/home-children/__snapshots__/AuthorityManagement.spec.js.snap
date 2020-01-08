@@ -7,9 +7,10 @@ exports[`AuthorityManagement 快照测试 1`] = `
       <div class="el-col el-col-3">
         <h3>已有管理员列表</h3>
       </div>
-      <div class="el-col el-col-2"><a href="#/add-administrator" class=""><button type="button" class="el-button el-button--primary">
+      <div class="el-col el-col-2"><a href="#/add-administrator" class=""><button type="button" class="el-button el-icon-plus el-button--primary el-button--mini is-circle">
             <!---->
-            <!----><span>添加管理员</span></button></a></div>
+            <!---->
+            <!----></button></a></div>
     </div>
   </header>
   <div class="el-row">
@@ -25,15 +26,15 @@ exports[`AuthorityManagement 快照测试 1`] = `
           <div></div>
         </div>
         <div class="el-table__header-wrapper">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1240px;">
+          <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1232px;">
             <colgroup>
-              <col name="el-table_1_column_1" width="150">
-              <col name="el-table_1_column_2" width="150">
-              <col name="el-table_1_column_3" width="205">
-              <col name="el-table_1_column_4" width="205">
-              <col name="el-table_1_column_5" width="205">
-              <col name="el-table_1_column_6" width="205">
-              <col name="el-table_1_column_7" width="120">
+              <col name="el-table_1_column_1" width="145">
+              <col name="el-table_1_column_2" width="145">
+              <col name="el-table_1_column_3" width="200">
+              <col name="el-table_1_column_4" width="200">
+              <col name="el-table_1_column_5" width="200">
+              <col name="el-table_1_column_6" width="200">
+              <col name="el-table_1_column_7" width="142">
             </colgroup>
             <thead class="">
               <tr class="">
@@ -63,15 +64,15 @@ exports[`AuthorityManagement 快照测试 1`] = `
           </table>
         </div>
         <div class="el-table__body-wrapper is-scrolling-left">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1240px;">
+          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1232px;">
             <colgroup>
-              <col name="el-table_1_column_1" width="150">
-              <col name="el-table_1_column_2" width="150">
-              <col name="el-table_1_column_3" width="205">
-              <col name="el-table_1_column_4" width="205">
-              <col name="el-table_1_column_5" width="205">
-              <col name="el-table_1_column_6" width="205">
-              <col name="el-table_1_column_7" width="120">
+              <col name="el-table_1_column_1" width="145">
+              <col name="el-table_1_column_2" width="145">
+              <col name="el-table_1_column_3" width="200">
+              <col name="el-table_1_column_4" width="200">
+              <col name="el-table_1_column_5" width="200">
+              <col name="el-table_1_column_6" width="200">
+              <col name="el-table_1_column_7" width="142">
             </colgroup>
             <tbody>
               <tr class="el-table__row">
@@ -128,17 +129,17 @@ exports[`AuthorityManagement 快照测试 1`] = `
           <!---->
         </div>
         <!---->
-        <div class="el-table__fixed" style="width: 150px;">
+        <div class="el-table__fixed" style="width: 145px;">
           <div class="el-table__fixed-header-wrapper">
-            <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1240px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1232px;">
               <colgroup>
-                <col name="el-table_1_column_1" width="150">
-                <col name="el-table_1_column_2" width="150">
-                <col name="el-table_1_column_3" width="205">
-                <col name="el-table_1_column_4" width="205">
-                <col name="el-table_1_column_5" width="205">
-                <col name="el-table_1_column_6" width="205">
-                <col name="el-table_1_column_7" width="120">
+                <col name="el-table_1_column_1" width="145">
+                <col name="el-table_1_column_2" width="145">
+                <col name="el-table_1_column_3" width="200">
+                <col name="el-table_1_column_4" width="200">
+                <col name="el-table_1_column_5" width="200">
+                <col name="el-table_1_column_6" width="200">
+                <col name="el-table_1_column_7" width="142">
               </colgroup>
               <thead class="">
                 <tr class="">
@@ -168,15 +169,15 @@ exports[`AuthorityManagement 快照测试 1`] = `
             </table>
           </div>
           <div class="el-table__fixed-body-wrapper" style="top: 0px;">
-            <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1240px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1232px;">
               <colgroup>
-                <col name="el-table_1_column_1" width="150">
-                <col name="el-table_1_column_2" width="150">
-                <col name="el-table_1_column_3" width="205">
-                <col name="el-table_1_column_4" width="205">
-                <col name="el-table_1_column_5" width="205">
-                <col name="el-table_1_column_6" width="205">
-                <col name="el-table_1_column_7" width="120">
+                <col name="el-table_1_column_1" width="145">
+                <col name="el-table_1_column_2" width="145">
+                <col name="el-table_1_column_3" width="200">
+                <col name="el-table_1_column_4" width="200">
+                <col name="el-table_1_column_5" width="200">
+                <col name="el-table_1_column_6" width="200">
+                <col name="el-table_1_column_7" width="142">
               </colgroup>
               <tbody>
                 <tr class="el-table__row">
