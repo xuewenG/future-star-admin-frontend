@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :span="12" v-for="(item) in activities" :key="item.id" >
-      <h4 v-if="activities.length === 0">暂无已结束的活动</h4>
+      <h4 v-if="activities.length === 0">暂无未开放的活动</h4>
       <el-card class="activity-card">
         <div slot="header">
           <span>{{ item.activityName }}</span>
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'ActivityCompleted',
+  name: 'ActivityUnopened',
   data () {
     return {
       activities: [
@@ -41,7 +41,7 @@ export default {
           activityEndTime: '2019/12/21',
           currentAmountOfParticipants: '13',
           capacity: '15',
-          state: '已结束'
+          state: '未开放'
         }
       ]
     }

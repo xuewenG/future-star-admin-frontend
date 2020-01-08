@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActivityCompleted 快照测试 1`] = `
+exports[`ActivityUnopened 快照测试 1`] = `
 <div class="el-row">
   <div class="el-col el-col-12">
     <!---->
@@ -25,7 +25,7 @@ exports[`ActivityCompleted 快照测试 1`] = `
           活动人数：13 / 15
         </div>
         <div class="el-row">
-          活动状态：已结束
+          活动状态：未开放
         </div>
         <div class="el-row">
           活动简介：这里是一个加了长文本省略号替代的活动介绍

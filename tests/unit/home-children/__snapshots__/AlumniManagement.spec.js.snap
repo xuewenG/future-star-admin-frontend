@@ -4,7 +4,7 @@ exports[`AlumniManagement 快照测试 1`] = `
 <section class="el-container is-vertical">
   <main class="el-main">
     <div class="el-row">
-      <div class="el-col el-col-4">
+      <div class="el-col el-col-4 el-col-offset-3">
         <div class="el-select selection">
           <!---->
           <div class="el-input el-input--suffix">
@@ -60,7 +60,7 @@ exports[`AlumniManagement 快照测试 1`] = `
           </div>
         </div>
       </div>
-      <div class="el-col el-col-8">
+      <div class="el-col el-col-6">
         <div class="search-input el-input">
           <!----><input type="text" autocomplete="off" placeholder="请输入搜索内容" class="el-input__inner">
           <!---->
@@ -69,13 +69,13 @@ exports[`AlumniManagement 快照测试 1`] = `
           <!---->
         </div>
       </div>
-      <div class="el-col el-col-4"><button type="button" class="el-button el-button--primary">
+      <div class="el-col el-col-4 el-col-offset-1"><button type="button" class="el-button el-button--primary">
           <!----><i class="el-icon-search"></i><span>搜索</span></button></div>
     </div>
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-table info-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover">
+    <div class="el-table info-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-loading-parent--relative">
       <div class="hidden-columns">
         <div></div>
         <div></div>
@@ -152,6 +152,13 @@ exports[`AlumniManagement 快照测试 1`] = `
       <!---->
       <!---->
       <div class="el-table__column-resize-proxy" style="display: none;"></div>
+      <div class="el-loading-mask el-loading-fade-enter el-loading-fade-enter-active" style="">
+        <div class="el-loading-spinner"><svg viewBox="25 25 50 50" class="circular">
+            <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+          </svg>
+          <!---->
+        </div>
+      </div>
     </div>
   </main>
   <footer class="el-footer" style="height: 60px;">
