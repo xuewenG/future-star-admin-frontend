@@ -51,7 +51,8 @@ export default {
     }
   },
   created () {
-    this.activeName = this.$store.getters.getActiveNameOfActivity
+    let that = this
+    that.activeName = that.$store.getters.getActiveNameOfActivity
   },
   methods: {
     changeActiveName: function (tab) {
