@@ -8,7 +8,8 @@ export default new Vuex.Store({
     activeIndexOfNavigation: '0',
     activeNameOfCourse: 'first',
     activeNameOfEnrollment: 'first',
-    semesters: ''
+    semesters: '',
+    infoOfAnAlumni: null
   },
   mutations: {
     changeActiveIndexOfNavigation (state, activeIndex) {
@@ -22,6 +23,9 @@ export default new Vuex.Store({
     },
     changeSemesters (state, semesters) {
       state.semesters = semesters
+    },
+    changeInfoOfAnAlumni (state, alumniInfo) {
+      state.infoOfAnAlumni = alumniInfo
     }
   },
   actions: {
@@ -36,6 +40,9 @@ export default new Vuex.Store({
     },
     changeSemesters (context, semesters) {
       context.commit('changeSemesters', semesters)
+    },
+    changeInfoOfAnAlumni (context, alumniInfo) {
+      context.commit('changeInfoOfAnAlumni', alumniInfo)
     }
   },
   getters: {
@@ -50,6 +57,9 @@ export default new Vuex.Store({
     },
     getSemesters (state) {
       return state.semesters
+    },
+    getInfoOfAnAlumni (state) {
+      return state.infoOfAnAlumni
     }
   },
   modules: {

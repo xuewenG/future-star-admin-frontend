@@ -2,7 +2,7 @@
   <el-container>
     <el-main>
       <el-row>
-        <el-col :span="4">
+        <el-col :span="4" :offset="3">
           <el-select class="selection" v-model="semester" @change="findAllClass()" filterable placeholder="请选择学期">
             <el-option
               v-for="item in semesterOptions"
@@ -13,7 +13,7 @@
           </el-select>
         </el-col>
         <el-col :span="4">
-          <el-select class="selection" v-model="clazz" filterable placeholder="请选择班级">
+          <el-select class="selection" v-model="clazz" :disabled="class_state" filterable placeholder="请选择班级">
             <el-option
               v-for="item in clazzOptions"
               :key="item.clazz"
@@ -22,16 +22,17 @@
             </el-option>
           </el-select>
         </el-col>
-        <el-col :span="8">
+        <el-col :span="6">
           <el-input class='search-input' v-model="keyword" placeholder="请输入搜索内容"/>
         </el-col>
-        <el-col :span="4">
+        <el-col :span="4" :offset="1">
           <el-button type="primary" icon="el-icon-search" @click="search()">搜索</el-button>
         </el-col>
       </el-row>
       <el-divider/>
       <el-table
         :data="tableData"
+        v-loading="loading"
         stripe
         class="info-table">
         <el-table-column
@@ -85,14 +86,14 @@
               type="primary"
               size="small"
               icon="el-icon-more"
-              @click="showAllInfo()"
+              @click="showAllInfo(scope.row)"
               circle>
             </el-button>
             <el-button
               type="danger"
               size="small"
               icon="el-icon-delete"
-              @click="deleteAlumni(scope.$index)"
+              @click="deleteAlumni(scope.row, scope.$index)"
               circle>
             </el-button>
           </template>
@@ -124,6 +125,8 @@ export default {
       currentClassPage: 1,
       totalPage: 1,
       page_size: 20,
+      class_state: false,
+      loading: true,
       keyword: null,
       clazz: null,
       semester: null,
@@ -135,8 +138,8 @@ export default {
   created () {
     let that = this
     if (that.axios) {
-      this.findAllAlumni()
-      this.findAllSemester()
+      that.findAllAlumni()
+      that.findAllSemester()
     }
   },
   methods: {
@@ -156,6 +159,7 @@ export default {
               that.tableData[i].gender = '女'
             }
           }
+          that.loading = false
           that.$forceUpdate()
         }
       })
@@ -187,6 +191,10 @@ export default {
       let that = this
       if (that.semester === null) {
         that.clazzOptions = []
+        that.clazz = null
+        that.class_state = true
+      } else {
+        that.class_state = false
       }
       that.$forceUpdate()
     },
@@ -229,6 +237,7 @@ export default {
             that.tableData[i].gender = '女'
           }
         }
+        that.loading = false
         that.$forceUpdate()
       })
     },
@@ -236,10 +245,36 @@ export default {
       this.currentAlumniPage = currentAlumniPage
       this.findAllAlumni()
     },
-    deleteAlumni (index) {
-      this.tableData.splice(index, 1)
+    deleteAlumni (student, index) {
+      let that = this
+      let url = '/student/student/' + student.id
+      that.axios.delete(url
+      ).then(function (response) {
+        if (response.data.code === '2000') {
+          that.tableData.splice(index, 1)
+          that.$message({
+            type: 'success',
+            message: '删除成功',
+            duration: 2000
+          })
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求出错',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '网络错误',
+          duration: 2000
+        })
+      })
     },
-    showAllInfo () {
+    showAllInfo (alumniInfo) {
+      this.$store.dispatch('changeInfoOfAnAlumni', alumniInfo)
       this.$router.push('/show-all-information')
     }
   }
@@ -257,11 +292,9 @@ export default {
 
   .search-input {
     display: inline-block;
-    width: 350px;
-    margin-right: 20px;
   }
 
   .pagination {
-    margin-left: 250px;
+    text-align: center;
   }
 </style>
