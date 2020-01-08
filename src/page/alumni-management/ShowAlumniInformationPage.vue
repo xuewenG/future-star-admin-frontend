@@ -158,35 +158,39 @@ export default {
   name: 'ShowAlumniInformationPage',
   data () {
     return {
-      info: [
-        {
-          id: '1',
-          name: '郑小鸽',
-          gender: '男',
-          birthday: '2019/10/01',
-          phone_number: '15256530000',
-          wx: '6028',
-          email: 'zls@gugugu.com',
-          city: '福建',
-          education: 'phD',
-          school: 'HFUT',
-          previous_company: '阿里',
-          previous_position: 'CWO',
-          company_name: '郑总的公司',
-          website: 'zheng.com',
-          wx_public: 'zheng',
-          create_time: '2020-01-01',
-          company_city: '合肥',
-          employee_number: '6',
-          position: 'CEO',
-          introduction: '这是郑总的公司',
-          company_data: '10E',
-          income_scale: '收入1E',
-          financing_situation: 'others',
-          value_of_assessment: '100E'
-        }
-      ]
+      info: []
     }
+  },
+  created () {
+    let that = this
+    let results = that.$store.getters.getInfoOfAnAlumni
+    that.info[0] = {
+      id: results.id,
+      name: results.name,
+      gender: results.gender,
+      birthday: results.birthday,
+      phone_number: results.phone_number,
+      wx: results.wx,
+      email: results.email,
+      city: results.city,
+      education: results.education,
+      school: results.school,
+      previous_company: results.previous_company,
+      previous_position: results.previous_position,
+      company_name: results.company.name,
+      website: results.company.website,
+      wx_public: results.company.wx_public,
+      create_time: results.company.create_time,
+      company_city: results.company.city,
+      employee_number: results.company.number_employee,
+      position: results.company.position,
+      introduction: results.company.introduction,
+      company_data: results.company.company_data,
+      income_scale: results.company.income_scale,
+      financing_situation: results.company.financing_situation,
+      value_of_assessment: results.company.value_of_assessment
+    }
+    that.$forceUpdate()
   },
   methods: {
     goBack: function () {
