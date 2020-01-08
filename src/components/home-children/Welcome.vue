@@ -1,5 +1,5 @@
 <template>
-  <el-carousel :interval="4000" type="card" height="500px">
+  <el-carousel :interval="4000" height="500px">
     <el-carousel-item v-for="imageAddress in imageAddressArray" :key="imageAddress.id">
       <el-image :src="imageAddress.address" fit="fill">
         <div slot="error" class="image-slot">

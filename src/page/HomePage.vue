@@ -2,58 +2,76 @@
   <el-container>
     <el-header>
       <el-row justify="center" align="middle" class="hint-info-row">
-          <el-col :span="2" :push="1">
+          <el-col :span="1">
             <img src="../assets/EdStarsLogo.jpg" height="50px" />
           </el-col>
-          <el-col :span="5" :push="1" class="hint-info">
-            <h3>欢迎来到未来之星管理系统</h3>
-          </el-col>
-          <el-col :span="4" :push="10"  class="hint-info">
-            <h3>{{ identityName }} , {{ name }}</h3>
-          </el-col>
-          <el-col :span="2" :push="9"  class="hint-info">
-              <el-button type="warning" size="small" round>修改密码</el-button>
-          </el-col>
-          <el-col :span="2" :push="9"  class="hint-info">
-            <el-button type="danger" size="small" @click="signOut" round>账号登出</el-button>
+          <el-col :span="2" :push="22">
+            <el-dropdown size="mini" placement="bottom-end">
+              <el-col>
+                <el-avatar :size="50" :src="avatarUrl"></el-avatar>
+                <li class="el-icon-arrow-down"></li>
+              </el-col>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>
+                  <el-row class="avatar-pop-menu-item">
+                    <h3>{{ name }}</h3>
+                  </el-row>
+                  <el-row class="avatar-pop-menu-item">
+                    @{{ account }}
+                  </el-row>
+                </el-dropdown-item>
+                <el-dropdown-item divided>
+                  <el-row class="avatar-pop-menu-item">
+                    修改密码
+                  </el-row>
+                </el-dropdown-item>
+                <el-dropdown-item divided>
+                  <el-row class="avatar-pop-menu-item">
+                    注销登录
+                  </el-row>
+                </el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
           </el-col>
       </el-row>
     </el-header>
     <el-container>
-      <el-header>
-        <el-menu mode="horizontal" :background-color="backgroundColor"
-                 :active-text-color="activeTextColor" :text-color="textColor"
-                 :default-active="defaultActive" align="middle"
-                  @select="changeDefaultActive">
-          <el-row type="flex" justify="space-around">
-            <el-col :span="4">
+      <el-aside width="202px">
+        <el-menu :background-color="backgroundColor" :active-text-color="activeTextColor"
+                 :text-color="textColor" :default-active="defaultActive"
+                 align="middle" @select="changeDefaultActive">
               <router-link to="/home/enrollment">
-                <el-menu-item index="1">招生管理</el-menu-item>
+                <el-menu-item index="1">
+                  <li class="el-icon-coordinate"></li>
+                  招生管理
+                </el-menu-item>
               </router-link>
-            </el-col>
-            <el-col :span="4">
               <router-link to="/home/course">
-                <el-menu-item index="2">课程管理</el-menu-item>
+                <el-menu-item index="2">
+                  <li class="el-icon-document"></li>
+                  课程管理
+                </el-menu-item>
               </router-link>
-            </el-col>
-            <el-col :span="4">
               <router-link to="/home/activity">
-                <el-menu-item index="3">活动管理</el-menu-item>
+                <el-menu-item index="3">
+                  <li class="el-icon-sunny"></li>
+                  活动管理
+                </el-menu-item>
               </router-link>
-            </el-col>
-            <el-col :span="4">
               <router-link to="/home/alumni">
-                <el-menu-item index="4">校友资料管理</el-menu-item>
+                <el-menu-item index="4">
+                  <li class="el-icon-user"></li>
+                  校友管理
+                </el-menu-item>
               </router-link>
-            </el-col>
-            <el-col :span="4">
               <router-link to="/home/authority">
-                <el-menu-item index="5">权限管理</el-menu-item>
+                <el-menu-item index="5">
+                  <li class="el-icon-key"></li>
+                  权限管理
+                </el-menu-item>
               </router-link>
-            </el-col>
-          </el-row>
         </el-menu>
-      </el-header>
+      </el-aside>
       <el-main>
         <router-view></router-view>
       </el-main>
@@ -66,12 +84,14 @@ export default {
   name: 'HomePage',
   data () {
     return {
-      textColor: '#ffffff',
-      activeTextColor: '#0069A0',
-      backgroundColor: '#00ADA9',
-      identityName: '',
+      textColor: '#707070',
+      activeTextColor: '#393982',
+      backgroundColor: '#f9fafc',
       defaultActive: '0',
-      name: ''
+      avatarUrl: require('../assets/avatar.jpg'),
+      name: '',
+      identityName: '',
+      account: ''
     }
   },
   created () {
@@ -79,6 +99,7 @@ export default {
     if (JSON.parse(sessionStorage.getItem('user') !== null)) {
       let user = JSON.parse(sessionStorage.getItem('user'))
       that.name = user.name
+      that.account = user.account
       if (user.privilege.super === 1) {
         that.identityName = '超级管理员'
       } else {
@@ -124,38 +145,45 @@ export default {
 
 <style scoped>
   .el-header {
-    padding: 0;
-    margin: 0;
+    background-color: #f9fafc;
   }
 
   .el-menu-item {
-    font-weight: bold;
-    font-size: 20px;
-    font-family: 'Microsoft YaHei', Serif;
+    width: 180px;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    font-size: .875rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-align: left;
+  }
+
+  .el-menu {
+    width: 200px;
+    height: 100%;
+  }
+
+  .el-aside {
+    height: 700px;
+    background-color: #f9fafc;
   }
 
   a {
     text-decoration: none;
   }
 
-  .widget-in-menu {
-    font-family: 'Microsoft YaHei', Serif;
-  }
-
-  .hint-info > h3 {
-    margin-top: 18px;
-  }
-
-  .hint-info > button {
-    margin-top: 15px;
-  }
-
   .hint-info-row {
-    height: 60px;
-    background-color: #f9fafc;
+    padding-top: 5px;
   }
 
-  .identity-name {
-    text-align: left;
+  .el-container {
+    height: 100%;
+  }
+
+  .avatar-pop-menu-item {
+    width: 220px;
+    height: 40px;
+    padding: 10px 12px;
+    font-size: 14px;
   }
 </style>

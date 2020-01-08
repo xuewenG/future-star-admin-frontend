@@ -1,22 +1,19 @@
 <template>
   <el-container>
+    <el-header>
+      <el-row type="flex" justify="center">
+        <el-image :src="logoSrc" alt="未来之星" class="logo"></el-image>
+      </el-row>
+    </el-header>
     <el-main>
       <el-card
         class="login-card"
         shadow="always">
-        <el-row type="flex" justify="center" class="hint">
-          <el-col :span="4">
-            <img src="../assets/EdStarsLogo.jpg" class="logo"/>
-          </el-col>
-          <el-col :span="8" class="login-hint">
-            管理人员登录平台
-          </el-col>
-        </el-row>
-        <el-form label-width="90px">
-          <el-form-item label="请输入账号:">
+        <el-form label-width="90px" label-position="top">
+          <el-form-item label="账号">
               <el-input type="text" v-model="account" autofocus="autofocus" class="input-text"/>
             </el-form-item>
-          <el-form-item label="请输入密码:">
+          <el-form-item label="密码">
               <el-input type="password" v-model="password" class="input-text"/>
             </el-form-item>
           <el-form-item>
@@ -38,7 +35,8 @@ export default {
   data () {
     return {
       account: '',
-      password: ''
+      password: '',
+      logoSrc: require('../assets/EdStarsLogo.jpg')
     }
   },
   methods: {
@@ -71,38 +69,9 @@ export default {
 }
 </script>
 
-<style scoped type="type/css">
-  .el-container {
-    height: 800px;
-    background-image: url('../assets/tileBackground1.jpg');
-  }
-
-  .hint {
-    margin-top: 5px;
-  }
-
-  .login-hint {
-    margin-top: 15px;
-    margin-left: 15px;
-  }
-
+<style scoped>
   .logo {
-    width: 66px;
-    height: 60px;
-  }
-
-  .login-card {
-    width: 38%;
-    padding: 0;
-    margin: 180px auto 80px;
-  }
-
-  .input-text {
-    width: 300px;
-    margin-left: 5px;
-  }
-
-  .login-button {
-    width: 150px;
+    width: 80px;
+    height: 80px;
   }
 </style>
