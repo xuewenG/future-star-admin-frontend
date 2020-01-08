@@ -8,6 +8,7 @@ export default new Vuex.Store({
     activeIndexOfNavigation: '0',
     activeNameOfCourse: 'first',
     activeNameOfEnrollment: 'first',
+    activeNameOfActivity: 'first',
     semesters: '',
     infoOfAnAlumni: null
   },
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     },
     changeActiveNameOfCourse (state, activeName) {
       state.activeNameOfCourse = activeName
+    },
+    changeActiveNameOfActivity (state, activeName) {
+      state.activeNameOfActivity = activeName
     },
     changeSemesters (state, semesters) {
       state.semesters = semesters
@@ -38,6 +42,9 @@ export default new Vuex.Store({
     changeActiveNameOfCourse (context, activeName) {
       context.commit('changeActiveNameOfCourse', activeName)
     },
+    changeActiveNameOfActivity (context, activeName) {
+      context.commit('changeActiveNameOfActivity', activeName)
+    },
     changeSemesters (context, semesters) {
       context.commit('changeSemesters', semesters)
     },
@@ -54,6 +61,9 @@ export default new Vuex.Store({
     },
     getActiveNameOfCourse (state) {
       return state.activeNameOfCourse
+    },
+    getActiveNameOfActivity (state) {
+      return state.activeNameOfActivity
     },
     getSemesters (state) {
       return state.semesters
