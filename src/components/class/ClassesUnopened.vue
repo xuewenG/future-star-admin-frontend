@@ -1,11 +1,11 @@
 <template>
   <div>
     <h4 v-if="classes.length === 0">暂无待招生班级</h4>
-    <el-col :span="12" v-for="(item) in classes" :key="item.id">
+    <el-col :span="12" v-for="item in classes" v-show="item.state===2" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
           <el-col :span="16">
-            {{ item.className }}
+            {{ item.name }}
           </el-col>
           <el-col :span="2">
             <el-button type="primary" size="small" icon="el-icon-check" circle></el-button>
@@ -20,17 +20,17 @@
             <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
           </el-col>
         </el-row>
-        <el-row>
-          起止日期：{{ item.classStartTime }}—— {{ item.classEndTime }}
+        <el-row class="info">
+          起止日期：{{ item.start_time }}—— {{ item.end_time }}
         </el-row>
-        <el-row>
-          招生人数：{{ item.currentAmountOfStudent }} / {{ item.capacity }}
+        <el-row class="info">
+          招生人数：{{ item.current_people_number }} / {{ item.people_number_limit }}
         </el-row>
-        <el-row>
-          班级状态：{{ item.state }}
+        <el-row class="info">
+          班级状态：未开放
         </el-row>
-        <el-row>
-          班级简介：{{ item.classIntroduction | ellipsis }}
+        <el-row class="info">
+          班级简介：{{ item.introduction | ellipsis }}
         </el-row>
       </el-card>
     </el-col>
@@ -39,38 +39,21 @@
 <script>
 export default {
   name: 'UnopenedClasses',
+  created () {
+    this.classes = this.$store.getters.getClasses
+  },
   data () {
     return {
       classes: [
         {
           id: '2',
-          className: '素质教育专题班',
-          classIntroduction: '这里是一个加了长文本省略号替代的班级介绍',
-          classStartTime: '2019/12/20',
-          classEndTime: '2019/12/21',
-          currentAmountOfStudent: '0',
-          capacity: '15',
-          state: '未开放'
-        },
-        {
-          id: '1',
-          className: '素质教育专题班',
-          classIntroduction: '这里是一个加了长文本省略号替代的班级介绍',
-          classStartTime: '2019/12/20',
-          classEndTime: '2019/12/21',
-          currentAmountOfStudent: '0',
-          capacity: '15',
-          state: '未开放'
-        },
-        {
-          id: '3',
-          className: '素质教育专题班',
-          classIntroduction: '这里是一个加了长文本省略号替代的班级介绍',
-          classStartTime: '2019/12/20',
-          classEndTime: '2019/12/21',
-          currentAmountOfStudent: '0',
-          capacity: '15',
-          state: '未开放'
+          name: '素质教育专题班',
+          introduction: '这里是一个加了长文本省略号替代的班级介绍',
+          start_time: '2019/12/20',
+          end_time: '2019/12/21',
+          current_people_number: '0',
+          people_number_limit: '15',
+          state: 0
         }
       ]
     }
@@ -107,5 +90,13 @@ export default {
 
   .el-button {
     float: right;
+  }
+
+  .info {
+    margin: 0 0 15px;
+  }
+
+  h4 {
+    color: #707070;
   }
 </style>
