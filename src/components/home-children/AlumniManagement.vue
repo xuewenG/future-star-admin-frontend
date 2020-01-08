@@ -3,7 +3,7 @@
     <el-main>
       <el-row>
         <el-col :span="4" :offset="3">
-          <el-select class="selection" v-model="semester" @change="findAllClass()" filterable placeholder="请选择学期">
+          <el-select class="selection" v-model="semester" @change="findAllClass();search()" filterable placeholder="请选择学期">
             <el-option
               v-for="item in semesterOptions"
               :key="item.semester"
@@ -13,7 +13,7 @@
           </el-select>
         </el-col>
         <el-col :span="4">
-          <el-select class="selection" v-model="clazz" :disabled="class_state" filterable placeholder="请选择班级">
+          <el-select class="selection" v-model="clazz" :disabled="class_state" @change="search()" filterable placeholder="请选择班级">
             <el-option
               v-for="item in clazzOptions"
               :key="item.clazz"
@@ -23,7 +23,7 @@
           </el-select>
         </el-col>
         <el-col :span="6">
-          <el-input class='search-input' v-model="keyword" placeholder="请输入搜索内容"/>
+          <el-input class='search-input' v-model="keyword" @change="search()" placeholder="请输入搜索内容"/>
         </el-col>
         <el-col :span="4" :offset="1">
           <el-button type="primary" icon="el-icon-search" @click="search()">搜索</el-button>
@@ -38,49 +38,41 @@
         <el-table-column
           prop="name"
           align="center"
-          label="姓名"
-          :width="shortInfoWidth">
+          label="姓名">
         </el-table-column>
         <el-table-column
           prop="gender"
           align="center"
-          label="性别"
-          :width="shortInfoWidth">
+          label="性别">
         </el-table-column>
         <el-table-column
           prop="birthday"
           align="center"
-          label="出生日期"
-          :width="longInfoWidth">
+          label="出生日期">
         </el-table-column>
         <el-table-column
           prop="phone_number"
           align="center"
-          label="联系电话"
-          :width="longInfoWidth">
+          label="联系电话">
         </el-table-column>
         <el-table-column
           prop="wx"
           align="center"
-          label="微信号"
-          :width="longInfoWidth">
+          label="微信号">
         </el-table-column>
         <el-table-column
           prop="email"
           align="center"
-          label="邮箱"
-          :width="emailWidth">
+          label="邮箱">
         </el-table-column>
         <el-table-column
           prop="city"
           align="center"
-          label="所在城市"
-          :width="shortInfoWidth">
+          label="所在城市">
         </el-table-column>
         <el-table-column
           align="center"
-          label="操作"
-          :width="shortInfoWidth">
+          label="操作">
           <template slot-scope="scope">
             <el-button
               type="primary"
@@ -117,15 +109,12 @@ export default {
   name: 'AlumniManagementPage',
   data () {
     return {
-      shortInfoWidth: 115,
-      longInfoWidth: 170,
-      emailWidth: 210,
       currentAlumniPage: 1,
       currentSemesterPage: 1,
       currentClassPage: 1,
       totalPage: 1,
       page_size: 20,
-      class_state: false,
+      class_state: true,
       loading: true,
       keyword: null,
       clazz: null,
@@ -147,7 +136,7 @@ export default {
       let that = this
       let params = {
         page_size: that.page_size,
-        page: that.currentAlumniPage
+        page: that.currentAlumniPagecurrentAlumniPage
       }
       that.axios.get('/student/student', { params }).then(function (response) {
         if (response.data.code === '2000') {
@@ -180,27 +169,22 @@ export default {
           for (let i = 1; i < results.length + 1; i++) {
             that.semesterOptions[i] = {
               semester: results[i - 1]['period_semester'],
-              label: '第' + results[i - 1]['period_semester'] + '学期'
+              label: results[i - 1]['subject']
             }
           }
           that.$forceUpdate()
         }
       })
     },
-    clazzClear: function () {
+    findAllClass: function () {
       let that = this
+      that.clazzOptions = []
+      that.clazz = null
       if (that.semester === null) {
-        that.clazzOptions = []
-        that.clazz = null
         that.class_state = true
       } else {
         that.class_state = false
       }
-      that.$forceUpdate()
-    },
-    findAllClass: function () {
-      let that = this
-      that.clazzClear()
       let params = {
         page_size: that.page_size,
         page: that.currentClassPage,
@@ -218,6 +202,7 @@ export default {
           that.$forceUpdate()
         }
       })
+      that.$forceUpdate()
     },
     search () {
       let that = this
