@@ -6,7 +6,7 @@
       <el-card class="activity-card" shadow="always">
        <el-row>
          <el-col :span="23">
-           学期主题：{{ semester.gist }}
+           学期主题：{{ semester.subject }}
          </el-col>
          <el-col :span="1">
            <el-button type="primary" size="mini" class="btn" icon="el-icon-edit-outline" @click="editSemesterInfo()" circle></el-button>
@@ -23,10 +23,13 @@
 <script>
 export default {
   name: 'SemesterDetailPage',
+  created () {
+    this.semester = this.$store.getters.getCurrentSemester
+  },
   data () {
     return {
       semester: {
-        gist: '第九期创新院',
+        subject: '第九期创新院',
         introduction: '这是一期很好的课程'
       }
     }
