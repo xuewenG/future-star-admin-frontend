@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     activeNameOfCourse: 'first',
-    activeNameOfEnrollment: 'first'
+    activeNameOfEnrollment: 'first',
+    semesters: ''
   },
   mutations: {
     changeActiveNameOfEnrollment (state, activeName) {
@@ -14,6 +15,9 @@ export default new Vuex.Store({
     },
     changeActiveNameOfCourse (state, activeName) {
       state.activeNameOfCourse = activeName
+    },
+    changeSemesters (state, semesters) {
+      state.semesters = semesters
     }
   },
   actions: {
@@ -22,6 +26,9 @@ export default new Vuex.Store({
     },
     changeActiveNameOfCourse (context, activeName) {
       context.commit('changeActiveNameOfCourse', activeName)
+    },
+    changeSemesters (context, semesters) {
+      context.commit('changeSemesters', semesters)
     }
   },
   getters: {
@@ -30,6 +37,9 @@ export default new Vuex.Store({
     },
     getActiveNameOfCourse (state) {
       return state.activeNameOfCourse
+    },
+    getSemesters (state) {
+      return state.semesters
     }
   },
   modules: {
