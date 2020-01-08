@@ -32,7 +32,7 @@ exports[`LoginPage 快照测试 1`] = `
                 <!---->
               </div>
             </div>
-            <div class="el-form-item forget-password"><label class="el-form-item__label">密码</label>
+            <div class="el-form-item"><label class="el-form-item__label">密码</label>
               <div class="el-form-item__content">
                 <div class="el-input">
                   <!----><input type="password" autocomplete="off" class="el-input__inner">
@@ -43,9 +43,13 @@ exports[`LoginPage 快照测试 1`] = `
                 </div>
                 <!---->
               </div>
-            </div> <button type="button" class="el-button el-button--text el-button--mini">
-              <!---->
-              <!----><span>忘记密码？</span></button>
+            </div>
+            <div class="el-row">
+              <div class="el-col el-col-17"><label class="el-checkbox"><span class="el-checkbox__input"><span class="el-checkbox__inner"></span><input type="checkbox" aria-hidden="false" class="el-checkbox__original" value="记住账号"></span><span class="el-checkbox__label">记住账号</span></label></div>
+              <div class="el-col el-col-7"><a href="#/login" class="forget-password">
+                  忘记密码？
+                </a></div>
+            </div>
             <div class="el-form-item">
               <!---->
               <div class="el-form-item__content">
@@ -65,8 +69,8 @@ exports[`LoginPage 快照测试 1`] = `
   </div>
   <footer class="el-footer" style="height: 60px;">
     <div class="el-row is-justify-center el-row--flex">
-      <div class="hint-footer el-col el-col-3">
-        @copyright coo studio
+      <div class="hint-footer el-col el-col-4">
+        @copyright coo studio 2019
       </div>
     </div>
   </footer>

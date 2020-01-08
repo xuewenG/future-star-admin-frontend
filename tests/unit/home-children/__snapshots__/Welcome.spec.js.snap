@@ -24,18 +24,9 @@ exports[`Welcome 快照测试 1`] = `
         <!---->
       </div>
     </div>
-    <div class="el-carousel__item" style="transform: translateX(0px) scale(1); webkit-transform: translateX(0px) scale(1);">
-      <!---->
-      <div class="el-image">
-        <div class="el-image__placeholder"></div>
-        <!---->
-      </div>
-    </div>
   </div>
   <ul class="el-carousel__indicators el-carousel__indicators--horizontal">
     <li class="el-carousel__indicator el-carousel__indicator--horizontal is-active"><button class="el-carousel__button">
-        <!----></button></li>
-    <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button class="el-carousel__button">
         <!----></button></li>
     <li class="el-carousel__indicator el-carousel__indicator--horizontal"><button class="el-carousel__button">
         <!----></button></li>
