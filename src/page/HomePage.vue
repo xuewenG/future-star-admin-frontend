@@ -22,7 +22,9 @@
     <el-container>
       <el-header>
         <el-menu mode="horizontal" :background-color="backgroundColor"
-                 :active-text-color="activeTextColor" :text-color="textColor" align="middle">
+                 :active-text-color="activeTextColor" :text-color="textColor"
+                 :default-active="defaultActive" align="middle"
+                  @select="changeDefaultActive">
           <el-row type="flex" justify="space-around">
             <el-col :span="4">
               <router-link to="/home/enrollment">
@@ -68,21 +70,28 @@ export default {
       activeTextColor: '#0069A0',
       backgroundColor: '#00ADA9',
       identityName: '',
+      defaultActive: '0',
       name: ''
     }
   },
   created () {
+    let that = this
     if (JSON.parse(sessionStorage.getItem('user') !== null)) {
       let user = JSON.parse(sessionStorage.getItem('user'))
-      this.name = user.name
+      that.name = user.name
       if (user.privilege.super === 1) {
-        this.identityName = '超级管理员'
+        that.identityName = '超级管理员'
       } else {
-        this.identityName = '管理员'
+        that.identityName = '管理员'
       }
     }
+    that.defaultActive = that.$store.getters.getActiveIndexOfNavigation
   },
   methods: {
+    changeDefaultActive (index) {
+      let that = this
+      that.$store.dispatch('changeActiveIndexOfNavigation', index)
+    },
     signOut: function () {
       let that = this
       that.axios.post('/administrator/logout'

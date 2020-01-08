@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    activeIndexOfNavigation: '0',
     activeNameOfCourse: 'first',
     activeNameOfEnrollment: 'first',
     semesters: ''
   },
   mutations: {
+    changeActiveIndexOfNavigation (state, activeIndex) {
+      state.activeIndexOfNavigation = activeIndex
+    },
     changeActiveNameOfEnrollment (state, activeName) {
       state.activeNameOfEnrollment = activeName
     },
@@ -21,6 +25,9 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    changeActiveIndexOfNavigation (context, activeIndex) {
+      context.commit('changeActiveIndexOfNavigation', activeIndex)
+    },
     changeActiveNameOfEnrollment (context, activeName) {
       context.commit('changeActiveNameOfEnrollment', activeName)
     },
@@ -32,6 +39,9 @@ export default new Vuex.Store({
     }
   },
   getters: {
+    getActiveIndexOfNavigation (state) {
+      return state.activeIndexOfNavigation
+    },
     getActiveNameOfEnrollment (state) {
       return state.activeNameOfEnrollment
     },

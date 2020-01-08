@@ -37,14 +37,27 @@ export default {
     UnderwayClasses,
     EndedClasses
   },
-  created () {
-    this.activeName = this.$store.getters.getActiveNameOfCourse
-  },
   data () {
     return {
       activeName: 'first',
-      semester: '第九期未来之星创新院'
+      semester: '第九期未来之星创新院',
+      currentPage: 1,
+      pageSize: 999999
     }
+  },
+  created () {
+    let that = this
+    that.activeName = that.$store.getters.getActiveNameOfCourse
+    that.axios.get('/semester/semester', {
+      params: {
+        page: that.currentPage,
+        page_size: that.pageSize
+      }
+    }).then(function (response) {
+      console.log(response)
+    }).catch(function (error) {
+      console.log(error)
+    })
   },
   methods: {
     lookOverSemesterDetail: function () {
