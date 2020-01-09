@@ -1,36 +1,36 @@
 <template>
   <div>
-    <h4 v-if="classes.length === 0">暂无已结束班级</h4>
-    <el-col :span="12" v-for="(item) in classes" :key="item.id">
+    <h4 v-if="count === 0">暂无已结束班级</h4>
+    <el-col :span="12" v-for="item in classes" v-show="item.state===4" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
           <el-col :span="16">
-            {{ item.className }}
+            {{ item.name }}
           </el-col>
           <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail" circle></el-button>
+            <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail(item)" circle></el-button>
           </el-col>
           <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
+            <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo(item)" circle></el-button>
           </el-col>
           <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-s-custom" @click="lookOverStudentInClass" circle></el-button>
+            <el-button type="primary" size="small" icon="el-icon-s-custom" @click="enrollmentAudit(item)" circle></el-button>
           </el-col>
           <el-col :span="2">
             <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
           </el-col>
         </el-row>
-        <el-row>
-          起止日期：{{ item.classStartTime }}—— {{ item.classEndTime }}
+        <el-row class="info">
+          起止日期：{{ item.start_time }}—— {{ item.end_time }}
         </el-row>
-        <el-row>
-          招生人数：{{ item.currentAmountOfStudent }} / {{ item.capacity }}
+        <el-row class="info">
+          招生人数：{{ item.current_people_number }} / {{ item.people_number_limit }}
         </el-row>
-        <el-row>
-          班级状态：{{ item.state }}
+        <el-row class="info">
+          班级状态：已结束
         </el-row>
-        <el-row>
-          班级简介：{{ item.classIntroduction | ellipsis }}
+        <el-row class="info">
+          班级简介：{{ item.introduction | ellipsis }}
         </el-row>
       </el-card>
     </el-col>
@@ -38,52 +38,44 @@
 </template>
 <script>
 export default {
-  name: 'EndedClasses',
+  name: 'WaitForStartClasses',
+  created () {
+    this.classes = this.$store.getters.getClasses
+    for (let i = 0; i < this.classes.length; i++) {
+      if (this.classes[i].state === 4) {
+        this.count++
+      }
+    }
+  },
   data () {
     return {
+      count: 0,
       classes: [
         {
           id: '2',
-          className: '素质教育专题班',
-          classIntroduction: '这里是一个加了长文本省略号替代的班级介绍',
-          classStartTime: '2019/12/20',
-          classEndTime: '2019/12/21',
-          currentAmountOfStudent: '13',
-          capacity: '15',
-          state: '已结束'
-        },
-        {
-          id: '1',
-          className: '素质教育专题班',
-          classIntroduction: '这里是一个加了长文本省略号替代的班级介绍',
-          classStartTime: '2019/12/20',
-          classEndTime: '2019/12/21',
-          currentAmountOfStudent: '12',
-          capacity: '15',
-          state: '已结束'
-        },
-        {
-          id: '3',
-          className: '素质教育专题班',
-          classIntroduction: '这里是一个加了长文本省略号替代的班级介绍',
-          classStartTime: '2019/12/20',
-          classEndTime: '2019/12/21',
-          currentAmountOfStudent: '11',
-          capacity: '15',
-          state: '已结束'
+          name: '素质教育专题班',
+          introduction: '这里是一个加了长文本省略号替代的班级介绍',
+          start_time: '2019/12/20',
+          end_time: '2019/12/21',
+          current_people_number: '0',
+          people_number_limit: '15',
+          state: 0
         }
       ]
     }
   },
   methods: {
-    editClassInfo: function () {
-      this.$router.push('/edit-class-info')
+    editClassInfo: async function (currentClass) {
+      await this.$store.dispatch('changeCurrentClass', currentClass)
+      await this.$router.push('/edit-class-info')
     },
-    lookOverClassDetail: function () {
-      this.$router.push('/class-detail')
+    lookOverClassDetail: async function (currentClass) {
+      await this.$store.dispatch('changeCurrentClass', currentClass)
+      await this.$router.push('/class-detail')
     },
-    lookOverStudentInClass: function () {
-      this.$router.push('/student-in-class')
+    enrollmentAudit: async function (currentClass) {
+      await this.$store.dispatch('changeCurrentClass', currentClass)
+      await this.$router.push('/enrollment-audit')
     }
   },
   filters: {
@@ -110,5 +102,13 @@ export default {
 
   .el-button {
     float: right;
+  }
+
+  .info {
+    margin: 0 0 8px;
+  }
+
+  h4 {
+    color: #707070;
   }
 </style>
