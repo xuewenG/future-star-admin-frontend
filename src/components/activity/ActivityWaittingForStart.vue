@@ -82,6 +82,6 @@ export default {
 
   .activity-card {
     padding: 14px;
-    margin: 14px;git
+    margin: 14px;
   }
 </style>
