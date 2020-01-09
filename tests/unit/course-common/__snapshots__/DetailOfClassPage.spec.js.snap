@@ -39,8 +39,8 @@ exports[`DetailOfClassPage 快照测试 1`] = `
           <!---->
           <div class="el-card__body">
             <div class="el-row">
-              <div class="el-col el-col-21">
-                课程名：素质教育行业现状分析与未来展望
+              <div class="el-col el-col-19">
+                课程名：
               </div>
               <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
                   <!----><i class="el-icon-more"></i>
@@ -48,24 +48,11 @@ exports[`DetailOfClassPage 快照测试 1`] = `
               <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
                   <!----><i class="el-icon-edit-outline"></i>
                   <!----></button></div>
-              <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
-                  <!----><i class="el-icon-delete"></i>
-                  <!----></button></div>
-            </div>
-          </div>
-        </div>
-        <div class="el-card is-never-shadow">
-          <!---->
-          <div class="el-card__body">
-            <div class="el-row">
-              <div class="el-col el-col-21">
-                课程名：素质教育行业现状分析与未来展望
-              </div>
               <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-                  <!----><i class="el-icon-more"></i>
+                  <!----><i class="el-icon-document-copy"></i>
                   <!----></button></div>
               <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-                  <!----><i class="el-icon-edit-outline"></i>
+                  <!----><i class="el-icon-user"></i>
                   <!----></button></div>
               <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
                   <!----><i class="el-icon-delete"></i>
@@ -73,28 +60,10 @@ exports[`DetailOfClassPage 快照测试 1`] = `
             </div>
           </div>
         </div>
-        <div class="el-card is-never-shadow">
-          <!---->
-          <div class="el-card__body">
-            <div class="el-row">
-              <div class="el-col el-col-21">
-                课程名：素质教育行业现状分析与未来展望
-              </div>
-              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-                  <!----><i class="el-icon-more"></i>
-                  <!----></button></div>
-              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-                  <!----><i class="el-icon-edit-outline"></i>
-                  <!----></button></div>
-              <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
-                  <!----><i class="el-icon-delete"></i>
-                  <!----></button></div>
-            </div>
-          </div>
-        </div>
-        <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary is-round">
+        <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-icon-plus el-button--primary is-circle">
             <!---->
-            <!----><span>添加课程</span></button></div>
+            <!---->
+            <!----></button></div>
       </div>
     </div>
   </main>

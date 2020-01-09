@@ -59,13 +59,13 @@ export default {
     }
   },
   methods: {
-    editClassInfo: function (currentClass) {
-      this.$store.dispatch('changeCurrentClass', currentClass)
-      this.$router.push('/edit-class-info')
+    editClassInfo: async function (currentClass) {
+      await this.$store.dispatch('changeCurrentClass', currentClass)
+      await this.$router.push('/edit-class-info')
     },
-    lookOverClassDetail: function (currentClass) {
-      this.$store.dispatch('changeCurrentClass', currentClass)
-      this.$router.push('/class-detail')
+    lookOverClassDetail: async function (currentClass) {
+      await this.$store.dispatch('changeCurrentClass', currentClass)
+      await this.$router.push('/class-detail')
     }
   },
   filters: {

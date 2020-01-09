@@ -48,26 +48,6 @@ exports[`DetailOfCoursePage 快照测试 1`] = `
         <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-round">
             <!---->
             <!----><span>添加课程资料</span></button></div>
-        <div class="el-divider el-divider--horizontal">
-          <div class="el-divider__text is-center">讲师信息</div>
-        </div>
-        <div>
-          <div class="el-row">
-            讲师名：
-          </div>
-          <div class="el-row">
-            讲师头像:
-          </div>
-          <div class="el-row">
-            讲师头衔：
-          </div>
-          <div class="el-row">
-            讲师简介：
-          </div>
-          <div class="el-row">
-            讲师联系方式：
-          </div>
-        </div>
       </div>
     </div>
   </main>
