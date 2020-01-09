@@ -17,7 +17,7 @@
             <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo(item)" circle></el-button>
           </el-col>
           <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-s-custom" @click="enrollmentAudit(item)" circle></el-button>
+            <el-button type="primary" size="small" icon="el-icon-s-custom" @click="lookOverStudentInClass(item)" circle></el-button>
           </el-col>
           <el-col :span="2">
             <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
@@ -68,9 +68,9 @@ export default {
       await this.$store.dispatch('changeCurrentClass', currentClass)
       await this.$router.push('/class-detail')
     },
-    enrollmentAudit: async function (currentClass) {
+    lookOverStudentInClass: async function (currentClass) {
       await this.$store.dispatch('changeCurrentClass', currentClass)
-      await this.$router.push('/enrollment-audit')
+      await this.$router.push('/student-in-class')
     }
   },
   watch: {

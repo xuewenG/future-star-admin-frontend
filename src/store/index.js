@@ -9,6 +9,7 @@ export default new Vuex.Store({
     activeNameOfCourse: 'first',
     activeNameOfEnrollment: 'first',
     activeNameOfActivity: 'first',
+    activeSemesterOfCourse: 0,
     semesters: '',
     currentSemester: '',
     classes: '',
@@ -29,6 +30,9 @@ export default new Vuex.Store({
     },
     changeActiveNameOfActivity (state, activeName) {
       state.activeNameOfActivity = activeName
+    },
+    changeActiveSemesterOfCourse (state, activeID) {
+      state.activeSemesterOfCourse = activeID
     },
     changeSemesters (state, semesters) {
       state.semesters = semesters
@@ -65,6 +69,9 @@ export default new Vuex.Store({
     changeActiveNameOfActivity (context, activeName) {
       context.commit('changeActiveNameOfActivity', activeName)
     },
+    changeActiveSemesterOfCourse (context, activeID) {
+      context.commit('changeActiveSemesterOfCourse', activeID)
+    },
     changeSemesters (context, semesters) {
       context.commit('changeSemesters', semesters)
     },
@@ -99,6 +106,9 @@ export default new Vuex.Store({
     },
     getActiveNameOfActivity (state) {
       return state.activeNameOfActivity
+    },
+    getActiveSemesterOfCourse (state) {
+      return state.activeSemesterOfCourse
     },
     getSemesters (state) {
       return state.semesters
