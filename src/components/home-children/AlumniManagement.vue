@@ -3,7 +3,7 @@
     <el-main>
       <el-row>
         <el-col :span="4" :offset="3">
-          <el-select class="selection" v-model="semester" @change="findAllClass();search()" filterable placeholder="请选择学期">
+          <el-select class="selection" v-model="semester" @change="findAllClass()" filterable placeholder="请选择学期">
             <el-option
               v-for="item in semesterOptions"
               :key="item.semester"
@@ -136,7 +136,7 @@ export default {
       let that = this
       let params = {
         page_size: that.page_size,
-        page: that.currentAlumniPagecurrentAlumniPage
+        page: that.currentAlumniPage
       }
       that.axios.get('/student/student', { params }).then(function (response) {
         if (response.data.code === '2000') {
@@ -202,6 +202,7 @@ export default {
           that.$forceUpdate()
         }
       })
+      that.search()
       that.$forceUpdate()
     },
     search () {
