@@ -2,6 +2,7 @@ import DetailOfSemesterPage from '../page/course-common/DetailOfSemesterPage'
 import DetailOfClassPage from '../page/course-common/DetailOfClassPage'
 import DetailOfCoursePage from '../page/course-common/DetailOfCoursePage'
 import DetailOfTeacherPage from '../page/course-common/DetailOfTeacherPage'
+import DetailOfSubCoursePage from '../page/course-common/DetailOfSubCoursePage'
 import EditSemesterInfoPage from '../page/course-common/EditSemesterInfoPage'
 import EditClassInfoPage from '../page/course-common/EditClassInfoPage'
 import EditCourseInfoPage from '../page/course-common/EditCourseInfoPage'
@@ -30,6 +31,11 @@ export default [
     path: '/teacher-detail',
     name: 'DetailOfTeacherPage',
     component: DetailOfTeacherPage
+  },
+  {
+    path: '/sub-course-detail',
+    name: 'DetailOfSubCoursePage',
+    component: DetailOfSubCoursePage
   },
   {
     path: '/edit-semester-info',
