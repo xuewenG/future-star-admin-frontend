@@ -37,7 +37,7 @@
               <el-button type="primary" size="mini" icon="el-icon-document-copy" @click="lookOverSubCourses" circle></el-button>
             </el-col>
             <el-col :span="1">
-              <el-button type="primary" size="mini" icon="el-icon-user" @click="lookOverTeachers" circle></el-button>
+              <el-button type="primary" size="mini" icon="el-icon-user" @click="lookOverTeachers(course)" circle></el-button>
             </el-col>
             <el-col :span="1">
               <el-button type="danger" size="mini" icon="el-icon-delete" circle></el-button>
@@ -108,7 +108,9 @@ export default {
     },
     lookOverSubCourses: function () {
     },
-    lookOverTeachers: function () {
+    lookOverTeachers: function (course) {
+      this.$store.dispatch('changeCurrentCourse', course)
+      this.$router.push('/teacher-detail')
     },
     editCourseInfo: function () {
       this.$store.dispatch('changeCurrentClass', this.currentClass)

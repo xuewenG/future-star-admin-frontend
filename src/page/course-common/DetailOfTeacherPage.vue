@@ -5,23 +5,30 @@
     </el-header>
     <el-main>
       <el-divider content-position="center">讲师信息</el-divider>
-      <el-card v-for="teacher in teachers" :key="teacher.id">
-        <el-row>
-          讲师名： {{ teacher.name }}
-        </el-row>
-        <el-row>
-          讲师头像: {{ teacher.avatar }}
-        </el-row>
-        <el-row>
-          讲师头衔：{{ teacher.title }}
-        </el-row>
-        <el-row>
-          讲师简介： {{ teacher.teacherBriefIntroduction }}
-        </el-row>
-        <el-row>
-          讲师联系方式： {{ teacher.teacherContactInformation }}
-        </el-row>
-      </el-card>
+      <el-col :span="8" shadow="never">
+        <el-card shadow="never">
+          <el-row slot="header" type="flex" align="middle">
+            <el-col :span="3">
+              <el-avatar :src="teacher.avatar" size="small"></el-avatar>
+            </el-col>
+            <el-col :span="18">
+              {{ teacher.name }}
+            </el-col>
+            <el-col :span="3" :push="1">
+              <el-button size="small" type="primary" class="el-icon-edit-outline" circle></el-button>
+            </el-col>
+          </el-row>
+          <el-row>
+            头衔：{{ teacher.title }}
+          </el-row>
+          <el-row>
+            简介： {{ teacher.introduction }}
+          </el-row>
+          <el-row>
+            联系方式： {{ teacher.contact_way }}
+          </el-row>
+        </el-card>
+      </el-col>
     </el-main>
   </el-container>
 </template>
@@ -31,12 +38,31 @@ export default {
   name: 'DetailOfTeacherPage',
   data () {
     return {
-
+      teacher:
+        {
+          id: '1',
+          name: '陈某人',
+          avatar: 'http://dmimg.5054399.com/allimg/pkm/pk/22.jpg',
+          title: '计蒜鸽UFO',
+          introduction: 'I come from university',
+          contact_way: '1981468862@qq.com'
+        }
+    }
+  },
+  created () {
+    let course = this.$store.getters.getCurrentCourse
+    this.teacher = course.teacher
+  },
+  methods: {
+    goBack: function () {
+      this.$router.go(-1)
     }
   }
 }
 </script>
 
 <style scoped>
-
+  .el-card {
+    margin: 10px;
+  }
 </style>
