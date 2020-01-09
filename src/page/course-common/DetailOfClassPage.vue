@@ -31,10 +31,10 @@
               <el-button type="primary" size="mini" icon="el-icon-more" @click="lookOverCourseDetail(course)" circle></el-button>
             </el-col>
             <el-col :span="1">
-              <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editCourseInfo" circle></el-button>
+              <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editCourseInfo(course)" circle></el-button>
             </el-col>
             <el-col :span="1">
-              <el-button type="primary" size="mini" icon="el-icon-document-copy" @click="lookOverSubCourses" circle></el-button>
+              <el-button type="primary" size="mini" icon="el-icon-document-copy" @click="lookOverSubCourses(course)" circle></el-button>
             </el-col>
             <el-col :span="1">
               <el-button type="primary" size="mini" icon="el-icon-user" @click="lookOverTeachers(course)" circle></el-button>
@@ -100,25 +100,30 @@ export default {
     goBack: function () {
       this.$router.go(-1)
     },
-    addCourse: function () {
-      this.$router.push('/add-course')
+    addCourse: async function () {
+      await this.$store.dispatch('changeCurrentClass', this.currentClass)
+      await this.$router.push('/add-course')
     },
     lookOverCourseDetail: async function (course) {
       await this.$store.dispatch('changeCurrentCourse', course)
-      this.$router.push('/course-detail')
+      await this.$router.push('/course-detail')
     },
-    lookOverSubCourses: function () {
+    lookOverSubCourses: async function (course) {
+      await this.$store.dispatch('changeCurrentCourse', course)
+      await this.$router.push('/sub-course-detail')
     },
-    lookOverTeachers: function (course) {
-      this.$store.dispatch('changeCurrentCourse', course)
-      this.$router.push('/teacher-detail')
+    lookOverTeachers: async function (course) {
+      await this.$store.dispatch('changeCurrentCourse', course)
+      await this.$router.push('/teacher-detail')
     },
-    editCourseInfo: function () {
-      this.$store.dispatch('changeCurrentClass', this.currentClass)
-      this.$router.push('/edit-course-info')
+    editCourseInfo: async function (course) {
+      await this.$store.dispatch('changeCurrentClass', this.currentClass)
+      await this.$store.dispatch('changeCurrentCourse', course)
+      await this.$router.push('/edit-course-info')
     },
-    editClassInfo: function () {
-      this.$router.push('/edit-class-info')
+    editClassInfo: async function () {
+      await this.$store.dispatch('changeCurrentClass', this.currentClass)
+      await this.$router.push('/edit-class-info')
     }
   }
 }
