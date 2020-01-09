@@ -27,24 +27,6 @@
         <el-row type="flex" justify="center">
           <el-button type="primary" size="small" @click="addCourseResource" round>添加课程资料</el-button>
         </el-row>
-          <el-divider>讲师信息</el-divider>
-          <div v-for="teacher in course.courseTeachers" :key="teacher.teacherId">
-            <el-row>
-              讲师名： {{ teacher.teacherName }}
-            </el-row>
-            <el-row>
-              讲师头像: {{ teacher.teacherAvatar }}
-            </el-row>
-            <el-row>
-              讲师头衔：{{ teacher.teacherTitle }}
-            </el-row>
-            <el-row>
-              讲师简介： {{ teacher.teacherBriefIntroduction }}
-            </el-row>
-            <el-row>
-              讲师联系方式： {{ teacher.teacherContactInformation }}
-            </el-row>
-          </div>
       </el-card>
     </el-main>
   </el-container>

@@ -13,6 +13,8 @@ export default new Vuex.Store({
     currentSemester: '',
     classes: '',
     currentClass: '',
+    courses: '',
+    currentCourse: '',
     infoOfAnAlumni: null
   },
   mutations: {
@@ -42,6 +44,12 @@ export default new Vuex.Store({
     },
     changeCurrentClass (state, currentClass) {
       state.currentClass = currentClass
+    },
+    changeCourses (state, courses) {
+      state.courses = courses
+    },
+    changeCurrentCourse (state, currentCourse) {
+      state.currentCourse = currentCourse
     }
   },
   actions: {
@@ -71,6 +79,12 @@ export default new Vuex.Store({
     },
     changeCurrentClass (context, currentClass) {
       context.commit('changeCurrentClass', currentClass)
+    },
+    changeCourses (context, courses) {
+      context.commit('changeCourses', courses)
+    },
+    changeCurrentCourse (context, currentCourse) {
+      context.commit('changeCurrentCourse', currentCourse)
     }
   },
   getters: {
@@ -100,6 +114,12 @@ export default new Vuex.Store({
     },
     getCurrentClass (state) {
       return state.currentClass
+    },
+    getCourses (state) {
+      return state.courses
+    },
+    getCurrentCourse (state) {
+      return state.currentCourse
     }
   },
   modules: {

@@ -1,9 +1,11 @@
 import DetailOfSemesterPage from '../page/course-common/DetailOfSemesterPage'
 import DetailOfClassPage from '../page/course-common/DetailOfClassPage'
 import DetailOfCoursePage from '../page/course-common/DetailOfCoursePage'
+import DetailOfTeacherPage from '../page/course-common/DetailOfTeacherPage'
 import EditSemesterInfoPage from '../page/course-common/EditSemesterInfoPage'
 import EditClassInfoPage from '../page/course-common/EditClassInfoPage'
 import EditCourseInfoPage from '../page/course-common/EditCourseInfoPage'
+import EditTeacherInfoPage from '../page/course-common/EditTeacherInfoPage'
 import AddCoursePage from '../page/course-common/AddCoursePage'
 import AddCourseResourcePage from '../page/course-common/AddCourseResourcePage'
 import StudentInClass from '../page/course-common/StudentInClass'
@@ -25,6 +27,11 @@ export default [
     component: DetailOfCoursePage
   },
   {
+    path: '/teacher-detail',
+    name: 'DetailOfTeacherPage',
+    component: DetailOfTeacherPage
+  },
+  {
     path: '/edit-semester-info',
     name: 'EditSemesterInfoPage',
     component: EditSemesterInfoPage
@@ -38,6 +45,11 @@ export default [
     path: '/edit-course-info',
     name: 'EditCourseInfoPage',
     component: EditCourseInfoPage
+  },
+  {
+    path: '/edit-teacher-info',
+    name: 'EditTeacherInfoPage',
+    component: EditTeacherInfoPage
   },
   {
     path: '/add-course',

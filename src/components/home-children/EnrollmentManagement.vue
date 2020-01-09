@@ -68,7 +68,7 @@ export default {
       total: 0
     }
   },
-  created () {
+   created () {
     let that = this
     that.activeName = that.$store.getters.getActiveNameOfEnrollment
     that.axios.get('/semester/semester', {
@@ -76,10 +76,10 @@ export default {
         page: 1,
         page_size: 999999
       }
-    }).then(function (response) {
+    }).then(async function (response) {
       let semesters = response.data.data.results
       console.log(response)
-      that.$store.dispatch('changeSemesters', semesters)
+      await that.$store.dispatch('changeSemesters', semesters)
       that.semester = semesters[semesters.length - 1]
     }).catch(function (error) {
       console.log(error)
@@ -88,12 +88,12 @@ export default {
     that.getClasses()
   },
   methods: {
-    lookOverSemesterDetail: function () {
-      this.$store.dispatch('changeCurrentSemester', this.semester)
-      this.$router.push('/semester-detail')
+    lookOverSemesterDetail: async function () {
+      await this.$store.dispatch('changeCurrentSemester', this.semester)
+      await this.$router.push('/semester-detail')
     },
-    changeActiveName: function (tab) {
-      this.$store.dispatch('changeActiveNameOfEnrollment', tab.name)
+    changeActiveName: async function (tab) {
+      await this.$store.dispatch('changeActiveNameOfEnrollment', tab.name)
     },
     CurrentPageChange: function (currentPage) {
       let that = this
@@ -108,11 +108,11 @@ export default {
           page: that.page,
           page_size: that.page_size
         }
-      }).then(function (response) {
+      }).then(async function (response) {
         let classes = response.data.data.results
         that.total = response.data.data.count
         console.log(response)
-        that.$store.dispatch('changeClasses', classes)
+        await that.$store.dispatch('changeClasses', classes)
       }).catch(function (error) {
         console.log(error)
       })

@@ -37,36 +37,6 @@
               <el-input v-model="subCourse.subCourseName"></el-input>
             </el-form-item>
           </el-row>
-          <el-row>
-            <el-button type="primary">添加子课程</el-button>
-          </el-row>
-          <el-divider>讲师信息</el-divider>
-          <div v-for="teacher in course.courseTeachers" :key="teacher.teacherId">
-            <el-row>
-              <el-form-item label="讲师名：">
-                <el-input v-model="teacher.teacherName"></el-input>
-              </el-form-item>
-            </el-row>
-            <el-form-item label="讲师头像：">
-              <el-input v-model="teacher.teacherAvatar"></el-input>
-            </el-form-item>
-            <el-row>
-              <el-form-item label="讲师头衔：">
-                <el-input v-model="teacher.teacherTitle"></el-input>
-              </el-form-item>
-            </el-row>
-            <el-form-item label="讲师简介：">
-              <el-input v-model="teacher.teacherBriefIntroduction"></el-input>
-            </el-form-item>
-            <el-row>
-              <el-form-item label="讲师联系方式：">
-                <el-input v-model="teacher.teacherContactInformation"></el-input>
-              </el-form-item>
-            </el-row>
-          </div>
-          <el-row>
-            <el-button type="primary">添加老师</el-button>
-          </el-row>
           <el-form-item>
             <el-button type="primary">立即创建</el-button>
             <el-button>取消</el-button>
