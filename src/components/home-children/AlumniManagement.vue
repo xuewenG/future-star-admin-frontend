@@ -261,7 +261,6 @@ export default {
     },
     showAllInfo (alumniInfo) {
       this.$store.dispatch('changeInfoOfAnAlumni', alumniInfo)
-      console.log(alumniInfo)
       this.$router.push('/show-all-information')
     }
   }
