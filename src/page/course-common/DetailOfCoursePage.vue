@@ -3,30 +3,24 @@
     <el-main>
       <el-page-header @back="goBack()" content="课程信息"></el-page-header>
       <el-divider/>
-      <el-card shadow="always">
+      <el-card shadow="never">
           <el-row>
             <el-col :span="23">
-              课程名称： {{ course.courseName }}
+              课程名称： {{ course.name }}
             </el-col>
             <el-col :span="1">
               <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editCourseInfo" circle></el-button>
             </el-col>
           </el-row>
           <el-row>
-            课程起止时间： {{ course.courseStartTime }} ---- {{ course.courseEndTime }}
+            课程起止时间： {{ course.begin_time }} ---- {{ course.end_time }}
           </el-row>
           <el-row>
-            上课地点： {{ course.coursePlace }}
+            上课地点： {{ course.location }}
           </el-row>
           <el-row>
-            课程介绍： {{ course.courseIntroduction }}
+            课程介绍： {{ course.introduction }}
           </el-row>
-          <el-divider>课程资料</el-divider>
-          <el-tree :data="resourceData" :props="defaultProps">
-          </el-tree>
-        <el-row type="flex" justify="center">
-          <el-button type="primary" size="small" @click="addCourseResource" round>添加课程资料</el-button>
-        </el-row>
       </el-card>
     </el-main>
   </el-container>
@@ -37,60 +31,24 @@ export default {
   name: 'CourseDetailPage',
   data () {
     return {
-      defaultProps: {
-        children: 'children',
-        label: 'label'
-      },
-      resourceData: [
-        {
-          label: '课程一',
-          children: [
-            {
-              label: '资料一'
-            },
-            {
-              label: '资料二'
-            }
-          ]
-        }
-      ],
       course: {
-        courseName: '滴滴滴滴滴大',
-        courseIntroduction: '这是一门xxxxk课',
-        coursePlace: 'HFUT',
-        courseTimeRange: '',
-        courseStartTime: '',
-        courseEndTime: '',
-        subCourses: [
-          {
-            subCourseId: '',
-            subCourseName: '现状分析',
-            subCourseBriefIntroduction: '',
-            subCourseResource: [
-              '资料一',
-              '资料二',
-              '资料三'
-            ]
-          }
-        ],
-        courseTeachers: [
-          {
-            teacherId: '',
-            teacherName: '',
-            teacherAvatar: '',
-            teacherTitle: '',
-            teacherBriefIntroduction: '',
-            teacherContactInformation: ''
-          }
-        ]
+        name: '',
+        introduction: '',
+        location: '',
+        begin_time: '',
+        end_time: ''
       }
     }
+  },
+  created () {
+    this.course = this.$store.getters.getCurrentCourse
   },
   methods: {
     goBack: function () {
       this.$router.go(-1)
     },
-    editCourseInfo: function () {
+    editCourseInfo: async function () {
+      await this.$store.dispatch('changeCurrentCourse', this.course)
       this.$router.push('/edit-course-info')
     },
     addCourseResource: function () {
@@ -101,5 +59,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .el-row {
+    margin: 0 0 8px;
+  }
 </style>

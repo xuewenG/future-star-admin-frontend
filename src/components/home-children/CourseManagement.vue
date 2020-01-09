@@ -6,7 +6,7 @@
           <h3>{{ semester }}</h3>
         </el-col>
         <el-col :span="1">
-          <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="lookOverSemesterDetail()" circle></el-button>
+          <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="lookOverSemesterDetail" circle></el-button>
         </el-col>
       </el-row>
     </el-header>

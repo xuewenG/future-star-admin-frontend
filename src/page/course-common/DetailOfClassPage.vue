@@ -12,13 +12,13 @@
             <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
           </el-col>
         </el-row>
-        <el-row>
+        <el-row class="info">
           起止时间： {{ currentClass.start_time }} ---- {{ currentClass.end_time }}
         </el-row>
-        <el-row>
+        <el-row class="info">
           班级人数： {{ currentClass.current_people_number }} / {{ currentClass.people_number_limit }}
         </el-row>
-        <el-row>
+        <el-row class="info">
           班级介绍： {{ currentClass.introduction }}
         </el-row>
         <el-divider content-position="center">课程详情</el-divider>
@@ -28,7 +28,7 @@
               课程名：{{ course.name }}
             </el-col>
             <el-col :span="1">
-              <el-button type="primary" size="mini" icon="el-icon-more" @click="lookOverCourseDetail" circle></el-button>
+              <el-button type="primary" size="mini" icon="el-icon-more" @click="lookOverCourseDetail(course)" circle></el-button>
             </el-col>
             <el-col :span="1">
               <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editCourseInfo" circle></el-button>
@@ -103,7 +103,8 @@ export default {
     addCourse: function () {
       this.$router.push('/add-course')
     },
-    lookOverCourseDetail: function () {
+    lookOverCourseDetail: async function (course) {
+      await this.$store.dispatch('changeCurrentCourse', course)
       this.$router.push('/course-detail')
     },
     lookOverSubCourses: function () {
@@ -135,5 +136,9 @@ export default {
 
   .el-card {
     margin-bottom: 10px;
+  }
+
+  .info {
+    margin: 0 0 8px;
   }
 </style>

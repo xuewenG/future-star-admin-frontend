@@ -3,7 +3,7 @@
     <el-header height="45px">
       <el-row justify="center" align="middle" class="hint-info-row">
           <el-col :span="23">
-            <img src="../assets/EdStarsLogo.jpg" height="30px" />
+            <el-image :src="logoUrl" fit="fit"></el-image>
           </el-col>
           <el-col :span="1">
             <el-dropdown size="mini" placement="bottom-end" @command="handleCommand">
@@ -50,7 +50,7 @@
               <router-link to="/home/course">
                 <el-menu-item index="2">
                   <li class="el-icon-document"></li>
-                  课程管理
+                  班级管理
                 </el-menu-item>
               </router-link>
               <router-link to="/home/activity">
@@ -90,6 +90,7 @@ export default {
       backgroundColor: '#f9fafc',
       defaultActive: '0',
       avatarUrl: require('../assets/avatar.jpg'),
+      logoUrl: require('../assets/logo.png'),
       name: '',
       identityName: '',
       account: ''
@@ -117,18 +118,18 @@ export default {
         this.signOut()
       }
     },
-    changeDefaultActive (index) {
+    changeDefaultActive: async function (index) {
       let that = this
-      that.$store.dispatch('changeActiveIndexOfNavigation', index)
+      await that.$store.dispatch('changeActiveIndexOfNavigation', index)
     },
     signOut: function () {
       let that = this
       that.axios.post('/administrator/logout'
-      ).then(function (response) {
+      ).then(async function (response) {
         console.log(response)
         if (response.data.code === '2000') {
           sessionStorage.setItem('user', '')
-          that.$router.push('/login')
+          await that.$router.push('/login')
         } else {
           that.$message({
             type: 'error',
@@ -200,5 +201,10 @@ export default {
   .sub-menu-item {
     display: inline-block;
     width: 29px;
+  }
+
+  .el-image {
+    width: 100px;
+    height: 30px;
   }
 </style>

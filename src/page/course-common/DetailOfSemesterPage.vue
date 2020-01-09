@@ -9,7 +9,7 @@
            学期主题：{{ semester.subject }}
          </el-col>
          <el-col :span="1">
-           <el-button type="primary" size="mini" class="btn" icon="el-icon-edit-outline" @click="editSemesterInfo()" circle></el-button>
+           <el-button type="primary" size="mini" class="btn" icon="el-icon-edit-outline" @click="editSemesterInfo" circle></el-button>
          </el-col>
        </el-row>
         <el-row>

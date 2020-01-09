@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h4 v-if="classes.length === 0">暂无待招生班级</h4>
-    <el-col :span="12" v-for="item in classes" v-show="item.state===2" :key="item.id">
+    <h4 v-if="count === 0">暂无待招生班级</h4>
+    <el-col :span="12" v-for="item in classes" v-show="item.state===0" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
           <el-col :span="16">
@@ -41,9 +41,15 @@ export default {
   name: 'UnopenedClasses',
   created () {
     this.classes = this.$store.getters.getClasses
+    for (let i = 0; i < this.classes.length; i++) {
+      if (this.classes[i].state === 0) {
+        this.count++
+      }
+    }
   },
   data () {
     return {
+      count: 0,
       classes: [
         {
           id: '2',
