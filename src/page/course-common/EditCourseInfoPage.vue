@@ -11,9 +11,9 @@
             </el-input>
           </el-form-item>
           <el-form-item label="班级起止时间：">
-            <el-col :span="8">
+            <el-col :span="6">
               <el-date-picker
-                v-model="course.start_time"
+                v-model="course.begin_time"
                 type="date"
                 placeholder="选择日期">
               </el-date-picker>
@@ -88,16 +88,16 @@ export default {
     },
     saveCourseInfo: async function () {
       let that = this
-      let url = '/clazz/clazz/' + that.currentClass.id
-      that.currentClass.start_time = that.currentClass.start_time.toLocaleDateString().replace(/\//g, '-')
-      that.currentClass.end_time = that.currentClass.end_time.toLocaleDateString().replace(/\//g, '-')
-      await that.$store.dispatch('changeCurrentClass', that.currentClass)
+      let url = '/course/course/' + that.course.id
+      that.course.start_time = that.course.start_time.toLocaleDateString().replace(/\//g, '-')
+      that.course.end_time = that.course.end_time.toLocaleDateString().replace(/\//g, '-')
+      await that.$store.dispatch('changeCurrentCourse', that.course)
       that.axios.put(url, {
-        name: that.currentClass.name,
-        introduction: that.currentClass.introduction,
-        start_time: that.currentClass.start_time,
-        end_time: that.currentClass.end_time,
-        people_number_limit: that.currentClass.people_number_limit
+        name: that.course.name,
+        introduction: that.course.introduction,
+        start_time: that.course.start_time,
+        end_time: that.course.end_time,
+        location: that.course.location
       }).then(function (response) {
         if (response.data.code === '2000') {
           that.$message({
