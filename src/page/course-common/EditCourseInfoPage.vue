@@ -72,8 +72,10 @@ export default {
   },
   created () {
     this.course = this.$store.getters.getCurrentCourse
-    this.course.start_time = new Date(this.course.start_time)
-    this.course.end_time = new Date(this.course.end_time)
+    if (this.course) {
+      this.course.start_time = new Date(this.course.start_time)
+      this.course.end_time = new Date(this.course.end_time)
+    }
   },
   methods: {
     goBack: function () {

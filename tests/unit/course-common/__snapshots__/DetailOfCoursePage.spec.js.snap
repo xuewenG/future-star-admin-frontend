@@ -12,12 +12,12 @@ exports[`DetailOfCoursePage 快照测试 1`] = `
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-card is-always-shadow">
+    <div class="el-card is-never-shadow">
       <!---->
       <div class="el-card__body">
         <div class="el-row">
           <div class="el-col el-col-23">
-            课程名称： 滴滴滴滴滴大
+            课程名称：
           </div>
           <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
               <!----><i class="el-icon-edit-outline"></i>
@@ -27,27 +27,11 @@ exports[`DetailOfCoursePage 快照测试 1`] = `
           课程起止时间： ----
         </div>
         <div class="el-row">
-          上课地点： HFUT
+          上课地点：
         </div>
         <div class="el-row">
-          课程介绍： 这是一门xxxxk课
+          课程介绍：
         </div>
-        <div class="el-divider el-divider--horizontal">
-          <div class="el-divider__text is-center">课程资料</div>
-        </div>
-        <div role="tree" class="el-tree">
-          <div role="treeitem" tabindex="0" aria-disabled="" draggable="false" class="el-tree-node is-focusable">
-            <div class="el-tree-node__content" style="padding-left: 0px;"><span class="el-tree-node__expand-icon el-icon-caret-right"></span>
-              <!---->
-              <!----><span class="el-tree-node__label">课程一</span></div>
-            <!---->
-          </div>
-          <!---->
-          <div class="el-tree__drop-indicator" style="display: none;"></div>
-        </div>
-        <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-round">
-            <!---->
-            <!----><span>添加课程资料</span></button></div>
       </div>
     </div>
   </main>

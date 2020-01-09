@@ -23,13 +23,13 @@ exports[`DetailOfClassPage 快照测试 1`] = `
               <!----><i class="el-icon-edit-outline"></i>
               <!----></button></div>
         </div>
-        <div class="el-row">
+        <div class="info el-row">
           起止时间： ----
         </div>
-        <div class="el-row">
+        <div class="info el-row">
           班级人数： /
         </div>
-        <div class="el-row">
+        <div class="info el-row">
           班级介绍：
         </div>
         <div class="el-divider el-divider--horizontal">
