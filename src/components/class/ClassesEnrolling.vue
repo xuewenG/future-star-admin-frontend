@@ -30,7 +30,7 @@
           招生人数：{{ item.current_people_number }} / {{ item.people_number_limit }}
         </el-row>
         <el-row class="info">
-          班级状态：未开放
+          班级状态：招生中
         </el-row>
         <el-row class="info">
           班级简介：{{ item.introduction | ellipsis }}
