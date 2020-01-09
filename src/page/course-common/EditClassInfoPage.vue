@@ -2,7 +2,7 @@
   <el-container>
     <el-main>
       <el-page-header @back="goBack()" content="修改班级信息"></el-page-header>
-      <el-divider/>
+      <el-divider></el-divider>
       <el-card class="activity-card" shadow="never">
         <el-form class="activity-table" label-width="150px">
           <el-form-item class="activity-title" label="班级名称：">
