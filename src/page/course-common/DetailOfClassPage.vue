@@ -3,7 +3,7 @@
     <el-main>
       <el-page-header @back="goBack()" content="班级详情"></el-page-header>
       <el-divider/>
-      <el-card class="activity-card" shadow="always">
+      <el-card class="activity-card" shadow="never">
         <el-row>
           <el-col :span="23">
             班级名称： {{ currentClass.name }}
@@ -22,7 +22,7 @@
           班级介绍： {{ currentClass.introduction }}
         </el-row>
         <el-divider content-position="center">课程详情</el-divider>
-        <el-card v-for="course in courses" :key="course.courseId">
+        <el-card v-for="course in courses" :key="course.courseId" shadow="never">
           <el-row>
             <el-col :span="21">
               课程名：{{ course.courseName }}
@@ -176,6 +176,7 @@ export default {
       this.$router.push('/course-detail')
     },
     editCourseInfo: function () {
+      this.$store.dispatch('changeCurrentClass', this.currentClass)
       this.$router.push('/edit-course-info')
     },
     editClassInfo: function () {

@@ -67,7 +67,9 @@ export default {
   },
   created () {
     this.currentClass = this.$store.getters.getCurrentClass
-    this.currentClass.timeRange = [this.currentClass.start_time, this.currentClass.end_time]
+    if (this.currentClass) {
+      this.currentClass.timeRange = [this.currentClass.start_time, this.currentClass.end_time]
+    }
   },
   methods: {
     goBack: function () {
@@ -80,6 +82,33 @@ export default {
       this.currentClass.introduction = ''
     },
     saveClassInfo: function () {
+      let that = this
+      let url = '/clazz/clazz/' + that.currentClass.id
+      that.axios.put(url, {
+        name: that.currentClass.name,
+        introduction: that.currentClass.introduction,
+        start_time: that.currentClass.timeRange[0],
+        end_time: that.currentClass.timeRange[1],
+        people_number_limit: that.currentClassl.people_number_limit
+      }).then(function (response) {
+        if (response.data.code === '2000') {
+          that.$message({
+            type: 'success',
+            message: '保存成功'
+          })
+        } else {
+          that.$message({
+            type: 'success',
+            message: '请求出错'
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'success',
+          message: '服务器内部错误'
+        })
+      })
     }
   }
 }

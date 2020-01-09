@@ -18,7 +18,7 @@ exports[`EditClassInfoPage 快照测试 1`] = `
         <form class="el-form activity-table">
           <div class="el-form-item activity-title"><label class="el-form-item__label" style="width: 150px;">班级名称：</label>
             <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="short-text el-input">
+              <div class="el-input">
                 <!----><input type="text" autocomplete="off" class="el-input__inner">
                 <!---->
                 <!---->
@@ -32,7 +32,7 @@ exports[`EditClassInfoPage 快照测试 1`] = `
             <div class="el-col el-col-8">
               <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">限制人数：</label>
                 <div class="el-form-item__content" style="margin-left: 150px;">
-                  <div class="short-text el-input">
+                  <div class="el-input">
                     <!----><input type="text" autocomplete="off" class="el-input__inner">
                     <!---->
                     <!---->
@@ -46,7 +46,7 @@ exports[`EditClassInfoPage 快照测试 1`] = `
           </div>
           <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">班级起止时间：</label>
             <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="el-date-editor el-range-editor el-input__inner el-date-editor--timerange"><i class="el-input__icon el-range__icon el-icon-time"></i><input autocomplete="off" placeholder="开始时间" name="" class="el-range-input"><span class="el-range-separator">至</span><input autocomplete="off" placeholder="结束时间" name="" class="el-range-input"><i class="el-input__icon el-range__close-icon"></i></div>
+              <div class="el-date-editor el-range-editor el-input__inner el-date-editor--daterange"><i class="el-input__icon el-range__icon el-icon-date"></i><input autocomplete="off" placeholder="开始日期" name="" class="el-range-input"><span class="el-range-separator">至</span><input autocomplete="off" placeholder="结束日期" name="" class="el-range-input"><i class="el-input__icon el-range__close-icon"></i></div>
               <!---->
             </div>
           </div>
@@ -60,11 +60,15 @@ exports[`EditClassInfoPage 快照测试 1`] = `
           </div>
           <div class="el-form-item">
             <!---->
-            <div class="el-form-item__content" style="margin-left: 150px;"><button type="button" class="el-button el-button--primary">
-                <!---->
-                <!----><span>修改</span></button> <button type="button" class="el-button el-button--plain">
-                <!---->
-                <!----><span>清空</span></button>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="operation-button el-row is-justify-center el-row--flex">
+                <div class="el-col el-col-8"><button type="button" class="el-button el-button--primary">
+                    <!---->
+                    <!----><span>保存</span></button></div>
+                <div class="el-col el-col-8"><button type="button" class="el-button el-button--default">
+                    <!---->
+                    <!----><span>清空</span></button></div>
+              </div>
               <!---->
             </div>
           </div>
