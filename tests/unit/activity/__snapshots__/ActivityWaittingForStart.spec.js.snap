@@ -4,7 +4,7 @@ exports[`ActivityWaittingForStart 快照测试 1`] = `
 <div>
   <div class="el-col el-col-12">
     <!---->
-    <div class="el-card activity-card is-always-shadow">
+    <div class="el-card activity-card is-never-shadow">
       <div class="el-card__header">
         <div><span>大蜀山一日游</span> <button type="button" class="el-button el-button--text">
             <!---->
@@ -15,6 +15,8 @@ exports[`ActivityWaittingForStart 快照测试 1`] = `
             <!----><i class="el-icon-edit-outline"></i>
             <!----></button> <button type="button" class="el-button btn el-button--primary el-button--small is-circle">
             <!----><i class="el-icon-more"></i>
+            <!----></button> <button type="button" class="el-button btn el-button--primary el-button--small is-circle">
+            <!----><i class="el-icon-check"></i>
             <!----></button></div>
       </div>
       <div class="el-card__body">
