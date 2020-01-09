@@ -15,7 +15,7 @@
               {{ teacher.name }}
             </el-col>
             <el-col :span="3" :push="1">
-              <el-button size="small" type="primary" class="el-icon-edit-outline" circle></el-button>
+              <el-button size="small" type="primary" class="el-icon-edit-outline" @click="editTeacherInfo" circle></el-button>
             </el-col>
           </el-row>
           <el-row>
@@ -38,6 +38,7 @@ export default {
   name: 'DetailOfTeacherPage',
   data () {
     return {
+      course: '',
       teacher:
         {
           id: '1',
@@ -50,12 +51,16 @@ export default {
     }
   },
   created () {
-    let course = this.$store.getters.getCurrentCourse
-    this.teacher = course.teacher
+    this.course = this.$store.getters.getCurrentCourse
+    this.teacher = this.course.teacher
   },
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    editTeacherInfo: function () {
+      this.$store.dispatch('changeCurrentCourse', this.course)
+      this.$router.push('/edit-teacher-info')
     }
   }
 }

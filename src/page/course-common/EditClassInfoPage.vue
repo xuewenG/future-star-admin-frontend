@@ -98,14 +98,14 @@ export default {
           })
         } else {
           that.$message({
-            type: 'success',
+            type: 'error',
             message: '请求出错'
           })
         }
       }).catch(function (error) {
         console.log(error)
         that.$message({
-          type: 'success',
+          type: 'error',
           message: '服务器内部错误'
         })
       })
