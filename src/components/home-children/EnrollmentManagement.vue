@@ -35,6 +35,18 @@
         </el-tab-pane>
       </el-tabs>
     </el-main>
+    <el-footer>
+      <el-divider></el-divider>
+      <el-row type="flex" justify="center">
+        <el-pagination
+          @current-change="CurrentPageChange"
+          :current-page.sync="currentPage"
+          :page-size="pageSize"
+          layout="prev, pager, next, jumper"
+          :total="total">
+        </el-pagination>
+      </el-row>
+    </el-footer>
   </el-container>
 </template>
 
@@ -52,7 +64,8 @@ export default {
       activeName: 'first',
       semester: '',
       currentPage: 1,
-      pageSize: 999999
+      pageSize: 10,
+      total: 0
     }
   },
   created () {
@@ -60,8 +73,8 @@ export default {
     that.activeName = that.$store.getters.getActiveNameOfEnrollment
     that.axios.get('/semester/semester', {
       params: {
-        page: that.currentPage,
-        page_size: that.pageSize
+        page: 1,
+        page_size: 999999
       }
     }).then(function (response) {
       let semesters = response.data.data.results
@@ -71,6 +84,8 @@ export default {
     }).catch(function (error) {
       console.log(error)
     })
+
+    that.getClasses()
   },
   methods: {
     lookOverSemesterDetail: function () {
@@ -79,6 +94,28 @@ export default {
     },
     changeActiveName: function (tab) {
       this.$store.dispatch('changeActiveNameOfEnrollment', tab.name)
+    },
+    CurrentPageChange: function (currentPage) {
+      let that = this
+      that.currentPage = currentPage
+      that.getClasses()
+    },
+    getClasses: function () {
+      let that = this
+      that.axios.get('clazz/clazz', {
+        params: {
+          semester_id: that.semester.id,
+          page: that.page,
+          page_size: that.page_size
+        }
+      }).then(function (response) {
+        let classes = response.data.data.results
+        that.total = response.data.data.count
+        console.log(response)
+        that.$store.dispatch('changeClasses', classes)
+      }).catch(function (error) {
+        console.log(error)
+      })
     }
   }
 }
@@ -96,5 +133,9 @@ export default {
 
   h3 {
     color: #707070;
+  }
+
+  .el-footer {
+    padding: 0;
   }
 </style>
