@@ -22,10 +22,10 @@
           班级介绍： {{ currentClass.introduction }}
         </el-row>
         <el-divider content-position="center">课程详情</el-divider>
-        <el-card v-for="course in courses" :key="course.courseId" shadow="never">
+        <el-card v-for="course in courses" :key="course.id" shadow="never">
           <el-row>
-            <el-col :span="21">
-              课程名：{{ course.courseName }}
+            <el-col :span="19">
+              课程名：{{ course.name }}
             </el-col>
             <el-col :span="1">
               <el-button type="primary" size="mini" icon="el-icon-more" @click="lookOverCourseDetail" circle></el-button>
@@ -34,12 +34,18 @@
               <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editCourseInfo" circle></el-button>
             </el-col>
             <el-col :span="1">
-            <el-button type="danger" size="mini" icon="el-icon-delete" circle></el-button>
-          </el-col>
+              <el-button type="primary" size="mini" icon="el-icon-document-copy" @click="lookOverSubCourses" circle></el-button>
+            </el-col>
+            <el-col :span="1">
+              <el-button type="primary" size="mini" icon="el-icon-user" @click="lookOverTeachers" circle></el-button>
+            </el-col>
+            <el-col :span="1">
+              <el-button type="danger" size="mini" icon="el-icon-delete" circle></el-button>
+            </el-col>
           </el-row>
         </el-card>
         <el-row type="flex" justify="center">
-          <el-button type="primary" @click="addCourse" round>添加课程</el-button>
+          <el-button type="primary" @click="addCourse" class="el-icon-plus" circle></el-button>
         </el-row>
       </el-card>
     </el-main>
@@ -64,106 +70,31 @@ export default {
       },
       courses: [
         {
-          courseId: '1',
-          courseName: '素质教育行业现状分析与未来展望',
-          courseIntroduction: '',
-          coursePlace: '',
-          courseStartTime: '',
-          courseEndTime: '',
-          courseTeachers: [
-            {
-              teacherId: '1',
-              teacherName: 's',
-              teacherAvatar: 's',
-              teacherTitle: 's',
-              teacherBriefIntroduction: 's',
-              teacherContactInformation: 's'
-            },
-            {
-              teacherId: '1',
-              teacherName: 's',
-              teacherAvatar: 's',
-              teacherTitle: 's',
-              teacherBriefIntroduction: 's',
-              teacherContactInformation: 's'
-            }
-          ],
-          subCourses: [
-            {
-              subCourseId: '1',
-              subCourseName: '',
-              resourceType: '',
-              resourceName: '',
-              resourceUrl: '',
-              resourceContent: ''
-            },
-            {
-              subCourseId: '2',
-              subCourseName: '',
-              resourceType: '',
-              resourceName: '',
-              resourceUrl: '',
-              resourceContent: ''
-            }
-          ]
-        },
-        {
-          courseId: '2',
-          courseName: '素质教育行业现状分析与未来展望',
-          courseIntroduction: '',
-          coursePlace: '',
-          courseStartTime: '',
-          courseEndTime: '',
-          courseTeachers: [
-            {
-              teacherName: '2',
-              teacherAvatar: '3',
-              teacherTitle: 'w',
-              teacherBriefIntroduction: 'w',
-              teacherContactInformation: 'w'
-            }
-          ],
-          subCourses: [
-            {
-              subCourseName: 'w',
-              resourceType: 'w',
-              resourceName: 'w',
-              resourceUrl: 'w',
-              resourceContent: 'w'
-            }
-          ]
-        },
-        {
-          courseId: '3',
-          courseName: '素质教育行业现状分析与未来展望',
-          courseIntroduction: '',
-          coursePlace: '',
-          courseStartTime: '',
-          courseEndTime: '',
-          courseTeachers: [
-            {
-              teacherName: '',
-              teacherAvatar: '',
-              teacherTitle: '',
-              teacherBriefIntroduction: '',
-              teacherContactInformation: ''
-            }
-          ],
-          subCourses: [
-            {
-              subCourseName: '',
-              resourceType: '',
-              resourceName: '',
-              resourceUrl: '',
-              resourceContent: ''
-            }
-          ]
+          id: '0',
+          name: ''
         }
       ]
     }
   },
   created () {
     this.currentClass = this.$store.getters.getCurrentClass
+    let that = this
+    that.axios.get('/course/course', {
+      clazz_id: that.currentClass.id
+    }).then(function (response) {
+      if (response.data.code === '2000') {
+        let courses = response.data.data.results
+        that.$store.dispatch('changeCourses', courses)
+        that.courses = courses
+      } else {
+        that.$message({
+          type: 'error',
+          message: '服务器繁忙'
+        })
+      }
+    }).catch(function (error) {
+      console.log(error)
+    })
   },
   methods: {
     goBack: function () {
@@ -174,6 +105,10 @@ export default {
     },
     lookOverCourseDetail: function () {
       this.$router.push('/course-detail')
+    },
+    lookOverSubCourses: function () {
+    },
+    lookOverTeachers: function () {
     },
     editCourseInfo: function () {
       this.$store.dispatch('changeCurrentClass', this.currentClass)
