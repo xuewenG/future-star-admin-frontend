@@ -18,7 +18,7 @@
     <el-header>
       <el-row type="flex" align="middle">
         <el-col :span="5">
-          <el-select v-model="semester_id" @change="getClasses">
+          <el-select v-model="semester_id" @change="handleSelectChange">
             <el-option
               v-for="item in semesters"
               :key="item.name"
@@ -80,15 +80,15 @@ export default {
   },
   data () {
     return {
-      semester_id: '',
-      semesters: '',
+      semester_id: 0,
+      semesters: [],
       activeName: 'first',
-      semester: '',
+      semester: {},
       currentPage: 1,
       pageSize: 10,
       total: 0,
       createNewSemester: false,
-      classes: ''
+      classes: []
     }
   },
   created () {
@@ -107,11 +107,17 @@ export default {
         }
         await that.$store.dispatch('changeSemesters', semesters)
         that.semester = semesters[semesters.length - 1]
-        that.semester_id = that.semester.id
+        console.log(that.$store.getters.getActiveSemesterOfCourse)
+        if (that.$store.getters.getActiveSemesterOfCourse === 0) {
+          that.semester_id = that.semester.id
+        } else {
+          that.semester_id = that.$store.getters.getActiveSemesterOfCourse
+        }
         that.semesters = semesters
         if (that.semester && that.semester.state === 1) {
           that.createNewSemester = true
         }
+        that.getClasses()
       } else {
         that.$message({
           type: 'error',
@@ -127,10 +133,13 @@ export default {
         duration: 2000
       })
     })
-
-    that.getClasses()
   },
   methods: {
+    handleSelectChange: async function () {
+      let that = this
+      await that.$store.dispatch('changeActiveSemesterOfCourse', that.semester_id)
+      that.getClasses()
+    },
     changeCurrentSemester: function () {
       let semesters = this.$store.getters.getSemesters
       for (let i = 0; i < semesters.length; i++) {

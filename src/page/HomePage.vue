@@ -39,8 +39,7 @@
     <el-container>
       <el-aside width="202px">
         <el-menu :background-color="backgroundColor" :active-text-color="activeTextColor"
-                 :text-color="textColor" :default-active="defaultActive"
-                 align="middle" @select="changeDefaultActive">
+                 :text-color="textColor" align="middle" @select="changeDefaultActive">
               <router-link to="/home/enrollment">
                 <el-menu-item index="1">
                   <li class="el-icon-coordinate"></li>
@@ -88,7 +87,6 @@ export default {
       textColor: '#707070',
       activeTextColor: '#409eff',
       backgroundColor: '#f9fafc',
-      defaultActive: '0',
       avatarUrl: require('../assets/avatar.jpg'),
       logoUrl: require('../assets/logo.png'),
       name: '',
