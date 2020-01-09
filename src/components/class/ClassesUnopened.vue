@@ -11,10 +11,10 @@
             <el-button type="primary" size="small" icon="el-icon-check" circle></el-button>
           </el-col>
           <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail" circle></el-button>
+            <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail(item)" circle></el-button>
           </el-col>
           <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
+            <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo(item)" circle></el-button>
           </el-col>
           <el-col :span="2">
             <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
@@ -59,10 +59,12 @@ export default {
     }
   },
   methods: {
-    editClassInfo: function () {
+    editClassInfo: function (currentClass) {
+      this.$store.dispatch('changeCurrentClass', currentClass)
       this.$router.push('/edit-class-info')
     },
-    lookOverClassDetail: function () {
+    lookOverClassDetail: function (currentClass) {
+      this.$store.dispatch('changeCurrentClass', currentClass)
       this.$router.push('/class-detail')
     }
   },
@@ -93,7 +95,7 @@ export default {
   }
 
   .info {
-    margin: 0 0 15px;
+    margin: 0 0 8px;
   }
 
   h4 {

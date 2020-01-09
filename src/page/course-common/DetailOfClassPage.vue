@@ -6,23 +6,23 @@
       <el-card class="activity-card" shadow="always">
         <el-row>
           <el-col :span="23">
-            班级名称： {{ newClass.className }}
+            班级名称： {{ currentClass.name }}
           </el-col>
           <el-col :span="1">
             <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
           </el-col>
         </el-row>
         <el-row>
-          起止时间： {{ newClass.startTime }} ---- {{ newClass.endTime }}
+          起止时间： {{ currentClass.start_time }} ---- {{ currentClass.end_time }}
         </el-row>
         <el-row>
-          班级人数： {{ newClass.currentAmountOfStudent }} / {{ newClass.limitsOfStudent }}
+          班级人数： {{ currentClass.current_people_number }} / {{ currentClass.people_number_limit }}
         </el-row>
         <el-row>
-          班级介绍： {{ newClass.classIntroduction }}
+          班级介绍： {{ currentClass.introduction }}
         </el-row>
         <el-divider content-position="center">课程详情</el-divider>
-        <el-card v-for="course in newClass.courses" :key="course.courseId">
+        <el-card v-for="course in courses" :key="course.courseId">
           <el-row>
             <el-col :span="21">
               课程名：{{ course.courseName }}
@@ -51,125 +51,119 @@ export default {
   name: 'CourseClassDetailPage',
   data () {
     return {
-      newClass: {
-        className: '素质教育专题班',
-        classIntroduction: '如何体系化的进行素质教育类产品设计与开发？\n' +
-          '\n' +
-          '如何实现素质教育的效果外化和用户感知？\n' +
-          '\n' +
-          '如何高效获客并延长客户生命周期？\n' +
-          '\n' +
-          '如何实现规模化发展及标准化运营？\n' +
-          '\n' +
-          '如何提升客户亲密度与客户满意度，赢得客户口碑？\n' +
-          '\n' +
-          '如何做好人才体系搭建、团队管理与有效激励？\n' +
-          '\n' +
-          '大数据、人工智能、直播技术、智能硬件等如何与素质教育相结合？',
-        startTime: '2019-12-10',
-        endTime: '2019-12-31',
-        limitsOfStudent: '46',
-        currentAmountOfStudent: '2',
-        courses: [
-          {
-            courseId: '1',
-            courseName: '素质教育行业现状分析与未来展望',
-            courseIntroduction: '',
-            coursePlace: '',
-            courseStartTime: '',
-            courseEndTime: '',
-            courseTeachers: [
-              {
-                teacherId: '1',
-                teacherName: 's',
-                teacherAvatar: 's',
-                teacherTitle: 's',
-                teacherBriefIntroduction: 's',
-                teacherContactInformation: 's'
-              },
-              {
-                teacherId: '1',
-                teacherName: 's',
-                teacherAvatar: 's',
-                teacherTitle: 's',
-                teacherBriefIntroduction: 's',
-                teacherContactInformation: 's'
-              }
-            ],
-            subCourses: [
-              {
-                subCourseId: '1',
-                subCourseName: '',
-                resourceType: '',
-                resourceName: '',
-                resourceUrl: '',
-                resourceContent: ''
-              },
-              {
-                subCourseId: '2',
-                subCourseName: '',
-                resourceType: '',
-                resourceName: '',
-                resourceUrl: '',
-                resourceContent: ''
-              }
-            ]
-          },
-          {
-            courseId: '2',
-            courseName: '素质教育行业现状分析与未来展望',
-            courseIntroduction: '',
-            coursePlace: '',
-            courseStartTime: '',
-            courseEndTime: '',
-            courseTeachers: [
-              {
-                teacherName: '2',
-                teacherAvatar: '3',
-                teacherTitle: 'w',
-                teacherBriefIntroduction: 'w',
-                teacherContactInformation: 'w'
-              }
-            ],
-            subCourses: [
-              {
-                subCourseName: 'w',
-                resourceType: 'w',
-                resourceName: 'w',
-                resourceUrl: 'w',
-                resourceContent: 'w'
-              }
-            ]
-          },
-          {
-            courseId: '3',
-            courseName: '素质教育行业现状分析与未来展望',
-            courseIntroduction: '',
-            coursePlace: '',
-            courseStartTime: '',
-            courseEndTime: '',
-            courseTeachers: [
-              {
-                teacherName: '',
-                teacherAvatar: '',
-                teacherTitle: '',
-                teacherBriefIntroduction: '',
-                teacherContactInformation: ''
-              }
-            ],
-            subCourses: [
-              {
-                subCourseName: '',
-                resourceType: '',
-                resourceName: '',
-                resourceUrl: '',
-                resourceContent: ''
-              }
-            ]
-          }
-        ]
-      }
+      currentClass: {
+        id: '2',
+        name: '素质教育专题班',
+        introduction: '这里是一个加了长文本省略号替代的班级介绍',
+        start_time: '2019/12/20',
+        end_time: '2019/12/21',
+        timeRange: ['2019/12/20', '2019/12/21'],
+        current_people_number: '0',
+        people_number_limit: '15',
+        state: 0
+      },
+      courses: [
+        {
+          courseId: '1',
+          courseName: '素质教育行业现状分析与未来展望',
+          courseIntroduction: '',
+          coursePlace: '',
+          courseStartTime: '',
+          courseEndTime: '',
+          courseTeachers: [
+            {
+              teacherId: '1',
+              teacherName: 's',
+              teacherAvatar: 's',
+              teacherTitle: 's',
+              teacherBriefIntroduction: 's',
+              teacherContactInformation: 's'
+            },
+            {
+              teacherId: '1',
+              teacherName: 's',
+              teacherAvatar: 's',
+              teacherTitle: 's',
+              teacherBriefIntroduction: 's',
+              teacherContactInformation: 's'
+            }
+          ],
+          subCourses: [
+            {
+              subCourseId: '1',
+              subCourseName: '',
+              resourceType: '',
+              resourceName: '',
+              resourceUrl: '',
+              resourceContent: ''
+            },
+            {
+              subCourseId: '2',
+              subCourseName: '',
+              resourceType: '',
+              resourceName: '',
+              resourceUrl: '',
+              resourceContent: ''
+            }
+          ]
+        },
+        {
+          courseId: '2',
+          courseName: '素质教育行业现状分析与未来展望',
+          courseIntroduction: '',
+          coursePlace: '',
+          courseStartTime: '',
+          courseEndTime: '',
+          courseTeachers: [
+            {
+              teacherName: '2',
+              teacherAvatar: '3',
+              teacherTitle: 'w',
+              teacherBriefIntroduction: 'w',
+              teacherContactInformation: 'w'
+            }
+          ],
+          subCourses: [
+            {
+              subCourseName: 'w',
+              resourceType: 'w',
+              resourceName: 'w',
+              resourceUrl: 'w',
+              resourceContent: 'w'
+            }
+          ]
+        },
+        {
+          courseId: '3',
+          courseName: '素质教育行业现状分析与未来展望',
+          courseIntroduction: '',
+          coursePlace: '',
+          courseStartTime: '',
+          courseEndTime: '',
+          courseTeachers: [
+            {
+              teacherName: '',
+              teacherAvatar: '',
+              teacherTitle: '',
+              teacherBriefIntroduction: '',
+              teacherContactInformation: ''
+            }
+          ],
+          subCourses: [
+            {
+              subCourseName: '',
+              resourceType: '',
+              resourceName: '',
+              resourceUrl: '',
+              resourceContent: ''
+            }
+          ]
+        }
+      ]
     }
+  },
+  created () {
+    this.currentClass = this.$store.getters.getCurrentClass
   },
   methods: {
     goBack: function () {
