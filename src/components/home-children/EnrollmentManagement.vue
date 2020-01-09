@@ -1,5 +1,5 @@
 <template>
-  <el-container v-if="semester.state===1">
+  <el-container v-if="createNewSemester">
     <el-header>
       <el-row>
         <h3>暂无进行中学期，点击下方按钮添加新学期</h3>
@@ -21,11 +21,20 @@
           <h3>{{ semester.subject }}</h3>
         </el-col>
         <el-col :span="1">
-          <el-button type="primary" size="mini" class="btn" icon="el-icon-more" @click="lookOverSemesterDetail" circle></el-button>
+          <el-button type="primary" size="mini" icon="el-icon-more" @click="lookOverSemesterDetail" circle></el-button>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editSemesterInfo" circle></el-button>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="primary" size="mini" icon="el-icon-plus" @click="addClass" circle></el-button>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="danger" size="mini" icon="el-icon-close" circle></el-button>
         </el-col>
       </el-row>
     </el-header>
-    <el-main class="main-in-enrollment">
+    <el-main class="main-contain-class">
       <el-tabs v-model="activeName" @tab-click="changeActiveName">
         <el-tab-pane label="未开放" name="first">
           <unopened-classes></unopened-classes>
@@ -34,8 +43,6 @@
           <enrolling-classes></enrolling-classes>
         </el-tab-pane>
       </el-tabs>
-    </el-main>
-    <el-footer>
       <el-divider></el-divider>
       <el-row type="flex" justify="center">
         <el-pagination
@@ -46,7 +53,7 @@
           :total="total">
         </el-pagination>
       </el-row>
-    </el-footer>
+    </el-main>
   </el-container>
 </template>
 
@@ -65,10 +72,11 @@ export default {
       semester: '',
       currentPage: 1,
       pageSize: 10,
-      total: 0
+      total: 0,
+      createNewSemester: false
     }
   },
-   created () {
+  created () {
     let that = this
     that.activeName = that.$store.getters.getActiveNameOfEnrollment
     that.axios.get('/semester/semester', {
@@ -77,17 +85,43 @@ export default {
         page_size: 999999
       }
     }).then(async function (response) {
-      let semesters = response.data.data.results
-      console.log(response)
-      await that.$store.dispatch('changeSemesters', semesters)
-      that.semester = semesters[semesters.length - 1]
+      if (response.data.code === '2000') {
+        let semesters = response.data.data.results
+        if (semesters.length === 0) {
+          that.createNewSemester = true
+        }
+        await that.$store.dispatch('changeSemesters', semesters)
+        that.semester = semesters[semesters.length - 1]
+        if (that.semester && that.semester.state === 1) {
+          that.createNewSemester = true
+        }
+      } else {
+        that.$message({
+          type: 'error',
+          message: '请求出错',
+          duration: 2000
+        })
+      }
     }).catch(function (error) {
       console.log(error)
+      that.$message({
+        type: 'error',
+        message: '服务器内部错误',
+        duration: 2000
+      })
     })
 
     that.getClasses()
   },
   methods: {
+    addClass: async function () {
+      await this.$store.dispatch('changeCurrentSemester', this.semester)
+      await this.$router.push('/add-class')
+    },
+    editSemesterInfo: async function () {
+      await this.$store.dispatch('changeCurrentSemester', this.semester)
+      await this.$router.push('/edit-semester-info')
+    },
     lookOverSemesterDetail: async function () {
       await this.$store.dispatch('changeCurrentSemester', this.semester)
       await this.$router.push('/semester-detail')
@@ -105,16 +139,28 @@ export default {
       that.axios.get('clazz/clazz', {
         params: {
           semester_id: that.semester.id,
-          page: that.page,
-          page_size: that.page_size
+          page: that.currentPage,
+          page_size: that.pageSize
         }
       }).then(async function (response) {
-        let classes = response.data.data.results
-        that.total = response.data.data.count
-        console.log(response)
-        await that.$store.dispatch('changeClasses', classes)
+        if (response.data.code === '2000') {
+          let classes = response.data.data.results
+          that.total = response.data.data.count
+          await that.$store.dispatch('changeClasses', classes)
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求出错',
+            duration: 2000
+          })
+        }
       }).catch(function (error) {
         console.log(error)
+        that.$message({
+          type: 'error',
+          message: '服务器内部错误',
+          duration: 2000
+        })
       })
     }
   }
@@ -122,20 +168,16 @@ export default {
 </script>
 
 <style scoped>
-  .main-in-enrollment {
-    padding: 0;
-    margin: 0;
-  }
-
   .el-header {
     padding: 0;
   }
 
-  h3 {
-    color: #707070;
+  .main-contain-class {
+    padding: 0;
+    margin: 0;
   }
 
-  .el-footer {
-    padding: 0;
+  h3 {
+    color: #707070;
   }
 </style>

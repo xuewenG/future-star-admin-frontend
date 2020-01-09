@@ -12,7 +12,7 @@ exports[`EditClassInfoPage 快照测试 1`] = `
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-card activity-card is-always-shadow">
+    <div class="el-card activity-card is-never-shadow">
       <!---->
       <div class="el-card__body">
         <form class="el-form activity-table">
@@ -46,13 +46,31 @@ exports[`EditClassInfoPage 快照测试 1`] = `
           </div>
           <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">班级起止时间：</label>
             <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="el-date-editor el-range-editor el-input__inner el-date-editor--daterange"><i class="el-input__icon el-range__icon el-icon-date"></i><input autocomplete="off" placeholder="开始日期" name="" class="el-range-input"><span class="el-range-separator">至</span><input autocomplete="off" placeholder="结束日期" name="" class="el-range-input"><i class="el-input__icon el-range__close-icon"></i></div>
+              <div class="el-col el-col-8">
+                <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--date">
+                  <!----><input type="text" autocomplete="off" name="" placeholder="选择日期" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-date"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----><!----><!----><!----></span>
+                  <!----></span>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
+              <div class="el-col el-col-2">
+                至
+              </div>
+              <div class="el-col el-col-8">
+                <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--date">
+                  <!----><input type="text" autocomplete="off" name="" placeholder="选择日期" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-date"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----><!----><!----><!----></span>
+                  <!----></span>
+                  <!---->
+                  <!---->
+                </div>
+              </div>
               <!---->
             </div>
           </div>
           <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">班级介绍：</label>
             <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="long-text el-textarea"><textarea autocomplete="off" class="el-textarea__inner" style="min-height: -24px; height: -120px;"></textarea>
+              <div class="el-textarea"><textarea autocomplete="off" class="el-textarea__inner" style="min-height: -24px; height: -120px;"></textarea>
                 <!---->
               </div>
               <!---->

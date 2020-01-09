@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: 'ModifySemesterPage',
+  name: 'EditSemesterInfoPage',
   created () {
     this.semester = this.$store.getters.getCurrentSemester
   },
