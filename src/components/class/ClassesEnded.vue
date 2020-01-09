@@ -38,30 +38,22 @@
 </template>
 <script>
 export default {
-  name: 'WaitForStartClasses',
+  name: 'EndedClasses',
   created () {
-    this.classes = this.$store.getters.getClasses
-    for (let i = 0; i < this.classes.length; i++) {
-      if (this.classes[i].state === 4) {
-        this.count++
+    if (this.classes) {
+      for (let i = 0; i < this.classes.length; i++) {
+        if (this.classes[i].state === 2) {
+          this.count++
+        }
       }
     }
   },
+  props: {
+    classes: [Array, String]
+  },
   data () {
     return {
-      count: 0,
-      classes: [
-        {
-          id: '2',
-          name: '素质教育专题班',
-          introduction: '这里是一个加了长文本省略号替代的班级介绍',
-          start_time: '2019/12/20',
-          end_time: '2019/12/21',
-          current_people_number: '0',
-          people_number_limit: '15',
-          state: 0
-        }
-      ]
+      count: 0
     }
   },
   methods: {
@@ -76,6 +68,16 @@ export default {
     enrollmentAudit: async function (currentClass) {
       await this.$store.dispatch('changeCurrentClass', currentClass)
       await this.$router.push('/enrollment-audit')
+    }
+  },
+  watch: {
+    classes () {
+      this.count = 0
+      for (let i = 0; i < this.classes.length; i++) {
+        if (this.classes[i].state === 4) {
+          this.count++
+        }
+      }
     }
   },
   filters: {

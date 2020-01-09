@@ -18,7 +18,7 @@
     <el-header>
       <el-row type="flex" align="middle">
         <el-col :span="5">
-          <el-select v-model="semester.id" @change="getClasses">
+          <el-select v-model="semester_id" @change="getClasses">
             <el-option
               v-for="item in semesters"
               :key="item.name"
@@ -44,13 +44,13 @@
     <el-main class="main-contain-class">
       <el-tabs v-model="activeName" @tab-click="changeActiveName">
         <el-tab-pane label="待开课" name="first">
-          <wait-for-start-classes></wait-for-start-classes>
+          <wait-for-start-classes :classes="classes"></wait-for-start-classes>
         </el-tab-pane>
         <el-tab-pane label="进行中" name="second">
-          <underway-classes></underway-classes>
+          <underway-classes :classes="classes"></underway-classes>
         </el-tab-pane>
         <el-tab-pane label="已结束" name="third">
-          <ended-classes></ended-classes>
+          <ended-classes :classes="classes"></ended-classes>
         </el-tab-pane>
       </el-tabs>
       <el-divider></el-divider>
@@ -80,13 +80,15 @@ export default {
   },
   data () {
     return {
+      semester_id: '',
       semesters: '',
       activeName: 'first',
       semester: '',
       currentPage: 1,
       pageSize: 10,
       total: 0,
-      createNewSemester: false
+      createNewSemester: false,
+      classes: ''
     }
   },
   created () {
@@ -105,6 +107,7 @@ export default {
         }
         await that.$store.dispatch('changeSemesters', semesters)
         that.semester = semesters[semesters.length - 1]
+        that.semester_id = that.semester.id
         that.semesters = semesters
         if (that.semester && that.semester.state === 1) {
           that.createNewSemester = true
@@ -128,15 +131,26 @@ export default {
     that.getClasses()
   },
   methods: {
+    changeCurrentSemester: function () {
+      let semesters = this.$store.getters.getSemesters
+      for (let i = 0; i < semesters.length; i++) {
+        if (this.semester_id === semesters[i].id) {
+          this.semester = semesters[i]
+        }
+      }
+    },
     addClass: async function () {
+      this.changeCurrentSemester()
       await this.$store.dispatch('changeCurrentSemester', this.semester)
       await this.$router.push('/add-class')
     },
     editSemesterInfo: async function () {
+      this.changeCurrentSemester()
       await this.$store.dispatch('changeCurrentSemester', this.semester)
       await this.$router.push('/edit-semester-info')
     },
     lookOverSemesterDetail: async function () {
+      this.changeCurrentSemester()
       await this.$store.dispatch('changeCurrentSemester', this.semester)
       await this.$router.push('/semester-detail')
     },
@@ -152,15 +166,15 @@ export default {
       let that = this
       that.axios.get('clazz/clazz', {
         params: {
-          semester_id: that.semester.id,
+          semester_id: that.semester_id,
           page: that.currentPage,
           page_size: that.pageSize
         }
       }).then(async function (response) {
         if (response.data.code === '2000') {
-          let classes = response.data.data.results
+          that.classes = response.data.data.results
           that.total = response.data.data.count
-          await that.$store.dispatch('changeClasses', classes)
+          await that.$store.dispatch('changeClasses', that.classes)
         } else {
           that.$message({
             type: 'error',
