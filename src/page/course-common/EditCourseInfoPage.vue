@@ -72,6 +72,8 @@ export default {
   },
   created () {
     this.course = this.$store.getters.getCurrentCourse
+    this.course.start_time = new Date(this.course.start_time)
+    this.course.end_time = new Date(this.course.end_time)
   },
   methods: {
     goBack: function () {
@@ -84,7 +86,40 @@ export default {
       this.course.begin_time = ''
       this.course.end_time = ''
     },
-    saveCourseInfo: function () {
+    saveCourseInfo: async function () {
+      let that = this
+      let url = '/clazz/clazz/' + that.currentClass.id
+      that.currentClass.start_time = that.currentClass.start_time.toLocaleDateString().replace(/\//g, '-')
+      that.currentClass.end_time = that.currentClass.end_time.toLocaleDateString().replace(/\//g, '-')
+      await that.$store.dispatch('changeCurrentClass', that.currentClass)
+      that.axios.put(url, {
+        name: that.currentClass.name,
+        introduction: that.currentClass.introduction,
+        start_time: that.currentClass.start_time,
+        end_time: that.currentClass.end_time,
+        people_number_limit: that.currentClass.people_number_limit
+      }).then(function (response) {
+        if (response.data.code === '2000') {
+          that.$message({
+            type: 'success',
+            message: '保存成功',
+            duration: 2000
+          })
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求出错',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '服务器内部错误',
+          duration: 2000
+        })
+      })
     }
   }
 }
