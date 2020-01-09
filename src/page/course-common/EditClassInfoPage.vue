@@ -89,7 +89,7 @@ export default {
         introduction: that.currentClass.introduction,
         start_time: that.currentClass.timeRange[0],
         end_time: that.currentClass.timeRange[1],
-        people_number_limit: that.currentClassl.people_number_limit
+        people_number_limit: that.currentClass.people_number_limit
       }).then(function (response) {
         if (response.data.code === '2000') {
           that.$message({
