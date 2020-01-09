@@ -24,7 +24,7 @@
           </div>
           <div class="description">- 个人信息 -</div>
           <el-row class="top-distance">
-            <el-col :span="width" offset="2">
+            <el-col :span="width" :offset="2">
               <i class="el-icon-user">&nbsp;姓名：</i>
               <label>{{ item.name }}</label>
             </el-col>
