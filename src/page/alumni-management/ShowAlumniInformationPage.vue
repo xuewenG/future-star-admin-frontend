@@ -9,11 +9,11 @@
         v-for="item in info"
         :key="item.id"
         class="info-card"
-        shadow="always">
+        shadow="never">
         <el-row>
           <el-col :span="24" class="center-position">
             <div class="block">
-              <el-avatar :size="130" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2449839064,3509439903&fm=15&gp=0.jpg">
+              <el-avatar :size="130" :src="item.avatar">
               </el-avatar>
             </div>
           </el-col>
@@ -182,34 +182,9 @@ export default {
   created () {
     let that = this
     let results = that.$store.getters.getInfoOfAnAlumni
-    if (results && results.company) {
-      let education = results.education
-      if (education === 'PhD') {
-        education = '博士'
-      } else if (education === 'MBA') {
-        education = '硕士'
-      } else if (education === 'Bachelor') {
-        education = '本科'
-      } else if (education === 'College') {
-        education = '专科'
-      } else {
-        education = '其他'
-      }
-      let financing = results.company.financing_situation
-      if (financing === 'N') {
-        financing = '尚未获得融资'
-      } else if (financing === 'seed/angel') {
-        financing = '已完成种子/天使融资'
-      } else if (financing === 'pre-A') {
-        financing = '已完成pre-A轮融资'
-      } else if (financing === 'A') {
-        financing = '已完成A轮融资'
-      } else if (financing === 'refuse') {
-        financing = '不方便透露'
-      } else {
-        financing = '其他'
-      }
+    if (results) {
       that.info[0] = {
+        avatar: results.avatar_url,
         id: results.id,
         name: results.name,
         gender: results.gender,
@@ -218,7 +193,7 @@ export default {
         wx: results.wx,
         email: results.email,
         city: results.city,
-        education: education,
+        education: results.education,
         school: results.school,
         previous_company: results.previous_company,
         previous_position: results.previous_position,
@@ -232,7 +207,7 @@ export default {
         introduction: results.company.introduction,
         company_data: results.company.company_data,
         income_scale: results.company.income_scale,
-        financing_situation: financing,
+        financing_situation: results.company.financing_situation,
         value_of_assessment: results.company.value_of_assessment
       }
     }
