@@ -3,14 +3,16 @@
 exports[`ShowAlumniInformationPage 快照测试 1`] = `
 <section class="el-container">
   <main class="el-main">
-    <div class="el-page-header">
-      <div class="el-page-header__left"><i class="el-icon-back"></i>
-        <div class="el-page-header__title">返回</div>
+    <div>
+      <div class="el-page-header">
+        <div class="el-page-header__left"><i class="el-icon-back"></i>
+          <div class="el-page-header__title">返回</div>
+        </div>
+        <div class="el-page-header__content">资料详情</div>
       </div>
-      <div class="el-page-header__content">资料详情</div>
-    </div>
-    <div class="el-divider el-divider--horizontal">
-      <!---->
+      <div class="el-divider el-divider--horizontal">
+        <!---->
+      </div>
     </div>
   </main>
 </section>
