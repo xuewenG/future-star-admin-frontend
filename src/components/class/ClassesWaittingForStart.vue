@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 v-if="count === 0">暂无招生中班级</h4>
+    <h4 v-if="count === 0">暂无待开课班级</h4>
     <el-col :span="12" v-for="item in classes" v-show="item.state===2" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
