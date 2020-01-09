@@ -2,13 +2,14 @@
   <div>
     <el-col :span="12" v-for="(item) in activities" :key="item.id" >
       <h4 v-if="activities.length === 0">暂无待举行的活动</h4>
-      <el-card class="activity-card">
+      <el-card class="activity-card" shadow="never">
         <div slot="header">
           <span>{{ item.activityName }}</span>
           <el-button type="text"></el-button>
           <el-button type="primary" size="small" class="btn" icon="el-icon-s-custom" @click="showParticipants()" circle></el-button>
           <el-button type="primary" size="small" class="btn" icon="el-icon-edit-outline" @click="editDetails()" circle></el-button>
           <el-button type="primary" size="small" class="btn" icon="el-icon-more" @click="showDetails()" circle></el-button>
+          <el-button type="primary" size="small" class="btn" icon="el-icon-check" circle></el-button>
         </div>
         <el-row>
           起止日期：{{ item.activityStartTime }} —— {{ item.activityEndTime }}
@@ -81,6 +82,6 @@ export default {
 
   .activity-card {
     padding: 14px;
-    margin: 14px;
+    margin: 14px;git
   }
 </style>

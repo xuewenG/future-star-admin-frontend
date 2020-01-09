@@ -68,7 +68,7 @@ export default {
       total: 0
     }
   },
-   created () {
+  created () {
     let that = this
     that.activeName = that.$store.getters.getActiveNameOfEnrollment
     that.axios.get('/semester/semester', {
