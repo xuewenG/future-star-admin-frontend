@@ -7,10 +7,9 @@ exports[`AuthorityManagement 快照测试 1`] = `
       <div class="el-col el-col-3">
         <h3>已有管理员列表</h3>
       </div>
-      <div class="el-col el-col-2"><a href="#/add-administrator" class=""><button type="button" class="el-button el-icon-plus el-button--primary el-button--mini is-circle">
+      <div class="el-col el-col-2"><a href="#/add-administrator" class=""><button type="button" class="el-button el-button--primary el-button--small is-round">
             <!---->
-            <!---->
-            <!----></button></a></div>
+            <!----><span>添加管理员</span></button></a></div>
     </div>
   </header>
   <div class="el-row">
@@ -116,10 +115,14 @@ exports[`AuthorityManagement 快照测试 1`] = `
                 </td>
                 <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
                   <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                      <!----><i class="el-icon-check"></i>
-                      <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                      <!----><i class="el-icon-delete"></i>
-                      <!----></button></div>
+                      <!---->
+                      <!----><span>
+              保存
+            </span></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                      <!---->
+                      <!----><span>
+              删除
+            </span></button></div>
                 </td>
               </tr>
               <!---->
@@ -221,10 +224,14 @@ exports[`AuthorityManagement 快照测试 1`] = `
                   </td>
                   <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center  is-hidden">
                     <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                        <!----><i class="el-icon-check"></i>
-                        <!----></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                        <!----><i class="el-icon-delete"></i>
-                        <!----></button></div>
+                        <!---->
+                        <!----><span>
+              保存
+            </span></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
+                        <!---->
+                        <!----><span>
+              删除
+            </span></button></div>
                   </td>
                 </tr>
                 <!---->

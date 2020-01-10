@@ -27,14 +27,14 @@
             </el-option>
           </el-select>
         </el-col>
-        <el-col :span="1">
-          <el-button type="primary" size="mini" icon="el-icon-more" @click="lookOverSemesterDetail" circle></el-button>
+        <el-col :span="2">
+          <el-button type="primary" size="small" @click="lookOverSemesterDetail" round>学期详情</el-button>
         </el-col>
-        <el-col :span="1">
-          <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editSemesterInfo" circle></el-button>
+        <el-col :span="2">
+          <el-button type="primary" size="small" @click="editSemesterInfo" round>编辑信息</el-button>
         </el-col>
-        <el-col v-show="semester.state===0" :span="1">
-          <el-button type="danger" size="mini" icon="el-icon-close" @click="closeSemester" circle></el-button>
+        <el-col v-show="semester.state===0" :span="2">
+          <el-button type="danger" size="small" @click="closeSemester" round>关闭学期</el-button>
         </el-col>
       </el-row>
     </el-header>

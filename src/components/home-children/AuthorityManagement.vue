@@ -7,7 +7,7 @@
         </el-col>
           <el-col :span="2">
             <router-link to="/add-administrator">
-              <el-button type="primary" size="mini" class="el-icon-plus" circle=""></el-button>
+              <el-button type="primary" size="small" round>添加管理员</el-button>
             </router-link>
           </el-col>
       </el-row>
@@ -87,18 +87,18 @@
               <el-button
                 type="primary"
                 size="small"
-                icon="el-icon-check"
                 @click="saveInfo(scope.row)"
                 :disabled="scope.row.privilege.super===1"
                 circle>
+                保存
               </el-button>
               <el-button
                 type="danger"
                 size="small"
-                icon="el-icon-delete"
                 @click="deleteManager(scope.row, scope.$index)"
                 :disabled="scope.row.privilege.super===1"
                 circle>
+                删除
               </el-button>
             </template>
           </el-table-column>

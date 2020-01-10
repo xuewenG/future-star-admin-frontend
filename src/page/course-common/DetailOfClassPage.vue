@@ -24,25 +24,25 @@
         <el-divider content-position="center">课程详情</el-divider>
         <el-card v-for="course in courses" :key="course.id" shadow="never">
           <el-row>
-            <el-col :span="20">
+            <el-col :span="12">
               课程名：{{ course.name }}
             </el-col>
-            <el-col :span="1">
-              <el-button type="primary" size="mini" icon="el-icon-more" @click="lookOverCourseDetail(course)" circle></el-button>
+            <el-col :span="3">
+              <el-button type="primary" size="small" @click="lookOverCourseDetail(course)" round>课程详情</el-button>
             </el-col>
-            <el-col :span="1">
-              <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editCourseInfo(course)" circle></el-button>
+            <el-col :span="3">
+              <el-button type="primary" size="small" @click="editCourseInfo(course)" round>编辑信息</el-button>
             </el-col>
-            <el-col :span="1">
-              <el-button type="primary" size="mini" icon="el-icon-document-copy" @click="lookOverSubCourses(course)" circle></el-button>
+            <el-col :span="3">
+              <el-button type="primary" size="small" @click="lookOverSubCourses(course)" round>课程资源</el-button>
             </el-col>
-            <el-col :span="1">
-              <el-button type="primary" size="mini" icon="el-icon-user" @click="lookOverTeachers(course)" circle></el-button>
+            <el-col :span="3">
+              <el-button type="primary" size="small" @click="lookOverTeachers(course)" round>课程讲师</el-button>
             </el-col>
           </el-row>
         </el-card>
         <el-row type="flex" justify="center">
-          <el-button type="primary" @click="addCourse" class="el-icon-plus" circle></el-button>
+          <el-button type="primary" size="small" @click="addCourse" round>添加课程</el-button>
         </el-row>
       </el-card>
     </el-main>
