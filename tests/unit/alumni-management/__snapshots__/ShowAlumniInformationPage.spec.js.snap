@@ -14,6 +14,98 @@ exports[`ShowAlumniInformationPage 快照测试 1`] = `
         <!---->
       </div>
     </div>
+    <div class="el-card info-card is-never-shadow">
+      <!---->
+      <div class="el-card__body">
+        <div class="el-row">
+          <div class="center-position el-col el-col-24">
+            <div class="block"><span class="el-avatar el-avatar--circle" style="height: 130px; width: 130px; line-height: 130px;"></span></div>
+          </div>
+        </div>
+        <form class="el-form info-table">
+          <div class="line">
+            <div class="el-divider el-divider--horizontal">
+              <!---->
+            </div>
+          </div>
+          <div class="description">- 个人信息 -</div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-user">&nbsp;姓名：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-male">&nbsp;性别：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-timer">&nbsp;生日：</i> <label></label></div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-mobile-phone">&nbsp;电话：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-document">&nbsp;最高学历：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-school">&nbsp;毕业院校：</i> <label></label></div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-location-information">&nbsp;城市：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-chat-dot-round">&nbsp;微信：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-edit-outline">&nbsp;邮箱：</i> <label></label></div>
+          </div>
+          <div class="line">
+            <div class="el-divider el-divider--horizontal">
+              <!---->
+            </div>
+          </div>
+          <div class="bottom-distance el-row">
+            <div class="el-col el-col-24">
+              <div class="description">- 创业前所在公司 -</div>
+            </div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-10 el-col-offset-4"><i class="el-icon-office-building">&nbsp;公司名称：</i> <label></label></div>
+            <div class="el-col el-col-10"><i class="el-icon-trophy">&nbsp;前职位：</i> <label></label></div>
+          </div>
+          <div class="line">
+            <div class="el-divider el-divider--horizontal">
+              <!---->
+            </div>
+          </div>
+          <div class="bottom-distance el-row">
+            <div class="el-col el-col-24">
+              <div class="description">- 当前公司 -</div>
+            </div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-star-off">&nbsp;名称：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-house">&nbsp;官网：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-discount">&nbsp;公众号：</i> <label></label></div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-alarm-clock">&nbsp;成立时间：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-place">&nbsp;所在城市：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-data-analysis">&nbsp;总人数：</i> <label></label></div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-trophy">&nbsp;职位：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-news">&nbsp;融资情况：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-coin">&nbsp;当前估值：</i> <label></label></div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-21 el-col-offset-2"><i class="el-icon-money">&nbsp;收入规模：</i> <label></label></div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-21 el-col-offset-2"><i class="el-icon-shopping-cart-full">&nbsp;运营数据：</i> <label></label></div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="el-col el-col-21 el-col-offset-2"><i class="el-icon-reading">&nbsp;公司简介：</i> <label></label></div>
+          </div>
+        </form>
+        <div class="el-row">
+          <div class="center-position el-col el-col-24">
+            <div class="el-button-group"><button type="button" class="el-button el-button--primary">
+                <!----><i class="el-icon-edit"></i><span>
+              编辑
+            </span></button> <button type="button" class="el-button el-button--primary">
+                <!----><i class="el-icon-time"></i><span>
+              编辑历史
+            </span></button></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </section>
 `;
