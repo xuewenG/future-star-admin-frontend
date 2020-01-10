@@ -42,7 +42,7 @@ export default {
   created () {
     if (this.classes) {
       for (let i = 0; i < this.classes.length; i++) {
-        if (this.classes[i].state === 2) {
+        if (this.classes[i].state === 3) {
           this.count++
         }
       }

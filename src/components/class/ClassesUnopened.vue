@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 v-if="count === 0">暂无待招生班级</h4>
+    <h4 v-if="count ===0 ">暂无待招生班级</h4>
     <el-col :span="12" v-for="item in classes" v-show="item.state===0" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
@@ -39,7 +39,7 @@ export default {
   created () {
     if (this.classes) {
       for (let i = 0; i < this.classes.length; i++) {
-        if (this.classes[i].state === 2) {
+        if (this.classes[i].state === 0) {
           this.count++
         }
       }
@@ -97,7 +97,7 @@ export default {
     classes () {
       this.count = 0
       for (let i = 0; i < this.classes.length; i++) {
-        if (this.classes[i].state === 2) {
+        if (this.classes[i].state === 0) {
           this.count++
         }
       }

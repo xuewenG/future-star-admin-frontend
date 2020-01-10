@@ -24,7 +24,7 @@
         <el-divider content-position="center">课程详情</el-divider>
         <el-card v-for="course in courses" :key="course.id" shadow="never">
           <el-row>
-            <el-col :span="19">
+            <el-col :span="20">
               课程名：{{ course.name }}
             </el-col>
             <el-col :span="1">
@@ -38,9 +38,6 @@
             </el-col>
             <el-col :span="1">
               <el-button type="primary" size="mini" icon="el-icon-user" @click="lookOverTeachers(course)" circle></el-button>
-            </el-col>
-            <el-col :span="1">
-              <el-button type="danger" size="mini" icon="el-icon-delete" circle></el-button>
             </el-col>
           </el-row>
         </el-card>

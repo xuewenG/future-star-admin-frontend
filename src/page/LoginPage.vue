@@ -14,26 +14,18 @@
         <el-card
           class="login-card"
           shadow="never">
-          <el-form label-width="90px" label-position="top">
-            <el-form-item label="账号">
-              <el-input type="text" v-model="account" autofocus="autofocus"></el-input>
+          <el-form label-width="90px" label-position="top" ref="form"
+            :status-icon="true" :model="form" :rules="rules"
+            :hide-required-asterisk="true">
+            <el-form-item label="账号" prop="account">
+              <el-input type="text" v-model="form.account"></el-input>
             </el-form-item>
-            <el-form-item label="密码">
-              <el-input type="password" v-model="password"></el-input>
+            <el-form-item label="密码" prop="password">
+              <el-input type="password" v-model="form.password"></el-input>
             </el-form-item>
-            <el-row>
-              <el-col :span="17">
-                  <el-checkbox v-model="remember" label="记住账号"></el-checkbox>
-              </el-col>
-              <el-col :span="7">
-                <router-link to="/login" class="forget-password">
-                  忘记密码？
-                </router-link>
-              </el-col>
-            </el-row>
             <el-form-item>
               <el-row>
-                  <el-button type="primary" @click="login()" class="login-button">登录</el-button>
+                  <el-button type="primary" @click="submitForm('form')" class="login-button">登录</el-button>
               </el-row>
             </el-form-item>
           </el-form>
@@ -56,23 +48,41 @@ export default {
   name: 'LoginPage',
   data () {
     return {
-      account: '',
-      password: '',
-      logoSrc: require('../assets/EdStarsLogo.jpg'),
-      remember: false
+      form: {
+        account: '',
+        password: ''
+      },
+      rules: {
+        account: [
+          { required: true, message: '账号不能为空', trigger: ['blur', 'change'] }
+        ],
+        password: [
+          { required: true, message: '密码不为空', trigger: ['blur', 'change'] }
+        ]
+      },
+      logoSrc: require('../assets/EdStarsLogo.jpg')
     }
   },
   methods: {
+    submitForm (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          this.login()
+        } else {
+          return false
+        }
+      })
+    },
     login: function () {
       let that = this
       that.axios.post('/administrator/login', that.$qs.stringify({
-        account: that.account,
-        password: that.password
+        account: that.form.account,
+        password: that.form.password
       })).then(async function (response) {
         if (response.data.code === '2000') {
           await that.$store.dispatch('initializeStateWhileLogin')
           sessionStorage.setItem('user', JSON.stringify(response.data.data))
-          that.$router.push('/home')
+          await that.$router.push('/home')
         } else {
           that.$message({
             type: 'error',
@@ -105,7 +115,7 @@ export default {
 
   .login-card {
     width: 300px;
-    height: 290px;
+    height: 300px;
     margin-top: 25px;
     margin-bottom: 25px;
   }
@@ -117,38 +127,14 @@ export default {
 
   .login-button {
     width: 260px;
-    margin-top: 15px;
+    margin-top: 5px;
     color: #fff;
     background-color: #409eff;
   }
 
-  .forget-password {
-    display: inline-block;
-    padding-left: 5px;
-    margin: 0;
-    font-size: 14px;
-    text-decoration: none;
-  }
-
-  a:link {
-    color: #409eff;
-  }
-
-  a:visited {
-    color: #409eff;
-  }
-
-  a:hover {
-    color: #409eff;
-  }
-
-  a:active {
-    color: #409eff;
-  }
-
   .el-form-item {
     padding: 0;
-    margin: 0;
+    margin-top: 0;
   }
 
   .hint-footer {

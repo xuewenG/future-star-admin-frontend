@@ -34,9 +34,6 @@
           <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editSemesterInfo" circle></el-button>
         </el-col>
         <el-col v-show="semester.state===0" :span="1">
-          <el-button type="primary" size="mini" icon="el-icon-plus" @click="addClass" circle></el-button>
-        </el-col>
-        <el-col v-show="semester.state===0" :span="1">
           <el-button type="danger" size="mini" icon="el-icon-close" @click="closeSemester" circle></el-button>
         </el-col>
       </el-row>
@@ -175,11 +172,6 @@ export default {
           this.semester = semesters[i]
         }
       }
-    },
-    addClass: async function () {
-      this.changeCurrentSemester()
-      await this.$store.dispatch('changeCurrentSemester', this.semester)
-      await this.$router.push('/add-class')
     },
     editSemesterInfo: async function () {
       this.changeCurrentSemester()

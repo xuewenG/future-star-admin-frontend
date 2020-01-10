@@ -20,11 +20,6 @@
                     @{{ account }}
                   </el-row>
                 </el-dropdown-item>
-                <el-dropdown-item command="a" divided>
-                  <el-row class="avatar-pop-menu-item">
-                    修改密码
-                  </el-row>
-                </el-dropdown-item>
                 <el-dropdown-item command="b" divided>
                   <el-row class="avatar-pop-menu-item">
                     注销登录
@@ -39,37 +34,33 @@
     <el-container>
       <el-aside width="202px">
         <el-menu :background-color="backgroundColor" :active-text-color="activeTextColor"
-                 :text-color="textColor" align="middle" :default-active="defaultActive" @select="changeDefaultActive">
-              <router-link to="/home/enrollment">
-                <el-menu-item index="1">
-                  <li class="el-icon-coordinate"></li>
-                  招生管理
-                </el-menu-item>
-              </router-link>
-              <router-link to="/home/course">
-                <el-menu-item index="2">
-                  <li class="el-icon-document"></li>
-                  班级管理
-                </el-menu-item>
-              </router-link>
-              <router-link to="/home/activity">
-                <el-menu-item index="3">
-                  <li class="el-icon-sunny"></li>
-                  活动管理
-                </el-menu-item>
-              </router-link>
-              <router-link to="/home/alumni">
-                <el-menu-item index="4">
-                  <li class="el-icon-user"></li>
-                  校友管理
-                </el-menu-item>
-              </router-link>
-              <router-link to="/home/authority">
-                <el-menu-item index="5">
-                  <li class="el-icon-key"></li>
-                  权限管理
-                </el-menu-item>
-              </router-link>
+                 :text-color="textColor" align="middle" :default-active="defaultActive"
+                 @select="changeDefaultActive" router>
+              <el-menu-item index="1" :disabled="user.privilege.enrollment!==1"
+                route="/home/enrollment">
+                <li class="el-icon-coordinate"></li>
+                招生管理
+              </el-menu-item>
+              <el-menu-item index="2" :disabled="user.privilege.semester!==1"
+                route="/home/course">
+                <li class="el-icon-document"></li>
+                班级管理
+              </el-menu-item>
+              <el-menu-item index="3" :disabled="user.privilege.activity!==1"
+                route="/home/activity">
+                <li class="el-icon-sunny"></li>
+                活动管理
+              </el-menu-item>
+              <el-menu-item index="4" :disabled="user.privilege.student!==1"
+                route="/home/alumni">
+                <li class="el-icon-user"></li>
+                校友管理
+              </el-menu-item>
+              <el-menu-item index="5" :disabled="user.privilege.super!==1"
+                route="/home/authority">
+                <li class="el-icon-key"></li>
+                权限管理
+              </el-menu-item>
         </el-menu>
       </el-aside>
       <el-main>
@@ -84,6 +75,15 @@ export default {
   name: 'HomePage',
   data () {
     return {
+      user: {
+        privilege: {
+          enrollment: '',
+          semester: '',
+          activity: '',
+          student: '',
+          super: ''
+        }
+      },
       textColor: '#707070',
       activeTextColor: '#409eff',
       backgroundColor: '#f9fafc',
@@ -99,6 +99,7 @@ export default {
     let that = this
     if (JSON.parse(sessionStorage.getItem('user') !== null)) {
       let user = JSON.parse(sessionStorage.getItem('user'))
+      this.user = user
       that.name = user.name
       that.account = user.account
       if (user.privilege.super === 1) {
@@ -111,8 +112,7 @@ export default {
   },
   methods: {
     handleCommand (command) {
-      if (command === 'a') {
-      } else if (command === 'b') {
+      if (command === 'b') {
         this.signOut()
       }
     },

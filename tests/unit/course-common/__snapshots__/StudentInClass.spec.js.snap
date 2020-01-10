@@ -37,29 +37,29 @@ exports[`StudentInClass 快照测试 1`] = `
           </colgroup>
           <thead class="">
             <tr class="">
-              <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf">
-                <div class="cell">姓名</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_1 descending is-center   is-leaf is-sortable">
+                <div class="cell">姓名<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf">
-                <div class="cell">性别</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf is-sortable">
+                <div class="cell">性别<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf">
-                <div class="cell">出生日期</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf is-sortable">
+                <div class="cell">出生日期<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
-                <div class="cell">联系电话</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf is-sortable">
+                <div class="cell">联系电话<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
-                <div class="cell">微信号</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf is-sortable">
+                <div class="cell">微信号<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf">
-                <div class="cell">邮箱</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf is-sortable">
+                <div class="cell">邮箱<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf">
-                <div class="cell">所在城市</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf is-sortable">
+                <div class="cell">所在城市<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-leaf">
-                <div class="cell">操作</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-leaf is-sortable">
+                <div class="cell">操作<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
             </tr>
           </thead>

@@ -38,6 +38,7 @@
             <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.privilege.enrollment"
+                :disabled="scope.row.privilege.super===1"
                 :active-color="permissionActiveColor">
               </el-switch>
             </template>
@@ -49,6 +50,7 @@
             <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.privilege.semester"
+                :disabled="scope.row.privilege.super===1"
                 :active-color="permissionActiveColor">
               </el-switch>
             </template>
@@ -60,6 +62,7 @@
             <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.privilege.activity"
+                :disabled="scope.row.privilege.super===1"
                 :active-color="permissionActiveColor">
               </el-switch>
             </template>
@@ -71,6 +74,7 @@
             <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.privilege.student"
+                :disabled="scope.row.privilege.super===1"
                 :active-color="permissionActiveColor">
               </el-switch>
             </template>
@@ -85,6 +89,7 @@
                 size="small"
                 icon="el-icon-check"
                 @click="saveInfo(scope.row)"
+                :disabled="scope.row.privilege.super===1"
                 circle>
               </el-button>
               <el-button
@@ -92,6 +97,7 @@
                 size="small"
                 icon="el-icon-delete"
                 @click="deleteManager(scope.row, scope.$index)"
+                :disabled="scope.row.privilege.super===1"
                 circle>
               </el-button>
             </template>
@@ -127,11 +133,12 @@ export default {
         {
           name: '',
           account: '',
+          identity: '',
           privilege: {
-            enrollment: 2,
-            semester: 2,
-            activity: 2,
-            student: 2
+            enrollment: 0,
+            semester: 0,
+            activity: 0,
+            student: 0
           }
         }
       ]
@@ -165,7 +172,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '请求出错',
+            message: '服务器繁忙，请稍后重试',
             duration: 2000
           })
         }
@@ -173,7 +180,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '服务器内部错误',
+          message: '服务器繁忙，请稍后重试',
           duration: 2000
         })
       })
@@ -193,7 +200,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '请求出错',
+            message: '服务器繁忙，请稍后重试',
             duration: 2000
           })
         }
@@ -201,7 +208,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '服务器内部错误',
+          message: '服务器繁忙，请稍后重试',
           duration: 2000
         })
       })
@@ -228,7 +235,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '请求出错',
+            message: '服务器繁忙，请稍后重试',
             duration: 2000
           })
         }
@@ -236,7 +243,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '服务器内部错误',
+          message: '服务器繁忙，请稍后重试',
           duration: 2000
         })
       })

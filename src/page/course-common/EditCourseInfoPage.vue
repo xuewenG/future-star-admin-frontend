@@ -3,7 +3,7 @@
     <el-main>
       <el-page-header @back="goBack" content="修改课程信息"></el-page-header>
       <el-divider/>
-      <el-card shadow="always">
+      <el-card shadow="never">
         <el-form label-width="150px">
           <el-form-item label="课程名称：">
             <el-input
