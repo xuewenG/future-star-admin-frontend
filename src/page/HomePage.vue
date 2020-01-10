@@ -39,7 +39,7 @@
     <el-container>
       <el-aside width="202px">
         <el-menu :background-color="backgroundColor" :active-text-color="activeTextColor"
-                 :text-color="textColor" align="middle" @select="changeDefaultActive">
+                 :text-color="textColor" align="middle" :default-active="defaultActive" @select="changeDefaultActive">
               <router-link to="/home/enrollment">
                 <el-menu-item index="1">
                   <li class="el-icon-coordinate"></li>
@@ -87,6 +87,7 @@ export default {
       textColor: '#707070',
       activeTextColor: '#409eff',
       backgroundColor: '#f9fafc',
+      defaultActive: '0',
       avatarUrl: require('../assets/avatar.jpg'),
       logoUrl: require('../assets/logo.png'),
       name: '',
@@ -111,20 +112,19 @@ export default {
   methods: {
     handleCommand (command) {
       if (command === 'a') {
-        console.log('modify password')
       } else if (command === 'b') {
         this.signOut()
       }
     },
     changeDefaultActive: async function (index) {
       let that = this
+      await that.$store.dispatch('initializeStateWhileSwitch')
       await that.$store.dispatch('changeActiveIndexOfNavigation', index)
     },
     signOut: function () {
       let that = this
       that.axios.post('/administrator/logout'
       ).then(async function (response) {
-        console.log(response)
         if (response.data.code === '2000') {
           sessionStorage.setItem('user', '')
           await that.$router.push('/login')
@@ -144,8 +144,6 @@ export default {
         })
       })
     }
-  },
-  computed: {
   }
 }
 </script>

@@ -68,8 +68,9 @@ export default {
       that.axios.post('/administrator/login', that.$qs.stringify({
         account: that.account,
         password: that.password
-      })).then(function (response) {
+      })).then(async function (response) {
         if (response.data.code === '2000') {
+          await that.$store.dispatch('initializeStateWhileLogin')
           sessionStorage.setItem('user', JSON.stringify(response.data.data))
           that.$router.push('/home')
         } else {

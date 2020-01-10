@@ -3,8 +3,9 @@
     <el-main>
       <el-page-header @back="goBack()" content="课程信息"></el-page-header>
       <el-divider/>
-      <el-card shadow="never">
-          <el-row>
+      <el-row type="flex" justify="center">
+        <el-card shadow="never">
+          <el-row slot="header">
             <el-col :span="23">
               课程名称： {{ course.name }}
             </el-col>
@@ -21,7 +22,8 @@
           <el-row>
             课程介绍： {{ course.introduction }}
           </el-row>
-      </el-card>
+        </el-card>
+      </el-row>
     </el-main>
   </el-container>
 </template>
@@ -57,6 +59,10 @@ export default {
 
 <style scoped>
   .el-row {
-    margin: 0 0 8px;
+    margin: 0 0 10px;
+  }
+
+  .el-card {
+    width: 700px;
   }
 </style>
