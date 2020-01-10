@@ -51,7 +51,7 @@ export default {
     },
     editCourseInfo: async function () {
       await this.$store.dispatch('changeCurrentCourse', this.course)
-      this.$router.push('/edit-course-info')
+      await this.$router.push('/edit-course-info')
     }
   }
 }

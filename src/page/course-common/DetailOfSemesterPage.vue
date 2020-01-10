@@ -38,8 +38,8 @@ export default {
     goBack: function () {
       this.$router.go(-1)
     },
-    editSemesterInfo: function () {
-      this.$router.push('/edit-semester-info')
+    editSemesterInfo: async function () {
+      await this.$router.push('/edit-semester-info')
     }
   }
 }
