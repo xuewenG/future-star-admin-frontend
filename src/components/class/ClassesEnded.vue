@@ -4,7 +4,7 @@
     <el-col :span="12" v-for="item in classes" v-show="item.state===4" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
-          <el-col :span="16">
+          <el-col :span="18">
             {{ item.name }}
           </el-col>
           <el-col :span="2">
@@ -15,9 +15,6 @@
           </el-col>
           <el-col :span="2">
             <el-button type="primary" size="small" icon="el-icon-s-custom" @click="lookOverStudentInClass(item)" circle></el-button>
-          </el-col>
-          <el-col :span="2">
-            <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
           </el-col>
         </el-row>
         <el-row class="info">

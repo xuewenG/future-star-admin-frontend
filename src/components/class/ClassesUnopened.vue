@@ -4,7 +4,7 @@
     <el-col :span="12" v-for="item in classes" v-show="item.state===0" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
-          <el-col :span="16">
+          <el-col :span="18">
             {{ item.name }}
           </el-col>
           <el-col :span="2">
@@ -15,9 +15,6 @@
           </el-col>
           <el-col :span="2">
             <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo(item)" circle></el-button>
-          </el-col>
-          <el-col :span="2">
-            <el-button type="danger" size="small" icon="el-icon-delete" @click="deleteClass(item)" circle></el-button>
           </el-col>
         </el-row>
         <el-row class="info">
@@ -94,8 +91,6 @@ export default {
     lookOverClassDetail: async function (currentClass) {
       await this.$store.dispatch('changeCurrentClass', currentClass)
       await this.$router.push('/class-detail')
-    },
-    deleteClass: function (currentClass) {
     }
   },
   watch: {
