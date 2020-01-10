@@ -54,6 +54,33 @@ export default new Vuex.Store({
     },
     changeCurrentCourse (state, currentCourse) {
       state.currentCourse = currentCourse
+    },
+    initializeStateWhileLogin (state) {
+      state.activeIndexOfNavigation = '0'
+      state.activeNameOfCourse = 'first'
+      state.activeNameOfEnrollment = 'first'
+      state.activeNameOfActivity = 'first'
+      state.activeSemesterOfCourse = 0
+      state.semesters = ''
+      state.currentSemester = ''
+      state.classes = ''
+      state.currentClass = ''
+      state.courses = ''
+      state.currentCourse = ''
+      state.infoOfAnAlumni = null
+    },
+    initializeStateWhileSwitch (state) {
+      state.activeNameOfCourse = 'first'
+      state.activeNameOfEnrollment = 'first'
+      state.activeNameOfActivity = 'first'
+      state.activeSemesterOfCourse = 0
+      state.semesters = ''
+      state.currentSemester = ''
+      state.classes = ''
+      state.currentClass = ''
+      state.courses = ''
+      state.currentCourse = ''
+      state.infoOfAnAlumni = null
     }
   },
   actions: {
@@ -92,6 +119,12 @@ export default new Vuex.Store({
     },
     changeCurrentCourse (context, currentCourse) {
       context.commit('changeCurrentCourse', currentCourse)
+    },
+    initializeStateWhileLogin (context) {
+      context.commit('initializeStateWhileLogin')
+    },
+    initializeStateWhileSwitch (context) {
+      context.commit('initializeStateWhileSwitch')
     }
   },
   getters: {

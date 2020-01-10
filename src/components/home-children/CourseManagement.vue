@@ -106,8 +106,7 @@ export default {
           that.createNewSemester = true
         }
         await that.$store.dispatch('changeSemesters', semesters)
-        that.semester = semesters[semesters.length - 1]
-        console.log(that.$store.getters.getActiveSemesterOfCourse)
+        that.semester = semesters[0]
         if (that.$store.getters.getActiveSemesterOfCourse === 0) {
           that.semester_id = that.semester.id
         } else {

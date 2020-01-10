@@ -80,11 +80,16 @@ export default {
     this.currentClass = this.$store.getters.getCurrentClass
     let that = this
     that.axios.get('/course/course', {
-      clazz_id: that.currentClass.id
-    }).then(function (response) {
+      params: {
+        clazz_id: that.currentClass.id,
+        page: 1,
+        page_size: 999
+      }
+    }).then(async function (response) {
       if (response.data.code === '2000') {
+        console.log(response)
         let courses = response.data.data.results
-        that.$store.dispatch('changeCourses', courses)
+        await that.$store.dispatch('changeCourses', courses)
         that.courses = courses
       } else {
         that.$message({

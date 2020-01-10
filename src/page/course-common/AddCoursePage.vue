@@ -2,76 +2,76 @@
   <el-container>
     <el-main>
       <el-page-header @back="goBack()" content="新建课程"></el-page-header>
-      <el-divider/>
-      <el-card shadow="always">
+      <el-divider></el-divider>
+      <el-card shadow="never">
         <el-form label-width="150px">
-          <el-form-item label="课程名称：">
-            <el-input
-              v-model="course.courseName">
-            </el-input>
+        <el-divider>课程信息</el-divider>
+        <el-card shadow="never">
+            <el-form-item label="课程名称：">
+              <el-input
+                v-model="course.name">
+              </el-input>
+            </el-form-item>
+            <el-form-item label="课程起止时间：">
+              <el-date-picker
+                type="daterange"
+                v-model="course.timeRange"
+                range-separator="至"
+                start-placeholder="开始时间"
+                end-placeholder="结束时间"
+                placeholder="选择时间范围">
+              </el-date-picker>
+            </el-form-item>
+            <el-form-item label="课程地点：">
+              <el-input
+                v-model="course.location">
+              </el-input>
+            </el-form-item>
+            <el-form-item label="课程介绍：">
+              <el-input
+                :autosize="{ minRows: 6, maxRows: 30}"
+                v-model="course.introduction"
+                type="textarea"/>
+            </el-form-item>
+        </el-card>
+        <el-divider>讲师信息</el-divider>
+        <el-card shadow="never">
+          <el-row>
+            <el-col :span="11">
+              <el-form-item label="讲师名：">
+                <el-input v-model="course.teacher.name"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="13">
+              <el-form-item label="讲师联系方式：">
+                <el-input v-model="course.teacher.contact_way"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-form-item label="讲师头像：">
+            <el-input v-model="course.teacher.avatar"></el-input>
           </el-form-item>
-          <el-form-item label="课程起止时间：">
-            <el-time-picker
-              is-range
-              v-model="course.timeRange"
-              range-separator="至"
-              start-placeholder="开始时间"
-              end-placeholder="结束时间"
-              placeholder="选择时间范围">
-            </el-time-picker>
+          <el-form-item label="讲师头衔：">
+            <el-input v-model="course.teacher.title"></el-input>
           </el-form-item>
-          <el-form-item label="课程地点：">
+          <el-form-item label="讲师简介：">
             <el-input
-              v-model="course.coursePlace">
-            </el-input>
-          </el-form-item>
-          <el-form-item label="课程介绍：">
-            <el-input
-              :autosize="{ minRows: 6, maxRows: 30}"
-              v-model="course.courseIntroduction"
+              :autosize="{ minRows: 3, maxRows: 8}"
+              v-model="course.teacher.introduction"
               type="textarea"/>
           </el-form-item>
-          <el-divider>子课程信息</el-divider>
-          <el-row v-for="subCourse in course.subCourses" :key="subCourse.subCourseId">
-            <el-form-item label="子课程名：">
-              <el-input v-model="subCourse.subCourseName"></el-input>
-            </el-form-item>
+        </el-card>
+        <el-form-item>
+          <el-row type="flex" justify="space-around">
+            <el-col :span="3">
+              <el-button type="primary" @click="createCourse">创建</el-button>
+            </el-col>
+            <el-col :span="3">
+              <el-button @click="clearText">清空</el-button>
+            </el-col>
           </el-row>
-          <el-row>
-            <el-button type="primary">添加子课程</el-button>
-          </el-row>
-          <el-divider>讲师信息</el-divider>
-          <div v-for="teacher in course.courseTeachers" :key="teacher.teacherId">
-            <el-row>
-              <el-form-item label="讲师名：">
-                <el-input v-model="teacher.teacherName"></el-input>
-              </el-form-item>
-            </el-row>
-              <el-form-item label="讲师头像：">
-                <el-input v-model="teacher.teacherAvatar"></el-input>
-              </el-form-item>
-            <el-row>
-              <el-form-item label="讲师头衔：">
-                <el-input v-model="teacher.teacherTitle"></el-input>
-              </el-form-item>
-            </el-row>
-              <el-form-item label="讲师简介：">
-                <el-input v-model="teacher.teacherBriefIntroduction"></el-input>
-              </el-form-item>
-            <el-row>
-              <el-form-item label="讲师联系方式：">
-                <el-input v-model="teacher.teacherContactInformation"></el-input>
-              </el-form-item>
-            </el-row>
-          </div>
-          <el-row>
-            <el-button type="primary">添加老师</el-button>
-          </el-row>
-          <el-form-item>
-            <el-button type="primary">立即创建</el-button>
-            <el-button>取消</el-button>
-          </el-form-item>
-        </el-form>
+        </el-form-item>
+      </el-form>
       </el-card>
     </el-main>
   </el-container>
@@ -80,36 +80,88 @@
 <script>
 export default {
   name: 'AddCoursePage',
-  data () {
+  data: function () {
     return {
+      currentClass: {},
       course: {
-        courseName: '滴滴滴滴滴大',
-        courseIntroduction: '这是一门xxxxk课',
-        coursePlace: 'HFUT',
-        courseTimeRange: '',
-        subCourses: [
-          {
-            subCourseId: '1',
-            subCourseName: '现状分析',
-            subCourseBriefIntroduction: ''
-          }
-        ],
-        courseTeachers: [
-          {
-            teacherId: '2',
-            teacherName: '',
-            teacherAvatar: '',
-            teacherTitle: '',
-            teacherBriefIntroduction: '',
-            teacherContactInformation: ''
-          }
-        ]
+        name: '',
+        introduction: '',
+        location: '',
+        timeRange: '',
+        teacher: {
+          name: '',
+          avatar: '',
+          title: '',
+          introduction: '',
+          contact_way: ''
+        }
       }
     }
+  },
+  created () {
+    this.currentClass = this.$store.getters.getCurrentClass
   },
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    clearText: function () {
+      this.course = {
+        name: '',
+        introduction: '',
+        location: '',
+        timeRange: '',
+        teacher: {
+          name: '',
+          avatar: '',
+          title: '',
+          introduction: '',
+          contact_way: ''
+        }
+      }
+    },
+    createCourse: async function () {
+      let that = this
+      let startTime = that.course.timeRange[0].toLocaleDateString().replace(/\//g, '-')
+      let endTime = that.course.timeRange[1].toLocaleDateString().replace(/\//g, '-')
+      await that.$store.dispatch('changeCurrentCourse', that.course)
+      that.axios.post('/course/course', {
+        clazz: that.currentClass.id,
+        name: that.course.name,
+        introduction: that.course.introduction,
+        begin_time: startTime,
+        end_time: endTime,
+        location: that.course.location,
+        teacher: {
+          name: that.course.teacher.name,
+          avatar: that.course.teacher.avatar,
+          title: that.course.teacher.title,
+          introduction: that.course.teacher.introduction,
+          contact_way: that.course.teacher.contact_way
+        }
+      }).then(async function (response) {
+        if (response.data.code === '2000') {
+          await that.$router.push('/class-detail')
+          that.$message({
+            type: 'success',
+            message: '创建成功',
+            duration: 2000
+          })
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求出错',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '服务器内部错误',
+          duration: 2000
+        })
+      })
     }
   }
 }
