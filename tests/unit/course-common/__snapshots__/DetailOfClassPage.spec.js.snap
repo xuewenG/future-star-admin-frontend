@@ -39,7 +39,7 @@ exports[`DetailOfClassPage 快照测试 1`] = `
           <!---->
           <div class="el-card__body">
             <div class="el-row">
-              <div class="el-col el-col-19">
+              <div class="el-col el-col-20">
                 课程名：
               </div>
               <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
@@ -53,9 +53,6 @@ exports[`DetailOfClassPage 快照测试 1`] = `
                   <!----></button></div>
               <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
                   <!----><i class="el-icon-user"></i>
-                  <!----></button></div>
-              <div class="el-col el-col-1"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
-                  <!----><i class="el-icon-delete"></i>
                   <!----></button></div>
             </div>
           </div>

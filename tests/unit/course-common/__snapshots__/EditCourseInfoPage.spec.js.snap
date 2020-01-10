@@ -12,7 +12,7 @@ exports[`EditCourseInfoPage 快照测试 1`] = `
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-card is-always-shadow">
+    <div class="el-card is-never-shadow">
       <!---->
       <div class="el-card__body">
         <form class="el-form">

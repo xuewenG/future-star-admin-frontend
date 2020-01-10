@@ -38,9 +38,6 @@ exports[`CourseManagement 快照测试 1`] = `
       <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
           <!----><i class="el-icon-edit-outline"></i>
           <!----></button></div>
-      <div class="el-col el-col-1" style="display: none;"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-          <!----><i class="el-icon-plus"></i>
-          <!----></button></div>
       <div class="el-col el-col-1" style="display: none;"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
           <!----><i class="el-icon-close"></i>
           <!----></button></div>

@@ -75,7 +75,15 @@ export default {
   name: 'HomePage',
   data () {
     return {
-      user: '',
+      user: {
+        privilege: {
+          enrollment: '',
+          semester: '',
+          activity: '',
+          student: '',
+          super: ''
+        }
+      },
       textColor: '#707070',
       activeTextColor: '#409eff',
       backgroundColor: '#f9fafc',
