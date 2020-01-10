@@ -80,7 +80,7 @@ export default {
   },
   data () {
     return {
-      semester_id: 0,
+      semester_id: '',
       semesters: [],
       activeName: 'first',
       semester: {},
@@ -107,7 +107,7 @@ export default {
         }
         await that.$store.dispatch('changeSemesters', semesters)
         that.semester = semesters[0]
-        if (that.$store.getters.getActiveSemesterOfCourse === 0) {
+        if (that.$store.getters.getActiveSemesterOfCourse === '') {
           that.semester_id = that.semester.id
         } else {
           that.semester_id = that.$store.getters.getActiveSemesterOfCourse
