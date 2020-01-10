@@ -12,15 +12,14 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-card info-card is-never-shadow">
+    <div class="el-card info-card is-always-shadow">
       <!---->
       <div class="el-card__body">
         <div class="el-row">
-          <div class="avatar el-col el-col-24">
-            <div class="block" style="margin: 30px auto 0px;">
-              <div>
-                <div tabindex="0" class="el-upload el-upload--text"><span class="el-avatar el-avatar--circle" style="height: 130px; width: 130px; line-height: 130px;"></span><input type="file" name="file" class="el-upload__input"></div>
-                <ul class="el-upload-list el-upload-list--text"></ul>
+          <div class="avatar-container el-col el-col-24">
+            <div class="block">
+              <div class="avatar-uploader">
+                <div tabindex="0" class="el-upload el-upload--text"><i class="el-icon-plus avatar-uploader-icon"></i><input type="file" name="file" class="el-upload__input"></div>
               </div>
             </div>
           </div>
@@ -32,7 +31,7 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
             </div>
           </div>
           <div class="description">- 个人信息 -</div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-5 el-col-offset-2"><i class="el-icon-user">&nbsp;姓名：</i>
               <div class="el-input el-input--size el-input-group el-input-group--prepend">
                 <div class="el-input-group__prepend">名字:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="10" class="el-input__inner">
@@ -94,7 +93,7 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
               </div>
             </div>
           </div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-5 el-col-offset-2"><i class="el-icon-mobile-phone">&nbsp;电话：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
                 <div class="el-input-group__prepend">电话号码:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="11" class="el-input__inner">
@@ -161,7 +160,7 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
               </div>
             </div>
           </div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-5 el-col-offset-2"><i class="el-icon-location-information">&nbsp;城市：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
                 <div class="el-input-group__prepend">城市名:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="10" class="el-input__inner">
@@ -201,12 +200,12 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
               <!---->
             </div>
           </div>
-          <div class="bottom-distance el-row">
+          <div class="el-row" style="margin-bottom: 40px;">
             <div class="el-col el-col-24">
               <div class="description">- 创业前所在公司 -</div>
             </div>
           </div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-8 el-col-offset-3"><i class="el-icon-office-building">&nbsp;公司名称：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
                 <div class="el-input-group__prepend">公司名:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
@@ -267,12 +266,12 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
               <!---->
             </div>
           </div>
-          <div class="bottom-distance el-row">
+          <div class="el-row" style="margin-bottom: 40px;">
             <div class="el-col el-col-24">
               <div class="description">- 当前公司 -</div>
             </div>
           </div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-5 el-col-offset-2"><i class="el-icon-star-off">&nbsp;名称：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
                 <div class="el-input-group__prepend">公司名:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
@@ -307,7 +306,7 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
               </div>
             </div>
           </div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-5 el-col-offset-2"><i class="el-icon-alarm-clock">&nbsp;成立时间：</i>
               <div class="el-input el-input--medium is-disabled el-input-group el-input-group--prepend">
                 <div class="el-input-group__prepend">日期:</div><input type="text" disabled="disabled" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
@@ -340,7 +339,7 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
               </div>
             </div>
           </div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-5 el-col-offset-2"><i class="el-icon-trophy">&nbsp;职位：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--append el-input-group--prepend">
                 <div class="el-input-group__prepend">职称:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
@@ -441,17 +440,17 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
               </div>
             </div>
           </div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-21 el-col-offset-2"><i class="el-icon-money">&nbsp;收入规模：</i>
               <div class="el-textarea"><textarea autocomplete="off" placeholder="请输入内容" maxlength="100" class="el-textarea__inner" style="min-height: -8px; height: -16px;"></textarea><span class="el-input__count">0/100</span></div>
             </div>
           </div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-21 el-col-offset-2"><i class="el-icon-shopping-cart-full">&nbsp;运营数据：</i>
               <div class="el-textarea"><textarea autocomplete="off" placeholder="请输入内容" maxlength="100" class="el-textarea__inner" style="min-height: -8px; height: -16px;"></textarea><span class="el-input__count">0/100</span></div>
             </div>
           </div>
-          <div class="top-distance el-row">
+          <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-21 el-col-offset-2"><i class="el-icon-reading">&nbsp;公司简介：</i>
               <div class="el-textarea"><textarea autocomplete="off" placeholder="请输入内容" maxlength="400" class="el-textarea__inner" style="min-height: -8px; height: -32px;"></textarea><span class="el-input__count">0/400</span></div>
             </div>

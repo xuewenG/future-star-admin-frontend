@@ -179,7 +179,6 @@ export default {
       that.axios.get('/clazz/clazz', { params }).then(function (response) {
         if (response.data.code === '2000') {
           let results = response.data.data.results
-          // console.log(results)
           for (let i = 0; i < results.length; i++) {
             that.clazzOptions[i] = {
               clazz: results[i]['id'],
@@ -203,7 +202,6 @@ export default {
         price: that.currentActivity.price,
         people_number_limit: that.currentActivity.people_number_limit
       }
-      console.log(params)
       that.axios.post('/activity/activity', params).then(function (response) {
         if (response.data.code === '2000') {
           that.$message({
@@ -212,7 +210,6 @@ export default {
             duration: 2000
           })
           let activityResults = response.data.data
-          console.log(activityResults)
           for (let i = 0; i < that.clazz.length; i++) {
             that.axios.post('/activity/clazz', {
               activity_id: activityResults.id,

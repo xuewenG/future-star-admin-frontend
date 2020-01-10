@@ -3,13 +3,21 @@
     <el-main>
       <el-page-header @back="goBack()" content="修改校友信息"></el-page-header>
       <el-divider/>
-      <el-card class="info-card" shadow="never">
+      <el-card class="info-card" shadow="always">
         <el-row>
-          <el-col :span="24" class="avatar">
-            <div class="block" style="margin: 30px auto 0;">
-              <el-upload action="https://jsonplaceholder.typicode.com/posts/">
-                <el-avatar :size="130" :src="student.avatar_url">
-                </el-avatar>
+          <el-col :span="24" class="avatar-container">
+            <div class="block">
+              <!--              <el-avatar :size="130" :src="student.avatar_url">-->
+              <!--              </el-avatar>-->
+              <el-upload
+                class="avatar-uploader"
+                action="https://jsonplaceholder.typicode.com/posts/"
+                :show-file-list="false"
+                :http-request="uploadImg"
+                :on-success="uploadImgSuccess"
+                :on-remove="handleRemove">
+                <img v-if="student.avatar_url" :src="student.avatar_url" class="avatar" alt="avatar">
+                <i v-else class="el-icon-plus avatar-uploader-icon"></i>
               </el-upload>
             </div>
           </el-col>
@@ -19,7 +27,7 @@
             <el-divider></el-divider>
           </div>
           <div class="description">- 个人信息 -</div>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-user">&nbsp;姓名：</i>
               <el-input
@@ -63,7 +71,7 @@
               </el-input>
             </el-col>
           </el-row>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-mobile-phone">&nbsp;电话：</i>
               <el-input
@@ -111,7 +119,7 @@
               </el-input>
             </el-col>
           </el-row>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-location-information">&nbsp;城市：</i>
               <el-input
@@ -155,12 +163,12 @@
           <div class="line">
             <el-divider></el-divider>
           </div>
-          <el-row class="bottom-distance">
+          <el-row style="margin-bottom: 40px;">
             <el-col :span="24">
               <div class="description">- 创业前所在公司 -</div>
             </el-col>
           </el-row>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="8" :offset="3">
               <i class="el-icon-office-building">&nbsp;公司名称：</i>
               <el-input
@@ -198,12 +206,12 @@
           <div class="line">
             <el-divider></el-divider>
           </div>
-          <el-row class="bottom-distance">
+          <el-row style="margin-bottom: 40px;">
             <el-col :span="24">
               <div class="description">- 当前公司 -</div>
             </el-col>
           </el-row>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-star-off">&nbsp;名称：</i>
               <el-input
@@ -244,7 +252,7 @@
               </el-input>
             </el-col>
           </el-row>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-alarm-clock">&nbsp;成立时间：</i>
               <el-input
@@ -285,7 +293,7 @@
               </el-input>
             </el-col>
           </el-row>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-trophy">&nbsp;职位：</i>
               <el-input
@@ -342,7 +350,7 @@
               </el-input>
             </el-col>
           </el-row>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="21" :offset="offset">
               <i class="el-icon-money">&nbsp;收入规模：</i>
               <el-input
@@ -356,7 +364,7 @@
               </el-input>
             </el-col>
           </el-row>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="21" :offset="offset">
               <i class="el-icon-shopping-cart-full">&nbsp;运营数据：</i>
               <el-input
@@ -370,7 +378,7 @@
               </el-input>
             </el-col>
           </el-row>
-          <el-row class="top-distance">
+          <el-row style="margin-top: 30px;">
             <el-col :span="21" :offset="offset">
               <i class="el-icon-reading">&nbsp;公司简介：</i>
               <el-input
@@ -437,6 +445,31 @@ export default {
     goBack: function () {
       this.$router.go(-1)
     },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.student.avatar_url = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改头像成功',
+        type: 'success' })
+    },
+    handleRemove (file, fileList) {
+      console.log('文件删除')
+    },
     confirmChange: function () {
       let that = this
       let alumni = that.student
@@ -500,6 +533,7 @@ export default {
   },
   data () {
     return {
+      info: {},
       student: {},
       width: 5,
       offset: 2,
@@ -525,10 +559,6 @@ export default {
     color: black;
   }
 
-  .avatar {
-    text-align: center;
-  }
-
   .el-col > i {
     font-size: 17px;
     color: #272324;
@@ -543,11 +573,38 @@ export default {
     font-size: 14px;
   }
 
-  .top-distance {
-    margin-top: 30px;
+  .avatar-container {
+    text-align: center;
   }
 
-  .bottom-distance {
-    margin-bottom: 40px;
+  .avatar-uploader .el-upload {
+    position: relative;
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .avatar-uploader .el-upload:hover {
+    border-color: #409eff;
+  }
+
+  .avatar-uploader-icon {
+    width: 178px;
+    height: 178px;
+    font-size: 28px;
+    line-height: 178px;
+    text-align: center;
+    color: #8c939d;
+  }
+
+  .avatar {
+    width: 178px;
+    height: 178px;
+    border-radius: 89px;
+  }
+
+  .block {
+    margin: 30px auto 0;
   }
 </style>

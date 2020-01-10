@@ -5,20 +5,20 @@
         <el-col :span="4" :offset="3">
           <el-select class="selection" v-model="semester" @change="findAllClass()" filterable placeholder="请选择学期">
             <el-option
-              v-for="item in semesterOptions"
-              :key="item.semester"
-              :label="item.label"
-              :value="item.semester">
+              v-for="semesters in semesterOptions"
+              :key="semesters.id"
+              :label="semesters.label"
+              :value="semesters.semester">
             </el-option>
           </el-select>
         </el-col>
         <el-col :span="4">
           <el-select class="selection" v-model="clazz" :disabled="class_state" @change="search()" filterable placeholder="请选择班级">
             <el-option
-              v-for="item in clazzOptions"
-              :key="item.clazz"
-              :label="item.label"
-              :value="item.clazz">
+              v-for="classes in clazzOptions"
+              :key="classes.clazz"
+              :label="classes.label"
+              :value="classes.clazz">
             </el-option>
           </el-select>
         </el-col>
@@ -164,12 +164,14 @@ export default {
           let results = response.data.data.results
           that.semesterOptions[0] = {
             semester: null,
-            label: '全部学期'
+            label: '全部学期',
+            id: 0
           }
           for (let i = 1; i < results.length + 1; i++) {
             that.semesterOptions[i] = {
               semester: results[i - 1]['period_semester'],
-              label: results[i - 1]['subject']
+              label: results[i - 1]['subject'],
+              id: results[i - 1]['id']
             }
           }
           that.$forceUpdate()
