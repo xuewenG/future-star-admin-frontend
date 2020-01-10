@@ -133,7 +133,7 @@ export default {
     },
     showAllInformation: async function (student) {
       await this.$store.dispatch('changeInfoOfAnAlumni', student)
-      await this.$router.push('/show-all-information')
+      await this.$router.push('/show-student-information')
     }
   }
 }

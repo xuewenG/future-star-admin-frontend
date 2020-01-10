@@ -6,59 +6,83 @@
       <el-table
         :data="tableData"
         :highlight-current-row="true"
+        :default-sort = "{prop: 'evaluation.fraction', order: 'descending'}"
         stripe>
         <el-table-column
-          prop="name"
+          prop="student.name"
           align="center"
           label="姓名"
+          sortable
           :width="shortTextWidth">
         </el-table-column>
         <el-table-column
-          prop="gender"
+          prop="student.gender"
           align="center"
           label="性别"
+          sortable
           :width="shortTextWidth">
         </el-table-column>
         <el-table-column
-          prop="birthday"
+          prop="student.birthday"
           align="center"
           label="出生日期"
+          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
-          prop="phone_number"
+          prop="student.phone_number"
           align="center"
           label="联系电话"
+          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
-          prop="wx"
+          prop="student.wx"
           align="center"
           label="微信号"
+          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
-          prop="email"
+          prop="student.email"
           align="center"
           label="邮箱"
+          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
-          prop="city"
+          prop="student.city"
           align="center"
           label="所在城市"
+          sortable
           :width="longTextWidth">
+        </el-table-column>
+        <el-table-column
+          prop="evaluation.fraction"
+          align="center"
+          label="分数"
+          sortable
+          :width="shortTextWidth">
+        </el-table-column>
+        <el-table-column
+          prop="state"
+          align="center"
+          label="状态"
+          sortable
+          :width="shortTextWidth">
         </el-table-column>
         <el-table-column
           align="center"
           label="操作"
+          sortable
           :width="operationWidth">
           <template slot-scope="scope">
             <el-button
               type="success"
               size="small"
               icon="el-icon-check"
-              @click="showAllInformation(scope.row)"
+              @click="pass(scope.row, scope.$index)"
+              :disabled="scope.row.state!=='待审核'"
               circle>
             </el-button>
             <el-button
@@ -72,14 +96,15 @@
               type="primary"
               size="small"
               icon="el-icon-s-comment"
-              @click="showAllInformation(scope.row)"
+              @click="evaluateStudent(scope.row)"
               circle>
             </el-button>
             <el-button
               type="danger"
               size="small"
               icon="el-icon-close"
-              @click="showAllInformation(scope.row)"
+              @click="refuse(scope.row, scope.$index)"
+              :disabled="scope.row.state!=='待审核'"
               circle>
             </el-button>
           </template>
@@ -106,7 +131,7 @@ export default {
   data () {
     return {
       shortTextWidth: 100,
-      longTextWidth: 180,
+      longTextWidth: 160,
       operationWidth: 210,
       currentClass: '',
       pageSize: 10,
@@ -115,17 +140,63 @@ export default {
       tableData: []
     }
   },
-  created () {
-    this.getStudents()
+  async created () {
+    await this.getStudents()
   },
   methods: {
     goBack: function () {
       this.$router.go(-1)
     },
+    dealWithTableData: function () {
+      for (let i = 0; i < this.tableData.length; i++) {
+        if (this.tableData[i].state === 0) {
+          this.tableData[i].state = '待审核'
+        } else if (this.tableData[i].state === 1) {
+          this.tableData[i].state = '已拒绝'
+        } else if (this.tableData[i].state === 2) {
+          this.tableData[i].state = '已通过'
+        }
+      }
+      this.$forceUpdate()
+    },
+    pass: function (currentApplyInformation, index) {
+      let that = this
+      let url = '/clazz/student/' + currentApplyInformation.id
+      that.axios.put(url, {
+        state: 2,
+        evaluation: {
+          fraction: currentApplyInformation.evaluation.fraction,
+          description: currentApplyInformation.evaluation.description
+        }
+      }).then(async function (response) {
+        if (response.data.code === '2000') {
+          that.tableData[index].state = 2
+          that.dealWithTableData()
+          that.$message({
+            type: 'success',
+            message: '通过成功',
+            duration: 2000
+          })
+        } else {
+          that.$message({
+            type: 'error',
+            message: '网络繁忙，请稍后重试',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '网络繁忙，请稍后重试',
+          duration: 2000
+        })
+      })
+    },
     getStudents: function () {
       let that = this
       that.currentClass = that.$store.getters.getCurrentClass
-      that.axios.get('/student/student', {
+      that.axios.get('/clazz/student', {
         params: {
           page: that.currentPage,
           page_size: that.page_size,
@@ -135,12 +206,13 @@ export default {
         if (response.data.code === '2000') {
           that.tableData = response.data.data.results
           for (let i = 0; i < that.tableData.length; i++) {
-            if (that.tableData[i].gender === 0) {
-              that.tableData[i].gender = '男'
+            if (that.tableData[i].student.gender === 0) {
+              that.tableData[i].student.gender = '男'
             } else {
-              that.tableData[i].gender = '女'
+              that.tableData[i].student.gender = '女'
             }
           }
+          that.dealWithTableData()
           that.total = response.data.data.count
         }
       }).catch(function (error) {
@@ -152,9 +224,47 @@ export default {
       that.currentPage = currentPage
       that.getStudents()
     },
-    showAllInformation: async function (student) {
-      await this.$store.dispatch('changeInfoOfAnAlumni', student)
-      await this.$router.push('/show-all-information')
+    showAllInformation: async function (applyInformation) {
+      await this.$store.dispatch('changeInfoOfAnAlumni', applyInformation.student)
+      await this.$router.push('/show-student-information')
+    },
+    evaluateStudent: async function (applyInformation) {
+      await this.$store.dispatch('changeCurrentApplyInformation', applyInformation)
+      await this.$router.push('/evaluate-student')
+    },
+    refuse: function (currentApplyInformation, index) {
+      let that = this
+      let url = '/clazz/student/' + currentApplyInformation.id
+      that.axios.put(url, {
+        state: 1,
+        evaluation: {
+          fraction: currentApplyInformation.evaluation.fraction,
+          description: currentApplyInformation.evaluation.description
+        }
+      }).then(async function (response) {
+        if (response.data.code === '2000') {
+          that.tableData[index].state = 1
+          that.dealWithTableData()
+          that.$message({
+            type: 'success',
+            message: '拒绝成功',
+            duration: 2000
+          })
+        } else {
+          that.$message({
+            type: 'error',
+            message: '网络繁忙，请稍后重试',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '网络繁忙，请稍后重试',
+          duration: 2000
+        })
+      })
     }
   }
 }
