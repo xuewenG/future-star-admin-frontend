@@ -1,15 +1,17 @@
 <template>
   <el-container>
     <el-header>
-      <router-link to="/create-activity">
-        <el-tooltip class="item" effect="dark" content="新建活动" placement="right">
-          <img class="add-activity" src="../../assets/addIcon.png">
-        </el-tooltip>
-      </router-link>
+      <el-row>
+        <el-col :span="3">
+          <h3>已有活动列表</h3>
+        </el-col>
+        <el-col :span="1">
+          <el-button type="primary" size="mini" class="el-icon-plus" @click="createActivity()" circle></el-button>
+        </el-col>
+      </el-row>
     </el-header>
     <el-main>
-      <el-divider/>
-      <el-tabs v-model="activeName" @tab-click="changeActiveName" type="border-card">
+      <el-tabs v-model="activeName" @tab-click="changeActiveName">
         <el-tab-pane label="未开放" name="first">
           <activity-unopened/>
         </el-tab-pane>
@@ -57,6 +59,9 @@ export default {
   methods: {
     changeActiveName: function (tab) {
       this.$store.dispatch('changeActiveNameOfActivity', tab.name)
+    },
+    createActivity: function () {
+      this.$router.push('/create-activity')
     }
   }
 }
