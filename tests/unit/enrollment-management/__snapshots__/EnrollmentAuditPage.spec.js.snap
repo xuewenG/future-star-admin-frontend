@@ -22,66 +22,78 @@ exports[`EnrollmentAuditPage 快照测试 1`] = `
         <div></div>
         <div></div>
         <div></div>
+        <div></div>
+        <div></div>
       </div>
       <div class="el-table__header-wrapper">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1310px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1410px;">
           <colgroup>
             <col name="el-table_1_column_1" width="100">
             <col name="el-table_1_column_2" width="100">
-            <col name="el-table_1_column_3" width="180">
-            <col name="el-table_1_column_4" width="180">
-            <col name="el-table_1_column_5" width="180">
-            <col name="el-table_1_column_6" width="180">
-            <col name="el-table_1_column_7" width="180">
-            <col name="el-table_1_column_8" width="210">
+            <col name="el-table_1_column_3" width="160">
+            <col name="el-table_1_column_4" width="160">
+            <col name="el-table_1_column_5" width="160">
+            <col name="el-table_1_column_6" width="160">
+            <col name="el-table_1_column_7" width="160">
+            <col name="el-table_1_column_8" width="100">
+            <col name="el-table_1_column_9" width="100">
+            <col name="el-table_1_column_10" width="210">
           </colgroup>
           <thead class="">
             <tr class="">
-              <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf">
-                <div class="cell">姓名</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf is-sortable">
+                <div class="cell">姓名<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf">
-                <div class="cell">性别</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf is-sortable">
+                <div class="cell">性别<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf">
-                <div class="cell">出生日期</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf is-sortable">
+                <div class="cell">出生日期<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
-                <div class="cell">联系电话</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf is-sortable">
+                <div class="cell">联系电话<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
-                <div class="cell">微信号</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf is-sortable">
+                <div class="cell">微信号<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf">
-                <div class="cell">邮箱</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf is-sortable">
+                <div class="cell">邮箱<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf">
-                <div class="cell">所在城市</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf is-sortable">
+                <div class="cell">所在城市<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-leaf">
-                <div class="cell">操作</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_8 descending is-center   is-leaf is-sortable">
+                <div class="cell">分数<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_9  is-center   is-leaf is-sortable">
+                <div class="cell">状态<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_10  is-center   is-leaf is-sortable">
+                <div class="cell">操作<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
             </tr>
           </thead>
         </table>
       </div>
       <div class="el-table__body-wrapper is-scrolling-left">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1310px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1410px;">
           <colgroup>
             <col name="el-table_1_column_1" width="100">
             <col name="el-table_1_column_2" width="100">
-            <col name="el-table_1_column_3" width="180">
-            <col name="el-table_1_column_4" width="180">
-            <col name="el-table_1_column_5" width="180">
-            <col name="el-table_1_column_6" width="180">
-            <col name="el-table_1_column_7" width="180">
-            <col name="el-table_1_column_8" width="210">
+            <col name="el-table_1_column_3" width="160">
+            <col name="el-table_1_column_4" width="160">
+            <col name="el-table_1_column_5" width="160">
+            <col name="el-table_1_column_6" width="160">
+            <col name="el-table_1_column_7" width="160">
+            <col name="el-table_1_column_8" width="100">
+            <col name="el-table_1_column_9" width="100">
+            <col name="el-table_1_column_10" width="210">
           </colgroup>
           <tbody>
             <!---->
           </tbody>
         </table>
-        <div class="el-table__empty-block" style="height: 100%; width: 1310px;"><span class="el-table__empty-text">暂无数据</span></div>
+        <div class="el-table__empty-block" style="height: 100%; width: 1410px;"><span class="el-table__empty-text">暂无数据</span></div>
         <!---->
       </div>
       <!---->

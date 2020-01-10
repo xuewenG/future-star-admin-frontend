@@ -148,7 +148,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '请求出错',
+            message: '尚有未结束班级',
             duration: 2000
           })
         }
