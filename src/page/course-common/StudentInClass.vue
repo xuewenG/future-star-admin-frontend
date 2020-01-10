@@ -53,11 +53,12 @@
           align="center"
           label="操作"
           :width="operationWidth">
-          <template>
+          <template slot-scope="scope">
             <el-button
               type="primary"
               size="small"
               icon="el-icon-more"
+              @click="showAllInformation(scope.row)"
               circle>
             </el-button>
           </template>
@@ -129,6 +130,10 @@ export default {
       let that = this
       that.currentPage = currentPage
       that.getStudents()
+    },
+    showAllInformation: async function (student) {
+      await this.$store.dispatch('changeInfoOfAnAlumni', student)
+      await this.$router.push('/show-all-information')
     }
   }
 }

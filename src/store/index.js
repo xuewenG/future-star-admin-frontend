@@ -9,7 +9,7 @@ export default new Vuex.Store({
     activeNameOfCourse: 'first',
     activeNameOfEnrollment: 'first',
     activeNameOfActivity: 'first',
-    activeSemesterOfCourse: 0,
+    activeSemesterOfCourse: '',
     semesters: '',
     currentSemester: '',
     classes: '',
@@ -60,7 +60,7 @@ export default new Vuex.Store({
       state.activeNameOfCourse = 'first'
       state.activeNameOfEnrollment = 'first'
       state.activeNameOfActivity = 'first'
-      state.activeSemesterOfCourse = 0
+      state.activeSemesterOfCourse = ''
       state.semesters = ''
       state.currentSemester = ''
       state.classes = ''
@@ -73,7 +73,7 @@ export default new Vuex.Store({
       state.activeNameOfCourse = 'first'
       state.activeNameOfEnrollment = 'first'
       state.activeNameOfActivity = 'first'
-      state.activeSemesterOfCourse = 0
+      state.activeSemesterOfCourse = ''
       state.semesters = ''
       state.currentSemester = ''
       state.classes = ''

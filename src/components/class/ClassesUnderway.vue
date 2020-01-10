@@ -4,11 +4,11 @@
     <el-col :span="12" v-for="item in classes" v-show="item.state===3" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
-          <el-col :span="14">
+          <el-col :span="16">
             {{ item.name }}
           </el-col>
           <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-check" circle></el-button>
+            <el-button type="primary" size="small" icon="el-icon-check" @click="endClass(item)" circle></el-button>
           </el-col>
           <el-col :span="2">
             <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail(item)" circle></el-button>
@@ -18,9 +18,6 @@
           </el-col>
           <el-col :span="2">
             <el-button type="primary" size="small" icon="el-icon-s-custom" @click="enrollmentAudit(item)" circle></el-button>
-          </el-col>
-          <el-col :span="2">
-            <el-button type="danger" size="small" icon="el-icon-delete" circle></el-button>
           </el-col>
         </el-row>
         <el-row class="info">
@@ -60,6 +57,36 @@ export default {
     }
   },
   methods: {
+    endClass: function (currentClass) {
+      let that = this
+      let url = '/clazz/clazz/' + currentClass.id
+      that.axios.put(url, {
+        state: 4
+      }).then(async function (response) {
+        if (response.data.code === '2000') {
+          currentClass.state = 4
+          await that.$store.dispatch('changeClasses', that.classes)
+          that.$message({
+            type: 'success',
+            message: '关闭课程成功',
+            duration: 2000
+          })
+        } else {
+          that.$message({
+            type: 'error',
+            message: '网络繁忙，请稍后重试',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '网络繁忙，请稍后重试',
+          duration: 2000
+        })
+      })
+    },
     editClassInfo: async function (currentClass) {
       await this.$store.dispatch('changeCurrentClass', currentClass)
       await this.$router.push('/edit-class-info')
@@ -70,7 +97,7 @@ export default {
     },
     enrollmentAudit: async function (currentClass) {
       await this.$store.dispatch('changeCurrentClass', currentClass)
-      await this.$router.push('/enrollment-audit')
+      await this.$router.push('/graduation-audit')
     }
   },
   watch: {
