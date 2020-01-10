@@ -160,7 +160,9 @@ export default {
     }
   },
   created () {
-    this.findAllClass()
+    if (this.axios) {
+      this.findAllClass()
+    }
   },
   methods: {
     goBack: function () {
