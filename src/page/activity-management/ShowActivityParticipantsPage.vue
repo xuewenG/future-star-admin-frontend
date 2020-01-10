@@ -2,12 +2,39 @@
   <el-container>
     <el-main>
       <el-page-header @back="goBack()" content="已参与校友名单"/>
-      <el-divider></el-divider>
-      <el-input class='search-input' placeholder="请输入搜索内容"/>
-      <el-button type="primary" icon="el-icon-search">搜索</el-button>
+      <!--      <el-divider></el-divider>-->
+      <!--      <el-row>-->
+      <!--        <el-col :span="4" :offset="3">-->
+      <!--          <el-select class="selection" v-model="semester" @change="findAllClass()" filterable placeholder="请选择学期">-->
+      <!--            <el-option-->
+      <!--              v-for="semesters in semesterOptions"-->
+      <!--              :key="semesters.id"-->
+      <!--              :label="semesters.label"-->
+      <!--              :value="semesters.semester">-->
+      <!--            </el-option>-->
+      <!--          </el-select>-->
+      <!--        </el-col>-->
+      <!--        <el-col :span="4">-->
+      <!--          <el-select class="selection" v-model="clazz" :disabled="class_state" @change="search()" filterable placeholder="请选择班级">-->
+      <!--            <el-option-->
+      <!--              v-for="classes in clazzOptions"-->
+      <!--              :key="classes.clazz"-->
+      <!--              :label="classes.label"-->
+      <!--              :value="classes.clazz">-->
+      <!--            </el-option>-->
+      <!--          </el-select>-->
+      <!--        </el-col>-->
+      <!--        <el-col :span="6">-->
+      <!--          <el-input class='search-input' v-model="keyword" @change="search()" placeholder="请输入搜索内容"/>-->
+      <!--        </el-col>-->
+      <!--        <el-col :span="4" :offset="1">-->
+      <!--          <el-button type="primary" icon="el-icon-search" @click="search()">搜索</el-button>-->
+      <!--        </el-col>-->
+      <!--      </el-row>-->
       <el-divider></el-divider>
       <el-table
-        :data="participantsData"
+        :data="tableData"
+        v-loading="loading"
         stripe>
         <el-table-column
           prop="name"
@@ -32,12 +59,12 @@
         <el-table-column
           align="center"
           label="操作">
-          <template>
+          <template  slot-scope="scope">
             <el-button
               type="primary"
               size="small"
               icon="el-icon-more"
-              @click="showAllInfo()"
+              @click="showAllInfo(scope.row)"
               circle>
             </el-button>
           </template>
@@ -47,13 +74,10 @@
     <el-footer>
       <el-pagination
         class="pagination"
-        @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
-        :current-page="currentPage"
-        :page-sizes="[10, 20, 30, 40]"
-        :page-size="10"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="5">
+        :current-page="currentAlumniPage"
+        layout="prev, pager, next"
+        :page-count="totalPage">
       </el-pagination>
     </el-footer>
   </el-container>
@@ -64,53 +88,172 @@ export default {
   name: 'ShowActivityParticipantsPage',
   data () {
     return {
-      currentPage: 1,
-      participantsData: [
-        {
-          name: '张邦鑫',
-          gender: '男',
-          phone_number: '13456327654',
-          wx: '11111111'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          phone_number: '23456327654',
-          wx: '22222222'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          phone_number: '33456327654',
-          wx: '33333333'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          phone_number: '43456327654',
-          wx: '44444444'
-        },
-        {
-          name: '张邦鑫',
-          gender: '男',
-          phone_number: '53456327654',
-          wx: '55555555'
-        }
-      ]
+      currentAlumniPage: 1,
+      currentSemesterPage: 1,
+      currentClassPage: 1,
+      totalPage: 1,
+      page_size: 20,
+      class_state: true,
+      loading: true,
+      keyword: null,
+      clazz: null,
+      semester: null,
+      activity_id: null,
+      tableData: [],
+      semesterOptions: [],
+      clazzOptions: []
+    }
+  },
+  created () {
+    this.activity_id = this.$store.getters.getCurrentActivity.id
+    if (this.axios) {
+      this.findAllAlumni()
+      // this.findAllSemester()
     }
   },
   methods: {
     goBack: function () {
       this.$router.go(-1)
     },
-    showAllInfo () {
+    showAllInfo (alumniInfo) {
+      this.$store.dispatch('changeInfoOfAnAlumni', alumniInfo)
       this.$router.push('/show-all-information')
     },
-    handleSizeChange (val) {
-      console.log(`每页 ${val} 条`)
+    handleCurrentChange (currentAlumniPage) {
+      this.currentAlumniPage = currentAlumniPage
+      this.findAllAlumni()
     },
-    handleCurrentChange (val) {
-      console.log(`当前页: ${val}`)
+    findAllAlumni () {
+      let params = {
+        page_size: this.page_size,
+        page: this.currentAlumniPage,
+        activity_id: this.activty_id
+      }
+      this.axios.get('/activity/student', { params }).then((response) => {
+        if (response.data.code === '2000') {
+          this.tableData = response.data.data.results
+          for (let i = 0; i < this.tableData.length; i++) {
+            if (this.tableData[i].gender === 0) {
+              this.tableData[i].gender = '男'
+            } else {
+              this.tableData[i].gender = '女'
+            }
+          }
+          this.loading = false
+          this.$forceUpdate()
+        } else {
+          this.$message({
+            type: 'error',
+            message: '网络繁忙，请稍候重试',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        this.$message({
+          type: 'error',
+          message: '网络繁忙，请稍候重试',
+          duration: 2000
+        })
+      })
+    },
+    // findAllSemester: function () {
+    //   let params = {
+    //     page_size: this.page_size,
+    //     page: this.currentSemesterPage
+    //   }
+    //   this.axios.get('/semester/semester', { params }).then((response) => {
+    //     if (response.data.code === '2000') {
+    //       let results = response.data.data.results
+    //       this.semesterOptions[0] = {
+    //         semester: null,
+    //         label: '全部学期',
+    //         id: 0
+    //       }
+    //       for (let i = 1; i < results.length + 1; i++) {
+    //         this.semesterOptions[i] = {
+    //           semester: results[i - 1]['period_semester'],
+    //           label: results[i - 1]['subject'],
+    //           id: results[i - 1]['id']
+    //         }
+    //       }
+    //       this.$forceUpdate()
+    //     } else {
+    //       this.$message({
+    //         type: 'error',
+    //         message: '网络繁忙，请稍候重试',
+    //         duration: 2000
+    //       })
+    //     }
+    //   }).catch(function (error) {
+    //     console.log(error)
+    //     this.$message({
+    //       type: 'error',
+    //       message: '网络繁忙，请稍候重试',
+    //       duration: 2000
+    //     })
+    //   })
+    // },
+    // findAllClass: function () {
+    //   this.clazzOptions = []
+    //   this.clazz = null
+    //   if (this.semester === null) {
+    //     this.class_state = true
+    //   } else {
+    //     this.class_state = false
+    //   }
+    //   let params = {
+    //     page_size: this.page_size,
+    //     page: this.currentClassPage,
+    //     semester_id: this.semester
+    //   }
+    //   this.axios.get('/clazz/clazz', { params }).then((response) => {
+    //     if (response.data.code === '2000') {
+    //       let results = response.data.data.results
+    //       for (let i = 0; i < results.length; i++) {
+    //         this.clazzOptions[i] = {
+    //           clazz: results[i]['id'],
+    //           label: results[i]['name']
+    //         }
+    //       }
+    //       this.search()
+    //       this.$forceUpdate()
+    //     } else {
+    //       this.$message({
+    //         type: 'error',
+    //         message: '网络繁忙，请稍候重试',
+    //         duration: 2000
+    //       })
+    //     }
+    //   }).catch(function (error) {
+    //     console.log(error)
+    //     this.$message({
+    //       type: 'error',
+    //       message: '网络繁忙，请稍候重试',
+    //       duration: 2000
+    //     })
+    //   })
+    // },
+    search () {
+      let params = {
+        page_size: this.page_size,
+        page: this.currentAlumniPage,
+        name: this.keyword,
+        semester_id: this.semester,
+        clazz_id: this.clazz
+      }
+      this.axios.get('/student/student', { params }).then((response) => {
+        this.tableData = response.data.data.results
+        for (let i = 0; i < this.tableData.length; i++) {
+          if (this.tableData[i].gender === 0) {
+            this.tableData[i].gender = '男'
+          } else {
+            this.tableData[i].gender = '女'
+          }
+        }
+        this.loading = false
+        this.$forceUpdate()
+      })
     }
   }
 }
@@ -124,6 +267,6 @@ export default {
   }
 
   .pagination {
-    margin-left: 430px;
+    text-align: center;
   }
 </style>
