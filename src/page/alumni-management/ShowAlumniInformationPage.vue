@@ -6,14 +6,12 @@
         <el-divider></el-divider>
       </div>
       <el-card
-        v-for="item in info"
-        :key="item.id"
         class="info-card"
         shadow="never">
         <el-row>
           <el-col :span="24" class="center-position">
             <div class="block">
-              <el-avatar :size="130" :src="item.avatar">
+              <el-avatar :size="130" :src="info.avatar">
               </el-avatar>
             </div>
           </el-col>
@@ -26,43 +24,43 @@
           <el-row class="top-distance">
             <el-col :span="width" :offset="2">
               <i class="el-icon-user">&nbsp;姓名：</i>
-              <label>{{ item.name }}</label>
+              <label>{{ info.name }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-male">&nbsp;性别：</i>
-              <label>{{ item.gender }}</label>
+              <label>{{ info.gender }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-timer">&nbsp;生日：</i>
-              <label>{{ item.birthday }}</label>
+              <label>{{ info.birthday }}</label>
             </el-col>
           </el-row>
           <el-row class="top-distance">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-mobile-phone">&nbsp;电话：</i>
-              <label>{{ item.phone_number }}</label>
+              <label>{{ info.phone_number }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-document">&nbsp;最高学历：</i>
-              <label>{{ item.education }}</label>
+              <label>{{ info.education }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-school">&nbsp;毕业院校：</i>
-              <label >{{ item.school }}</label>
+              <label >{{ info.school }}</label>
             </el-col>
           </el-row>
           <el-row class="top-distance">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-location-information">&nbsp;城市：</i>
-              <label>{{ item.city }}</label>
+              <label>{{ info.city }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-chat-dot-round">&nbsp;微信：</i>
-              <label>{{ item.wx }}</label>
+              <label>{{ info.wx }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-edit-outline">&nbsp;邮箱：</i>
-              <label >{{ item.email }}</label>
+              <label >{{ info.email }}</label>
             </el-col>
           </el-row>
           <div class="line">
@@ -76,11 +74,11 @@
           <el-row class="top-distance">
             <el-col :span="10" :offset="4">
               <i class="el-icon-office-building">&nbsp;公司名称：</i>
-              <label>{{ item.previous_company }}</label>
+              <label>{{ info.previous_company }}</label>
             </el-col>
             <el-col :span="10">
               <i class="el-icon-trophy">&nbsp;前职位：</i>
-              <label>{{ item.previous_position }}</label>
+              <label>{{ info.previous_position }}</label>
             </el-col>
           </el-row>
           <div class="line">
@@ -94,61 +92,61 @@
           <el-row class="top-distance">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-star-off">&nbsp;名称：</i>
-              <label>{{ item.company_name }}</label>
+              <label>{{ info.company_name }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-house">&nbsp;官网：</i>
-              <label>{{ item.website }}</label>
+              <label>{{ info.website }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-discount">&nbsp;公众号：</i>
-              <label >{{ item.wx_public }}</label>
+              <label >{{ info.wx_public }}</label>
             </el-col>
           </el-row>
           <el-row class="top-distance">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-alarm-clock">&nbsp;成立时间：</i>
-              <label>{{ item.create_time }}</label>
+              <label>{{ info.create_time }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-place">&nbsp;所在城市：</i>
-              <label>{{ item.company_city }}</label>
+              <label>{{ info.company_city }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-data-analysis">&nbsp;总人数：</i>
-              <label >{{ item.employee_number }}</label>
+              <label >{{ info.employee_number }}</label>
             </el-col>
           </el-row>
           <el-row class="top-distance">
             <el-col :span="width" :offset="offset">
               <i class="el-icon-trophy">&nbsp;职位：</i>
-              <label>{{ item.position }}</label>
+              <label>{{ info.position }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-news">&nbsp;融资情况：</i>
-              <label>{{ item.financing_situation }}</label>
+              <label>{{ info.financing_situation }}</label>
             </el-col>
             <el-col :span="width">
               <i class="el-icon-coin">&nbsp;当前估值：</i>
-              <label >{{ item.value_of_assessment }}</label>
+              <label >{{ info.value_of_assessment }}</label>
             </el-col>
           </el-row>
           <el-row class="top-distance">
             <el-col :span="21" :offset="offset">
               <i class="el-icon-money">&nbsp;收入规模：</i>
-              <label>{{ item.income_scale }}</label>
+              <label>{{ info.income_scale }}</label>
             </el-col>
           </el-row>
           <el-row class="top-distance">
             <el-col :span="21" :offset="offset">
               <i class="el-icon-shopping-cart-full">&nbsp;运营数据：</i>
-              <label >{{ item.company_data }}</label>
+              <label >{{ info.company_data }}</label>
             </el-col>
           </el-row>
           <el-row class="top-distance">
             <el-col :span="21" :offset="offset">
               <i class="el-icon-reading">&nbsp;公司简介：</i>
-              <label>{{ item.introduction }}</label>
+              <label>{{ info.introduction }}</label>
             </el-col>
           </el-row>
         </el-form>
@@ -176,46 +174,50 @@ export default {
     return {
       info: [],
       width: 7,
-      offset: 2
+      offset: 2,
+      currentAlumni: []
     }
   },
   created () {
-    let that = this
-    let results = that.$store.getters.getInfoOfAnAlumni
-    if (results) {
-      that.info[0] = {
-        avatar: results.avatar_url,
-        id: results.id,
-        name: results.name,
-        gender: results.gender,
-        birthday: results.birthday,
-        phone_number: results.phone_number,
-        wx: results.wx,
-        email: results.email,
-        city: results.city,
-        education: results.education,
-        school: results.school,
-        previous_company: results.previous_company,
-        previous_position: results.previous_position,
-        company_name: results.company.name,
-        website: results.company.website,
-        wx_public: results.company.wx_public,
-        create_time: results.company.create_time,
-        company_city: results.company.city,
-        employee_number: results.company.number_employee,
-        position: results.company.position,
-        introduction: results.company.introduction,
-        company_data: results.company.company_data,
-        income_scale: results.company.income_scale,
-        financing_situation: results.company.financing_situation,
-        value_of_assessment: results.company.value_of_assessment
-      }
+    this.currentAlumni = this.$store.getters.getInfoOfAnAlumni
+    if (this.axios) {
+      this.findAllInformation()
     }
-    that.$forceUpdate()
   },
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    findAllInformation () {
+      let that = this
+      let alumni = that.currentAlumni
+      that.info = {
+        avatar: alumni.avatar_url,
+        id: alumni.id,
+        name: alumni.name,
+        gender: alumni.gender,
+        birthday: alumni.birthday,
+        phone_number: alumni.phone_number,
+        wx: alumni.wx,
+        email: alumni.email,
+        city: alumni.city,
+        education: alumni.education,
+        school: alumni.school,
+        previous_company: alumni.previous_company,
+        previous_position: alumni.previous_position,
+        company_name: alumni.company.name,
+        website: alumni.company.website,
+        wx_public: alumni.company.wx_public,
+        create_time: alumni.company.create_time,
+        company_city: alumni.company.city,
+        employee_number: alumni.company.number_employee,
+        position: alumni.company.position,
+        introduction: alumni.company.introduction,
+        company_data: alumni.company.company_data,
+        income_scale: alumni.company.income_scale,
+        financing_situation: alumni.company.financing_situation,
+        value_of_assessment: alumni.company.value_of_assessment
+      }
     },
     editInfo () {
       this.$router.push('/edit-alumni-information')

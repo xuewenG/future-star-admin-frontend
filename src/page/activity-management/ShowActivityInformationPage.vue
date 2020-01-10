@@ -1,75 +1,97 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="活动详情"/>
-      <el-divider/>
-      <el-card v-for="(item) in info"  :key="item.id" class="info-card" shadow="always">
-        <el-form label-width="130px">
-          <el-row>
-            <el-col :span="4" :offset="11">
-              <el-button type="primary" icon="el-icon-edit" @click="editDetails()">编辑</el-button>
+      <div>
+        <el-page-header @back="goBack()" content="活动详情"/>
+        <el-divider></el-divider>
+      </div>
+      <el-card
+        class="info-card"
+        shadow="never">
+        <el-row>
+          <el-col
+            :span="24"
+            class="center-position">
+            <div class="block">
+              <el-avatar
+                :size="130"
+                :src="currentActivity.image">
+              </el-avatar>
+            </div>
+          </el-col>
+        </el-row>
+        <el-form class="info-table" label-width="130px">
+          <div class="line">
+            <el-divider></el-divider>
+          </div>
+          <div class="description">- 活动信息 -</div>
+          <el-row class="top-distance">
+            <el-col :span="width" :offset="2">
+              <i class="el-icon-user">&nbsp;活动名称：</i>
+              <label>{{ currentActivity.name }}</label>
+            </el-col>
+            <el-col :span="width">
+              <i class="el-icon-male">&nbsp;报名开始时间：</i>
+              <label>{{ currentActivity.enroll_start_time }}</label>
+            </el-col>
+            <el-col :span="width">
+              <i class="el-icon-timer">&nbsp;报名结束时间：</i>
+              <label>{{ currentActivity.enroll_end_time }}</label>
             </el-col>
           </el-row>
-          <el-divider></el-divider>
-          <el-row>
-            <el-col :span="12">
-              <el-form-item label="活动标题：">
-                {{item.name}}
-              </el-form-item>
+          <el-row class="top-distance">
+            <el-col :span="width" :offset="offset">
+              <i class="el-icon-mobile-phone">&nbsp;活动时间：</i>
+              <label>{{ currentActivity.start_time }}</label>
             </el-col>
-            <el-col :span="12">
-              <el-form-item label="活动项目：">
-                {{item.project}}
-              </el-form-item>
+            <el-col :span="width">
+              <i class="el-icon-document">&nbsp;面向人群：</i>
+              <label v-for="item in clazzOptions"
+                     :key="item.clazz"
+                     :label="item.label"
+                     :value="item.clazz">
+              </label>
             </el-col>
-          </el-row>
-          <el-row>
-            <el-col :span="12">
-              <el-form-item label="活动时间：">
-                {{item.activity_time}}
-              </el-form-item>
-            </el-col>
-            <el-col :span="12">
-              <el-form-item label="活动地点：">
-                {{item.activity_site}}
-              </el-form-item>
+            <el-col :span="width">
+              <i class="el-icon-school">&nbsp;活动地点：</i>
+              <label >{{ currentActivity.address }}</label>
             </el-col>
           </el-row>
-          <el-row>
-            <el-col :span="8">
-              <el-form-item label="限制人数：">
-                {{item.ceiling}}
-              </el-form-item>
+          <el-row class="top-distance">
+            <el-col :span="width" :offset="offset">
+              <i class="el-icon-location-information">&nbsp;限制人数：</i>
+              <label>{{ currentActivity.people_number_limit }}</label>
             </el-col>
-            <el-col :span="8">
-              <el-form-item label="收费情况：">
-                {{item.charge}}
-              </el-form-item>
+            <el-col :span="width">
+              <i class="el-icon-chat-dot-round">&nbsp;收费情况：</i>
+              <label>{{ currentActivity.price }}</label>
             </el-col>
-            <el-col :span="8">
-              <el-form-item label="活动内容描述：">
-                {{item.activity_describe}}
-              </el-form-item>
+            <el-col :span="width">
+              <i class="el-icon-edit-outline">&nbsp;主办方：</i>
+              <label >{{ currentActivity.organizer }}</label>
             </el-col>
           </el-row>
-          <el-row>
-            <el-col :span="8">
-              <el-form-item label="主办方信息：">
-                {{item.sponsor}}
-              </el-form-item>
-            </el-col>
-            <el-col :span="8">
-              <el-form-item label="主办方联系方式：">
-                {{item.sponsor_phone}}
-              </el-form-item>
-            </el-col>
-            <el-col :span="8">
-              <el-form-item label="报名截止时间：">
-                {{item.deadline}}
-              </el-form-item>
+          <el-row class="top-distance">
+            <el-col
+              :span="21"
+              :offset="offset">
+              <i class="el-icon-reading">&nbsp;活动日程：</i>
+              <label>{{ currentActivity.arrangement }}</label>
             </el-col>
           </el-row>
         </el-form>
+        <el-row>
+          <el-col
+            :span="24"
+            class="center-position">
+            <el-button
+              type="primary"
+              icon="el-icon-edit"
+              @click="editDetails()">
+              编辑
+            </el-button>
+          </el-col>
+        </el-row>
       </el-card>
     </el-main>
   </el-container>
@@ -80,21 +102,21 @@ export default {
   name: 'ShowActivityInformationPage',
   data () {
     return {
-      info: [
-        {
-          id: '1',
-          name: 'xx讲座',
-          project: 'xx讲座',
-          activity_time: '2020-02-01',
-          activity_site: 'hf',
-          ceiling: '20',
-          charge: '100/人',
-          activity_describe: '平平无奇的活动',
-          sponsor: '郑小鸽',
-          sponsor_phone: '1231231234',
-          deadline: '2020-01-23'
-        }
-      ]
+      currentActivity: [],
+      width: 7,
+      offset: 2,
+      page_size: 20,
+      currentPage: 1,
+      clazz: [],
+      clazzOptions: []
+    }
+  },
+  created () {
+    console.log(this.clazz)
+    this.currentActivity = this.$store.getters.getCurrentActivity
+    if (this.axios) {
+      // this.findAllClasses()
+      this.findExistClasses()
     }
   },
   methods: {
@@ -103,14 +125,75 @@ export default {
     },
     editDetails () {
       this.$router.push('/edit-activity')
+    },
+    findExistClasses () {
+      let that = this
+      let params = {
+        page: that.currentPage,
+        page_size: that.page_size,
+        activity_id: that.currentActivity.id
+      }
+      that.axios.get('/activity/clazz', { params }).then((response) => {
+        if (response.data.code === '2000') {
+          let activityResults = response.data.data.results
+          for (let i = 0; i < activityResults.length; i++) {
+            that.clazz.push(activityResults[i].id)
+          }
+        }
+        that.$forceUpdate()
+      })
     }
   }
 }
 </script>
 
 <style scoped>
+  .el-container {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 21px;
+    text-align: center;
+    color: black;
+  }
+
+  .center-position {
+    text-align: center;
+  }
+
+  .line {
+    margin: 0 10%;
+  }
+
+  .block {
+    margin: 30px auto 0;
+  }
+
+  .el-col > i {
+    font-size: 14px;
+    color: #272324;
+  }
+
+  .el-col > label {
+    margin-bottom: 100px;
+    font-size: 14px;
+  }
+
   .info-card {
-    width: 80%;
+    width: 62%;
     margin: auto;
+  }
+
+  .info-table {
+    margin: 40px 20px;
+  }
+
+  .top-distance {
+    margin-top: 30px;
+  }
+
+  .bottom-distance {
+    margin-bottom: 40px;
   }
 </style>

@@ -17,7 +17,8 @@ export default new Vuex.Store({
     courses: '',
     currentCourse: '',
     infoOfAnAlumni: null,
-    currentApplyInformation: ''
+    currentApplyInformation: '',
+    currentActivity: ''
   },
   mutations: {
     changeActiveIndexOfNavigation (state, activeIndex) {
@@ -59,6 +60,9 @@ export default new Vuex.Store({
     changeCurrentApplyInformation (state, currentApplyInformation) {
       state.currentApplyInformation = currentApplyInformation
     },
+    changeCurrentActivity (state, currentActivity) {
+      state.currentActivity = currentActivity
+    },
     initializeStateWhileLogin (state) {
       state.activeIndexOfNavigation = '0'
       state.activeNameOfCourse = 'first'
@@ -73,6 +77,7 @@ export default new Vuex.Store({
       state.currentCourse = ''
       state.infoOfAnAlumni = null
       state.currentApplyInformation = ''
+      state.currentActivity = ''
     },
     initializeStateWhileSwitch (state) {
       state.activeNameOfCourse = 'first'
@@ -87,6 +92,7 @@ export default new Vuex.Store({
       state.currentCourse = ''
       state.infoOfAnAlumni = null
       state.currentApplyInformation = ''
+      state.currentActivity = ''
     }
   },
   actions: {
@@ -134,6 +140,9 @@ export default new Vuex.Store({
     },
     changeCurrentApplyInformation (context, currentApplyInformation) {
       context.commit('changeCurrentApplyInformation', currentApplyInformation)
+    },
+    changeCurrentActivity (context, currentActivity) {
+      context.commit('changeCurrentActivity', currentActivity)
     }
   },
   getters: {
@@ -175,6 +184,9 @@ export default new Vuex.Store({
     },
     getCurrentApplyInformation (state) {
       return state.currentApplyInformation
+    },
+    getCurrentActivity (state) {
+      return state.currentActivity
     }
   },
   modules: {

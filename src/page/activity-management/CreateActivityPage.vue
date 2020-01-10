@@ -3,10 +3,14 @@
     <el-main>
       <el-page-header @back="goBack()" content="新建校友活动"></el-page-header>
       <el-divider/>
-      <el-card class="activity-card" shadow="never">
+      <el-card
+        class="activity-card"
+        shadow="never">
         <div class="description">- 活动信息 -</div>
         <el-image :src="src"></el-image>
-        <el-form class="activity-table" label-width="150px">
+        <el-form
+          class="activity-table"
+          label-width="150px">
           <div class="line">
             <el-divider></el-divider>
           </div>
@@ -161,14 +165,14 @@ export default {
   },
   created () {
     if (this.axios) {
-      this.findAllClass()
+      this.findAllClasses()
     }
   },
   methods: {
-    goBack: function () {
+    goBack () {
       this.$router.go(-1)
     },
-    findAllClass: function () {
+    findAllClasses () {
       let that = this
       that.clazzOptions = []
       that.clazz = null
@@ -176,7 +180,7 @@ export default {
         page_size: that.page_size,
         page: that.currentClassPage
       }
-      that.axios.get('/clazz/clazz', { params }).then(function (response) {
+      that.axios.get('/clazz/clazz', { params }).then((response) => {
         if (response.data.code === '2000') {
           let results = response.data.data.results
           for (let i = 0; i < results.length; i++) {
@@ -189,7 +193,7 @@ export default {
         }
       })
     },
-    createActivity: function () {
+    createActivity () {
       let that = this
       let params = {
         name: that.currentActivity.name,
@@ -202,7 +206,7 @@ export default {
         price: that.currentActivity.price,
         people_number_limit: that.currentActivity.people_number_limit
       }
-      that.axios.post('/activity/activity', params).then(function (response) {
+      that.axios.post('/activity/activity', params).then((response) => {
         if (response.data.code === '2000') {
           that.$message({
             type: 'success',
@@ -214,7 +218,7 @@ export default {
             that.axios.post('/activity/clazz', {
               activity_id: activityResults.id,
               clazz_id: that.clazz[i]
-            }).then(function (response) {
+            }).then((response) => {
               if (response.data.code === '2000') {
                 that.$message({
                   type: 'success',
@@ -253,7 +257,7 @@ export default {
         })
       })
     },
-    clearText: function () {
+    clearText () {
       this.currentActivity.name = ''
       this.currentActivity.enroll_start_time = ''
       this.currentActivity.enroll_end_time = ''

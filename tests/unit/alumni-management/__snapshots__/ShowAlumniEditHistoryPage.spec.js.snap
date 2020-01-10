@@ -16,16 +16,12 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
       <div class="hidden-columns">
         <div></div>
         <div></div>
-        <div><button type="button" class="el-button el-button--primary el-button--small is-circle">
-            <!----><i class="el-icon-more"></i>
-            <!----></button></div>
       </div>
       <div class="el-table__header-wrapper">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 240px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 160px;">
           <colgroup>
             <col name="el-table_1_column_1" width="80">
             <col name="el-table_1_column_2" width="80">
-            <col name="el-table_1_column_3" width="80">
           </colgroup>
           <thead class="">
             <tr class="">
@@ -35,19 +31,15 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf">
                 <div class="cell">时间</div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf">
-                <div class="cell">操作</div>
-              </th>
             </tr>
           </thead>
         </table>
       </div>
       <div class="el-table__body-wrapper is-scrolling-left">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 240px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 160px;">
           <colgroup>
             <col name="el-table_1_column_1" width="80">
             <col name="el-table_1_column_2" width="80">
-            <col name="el-table_1_column_3" width="80">
           </colgroup>
           <tbody>
             <tr class="el-table__row">
@@ -57,11 +49,6 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
                 <div class="cell">2020年1月3日14:36:18</div>
               </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
-              </td>
             </tr>
             <tr class="el-table__row el-table__row--striped">
               <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
@@ -69,11 +56,6 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               </td>
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
                 <div class="cell">2020年1月3日14:36:24</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
               </td>
             </tr>
             <tr class="el-table__row">
@@ -83,11 +65,6 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
                 <div class="cell">2020年1月3日14:36:30</div>
               </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
-              </td>
             </tr>
             <tr class="el-table__row el-table__row--striped">
               <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
@@ -95,11 +72,6 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               </td>
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
                 <div class="cell">2020年1月3日14:36:37</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
               </td>
             </tr>
             <tr class="el-table__row">
@@ -109,11 +81,6 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
                 <div class="cell">2020年1月3日14:36:41</div>
               </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
-              </td>
             </tr>
             <tr class="el-table__row el-table__row--striped">
               <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
@@ -121,11 +88,6 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               </td>
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
                 <div class="cell">2020年1月3日14:37:13</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
               </td>
             </tr>
             <tr class="el-table__row">
@@ -135,11 +97,6 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
                 <div class="cell">2020年1月3日14:37:21</div>
               </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
-              </td>
             </tr>
             <tr class="el-table__row el-table__row--striped">
               <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
@@ -147,11 +104,6 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               </td>
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
                 <div class="cell">2020年1月3日14:37:41</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
               </td>
             </tr>
             <tr class="el-table__row">
@@ -161,23 +113,13 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
                 <div class="cell">2020年1月3日14:38:02</div>
               </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
-              </td>
             </tr>
             <tr class="el-table__row el-table__row--striped">
               <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
                 <div class="cell">10</div>
               </td>
               <td rowspan="1" colspan="1" class="el-table_1_column_2 is-center ">
-                <div class="cell">2020年1月3日14:41:13</div>
-              </td>
-              <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                    <!----><i class="el-icon-more"></i>
-                    <!----></button></div>
+                <div class="cell">2020年1月10日19:31:29</div>
               </td>
             </tr>
             <!---->
@@ -194,42 +136,13 @@ exports[`ShowAlumniEditHistoryPage 快照测试 1`] = `
     </div>
   </main>
   <footer class="el-footer" style="height: 60px;">
-    <div class="el-row">
-      <div class="el-col el-col-8 el-col-offset-8">
-        <div class="pagination el-pagination"><span class="el-pagination__total">共 10 条</span><span class="el-pagination__sizes"><div class="el-select el-select--mini"><!----><div class="el-input el-input--mini el-input--suffix"><!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner"><!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span>
-          <!----></span>
-          <!---->
-          <!---->
-        </div>
-        <div class="el-select-dropdown el-popper" style="display: none;">
-          <div class="el-scrollbar" style="">
-            <div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
-              <ul class="el-scrollbar__view el-select-dropdown__list">
-                <!---->
-                <li class="el-select-dropdown__item selected"><span>10条/页</span></li>
-                <li class="el-select-dropdown__item"><span>20条/页</span></li>
-                <li class="el-select-dropdown__item"><span>30条/页</span></li>
-                <li class="el-select-dropdown__item"><span>40条/页</span></li>
-              </ul>
-            </div>
-            <div class="el-scrollbar__bar is-horizontal">
-              <div class="el-scrollbar__thumb" style="transform: translateX(0%); webkit-transform: translateX(0%);"></div>
-            </div>
-            <div class="el-scrollbar__bar is-vertical">
-              <div class="el-scrollbar__thumb" style="transform: translateY(0%); webkit-transform: translateY(0%);"></div>
-            </div>
-          </div>
-          <!---->
-        </div>
-      </div></span><button type="button" disabled="disabled" class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+    <div class="pagination el-pagination"><button type="button" disabled="disabled" class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
       <ul class="el-pager">
         <li class="number active">1</li>
         <!---->
         <!---->
         <!---->
-      </ul><button type="button" disabled="disabled" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button><span class="el-pagination__jump">前往<div class="el-input el-pagination__editor is-in-pagination"><!----><input type="number" autocomplete="off" min="1" max="1" class="el-input__inner"><!----><!----><!----><!----></div>页</span>
-    </div>
-    </div>
+      </ul><button type="button" disabled="disabled" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button>
     </div>
   </footer>
 </section>
