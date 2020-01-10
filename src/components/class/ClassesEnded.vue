@@ -4,17 +4,17 @@
     <el-col :span="12" v-for="item in classes" v-show="item.state===4" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
-          <el-col :span="18">
+          <el-col :span="12">
             {{ item.name }}
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail(item)" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="lookOverClassDetail(item)" round>班级详情</el-button>
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo(item)" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="editClassInfo(item)" round>编辑信息</el-button>
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-s-custom" @click="lookOverStudentInClass(item)" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="lookOverStudentInClass(item)" round>班级学员</el-button>
           </el-col>
         </el-row>
         <el-row class="info">

@@ -32,15 +32,15 @@ exports[`CourseManagement 快照测试 1`] = `
           </div>
         </div>
       </div>
-      <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-          <!----><i class="el-icon-more"></i>
-          <!----></button></div>
-      <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-          <!----><i class="el-icon-edit-outline"></i>
-          <!----></button></div>
-      <div class="el-col el-col-1" style="display: none;"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
-          <!----><i class="el-icon-close"></i>
-          <!----></button></div>
+      <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-round">
+          <!---->
+          <!----><span>学期详情</span></button></div>
+      <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-round">
+          <!---->
+          <!----><span>编辑信息</span></button></div>
+      <div class="el-col el-col-2" style="display: none;"><button type="button" class="el-button el-button--danger el-button--small is-round">
+          <!---->
+          <!----><span>关闭学期</span></button></div>
     </div>
   </header>
   <main class="el-main main-contain-class">

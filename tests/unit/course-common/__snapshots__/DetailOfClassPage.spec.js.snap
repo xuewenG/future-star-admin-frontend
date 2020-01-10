@@ -39,28 +39,27 @@ exports[`DetailOfClassPage 快照测试 1`] = `
           <!---->
           <div class="el-card__body">
             <div class="el-row">
-              <div class="el-col el-col-20">
+              <div class="el-col el-col-12">
                 课程名：
               </div>
-              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-                  <!----><i class="el-icon-more"></i>
-                  <!----></button></div>
-              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-                  <!----><i class="el-icon-edit-outline"></i>
-                  <!----></button></div>
-              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-                  <!----><i class="el-icon-document-copy"></i>
-                  <!----></button></div>
-              <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
-                  <!----><i class="el-icon-user"></i>
-                  <!----></button></div>
+              <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
+                  <!---->
+                  <!----><span>课程详情</span></button></div>
+              <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
+                  <!---->
+                  <!----><span>编辑信息</span></button></div>
+              <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
+                  <!---->
+                  <!----><span>课程资源</span></button></div>
+              <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
+                  <!---->
+                  <!----><span>课程讲师</span></button></div>
             </div>
           </div>
         </div>
-        <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-icon-plus el-button--primary is-circle">
+        <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-round">
             <!---->
-            <!---->
-            <!----></button></div>
+            <!----><span>添加课程</span></button></div>
       </div>
     </div>
   </main>

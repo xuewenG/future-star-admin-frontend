@@ -4,20 +4,20 @@
     <el-col :span="12" v-for="item in classes" v-show="item.state===2" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
-          <el-col :span="16">
+          <el-col :span="8">
             {{ item.name }}
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-check" @click="startClass(item)" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="startClass(item)" round>班级开课</el-button>
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail(item)" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="lookOverClassDetail(item)" round>班级详情</el-button>
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo(item)" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="editClassInfo(item)" round>编辑信息</el-button>
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-s-custom" @click="lookOverStudentInClass(item)" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="lookOverStudentInClass(item)" round>班级学员</el-button>
           </el-col>
         </el-row>
         <el-row class="info">
@@ -66,6 +66,7 @@ export default {
         if (response.data.code === '2000') {
           currentClass.state = 3
           await that.$store.dispatch('changeClasses', that.classes)
+          that.count--
           that.$message({
             type: 'success',
             message: '开课成功',

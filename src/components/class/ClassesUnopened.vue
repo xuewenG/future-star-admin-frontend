@@ -4,17 +4,17 @@
     <el-col :span="12" v-for="item in classes" v-show="item.state===0" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
-          <el-col :span="18">
+          <el-col :span="12">
             {{ item.name }}
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" @click="startEnrolling(item)" icon="el-icon-check" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="startEnrolling(item)" round>开始招生</el-button>
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-more" @click="lookOverClassDetail(item)" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="lookOverClassDetail(item)" round>班级详情</el-button>
           </el-col>
-          <el-col :span="2">
-            <el-button type="primary" size="small" icon="el-icon-edit-outline" @click="editClassInfo(item)" circle></el-button>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="editClassInfo(item)" round>编辑信息</el-button>
           </el-col>
         </el-row>
         <el-row class="info">
@@ -63,6 +63,7 @@ export default {
         if (response.data.code === '2000') {
           currentClass.state = 1
           await that.$store.dispatch('changeClasses', that.classes)
+          that.count--
           that.$message({
             type: 'success',
             message: '开启招生成功',
