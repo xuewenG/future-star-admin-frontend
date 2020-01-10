@@ -138,7 +138,7 @@ export default {
         page_size: that.page_size,
         page: that.currentAlumniPage
       }
-      that.axios.get('/student/student', { params }).then(function (response) {
+      that.axios.get('/student/student', { params }).then((response) => {
         if (response.data.code === '2000') {
           that.tableData = response.data.data.results
           for (let i = 0; i < that.tableData.length; i++) {
@@ -150,7 +150,20 @@ export default {
           }
           that.loading = false
           that.$forceUpdate()
+        } else {
+          that.$message({
+            type: 'error',
+            message: '网络繁忙，请稍候重试',
+            duration: 2000
+          })
         }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '网络繁忙，请稍候重试',
+          duration: 2000
+        })
       })
     },
     findAllSemester: function () {
@@ -175,7 +188,20 @@ export default {
             }
           }
           that.$forceUpdate()
+        } else {
+          that.$message({
+            type: 'error',
+            message: '网络繁忙，请稍候重试',
+            duration: 2000
+          })
         }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '网络繁忙，请稍候重试',
+          duration: 2000
+        })
       })
     },
     findAllClass: function () {
@@ -201,11 +227,23 @@ export default {
               label: results[i]['name']
             }
           }
+          that.search()
           that.$forceUpdate()
+        } else {
+          that.$message({
+            type: 'error',
+            message: '网络繁忙，请稍候重试',
+            duration: 2000
+          })
         }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '网络繁忙，请稍候重试',
+          duration: 2000
+        })
       })
-      that.search()
-      that.$forceUpdate()
     },
     search () {
       let that = this
@@ -248,7 +286,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '请求出错',
+            message: '网络繁忙，请稍候重试',
             duration: 2000
           })
         }
@@ -256,7 +294,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络错误',
+          message: '网络繁忙，请稍候重试',
           duration: 2000
         })
       })

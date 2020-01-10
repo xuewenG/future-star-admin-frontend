@@ -98,14 +98,15 @@ export default {
       keyword: null,
       clazz: null,
       semester: null,
-      activity_id: null,
       tableData: [],
       semesterOptions: [],
-      clazzOptions: []
+      clazzOptions: [],
+      currentActivity: []
     }
   },
   created () {
-    this.activity_id = this.$store.getters.getCurrentActivity.id
+    this.currentActivity = this.$store.getters.getCurrentActivity
+    console.log(this.currentActivity)
     if (this.axios) {
       this.findAllAlumni()
       // this.findAllSemester()
@@ -127,7 +128,7 @@ export default {
       let params = {
         page_size: this.page_size,
         page: this.currentAlumniPage,
-        activity_id: this.activty_id
+        activity_id: this.currentActivity.id
       }
       this.axios.get('/activity/student', { params }).then((response) => {
         if (response.data.code === '2000') {

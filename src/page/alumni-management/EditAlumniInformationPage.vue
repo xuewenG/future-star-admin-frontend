@@ -7,8 +7,6 @@
         <el-row>
           <el-col :span="24" class="avatar-container">
             <div class="block">
-              <!--              <el-avatar :size="130" :src="student.avatar_url">-->
-              <!--              </el-avatar>-->
               <el-upload
                 class="avatar-uploader"
                 action="https://jsonplaceholder.typicode.com/posts/"
@@ -407,43 +405,31 @@
 <script>
 export default {
   name: 'EditAlumniInformationPage',
+  data () {
+    return {
+      info: {},
+      student: {},
+      width: 5,
+      offset: 2,
+      signal: false,
+      change_state: 0,
+      currentAlumni: []
+    }
+  },
   created () {
     let that = this
-    let results = that.$store.getters.getInfoOfAnAlumni
-    if (results) {
-      that.student = {
-        id: results.id,
-        avatar_url: results.avatar_url,
-        name: results.name,
-        gender: results.gender,
-        birthday: results.birthday,
-        phone_number: results.phone_number,
-        wx: results.wx,
-        email: results.email,
-        city: results.city,
-        education: results.education,
-        school: results.school,
-        previous_company: results.previous_company,
-        previous_position: results.previous_position,
-        company_name: results.company.name,
-        website: results.company.website,
-        wx_public: results.company.wx_public,
-        create_time: results.company.create_time,
-        company_city: results.company.city,
-        employee_number: results.company.number_employee,
-        position: results.company.position,
-        introduction: results.company.introduction,
-        company_data: results.company.company_data,
-        income_scale: results.company.income_scale,
-        financing_situation: results.company.financing_situation,
-        value_of_assessment: results.company.value_of_assessment
-      }
+    that.currentAlumni = that.$store.getters.getInfoOfAnAlumni
+    that.findAllInformation()
+  },
+  watch: {
+    change_state () {
+      this.findAllInformation()
     }
-    that.$forceUpdate()
   },
   methods: {
     goBack: function () {
       this.$router.go(-1)
+      this.$store.dispatch('changeInfoOfAnAlumni', this.currentAlumni)
     },
     uploadImg (f) {
       let param = new FormData()
@@ -469,6 +455,39 @@ export default {
     },
     handleRemove (file, fileList) {
       console.log('文件删除')
+    },
+    findAllInformation: function () {
+      let that = this
+      let results = that.$store.getters.getInfoOfAnAlumni
+      if (results) {
+        that.student = {
+          id: results.id,
+          avatar_url: results.avatar_url,
+          name: results.name,
+          gender: results.gender,
+          birthday: results.birthday,
+          phone_number: results.phone_number,
+          wx: results.wx,
+          email: results.email,
+          city: results.city,
+          education: results.education,
+          school: results.school,
+          previous_company: results.previous_company,
+          previous_position: results.previous_position,
+          company_name: results.company.name,
+          website: results.company.website,
+          wx_public: results.company.wx_public,
+          create_time: results.company.create_time,
+          company_city: results.company.city,
+          employee_number: results.company.number_employee,
+          position: results.company.position,
+          introduction: results.company.introduction,
+          company_data: results.company.company_data,
+          income_scale: results.company.income_scale,
+          financing_situation: results.company.financing_situation,
+          value_of_assessment: results.company.value_of_assessment
+        }
+      }
     },
     confirmChange: function () {
       let that = this
@@ -509,6 +528,8 @@ export default {
       let url = '/student/student/' + alumni.id
       that.axios.put(url, params).then(function (response) {
         if (response.data.code === '2000') {
+          that.$store.dispatch('changeInfoOfAnAlumni', that.student)
+          that.change_state = 1
           that.$message({
             type: 'success',
             message: '修改成功',
@@ -529,15 +550,6 @@ export default {
           duration: 2000
         })
       })
-    }
-  },
-  data () {
-    return {
-      info: {},
-      student: {},
-      width: 5,
-      offset: 2,
-      signal: false
     }
   }
 }
