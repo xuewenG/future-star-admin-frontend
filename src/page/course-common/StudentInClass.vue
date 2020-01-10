@@ -125,7 +125,7 @@ export default {
         console.log(error)
       })
     },
-    CurrentPageChange: function (currentPage) {
+    currentPageChange: function (currentPage) {
       let that = this
       that.currentPage = currentPage
       that.getStudents()

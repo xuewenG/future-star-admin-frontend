@@ -14,7 +14,7 @@
       </el-row>
     </el-main>
   </el-container>
-  <el-container v-else-if="semester.state===0">
+  <el-container v-else>
     <el-header>
       <el-row type="flex" align="middle">
         <el-col :span="5">
@@ -33,11 +33,11 @@
         <el-col :span="1">
           <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editSemesterInfo" circle></el-button>
         </el-col>
-        <el-col :span="1">
+        <el-col v-show="semester.state===0" :span="1">
           <el-button type="primary" size="mini" icon="el-icon-plus" @click="addClass" circle></el-button>
         </el-col>
-        <el-col :span="1">
-          <el-button type="danger" size="mini" icon="el-icon-close" circle></el-button>
+        <el-col v-show="semester.state===0" :span="1">
+          <el-button type="danger" size="mini" icon="el-icon-close" @click="closeSemester" circle></el-button>
         </el-col>
       </el-row>
     </el-header>
@@ -113,9 +113,6 @@ export default {
           that.semester_id = that.$store.getters.getActiveSemesterOfCourse
         }
         that.semesters = semesters
-        if (that.semester && that.semester.state === 1) {
-          that.createNewSemester = true
-        }
         that.getClasses()
       } else {
         that.$message({
@@ -134,9 +131,41 @@ export default {
     })
   },
   methods: {
+    closeSemester: function () {
+      let that = this
+      let url = '/semester/semester/' + that.semester.id
+      that.axios.put(url, {
+        state: 1
+      }).then(async function (response) {
+        if (response.data.code === '2000') {
+          that.semester.state = 1
+          await that.$store.dispatch('changeCurrentSemester', that.semester)
+          that.$message({
+            type: 'success',
+            message: '关闭成功',
+            duration: 2000
+          })
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求出错',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '服务器内部错误',
+          duration: 2000
+        })
+      })
+    },
     handleSelectChange: async function () {
       let that = this
       await that.$store.dispatch('changeActiveSemesterOfCourse', that.semester_id)
+      that.changeCurrentSemester()
+      await that.$store.dispatch('changeCurrentSemester', this.semester)
       that.getClasses()
     },
     changeCurrentSemester: function () {

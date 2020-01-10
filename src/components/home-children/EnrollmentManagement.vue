@@ -30,17 +30,17 @@
           <el-button type="primary" size="mini" icon="el-icon-plus" @click="addClass" circle></el-button>
         </el-col>
         <el-col :span="1">
-          <el-button type="danger" size="mini" icon="el-icon-close" circle></el-button>
+          <el-button type="danger" size="mini" icon="el-icon-close" @click="closeSemester" circle></el-button>
         </el-col>
       </el-row>
     </el-header>
     <el-main class="main-contain-class">
       <el-tabs v-model="activeName" @tab-click="changeActiveName">
         <el-tab-pane label="未开放" name="first">
-          <unopened-classes></unopened-classes>
+          <unopened-classes :classes="classes"></unopened-classes>
         </el-tab-pane>
         <el-tab-pane label="招生中" name="second">
-          <enrolling-classes></enrolling-classes>
+          <enrolling-classes :classes="classes"></enrolling-classes>
         </el-tab-pane>
       </el-tabs>
       <el-divider></el-divider>
@@ -73,7 +73,8 @@ export default {
       currentPage: 1,
       pageSize: 10,
       total: 0,
-      createNewSemester: false
+      createNewSemester: false,
+      classes: []
     }
   },
   created () {
@@ -91,10 +92,11 @@ export default {
           that.createNewSemester = true
         }
         await that.$store.dispatch('changeSemesters', semesters)
-        that.semester = semesters[semesters.length - 1]
+        that.semester = semesters[0]
         if (that.semester && that.semester.state === 1) {
           that.createNewSemester = true
         }
+        that.getClasses()
       } else {
         that.$message({
           type: 'error',
@@ -110,10 +112,39 @@ export default {
         duration: 2000
       })
     })
-
-    that.getClasses()
   },
   methods: {
+    closeSemester: function () {
+      let that = this
+      let url = '/semester/semester/' + that.semester.id
+      that.axios.put(url, {
+        state: 1
+      }).then(async function (response) {
+        if (response.data.code === '2000') {
+          that.semester.state = 1
+          await that.$store.dispatch('changeCurrentSemester', that.semester)
+          that.createNewSemester = true
+          that.$message({
+            type: 'success',
+            message: '关闭成功',
+            duration: 2000
+          })
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求出错',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '服务器内部错误',
+          duration: 2000
+        })
+      })
+    },
     addClass: async function () {
       await this.$store.dispatch('changeCurrentSemester', this.semester)
       await this.$router.push('/add-class')
@@ -144,9 +175,9 @@ export default {
         }
       }).then(async function (response) {
         if (response.data.code === '2000') {
-          let classes = response.data.data.results
+          that.classes = response.data.data.results
           that.total = response.data.data.count
-          await that.$store.dispatch('changeClasses', classes)
+          await that.$store.dispatch('changeClasses', that.classes)
         } else {
           that.$message({
             type: 'error',

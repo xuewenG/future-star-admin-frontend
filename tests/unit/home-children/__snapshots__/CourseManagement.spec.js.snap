@@ -1,3 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CourseManagement 快照测试 1`] = `""`;
+exports[`CourseManagement 快照测试 1`] = `
+<section class="el-container is-vertical">
+  <header class="el-header" style="height: 60px;">
+    <div class="el-row is-align-middle el-row--flex">
+      <div class="el-col el-col-5">
+        <div class="el-select">
+          <!---->
+          <div class="el-input el-input--suffix">
+            <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="请选择" class="el-input__inner">
+            <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-select__caret el-input__icon el-icon-arrow-up"></i><!----><!----><!----><!----><!----></span>
+            <!----></span>
+            <!---->
+            <!---->
+          </div>
+          <div class="el-select-dropdown el-popper" style="display: none;">
+            <div class="el-scrollbar" style="display: none;">
+              <div class="el-select-dropdown__wrap el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                <ul class="el-scrollbar__view el-select-dropdown__list"></ul>
+              </div>
+              <div class="el-scrollbar__bar is-horizontal">
+                <div class="el-scrollbar__thumb" style="transform: translateX(0%); webkit-transform: translateX(0%);"></div>
+              </div>
+              <div class="el-scrollbar__bar is-vertical">
+                <div class="el-scrollbar__thumb" style="transform: translateY(0%); webkit-transform: translateY(0%);"></div>
+              </div>
+            </div>
+            <p class="el-select-dropdown__empty">
+              无数据
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+          <!----><i class="el-icon-more"></i>
+          <!----></button></div>
+      <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+          <!----><i class="el-icon-edit-outline"></i>
+          <!----></button></div>
+      <div class="el-col el-col-1" style="display: none;"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+          <!----><i class="el-icon-plus"></i>
+          <!----></button></div>
+      <div class="el-col el-col-1" style="display: none;"><button type="button" class="el-button el-button--danger el-button--mini is-circle">
+          <!----><i class="el-icon-close"></i>
+          <!----></button></div>
+    </div>
+  </header>
+  <main class="el-main main-contain-class">
+    <div class="el-tabs el-tabs--top">
+      <div class="el-tabs__header is-top">
+        <div class="el-tabs__nav-wrap is-top">
+          <div class="el-tabs__nav-scroll">
+            <div role="tablist" class="el-tabs__nav is-top" style="transform: translateX(-0px);">
+              <div class="el-tabs__active-bar is-top" style="width: 0px; transform: translateX(NaNpx); webkit-transform: translateX(NaNpx);"></div>
+              <div id="tab-first" aria-controls="pane-first" role="tab" aria-selected="true" tabindex="0" class="el-tabs__item is-top is-active">待开课</div>
+              <div id="tab-second" aria-controls="pane-second" role="tab" tabindex="-1" class="el-tabs__item is-top">进行中</div>
+              <div id="tab-third" aria-controls="pane-third" role="tab" tabindex="-1" class="el-tabs__item is-top">已结束</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="el-tabs__content">
+        <div role="tabpanel" id="pane-first" aria-labelledby="tab-first" class="el-tab-pane">
+          <div>
+            <h4>暂无待开课班级</h4>
+          </div>
+        </div>
+        <div role="tabpanel" aria-hidden="true" id="pane-second" aria-labelledby="tab-second" class="el-tab-pane" style="display: none;">
+          <div>
+            <h4>暂无进行中班级</h4>
+          </div>
+        </div>
+        <div role="tabpanel" aria-hidden="true" id="pane-third" aria-labelledby="tab-third" class="el-tab-pane" style="display: none;">
+          <div>
+            <h4>暂无已结束班级</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="el-pagination"><button type="button" disabled="disabled" class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+        <ul class="el-pager">
+          <li class="number active">1</li>
+          <!---->
+          <!---->
+          <!---->
+        </ul><button type="button" disabled="disabled" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button><span class="el-pagination__jump">前往<div class="el-input el-pagination__editor is-in-pagination"><!----><input type="number" autocomplete="off" min="1" max="1" class="el-input__inner"><!----><!----><!----><!----></div>页</span>
+      </div>
+    </div>
+  </main>
+</section>
+`;
