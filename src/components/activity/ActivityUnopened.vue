@@ -1,63 +1,157 @@
 <template>
-  <el-row>
-    <el-col :span="12" v-for="(item) in activities" :key="item.id" >
+  <div>
+    <el-col :span="12" v-for="activity in activities" :key="activity.id">
       <h4 v-if="activities.length === 0">暂无未开放的活动</h4>
-      <el-card class="activity-card" shadow="never">
-        <div slot="header">
-          <span>{{ item.activityName }}</span>
-          <el-button type="text"></el-button>
-          <el-button type="danger" size="small" class="btn" icon="el-icon-close" @click="showParticipants()" circle></el-button>
-          <el-button type="primary" size="small" class="btn" icon="el-icon-s-custom" @click="showParticipants()" circle></el-button>
-          <el-button type="primary" size="small" class="btn" icon="el-icon-edit-outline" @click="editDetails()" circle></el-button>
-          <el-button type="primary" size="small" class="btn" icon="el-icon-more" @click="showDetails()" circle></el-button>
-          <el-button type="primary" size="small" class="btn" icon="el-icon-check" circle></el-button>
-        </div>
-        <el-row>
-          起止日期：{{ item.activityStartTime }} —— {{ item.activityEndTime }}
+      <el-card shadow="never">
+        <el-row slot="header">
+          <el-col :span="2">
+            <el-avatar :src="activity.icon"></el-avatar>
+          </el-col>
+          <el-col :span="6">
+            {{ activity.name }}
+          </el-col>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="startEnrolling(activity)" round>开始报名</el-button>
+          </el-col>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="showDetails(activity)" round>活动详情</el-button>
+          </el-col>
+          <el-col :span="4">
+            <el-button type="primary" size="small" @click="editDetails(activity)" round>编辑详情</el-button>
+          </el-col>
+          <el-col :span="4">
+            <el-button type="danger" size="small" @click="closeActivity(activity)" round>取消活动</el-button>
+          </el-col>
         </el-row>
         <el-row>
-          活动人数：{{ item.currentAmountOfParticipants }} / {{ item.capacity }}
+          报名起止日期：{{ activity.enroll_start_time }} —— {{ activity.enroll_end_time }}
         </el-row>
         <el-row>
-          活动状态：{{ item.state }}
+          活动人数：0 / {{ activity.people_number_limit }}
         </el-row>
         <el-row>
-          活动简介：{{ item.activityIntroduction | ellipsis }}
+          活动状态：暂未开放
+        </el-row>
+        <el-row>
+          活动流程：{{ activity.arrangement | ellipsis }}
         </el-row>
       </el-card>
     </el-col>
-  </el-row>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'ActivityUnopened',
-  created () {
-  },
   data () {
     return {
-      activities: [
-        {
-          id: '1',
-          activityName: '大蜀山一日游',
-          activityIntroduction: '这里是一个加了长文本省略号替代的活动介绍',
-          activityStartTime: '2019/12/19',
-          activityEndTime: '2019/12/21',
-          currentAmountOfParticipants: '13',
-          capacity: '15',
-          state: '未开放'
-        }
-      ]
+      loading: true,
+      page: 1,
+      page_size: 20,
+      activities: [],
+      change_state: false
+    }
+  },
+  created () {
+    if (this.axios) {
+      this.findAllActivity()
+    }
+  },
+  watch: {
+    change_state () {
+      this.findAllActivity()
     }
   },
   methods: {
-    showParticipants () {
-      this.$router.push('/show-participants')
+    findAllActivity () {
+      let that = this
+      let params = {
+        page: that.page,
+        page_size: that.page_size,
+        activity_state: 0
+      }
+      that.axios.get('/activity/activity', { params }).then(function (response) {
+        if (response.data.code === '2000') {
+          that.activities = response.data.data.results
+        } else {
+          that.$message({
+            type: 'error',
+            message: '请求出错',
+            duration: 2000
+          })
+        }
+      })
     },
-    editDetails () {
+    startEnrolling: function (currentActivity) {
+      let that = this
+      let url = '/activity/activity/' + currentActivity.id
+      that.axios.put(url, {
+        state: 1
+      }).then(function (response) {
+        if (response.data.code === '2000') {
+          currentActivity.state = 1
+          that.change_state = true
+          that.$store.dispatch('changeActivities', that.activities)
+          that.$message({
+            type: 'success',
+            message: '开启活动成功',
+            duration: 2000
+          })
+          that.$forceUpdate()
+        } else {
+          that.$message({
+            type: 'error',
+            message: '网络繁忙，请稍后重试',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '网络繁忙，请稍后重试',
+          duration: 2000
+        })
+      })
+    },
+    closeActivity: function (currentActivity) {
+      let that = this
+      let url = '/activity/activity/' + currentActivity.id
+      that.axios.put(url, {
+        state: 5
+      }).then(function (response) {
+        if (response.data.code === '2000') {
+          currentActivity.state = 5
+          that.change_state = true
+          that.$store.dispatch('changeActivities', that.activities)
+          that.$message({
+            type: 'success',
+            message: '取消活动成功',
+            duration: 2000
+          })
+          that.$forceUpdate()
+        } else {
+          that.$message({
+            type: 'error',
+            message: '网络繁忙，请稍后重试',
+            duration: 2000
+          })
+        }
+      }).catch(function (error) {
+        console.log(error)
+        that.$message({
+          type: 'error',
+          message: '网络繁忙，请稍后重试',
+          duration: 2000
+        })
+      })
+    },
+    editDetails: function (currentActivity) {
+      this.$store.dispatch('changeCurrentActivity', currentActivity)
       this.$router.push('/edit-activity')
     },
-    showDetails () {
+    showDetails: function (currentActivity) {
+      this.$store.dispatch('changeCurrentActivity', currentActivity)
       this.$router.push('/show-activity-details')
     }
   },
@@ -79,12 +173,7 @@ export default {
     margin: 0;
   }
 
-  .btn {
-    float: right;
-  }
-
-  .activity-card {
-    padding: 14px;
-    margin: 14px;
+  .el-card {
+    margin: 10px;
   }
 </style>
