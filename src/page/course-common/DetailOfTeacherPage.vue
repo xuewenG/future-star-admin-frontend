@@ -58,9 +58,9 @@ export default {
     goBack: function () {
       this.$router.go(-1)
     },
-    editTeacherInfo: function () {
-      this.$store.dispatch('changeCurrentCourse', this.course)
-      this.$router.push('/edit-teacher-info')
+    editTeacherInfo: async function () {
+      await this.$store.dispatch('changeCurrentCourse', this.course)
+      await this.$router.push('/edit-teacher-info')
     }
   }
 }

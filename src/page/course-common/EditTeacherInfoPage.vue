@@ -94,14 +94,14 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '请求出错'
+            message: '网络繁忙，请稍后重试'
           })
         }
       }).catch(function (error) {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '服务器内部错误'
+          message: '网络繁忙，请稍后重试'
         })
       })
     }
