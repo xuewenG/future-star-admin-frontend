@@ -21,9 +21,7 @@ exports[`StudentInClass 快照测试 1`] = `
         <div></div>
         <div></div>
         <div></div>
-        <div><button type="button" class="el-button el-button--primary el-button--small is-circle">
-            <!----><i class="el-icon-more"></i>
-            <!----></button></div>
+        <div></div>
       </div>
       <div class="el-table__header-wrapper">
         <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1230px;">

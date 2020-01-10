@@ -3,6 +3,8 @@ import EnrollmentAuditPage from '../../../src/page/enrollment-management/Enrollm
 import Vuex from 'vuex'
 import ElementUI from 'element-ui'
 import VueRouter from 'vue-router'
+import VueAxios from 'vue-axios'
+import axios from 'axios'
 import store from '../../../src/store'
 import router from '../../../src/router'
 
@@ -11,6 +13,7 @@ describe('EnrollmentAuditPage', () => {
   localVue.use(Vuex)
   localVue.use(ElementUI)
   localVue.use(VueRouter)
+  localVue.use(VueAxios, axios)
   const wrapper = mount(EnrollmentAuditPage, {
     store,
     router,
