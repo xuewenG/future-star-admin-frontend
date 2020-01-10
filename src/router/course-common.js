@@ -10,6 +10,7 @@ import EditTeacherInfoPage from '../page/course-common/EditTeacherInfoPage'
 import AddCoursePage from '../page/course-common/AddCoursePage'
 import AddCourseResourcePage from '../page/course-common/AddCourseResourcePage'
 import StudentInClass from '../page/course-common/StudentInClass'
+import ShowStudentInformationPage from '../page/course-common/ShowStudentInformationPage'
 
 export default [
   {
@@ -71,5 +72,10 @@ export default [
     path: '/student-in-class',
     name: 'StudentInClass',
     component: StudentInClass
+  },
+  {
+    path: '/show-student-information',
+    name: 'ShowStudentInformationPage',
+    component: ShowStudentInformationPage
   }
 ]

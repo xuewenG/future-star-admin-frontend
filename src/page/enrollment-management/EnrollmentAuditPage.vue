@@ -8,46 +8,52 @@
         :highlight-current-row="true"
         stripe>
         <el-table-column
-          prop="name"
+          prop="student.name"
           align="center"
           label="姓名"
           :width="shortTextWidth">
         </el-table-column>
         <el-table-column
-          prop="gender"
+          prop="student.gender"
           align="center"
           label="性别"
           :width="shortTextWidth">
         </el-table-column>
         <el-table-column
-          prop="birthday"
+          prop="student.birthday"
           align="center"
           label="出生日期"
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
-          prop="phone_number"
+          prop="student.phone_number"
           align="center"
           label="联系电话"
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
-          prop="wx"
+          prop="student.wx"
           align="center"
           label="微信号"
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
-          prop="email"
+          prop="student.email"
           align="center"
           label="邮箱"
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
-          prop="city"
+          prop="student.city"
           align="center"
           label="所在城市"
           :width="longTextWidth">
+        </el-table-column>
+        <el-table-column
+          prop="evaluation.fraction"
+          align="center"
+          label="分数"
+          :width="shortTextWidth">
         </el-table-column>
         <el-table-column
           align="center"
@@ -72,7 +78,7 @@
               type="primary"
               size="small"
               icon="el-icon-s-comment"
-              @click="showAllInformation(scope.row)"
+              @click="evaluateStudent(scope.row)"
               circle>
             </el-button>
             <el-button
@@ -125,20 +131,22 @@ export default {
     getStudents: function () {
       let that = this
       that.currentClass = that.$store.getters.getCurrentClass
-      that.axios.get('/student/student', {
+      that.axios.get('/clazz/student', {
         params: {
           page: that.currentPage,
           page_size: that.page_size,
-          clazz_id: that.currentClass.id
+          clazz_id: that.currentClass.id,
+          clazz_student_state: 0
         }
       }).then(function (response) {
         if (response.data.code === '2000') {
+          console.log(response)
           that.tableData = response.data.data.results
           for (let i = 0; i < that.tableData.length; i++) {
-            if (that.tableData[i].gender === 0) {
-              that.tableData[i].gender = '男'
+            if (that.tableData[i].student.gender === 0) {
+              that.tableData[i].student.gender = '男'
             } else {
-              that.tableData[i].gender = '女'
+              that.tableData[i].student.gender = '女'
             }
           }
           that.total = response.data.data.count
@@ -152,9 +160,13 @@ export default {
       that.currentPage = currentPage
       that.getStudents()
     },
-    showAllInformation: async function (student) {
-      await this.$store.dispatch('changeInfoOfAnAlumni', student)
-      await this.$router.push('/show-all-information')
+    showAllInformation: async function (applyInformation) {
+      await this.$store.dispatch('changeInfoOfAnAlumni', applyInformation.student)
+      await this.$router.push('/show-student-information')
+    },
+    evaluateStudent: async function (applyInformation) {
+      await this.$store.dispatch('changeCurrentApplyInformation', applyInformation)
+      await this.$router.push('/evaluate-student')
     }
   }
 }

@@ -1,6 +1,7 @@
 import EnrollmentAuditPage from '../page/enrollment-management/EnrollmentAuditPage'
 import AddSemesterPage from '../page/enrollment-management/AddSemesterPage'
 import AddClassPage from '../page/enrollment-management/AddClassPage'
+import EvaluateStudentPage from '../page/enrollment-management/EvaluateStudentPage'
 
 export default [
   {
@@ -17,5 +18,10 @@ export default [
     path: '/add-class',
     name: 'AddClassPage',
     component: AddClassPage
+  },
+  {
+    path: '/evaluate-student',
+    name: 'EvaluateStudentPage',
+    component: EvaluateStudentPage
   }
 ]
