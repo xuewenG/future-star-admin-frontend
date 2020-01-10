@@ -3,10 +3,14 @@
     <el-main>
       <el-page-header @back="goBack()" content="新建校友活动"></el-page-header>
       <el-divider/>
-      <el-card class="activity-card" shadow="never">
+      <el-card
+        class="activity-card"
+        shadow="never">
         <div class="description">- 活动信息 -</div>
         <el-image :src="src"></el-image>
-        <el-form class="activity-table" label-width="150px">
+        <el-form
+          class="activity-table"
+          label-width="150px">
           <div class="line">
             <el-divider></el-divider>
           </div>
@@ -146,126 +150,126 @@
 </template>
 
 <script>
-export default {
-  name: 'CreateActivityPage',
-  data () {
-    return {
-      page_size: 20,
-      currentPage: 1,
-      offset: 5,
-      clazz: null,
-      currentActivity: [],
-      clazzOptions: [],
-      src: '../assets/backgroundImage1.jpg'
-    }
-  },
-  created () {
-    if (this.axios) {
-      this.findAllClass()
-    }
-  },
-  methods: {
-    goBack: function () {
-      this.$router.go(-1)
-    },
-    findAllClass: function () {
-      let that = this
-      that.clazzOptions = []
-      that.clazz = null
-      let params = {
-        page_size: that.page_size,
-        page: that.currentClassPage
+  export default {
+    name: 'CreateActivityPage',
+    data () {
+      return {
+        page_size: 20,
+        currentPage: 1,
+        offset: 5,
+        clazz: null,
+        currentActivity: [],
+        clazzOptions: [],
+        src: '../assets/backgroundImage1.jpg'
       }
-      that.axios.get('/clazz/clazz', { params }).then(function (response) {
-        if (response.data.code === '2000') {
-          let results = response.data.data.results
-          for (let i = 0; i < results.length; i++) {
-            that.clazzOptions[i] = {
-              clazz: results[i]['id'],
-              label: results[i]['name']
-            }
-          }
-          that.$forceUpdate()
+    },
+    created () {
+      if (this.axios) {
+        this.findAllClasses()
+      }
+    },
+    methods: {
+      goBack () {
+        this.$router.go(-1)
+      },
+      findAllClasses () {
+        let that = this
+        that.clazzOptions = []
+        that.clazz = null
+        let params = {
+          page_size: that.page_size,
+          page: that.currentClassPage
         }
-      })
-    },
-    createActivity: function () {
-      let that = this
-      let params = {
-        name: that.currentActivity.name,
-        enroll_start_time: that.currentActivity.enroll_start_time.toLocaleDateString().replace(/\//g, '-'),
-        enroll_end_time: that.currentActivity.enroll_end_time.toLocaleDateString().replace(/\//g, '-'),
-        organizer: that.currentActivity.organizer,
-        start_time: that.currentActivity.start_time.toLocaleDateString().replace(/\//g, '-'),
-        address: that.currentActivity.address,
-        arrangement: that.currentActivity.arrangement,
-        price: that.currentActivity.price,
-        people_number_limit: that.currentActivity.people_number_limit
-      }
-      that.axios.post('/activity/activity', params).then(function (response) {
-        if (response.data.code === '2000') {
-          that.$message({
-            type: 'success',
-            message: '创建活动成功',
-            duration: 2000
-          })
-          let activityResults = response.data.data
-          for (let i = 0; i < that.clazz.length; i++) {
-            that.axios.post('/activity/clazz', {
-              activity_id: activityResults.id,
-              clazz_id: that.clazz[i]
-            }).then(function (response) {
-              if (response.data.code === '2000') {
-                that.$message({
-                  type: 'success',
-                  message: '班级关联活动成功',
-                  duration: 2000
-                })
-              } else {
+        that.axios.get('/clazz/clazz', { params }).then((response) => {
+          if (response.data.code === '2000') {
+            let results = response.data.data.results
+            for (let i = 0; i < results.length; i++) {
+              that.clazzOptions[i] = {
+                clazz: results[i]['id'],
+                label: results[i]['name']
+              }
+            }
+            that.$forceUpdate()
+          }
+        })
+      },
+      createActivity () {
+        let that = this
+        let params = {
+          name: that.currentActivity.name,
+          enroll_start_time: that.currentActivity.enroll_start_time.toLocaleDateString().replace(/\//g, '-'),
+          enroll_end_time: that.currentActivity.enroll_end_time.toLocaleDateString().replace(/\//g, '-'),
+          organizer: that.currentActivity.organizer,
+          start_time: that.currentActivity.start_time.toLocaleDateString().replace(/\//g, '-'),
+          address: that.currentActivity.address,
+          arrangement: that.currentActivity.arrangement,
+          price: that.currentActivity.price,
+          people_number_limit: that.currentActivity.people_number_limit
+        }
+        that.axios.post('/activity/activity', params).then((response) => {
+          if (response.data.code === '2000') {
+            that.$message({
+              type: 'success',
+              message: '创建活动成功',
+              duration: 2000
+            })
+            let activityResults = response.data.data
+            for (let i = 0; i < that.clazz.length; i++) {
+              that.axios.post('/activity/clazz', {
+                activity_id: activityResults.id,
+                clazz_id: that.clazz[i]
+              }).then((response) => {
+                if (response.data.code === '2000') {
+                  that.$message({
+                    type: 'success',
+                    message: '班级关联活动成功',
+                    duration: 2000
+                  })
+                } else {
+                  that.$message({
+                    type: 'error',
+                    message: '请求出错',
+                    duration: 2000
+                  })
+                }
+              }).catch(function (error) {
+                console.log(error)
                 that.$message({
                   type: 'error',
-                  message: '请求出错',
+                  message: '网络繁忙',
                   duration: 2000
                 })
-              }
-            }).catch(function (error) {
-              console.log(error)
-              that.$message({
-                type: 'error',
-                message: '网络繁忙',
-                duration: 2000
               })
+            }
+          } else {
+            that.$message({
+              type: 'error',
+              message: '请求出错',
+              duration: 2000
             })
           }
-        } else {
+        }).catch(function (error) {
+          console.log(error)
           that.$message({
             type: 'error',
-            message: '请求出错',
+            message: '网络繁忙',
             duration: 2000
           })
-        }
-      }).catch(function (error) {
-        console.log(error)
-        that.$message({
-          type: 'error',
-          message: '网络繁忙',
-          duration: 2000
         })
-      })
-    },
-    clearText: function () {
-      this.currentActivity.name = ''
-      this.currentActivity.enroll_start_time = ''
-      this.currentActivity.enroll_end_time = ''
-      this.currentActivity.organizer = ''
-      this.currentActivity.start_time = ''
-      this.currentActivity.address = ''
-      this.currentActivity.arrangement = ''
-      this.currentActivity.price = ''
-      this.currentActivity.people_number_limit = ''
+      },
+      clearText () {
+        this.currentActivity.name = ''
+        this.currentActivity.enroll_start_time = ''
+        this.currentActivity.enroll_end_time = ''
+        this.currentActivity.organizer = ''
+        this.currentActivity.start_time = ''
+        this.currentActivity.address = ''
+        this.currentActivity.arrangement = ''
+        this.currentActivity.price = ''
+        this.currentActivity.people_number_limit = ''
+      }
     }
   }
-}
 </script>
 
 <style scoped>
