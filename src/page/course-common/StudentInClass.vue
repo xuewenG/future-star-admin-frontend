@@ -6,52 +6,61 @@
       <el-table
         :data="tableData"
         :highlight-current-row="true"
+        :default-sort = "{prop: 'name', order: 'descending'}"
         stripe>
         <el-table-column
           prop="name"
           align="center"
           label="姓名"
+          sortable
           :width="shortTextWidth">
         </el-table-column>
         <el-table-column
           prop="gender"
           align="center"
           label="性别"
+          sortable
           :width="shortTextWidth">
         </el-table-column>
         <el-table-column
           prop="birthday"
           align="center"
           label="出生日期"
+          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
           prop="phone_number"
           align="center"
           label="联系电话"
+          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
           prop="wx"
           align="center"
           label="微信号"
+          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
           prop="email"
           align="center"
           label="邮箱"
+          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
           prop="city"
           align="center"
           label="所在城市"
+          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
           align="center"
           label="操作"
+          sortable
           :width="operationWidth">
           <template slot-scope="scope">
             <el-button
