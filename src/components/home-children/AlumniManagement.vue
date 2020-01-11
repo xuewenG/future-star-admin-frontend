@@ -23,7 +23,7 @@
           </el-select>
         </el-col>
         <el-col :span="6">
-          <el-input class='search-input' v-model="keyword" @change="search()" placeholder="请输入搜索内容"/>
+          <el-input class='search-input' v-model="keyword" @change="search()" placeholder="请输入姓名"/>
         </el-col>
         <el-col :span="4" :offset="1">
           <el-button type="primary" icon="el-icon-search" @click="search()">搜索</el-button>
