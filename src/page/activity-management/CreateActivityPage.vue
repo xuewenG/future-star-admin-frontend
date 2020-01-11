@@ -232,7 +232,7 @@ export default {
                   duration: 2000
                 })
               }
-            }).catch(function (error) {
+            }).catch((error) => {
               console.log(error)
               that.$message({
                 type: 'error',
@@ -248,7 +248,7 @@ export default {
             duration: 2000
           })
         }
-      }).catch(function (error) {
+      }).catch((error) => {
         console.log(error)
         that.$message({
           type: 'error',

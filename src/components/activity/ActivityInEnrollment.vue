@@ -11,7 +11,7 @@
             {{ activity.name }}
           </el-col>
           <el-col :span="4">
-            <el-button type="primary" size="small" @click="beingReady(activity)" round>开始报名</el-button>
+            <el-button type="primary" size="small" @click="beingReady(activity)" round>结束报名</el-button>
           </el-col>
           <el-col :span="4">
             <el-button type="primary" size="small" @click="showDetails(activity)" round>活动详情</el-button>
@@ -70,7 +70,7 @@ export default {
         page_size: that.page_size,
         activity_state: 1
       }
-      that.axios.get('/activity/activity', { params }).then(function (response) {
+      that.axios.get('/activity/activity', { params }).then((response) => {
         if (response.data.code === '2000') {
           that.activities = response.data.data.results
         } else {
@@ -87,7 +87,7 @@ export default {
       let url = '/activity/activity/' + currentActivity.id
       that.axios.put(url, {
         state: 2
-      }).then(function (response) {
+      }).then((response) => {
         if (response.data.code === '2000') {
           currentActivity.state = 2
           that.change_state = true
@@ -105,7 +105,7 @@ export default {
             duration: 2000
           })
         }
-      }).catch(function (error) {
+      }).catch((error) => {
         console.log(error)
         that.$message({
           type: 'error',
