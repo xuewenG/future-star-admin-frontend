@@ -4,14 +4,11 @@
     <el-col :span="12" v-for="item in classes" v-show="item.state===4" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
-          <el-col :span="12">
+          <el-col :span="16">
             {{ item.name }}
           </el-col>
           <el-col :span="4">
             <el-button type="primary" size="small" @click="lookOverClassDetail(item)" round>班级详情</el-button>
-          </el-col>
-          <el-col :span="4">
-            <el-button type="primary" size="small" @click="editClassInfo(item)" round>编辑信息</el-button>
           </el-col>
           <el-col :span="4">
             <el-button type="primary" size="small" @click="lookOverStudentInClass(item)" round>班级学员</el-button>
@@ -50,14 +47,10 @@ export default {
   },
   data () {
     return {
-      count: 0
+      count: 1
     }
   },
   methods: {
-    editClassInfo: async function (currentClass) {
-      await this.$store.dispatch('changeCurrentClass', currentClass)
-      await this.$router.push('/edit-class-info')
-    },
     lookOverClassDetail: async function (currentClass) {
       await this.$store.dispatch('changeCurrentClass', currentClass)
       await this.$router.push('/class-detail')

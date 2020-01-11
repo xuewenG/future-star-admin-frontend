@@ -32,12 +32,7 @@ exports[`CourseManagement 快照测试 1`] = `
           </div>
         </div>
       </div>
-      <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-round">
-          <!---->
-          <!----><span>学期详情</span></button></div>
-      <div class="el-col el-col-2"><button type="button" class="el-button el-button--primary el-button--small is-round">
-          <!---->
-          <!----><span>编辑信息</span></button></div>
+      <!---->
       <div class="el-col el-col-2" style="display: none;"><button type="button" class="el-button el-button--danger el-button--small is-round">
           <!---->
           <!----><span>关闭学期</span></button></div>
@@ -60,17 +55,17 @@ exports[`CourseManagement 快照测试 1`] = `
       <div class="el-tabs__content">
         <div role="tabpanel" id="pane-first" aria-labelledby="tab-first" class="el-tab-pane">
           <div>
-            <h4>暂无待开课班级</h4>
+            <!---->
           </div>
         </div>
         <div role="tabpanel" aria-hidden="true" id="pane-second" aria-labelledby="tab-second" class="el-tab-pane" style="display: none;">
           <div>
-            <h4>暂无进行中班级</h4>
+            <!---->
           </div>
         </div>
         <div role="tabpanel" aria-hidden="true" id="pane-third" aria-labelledby="tab-third" class="el-tab-pane" style="display: none;">
           <div>
-            <h4>暂无已结束班级</h4>
+            <!---->
           </div>
         </div>
       </div>

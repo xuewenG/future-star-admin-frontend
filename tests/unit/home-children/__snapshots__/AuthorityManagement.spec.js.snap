@@ -14,7 +14,7 @@ exports[`AuthorityManagement 快照测试 1`] = `
   </header>
   <div class="el-row">
     <main class="el-main">
-      <div class="el-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-transition" id="table-center">
+      <div class="el-table el-table--fit el-table--striped el-table--scrollable-x" id="table-center">
         <div class="hidden-columns">
           <div></div>
           <div></div>
@@ -74,61 +74,10 @@ exports[`AuthorityManagement 快照测试 1`] = `
               <col name="el-table_1_column_7" width="142">
             </colgroup>
             <tbody>
-              <tr class="el-table__row">
-                <td rowspan="1" colspan="1" class="el-table_1_column_1   is-hidden">
-                  <div class="cell"></div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
-                  <div class="cell"></div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
-                  <div class="cell">
-                    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px;"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center ">
-                  <div class="cell">
-                    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px;"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center ">
-                  <div class="cell">
-                    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px;"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center ">
-                  <div class="cell">
-                    <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                      <!----><span class="el-switch__core" style="width: 40px;"></span>
-                      <!---->
-                    </div>
-                  </div>
-                </td>
-                <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center ">
-                  <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                      <!---->
-                      <!----><span>
-              保存
-            </span></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                      <!---->
-                      <!----><span>
-              删除
-            </span></button></div>
-                </td>
-              </tr>
               <!---->
             </tbody>
           </table>
-          <!---->
+          <div class="el-table__empty-block" style="height: 100%; width: 1232px;"><span class="el-table__empty-text">暂无数据</span></div>
           <!---->
         </div>
         <!---->
@@ -183,57 +132,6 @@ exports[`AuthorityManagement 快照测试 1`] = `
                 <col name="el-table_1_column_7" width="142">
               </colgroup>
               <tbody>
-                <tr class="el-table__row">
-                  <td rowspan="1" colspan="1" class="el-table_1_column_1  ">
-                    <div class="cell"></div>
-                  </td>
-                  <td rowspan="1" colspan="1" class="el-table_1_column_2   is-hidden">
-                    <div class="cell"></div>
-                  </td>
-                  <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center  is-hidden">
-                    <div class="cell">
-                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                        <!----><span class="el-switch__core" style="width: 40px;"></span>
-                        <!---->
-                      </div>
-                    </div>
-                  </td>
-                  <td rowspan="1" colspan="1" class="el-table_1_column_4 is-center  is-hidden">
-                    <div class="cell">
-                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                        <!----><span class="el-switch__core" style="width: 40px;"></span>
-                        <!---->
-                      </div>
-                    </div>
-                  </td>
-                  <td rowspan="1" colspan="1" class="el-table_1_column_5 is-center  is-hidden">
-                    <div class="cell">
-                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                        <!----><span class="el-switch__core" style="width: 40px;"></span>
-                        <!---->
-                      </div>
-                    </div>
-                  </td>
-                  <td rowspan="1" colspan="1" class="el-table_1_column_6 is-center  is-hidden">
-                    <div class="cell">
-                      <div role="switch" class="el-switch"><input type="checkbox" name="" true-value="true" class="el-switch__input">
-                        <!----><span class="el-switch__core" style="width: 40px;"></span>
-                        <!---->
-                      </div>
-                    </div>
-                  </td>
-                  <td rowspan="1" colspan="1" class="el-table_1_column_7 is-center  is-hidden">
-                    <div class="cell"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-                        <!---->
-                        <!----><span>
-              保存
-            </span></button> <button type="button" class="el-button el-button--danger el-button--small is-circle">
-                        <!---->
-                        <!----><span>
-              删除
-            </span></button></div>
-                  </td>
-                </tr>
                 <!---->
               </tbody>
             </table>

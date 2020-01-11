@@ -91,7 +91,7 @@
     </el-main>
     <el-footer>
       <el-row type="flex" justify="center">
-        <el-button type="primary" size="small" @click="insertInfoArea()" icon="el-icon-plus" circle></el-button>
+        <el-button type="primary" size="small" @click="insertInfoArea()" round>继续添加</el-button>
       </el-row>
       <el-divider></el-divider>
       <el-row type="flex" justify="center">

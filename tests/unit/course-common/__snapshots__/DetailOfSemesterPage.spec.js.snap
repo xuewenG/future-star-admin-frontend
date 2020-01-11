@@ -12,19 +12,19 @@ exports[`DetailOfSemesterPage 快照测试 1`] = `
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-card activity-card is-always-shadow">
+    <div class="el-card activity-card is-never-shadow">
       <!---->
       <div class="el-card__body">
         <div class="el-row">
-          <div class="el-col el-col-23">
-            学期主题：
+          <div class="el-col el-col-6">
+            <h4>学期主题：</h4> <span class="text"></span>
           </div>
           <div class="el-col el-col-1"><button type="button" class="el-button btn el-button--primary el-button--mini is-circle">
               <!----><i class="el-icon-edit-outline"></i>
               <!----></button></div>
         </div>
         <div class="el-row">
-          学期介绍：
+          <h4>学期介绍：</h4> <span class="text"></span>
         </div>
       </div>
     </div>

@@ -13,16 +13,17 @@ exports[`DetailOfClassPage 快照测试 1`] = `
       <!---->
     </div>
     <div class="el-card activity-card is-never-shadow">
-      <!---->
-      <div class="el-card__body">
+      <div class="el-card__header">
         <div class="el-row">
-          <div class="el-col el-col-23">
+          <div class="el-col el-col-15">
             班级名称：
           </div>
-          <div class="el-col el-col-1"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+          <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
               <!----><i class="el-icon-edit-outline"></i>
               <!----></button></div>
         </div>
+      </div>
+      <div class="el-card__body">
         <div class="info el-row">
           起止时间： ----
         </div>
@@ -39,15 +40,12 @@ exports[`DetailOfClassPage 快照测试 1`] = `
           <!---->
           <div class="el-card__body">
             <div class="el-row">
-              <div class="el-col el-col-12">
+              <div class="el-col el-col-15">
                 课程名：
               </div>
               <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
                   <!---->
                   <!----><span>课程详情</span></button></div>
-              <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
-                  <!---->
-                  <!----><span>编辑信息</span></button></div>
               <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
                   <!---->
                   <!----><span>课程资源</span></button></div>

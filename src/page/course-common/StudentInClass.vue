@@ -40,14 +40,12 @@
           prop="wx"
           align="center"
           label="微信号"
-          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
           prop="email"
           align="center"
           label="邮箱"
-          sortable
           :width="longTextWidth">
         </el-table-column>
         <el-table-column
@@ -59,16 +57,15 @@
         </el-table-column>
         <el-table-column
           align="center"
-          label="操作"
-          sortable
+          label="详情"
           :width="operationWidth">
           <template slot-scope="scope">
             <el-button
               type="primary"
-              size="small"
-              icon="el-icon-more"
+              size="mini"
               @click="showAllInformation(scope.row)"
-              circle>
+              round>
+              查看
             </el-button>
           </template>
         </el-table-column>

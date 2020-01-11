@@ -130,17 +130,6 @@ export default {
       currentPage: 1,
       total: 0,
       tableData: [
-        {
-          name: '',
-          account: '',
-          identity: '',
-          privilege: {
-            enrollment: 0,
-            semester: 0,
-            activity: 0,
-            student: 0
-          }
-        }
       ]
     }
   },

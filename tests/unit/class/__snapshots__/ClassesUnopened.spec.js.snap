@@ -2,6 +2,6 @@
 
 exports[`ClassesUnopened 快照测试 1`] = `
 <div>
-  <h4>暂无待招生班级</h4>
+  <!---->
 </div>
 `;

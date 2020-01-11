@@ -7,7 +7,7 @@ exports[`EnrollmentAuditPage 快照测试 1`] = `
       <div class="el-page-header__left"><i class="el-icon-back"></i>
         <div class="el-page-header__title">返回</div>
       </div>
-      <div class="el-page-header__content">报名审核</div>
+      <div class="el-page-header__content">招生审核</div>
     </div>
     <div class="el-divider el-divider--horizontal">
       <!---->
@@ -24,9 +24,11 @@ exports[`EnrollmentAuditPage 快照测试 1`] = `
         <div></div>
         <div></div>
         <div></div>
+        <div></div>
+        <div></div>
       </div>
       <div class="el-table__header-wrapper">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1410px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1440px;">
           <colgroup>
             <col name="el-table_1_column_1" width="100">
             <col name="el-table_1_column_2" width="100">
@@ -37,7 +39,9 @@ exports[`EnrollmentAuditPage 快照测试 1`] = `
             <col name="el-table_1_column_7" width="160">
             <col name="el-table_1_column_8" width="100">
             <col name="el-table_1_column_9" width="100">
-            <col name="el-table_1_column_10" width="210">
+            <col name="el-table_1_column_10" width="80">
+            <col name="el-table_1_column_11" width="80">
+            <col name="el-table_1_column_12" width="80">
           </colgroup>
           <thead class="">
             <tr class="">
@@ -68,15 +72,21 @@ exports[`EnrollmentAuditPage 快照测试 1`] = `
               <th colspan="1" rowspan="1" class="el-table_1_column_9  is-center   is-leaf is-sortable">
                 <div class="cell">状态<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
-              <th colspan="1" rowspan="1" class="el-table_1_column_10  is-center   is-leaf is-sortable">
-                <div class="cell">操作<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_10  is-center   is-leaf">
+                <div class="cell">详情</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_11  is-center   is-leaf">
+                <div class="cell">评价</div>
+              </th>
+              <th colspan="1" rowspan="1" class="el-table_1_column_12  is-center   is-leaf">
+                <div class="cell">审核</div>
               </th>
             </tr>
           </thead>
         </table>
       </div>
       <div class="el-table__body-wrapper is-scrolling-left">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1410px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1440px;">
           <colgroup>
             <col name="el-table_1_column_1" width="100">
             <col name="el-table_1_column_2" width="100">
@@ -87,13 +97,15 @@ exports[`EnrollmentAuditPage 快照测试 1`] = `
             <col name="el-table_1_column_7" width="160">
             <col name="el-table_1_column_8" width="100">
             <col name="el-table_1_column_9" width="100">
-            <col name="el-table_1_column_10" width="210">
+            <col name="el-table_1_column_10" width="80">
+            <col name="el-table_1_column_11" width="80">
+            <col name="el-table_1_column_12" width="80">
           </colgroup>
           <tbody>
             <!---->
           </tbody>
         </table>
-        <div class="el-table__empty-block" style="height: 100%; width: 1410px;"><span class="el-table__empty-text">暂无数据</span></div>
+        <div class="el-table__empty-block" style="height: 100%; width: 1440px;"><span class="el-table__empty-text">暂无数据</span></div>
         <!---->
       </div>
       <!---->

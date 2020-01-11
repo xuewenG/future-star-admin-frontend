@@ -64,7 +64,7 @@ exports[`LoginPage 快照测试 1`] = `
   <footer class="el-footer" style="height: 60px;">
     <div class="el-row is-justify-center el-row--flex">
       <div class="hint-footer el-col el-col-4">
-        @copyright coo studio 2019
+        @copyright coo studio 2019--2020
       </div>
     </div>
   </footer>

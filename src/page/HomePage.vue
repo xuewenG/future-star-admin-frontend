@@ -36,27 +36,27 @@
         <el-menu :background-color="backgroundColor" :active-text-color="activeTextColor"
                  :text-color="textColor" align="middle" :default-active="defaultActive"
                  @select="changeDefaultActive" router>
-              <el-menu-item index="1" :disabled="user.privilege.enrollment!==1"
+              <el-menu-item index="1" v-show="user.privilege.enrollment===1"
                 route="/home/enrollment">
                 <li class="el-icon-coordinate"></li>
                 招生管理
               </el-menu-item>
-              <el-menu-item index="2" :disabled="user.privilege.semester!==1"
+              <el-menu-item index="2" v-show="user.privilege.semester===1"
                 route="/home/course">
                 <li class="el-icon-document"></li>
                 班级管理
               </el-menu-item>
-              <el-menu-item index="3" :disabled="user.privilege.activity!==1"
+              <el-menu-item index="3" v-show="user.privilege.activity===1"
                 route="/home/activity">
                 <li class="el-icon-sunny"></li>
                 活动管理
               </el-menu-item>
-              <el-menu-item index="4" :disabled="user.privilege.student!==1"
+              <el-menu-item index="4" v-show="user.privilege.student===1"
                 route="/home/alumni">
                 <li class="el-icon-user"></li>
                 校友管理
               </el-menu-item>
-              <el-menu-item index="5" :disabled="user.privilege.super!==1"
+              <el-menu-item index="5" v-show="user.privilege.super===1"
                 route="/home/authority">
                 <li class="el-icon-key"></li>
                 权限管理
@@ -99,7 +99,7 @@ export default {
     let that = this
     if (JSON.parse(sessionStorage.getItem('user') !== null)) {
       let user = JSON.parse(sessionStorage.getItem('user'))
-      this.user = user
+      that.user = user
       that.name = user.name
       that.account = user.account
       if (user.privilege.super === 1) {

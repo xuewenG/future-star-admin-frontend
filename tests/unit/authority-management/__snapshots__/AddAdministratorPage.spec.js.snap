@@ -303,9 +303,9 @@ exports[`AddAdministratorPage 快照测试 1`] = `
     </div>
   </main>
   <footer class="el-footer" style="height: 60px;">
-    <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-circle">
-        <!----><i class="el-icon-plus"></i>
-        <!----></button></div>
+    <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-round">
+        <!---->
+        <!----><span>继续添加</span></button></div>
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>

@@ -36,7 +36,7 @@
     <el-footer>
       <el-row type="flex" justify="center">
         <el-col :span="4" class="hint-footer">
-          @copyright coo studio 2019
+          @copyright coo studio 2019--2020
         </el-col>
       </el-row>
     </el-footer>

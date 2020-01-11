@@ -1,12 +1,12 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="课程信息"></el-page-header>
+      <el-page-header @back="goBack" content="课程信息"></el-page-header>
       <el-divider/>
       <el-row type="flex" justify="center">
         <el-card shadow="never">
           <el-row slot="header">
-            <el-col :span="23">
+            <el-col :span="8">
               课程名称： {{ course.name }}
             </el-col>
             <el-col :span="1">

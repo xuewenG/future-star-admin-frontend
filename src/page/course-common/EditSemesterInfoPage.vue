@@ -22,11 +22,11 @@
             </el-input>
           </el-form-item>
           <el-form-item>
-            <el-row type="flex" justify="center" class="operation-button">
-              <el-col :span="8">
+            <el-row type="flex" justify="space-around">
+              <el-col :span="3">
                 <el-button type="primary" @click="editSemesterInfo">保存</el-button>
               </el-col>
-              <el-col :span="8">
+              <el-col :span="3">
                 <el-button @click="clearText">清空</el-button>
               </el-col>
             </el-row>
