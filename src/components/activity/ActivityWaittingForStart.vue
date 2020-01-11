@@ -10,14 +10,11 @@
           <el-col :span="6">
             {{ activity.name }}
           </el-col>
-          <el-col :span="4">
+          <el-col :span="4" :offset="4">
             <el-button type="primary" size="small" @click="beingUnderway(activity)" round>开始举行</el-button>
           </el-col>
           <el-col :span="4">
             <el-button type="primary" size="small" @click="showDetails(activity)" round>活动详情</el-button>
-          </el-col>
-          <el-col :span="4">
-            <el-button type="primary" size="small" @click="editDetails(activity)" round>编辑详情</el-button>
           </el-col>
           <el-col :span="4">
             <el-button type="primary" size="small" @click="showParticipants(activity)" round>活动成员</el-button>
