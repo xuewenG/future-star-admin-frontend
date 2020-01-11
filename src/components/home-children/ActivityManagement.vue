@@ -6,7 +6,7 @@
           <h3>已有活动列表</h3>
         </el-col>
         <el-col :span="1">
-          <el-button type="primary" size="mini" class="el-icon-plus" @click="createActivity()" circle></el-button>
+          <el-button type="primary" size="mini" class="el-icon-plus" @click="createActivity()" round>新建活动</el-button>
         </el-col>
       </el-row>
     </el-header>
