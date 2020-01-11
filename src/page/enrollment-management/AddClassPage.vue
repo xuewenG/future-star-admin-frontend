@@ -89,6 +89,7 @@ export default {
         current_people_number: 0
       }).then(function (response) {
         if (response.data.code === '2000') {
+          console.log(response)
           that.$message({
             type: 'success',
             message: '创建成功',
@@ -97,7 +98,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '网络繁忙，请稍后重试',
+            message: '输入信息有误',
             duration: 2000
           })
         }
@@ -105,7 +106,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络繁忙，请稍后重试',
+          message: '服务器繁忙，请稍后重试',
           duration: 2000
         })
       })

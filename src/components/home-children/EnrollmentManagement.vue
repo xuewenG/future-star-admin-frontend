@@ -40,16 +40,6 @@
           <enrolling-classes :classes="classes"></enrolling-classes>
         </el-tab-pane>
       </el-tabs>
-      <el-divider></el-divider>
-      <el-row type="flex" justify="center">
-        <el-pagination
-          @current-change="CurrentPageChange"
-          :current-page.sync="currentPage"
-          :page-size="pageSize"
-          layout="prev, pager, next, jumper"
-          :total="total">
-        </el-pagination>
-      </el-row>
     </el-main>
   </el-container>
 </template>
@@ -67,8 +57,6 @@ export default {
     return {
       activeName: 'first',
       semester: '',
-      currentPage: 1,
-      pageSize: 10,
       total: 0,
       createNewSemester: false,
       classes: []
@@ -94,10 +82,11 @@ export default {
           that.createNewSemester = true
         }
         that.getClasses()
+        that.classes = that.$store.getters.getClasses
       } else {
         that.$message({
           type: 'error',
-          message: '网络繁忙，请稍后重试',
+          message: '服务器繁忙，请稍后重试',
           duration: 2000
         })
       }
@@ -105,7 +94,7 @@ export default {
       console.log(error)
       that.$message({
         type: 'error',
-        message: '网络繁忙，请稍后重试',
+        message: '服务器繁忙，请稍后重试',
         duration: 2000
       })
     })
@@ -137,7 +126,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络繁忙，请稍后重试',
+          message: '服务器繁忙，请稍后重试',
           duration: 2000
         })
       })
@@ -153,18 +142,13 @@ export default {
     changeActiveName: async function (tab) {
       await this.$store.dispatch('changeActiveNameOfEnrollment', tab.name)
     },
-    CurrentPageChange: function (currentPage) {
-      let that = this
-      that.currentPage = currentPage
-      that.getClasses()
-    },
     getClasses: function () {
       let that = this
       that.axios.get('clazz/clazz', {
         params: {
           semester_id: that.semester.id,
-          page: that.currentPage,
-          page_size: that.pageSize
+          page: 1,
+          page_size: 999999
         }
       }).then(async function (response) {
         if (response.data.code === '2000') {
@@ -174,7 +158,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '网络繁忙，请稍后重试',
+            message: '服务器繁忙，请稍后重试',
             duration: 2000
           })
         }
@@ -182,7 +166,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络繁忙，请稍后重试',
+          message: '服务器繁忙，请稍后重试',
           duration: 2000
         })
       })
