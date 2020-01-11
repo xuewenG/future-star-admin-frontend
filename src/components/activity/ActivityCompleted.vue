@@ -3,17 +3,17 @@
     <el-col :span="12" v-for="activity in activities" :key="activity.id">
       <h4 v-if="activities.length === 0">暂无已结束的活动</h4>
       <el-card shadow="never">
-        <el-row slot="header">
-          <el-col :span="2">
+        <el-row slot="header" type="flex" justify="end">
+          <el-col :span="2" :pull="8">
             <el-avatar :src="activity.icon"></el-avatar>
           </el-col>
-          <el-col  :span="6">
+          <el-col  :span="5" :pull="7">
             {{ activity.name }}
           </el-col>
-          <el-col :span="4" :push="4">
+          <el-col :span="4">
             <el-button type="primary" size="small" @click="showDetails(activity)" round>活动详情</el-button>
           </el-col>
-          <el-col :span="4" :push="4">
+          <el-col :span="4">
             <el-button type="primary" size="small" @click="showParticipants(activity)" round>活动成员</el-button>
           </el-col>
         </el-row>
