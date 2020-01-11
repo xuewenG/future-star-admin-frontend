@@ -17,9 +17,6 @@
             <el-button type="primary" size="small" @click="showDetails(activity)" round>活动详情</el-button>
           </el-col>
           <el-col :span="4">
-            <el-button type="primary" size="small" @click="editDetails(activity)" round>编辑详情</el-button>
-          </el-col>
-          <el-col :span="4">
             <el-button type="primary" size="small" @click="showParticipants(activity)" round>活动成员</el-button>
           </el-col>
         </el-row>
@@ -94,7 +91,7 @@ export default {
           that.$store.dispatch('changeActivities', that.activities)
           that.$message({
             type: 'success',
-            message: '开启活动成功',
+            message: '结束活动成功',
             duration: 2000
           })
           that.$forceUpdate()

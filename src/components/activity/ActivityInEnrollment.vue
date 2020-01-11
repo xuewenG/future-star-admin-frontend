@@ -10,14 +10,11 @@
           <el-col :span="6">
             {{ activity.name }}
           </el-col>
-          <el-col :span="4">
+          <el-col :span="4" :offset="4">
             <el-button type="primary" size="small" @click="beingReady(activity)" round>结束报名</el-button>
           </el-col>
           <el-col :span="4">
             <el-button type="primary" size="small" @click="showDetails(activity)" round>活动详情</el-button>
-          </el-col>
-          <el-col :span="4">
-            <el-button type="primary" size="small" @click="editDetails(activity)" round>编辑详情</el-button>
           </el-col>
           <el-col :span="4">
             <el-button type="primary" size="small" @click="showParticipants(activity)" round>活动成员</el-button>
@@ -83,23 +80,22 @@ export default {
       })
     },
     beingReady (currentActivity) {
-      let that = this
       let url = '/activity/activity/' + currentActivity.id
-      that.axios.put(url, {
+      this.axios.put(url, {
         state: 2
       }).then((response) => {
         if (response.data.code === '2000') {
           currentActivity.state = 2
-          that.change_state = true
-          that.$store.dispatch('changeActivities', that.activities)
-          that.$message({
+          this.change_state = true
+          this.$store.dispatch('changeActivities', this.activities)
+          this.$message({
             type: 'success',
-            message: '开启活动成功',
+            message: '结束报名成功成功',
             duration: 2000
           })
-          that.$forceUpdate()
+          this.$forceUpdate()
         } else {
-          that.$message({
+          this.$message({
             type: 'error',
             message: '网络繁忙，请稍后重试',
             duration: 2000
@@ -107,7 +103,7 @@ export default {
         }
       }).catch((error) => {
         console.log(error)
-        that.$message({
+        this.$message({
           type: 'error',
           message: '网络繁忙，请稍后重试',
           duration: 2000
