@@ -10,10 +10,10 @@
           <el-col  :span="6">
             {{ activity.name }}
           </el-col>
-          <el-col :span="4" :push="8">
+          <el-col :span="4" :push="4">
             <el-button type="primary" size="small" @click="showDetails(activity)" round>活动详情</el-button>
           </el-col>
-          <el-col :span="4">
+          <el-col :span="4" :push="4">
             <el-button type="primary" size="small" @click="showParticipants(activity)" round>活动成员</el-button>
           </el-col>
         </el-row>
@@ -64,13 +64,13 @@ export default {
         page_size: that.page_size,
         activity_state: 4
       }
-      that.axios.get('/activity/activity', { params }).then(function (response) {
+      that.axios.get('/activity/activity', { params }).then((response) => {
         if (response.data.code === '2000') {
           that.activities = response.data.data.results
         } else {
           that.$message({
             type: 'error',
-            message: '请求出错',
+            message: '网络繁忙，请稍后重试',
             duration: 2000
           })
         }

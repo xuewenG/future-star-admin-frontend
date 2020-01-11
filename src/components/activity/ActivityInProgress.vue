@@ -70,7 +70,7 @@ export default {
         page_size: that.page_size,
         activity_state: 3
       }
-      that.axios.get('/activity/activity', { params }).then(function (response) {
+      that.axios.get('/activity/activity', { params }).then((response) => {
         if (response.data.code === '2000') {
           that.activities = response.data.data.results
         } else {
@@ -87,7 +87,7 @@ export default {
       let url = '/activity/activity/' + currentActivity.id
       that.axios.put(url, {
         state: 4
-      }).then(function (response) {
+      }).then((response) => {
         if (response.data.code === '2000') {
           currentActivity.state = 4
           that.change_state = true
@@ -105,7 +105,7 @@ export default {
             duration: 2000
           })
         }
-      }).catch(function (error) {
+      }).catch((error) => {
         console.log(error)
         that.$message({
           type: 'error',

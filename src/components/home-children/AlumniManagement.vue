@@ -254,7 +254,7 @@ export default {
         semester_id: that.semester,
         clazz_id: that.clazz
       }
-      that.axios.get('/student/student', { params }).then(function (response) {
+      that.axios.get('/student/student', { params }).then((response) => {
         that.tableData = response.data.data.results
         for (let i = 0; i < that.tableData.length; i++) {
           if (that.tableData[i].gender === 0) {
@@ -275,7 +275,7 @@ export default {
       let that = this
       let url = '/student/student/' + student.id
       that.axios.delete(url
-      ).then(function (response) {
+      ).then((response) => {
         if (response.data.code === '2000') {
           that.tableData.splice(index, 1)
           that.$message({
@@ -290,7 +290,7 @@ export default {
             duration: 2000
           })
         }
-      }).catch(function (error) {
+      }).catch((error) => {
         console.log(error)
         that.$message({
           type: 'error',

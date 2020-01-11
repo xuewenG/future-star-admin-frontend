@@ -265,7 +265,7 @@ export default {
                 console.log(error)
                 this.$message({
                   type: 'error',
-                  message: '网络繁忙',
+                  message: '网络繁忙，请稍后重试',
                   duration: 2000
                 })
               })
@@ -274,7 +274,7 @@ export default {
         } else {
           this.$message({
             type: 'error',
-            message: '请求出错',
+            message: '网络繁忙，请稍后重试',
             duration: 2000
           })
         }

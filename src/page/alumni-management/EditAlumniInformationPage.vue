@@ -526,7 +526,7 @@ export default {
         previous_position: alumni.previous_position
       }
       let url = '/student/student/' + alumni.id
-      that.axios.put(url, params).then(function (response) {
+      that.axios.put(url, params).then((response) => {
         if (response.data.code === '2000') {
           that.$store.dispatch('changeInfoOfAnAlumni', that.student)
           that.change_state = 1
@@ -538,15 +538,15 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '请求出错',
+            message: '网络繁忙，请稍后重试',
             duration: 2000
           })
         }
-      }).catch(function (error) {
+      }).catch((error) => {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络错误',
+          message: '网络繁忙，请稍后重试',
           duration: 2000
         })
       })
