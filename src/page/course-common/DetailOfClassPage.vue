@@ -4,11 +4,11 @@
       <el-page-header @back="goBack()" content="班级详情"></el-page-header>
       <el-divider/>
       <el-card class="activity-card" shadow="never">
-        <el-row>
-          <el-col :span="23">
+        <el-row slot="header">
+          <el-col :span="15">
             班级名称： {{ currentClass.name }}
           </el-col>
-          <el-col :span="1">
+          <el-col :span="3">
             <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
           </el-col>
         </el-row>
@@ -24,14 +24,11 @@
         <el-divider content-position="center">课程详情</el-divider>
         <el-card v-for="course in courses" :key="course.id" shadow="never">
           <el-row>
-            <el-col :span="12">
+            <el-col :span="15">
               课程名：{{ course.name }}
             </el-col>
             <el-col :span="3">
               <el-button type="primary" size="small" @click="lookOverCourseDetail(course)" round>课程详情</el-button>
-            </el-col>
-            <el-col :span="3">
-              <el-button type="primary" size="small" @click="editCourseInfo(course)" round>编辑信息</el-button>
             </el-col>
             <el-col :span="3">
               <el-button type="primary" size="small" @click="lookOverSubCourses(course)" round>课程资源</el-button>
@@ -121,11 +118,6 @@ export default {
     lookOverTeachers: async function (course) {
       await this.$store.dispatch('changeCurrentCourse', course)
       await this.$router.push('/teacher-detail')
-    },
-    editCourseInfo: async function (course) {
-      await this.$store.dispatch('changeCurrentClass', this.currentClass)
-      await this.$store.dispatch('changeCurrentCourse', course)
-      await this.$router.push('/edit-course-info')
     },
     editClassInfo: async function () {
       await this.$store.dispatch('changeCurrentClass', this.currentClass)

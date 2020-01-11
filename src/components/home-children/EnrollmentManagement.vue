@@ -24,9 +24,6 @@
           <el-button type="primary" size="small" @click="lookOverSemesterDetail" round>学期详情</el-button>
         </el-col>
         <el-col :span="2">
-          <el-button type="primary" size="small" @click="editSemesterInfo" round>编辑信息</el-button>
-        </el-col>
-        <el-col :span="2">
           <el-button type="primary" size="small" @click="addClass" round>添加班级</el-button>
         </el-col>
         <el-col :span="2">
@@ -148,10 +145,6 @@ export default {
     addClass: async function () {
       await this.$store.dispatch('changeCurrentSemester', this.semester)
       await this.$router.push('/add-class')
-    },
-    editSemesterInfo: async function () {
-      await this.$store.dispatch('changeCurrentSemester', this.semester)
-      await this.$router.push('/edit-semester-info')
     },
     lookOverSemesterDetail: async function () {
       await this.$store.dispatch('changeCurrentSemester', this.semester)

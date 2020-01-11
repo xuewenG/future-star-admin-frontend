@@ -3,17 +3,19 @@
     <el-main>
       <el-page-header @back="goBack()" content="学期信息"></el-page-header>
       <el-divider/>
-      <el-card class="activity-card" shadow="always">
+      <el-card class="activity-card" shadow="never">
        <el-row>
-         <el-col :span="23">
-           学期主题：{{ semester.subject }}
+         <el-col :span="6">
+           <h4>学期主题：</h4>
+           <span class="text">{{ semester.subject }}</span>
          </el-col>
          <el-col :span="1">
            <el-button type="primary" size="mini" class="btn" icon="el-icon-edit-outline" @click="editSemesterInfo" circle></el-button>
          </el-col>
        </el-row>
         <el-row>
-          学期介绍： {{ semester.introduction }}
+          <h4>学期介绍：</h4>
+          <span class="text">{{ semester.introduction }}</span>
         </el-row>
       </el-card>
     </el-main>
@@ -47,11 +49,21 @@ export default {
 
 <style scoped>
   .activity-card {
-    width: 70%;
+    width: 62%;
+    height: 100%;
     margin: auto;
   }
 
-  .activity-table {
-    margin: 40px 20px;
+  .el-row {
+    margin-top: 10px;
+  }
+
+  h4 {
+    margin-bottom: 8px;
+  }
+
+  .text {
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 </style>

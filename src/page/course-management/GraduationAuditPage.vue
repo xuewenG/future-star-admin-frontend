@@ -66,33 +66,47 @@
         </el-table-column>
         <el-table-column
           align="center"
-          label="操作"
-          sortable
+          label="详情"
           :width="operationWidth">
           <template slot-scope="scope">
             <el-button
-              type="success"
-              size="small"
-              icon="el-icon-check"
-              @click="pass(scope.row, scope.$index)"
-              :disabled="scope.row.state!=='在校'"
-              circle>
-            </el-button>
-            <el-button
               type="primary"
-              size="small"
-              icon="el-icon-more"
+              size="mini"
               @click="showAllInformation(scope.row)"
-              circle>
+              round>
+              查看
             </el-button>
-            <el-button
-              type="danger"
-              size="small"
-              icon="el-icon-close"
-              @click="refuse(scope.row, scope.$index)"
-              :disabled="scope.row.state!=='在校'"
-              circle>
-            </el-button>
+          </template>
+        </el-table-column>
+        <el-table-column
+          align="center"
+          label="审核"
+          :width="operationWidth">
+          <template slot-scope="scope">
+            <el-popover
+              :disabled="scope.row.state!=='待审核'"
+              trigger="click">
+              <el-button
+                type="success"
+                size="mini"
+                @click="pass(scope.row, scope.$index)">
+                通过
+              </el-button>
+              <el-button
+                type="danger"
+                size="mini"
+                @click="pass(scope.row, scope.$index)">
+                拒绝
+              </el-button>
+              <el-button
+                type="primary"
+                size="mini"
+                slot="reference"
+                :disabled="scope.row.state!=='待审核'"
+                round>
+                审核
+              </el-button>
+            </el-popover>
           </template>
         </el-table-column>
       </el-table>
@@ -118,7 +132,7 @@ export default {
     return {
       shortTextWidth: 100,
       longTextWidth: 160,
-      operationWidth: 210,
+      operationWidth: 80,
       currentClass: '',
       pageSize: 10,
       currentPage: 1,
@@ -253,12 +267,6 @@ export default {
 </script>
 
 <style scoped>
-  .search-input {
-    display: inline-block;
-    width: 350px;
-    margin-right: 20px;
-  }
-
   .el-main {
     margin: 0 auto;
   }

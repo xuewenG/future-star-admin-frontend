@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h4 v-if="count ===0 ">暂无待招生班级</h4>
+    <h4 v-if="count === 0">暂无待招生班级</h4>
     <el-col :span="12" v-for="item in classes" v-show="item.state===0" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
-          <el-col :span="12">
+          <el-col :span="16">
             {{ item.name }}
           </el-col>
           <el-col :span="4">
@@ -12,9 +12,6 @@
           </el-col>
           <el-col :span="4">
             <el-button type="primary" size="small" @click="lookOverClassDetail(item)" round>班级详情</el-button>
-          </el-col>
-          <el-col :span="4">
-            <el-button type="primary" size="small" @click="editClassInfo(item)" round>编辑信息</el-button>
           </el-col>
         </el-row>
         <el-row class="info">
@@ -47,7 +44,7 @@ export default {
   },
   data () {
     return {
-      count: 0
+      count: 1
     }
   },
   props: {
@@ -84,10 +81,6 @@ export default {
           duration: 2000
         })
       })
-    },
-    editClassInfo: async function (currentClass) {
-      await this.$store.dispatch('changeCurrentClass', currentClass)
-      await this.$router.push('/edit-class-info')
     },
     lookOverClassDetail: async function (currentClass) {
       await this.$store.dispatch('changeCurrentClass', currentClass)

@@ -2,6 +2,6 @@
 
 exports[`ClassesEnded 快照测试 1`] = `
 <div>
-  <h4>暂无已结束班级</h4>
+  <!---->
 </div>
 `;

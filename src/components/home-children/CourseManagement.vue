@@ -27,11 +27,8 @@
             </el-option>
           </el-select>
         </el-col>
-        <el-col :span="2">
+        <el-col v-if="semester!==''" :span="2">
           <el-button type="primary" size="small" @click="lookOverSemesterDetail" round>学期详情</el-button>
-        </el-col>
-        <el-col :span="2">
-          <el-button type="primary" size="small" @click="editSemesterInfo" round>编辑信息</el-button>
         </el-col>
         <el-col v-show="semester.state===0" :span="2">
           <el-button type="danger" size="small" @click="closeSemester" round>关闭学期</el-button>
@@ -80,7 +77,7 @@ export default {
       semester_id: '',
       semesters: [],
       activeName: 'first',
-      semester: {},
+      semester: '',
       currentPage: 1,
       pageSize: 10,
       total: 0,
@@ -99,9 +96,6 @@ export default {
     }).then(async function (response) {
       if (response.data.code === '2000') {
         let semesters = response.data.data.results
-        if (semesters.length === 0) {
-          that.createNewSemester = true
-        }
         await that.$store.dispatch('changeSemesters', semesters)
         that.semester = semesters[0]
         if (that.$store.getters.getActiveSemesterOfCourse === '') {
@@ -111,6 +105,9 @@ export default {
         }
         that.semesters = semesters
         that.getClasses()
+        if (semesters.length === 0) {
+          that.createNewSemester = true
+        }
       } else {
         that.$message({
           type: 'error',
@@ -172,11 +169,6 @@ export default {
           this.semester = semesters[i]
         }
       }
-    },
-    editSemesterInfo: async function () {
-      this.changeCurrentSemester()
-      await this.$store.dispatch('changeCurrentSemester', this.semester)
-      await this.$router.push('/edit-semester-info')
     },
     lookOverSemesterDetail: async function () {
       this.changeCurrentSemester()
