@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClassesEnded 快照测试 1`] = `
-<div>
-  <!---->
-</div>
-`;
+exports[`ClassesEnded 快照测试 1`] = `<div></div>`;
