@@ -7,7 +7,6 @@
         class="activity-card"
         shadow="never">
         <div class="description">- 活动信息 -</div>
-        <el-image :src="src"></el-image>
         <el-form
           class="activity-table"
           label-width="150px">
@@ -15,7 +14,7 @@
             <el-divider></el-divider>
           </div>
           <el-row class="top-distance">
-            <el-col :span="8" :offset="offset">
+            <el-col :span="10" :offset="offset">
               <i class="el-icon-tickets">&nbsp;活动名称：</i>
               <el-input
                 type="text"
@@ -156,11 +155,11 @@ export default {
     return {
       page_size: 20,
       currentPage: 1,
-      offset: 5,
+      offset: 6,
       clazz: null,
       currentActivity: [],
       clazzOptions: [],
-      src: '../assets/backgroundImage1.jpg'
+      src: 'src/assets/backgroundImage1.jpg'
     }
   },
   created () {
@@ -171,6 +170,31 @@ export default {
   methods: {
     goBack () {
       this.$router.go(-1)
+    },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.student.avatar_url = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改头像成功',
+        type: 'success' })
+    },
+    handleRemove (file, fileList) {
+      console.log('文件删除')
     },
     findAllClasses () {
       let that = this
@@ -277,14 +301,31 @@ export default {
     margin: 40px 20px;
   }
 
+  .activity-card {
+    width: 80%;
+    margin: auto;
+  }
+
   .description {
     font-size: 21px;
     text-align: center;
     color: black;
   }
 
-  .img {
+  .img-container {
     text-align: center;
+  }
+
+  .img-uploader .el-upload {
+    position: relative;
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .img-uploader .el-upload:hover {
+    border-color: #409eff;
   }
 
   .el-col > i {
