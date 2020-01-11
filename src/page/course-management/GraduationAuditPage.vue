@@ -259,10 +259,6 @@ export default {
     margin-right: 20px;
   }
 
-  .pagination {
-    margin-left: 250px;
-  }
-
   .el-main {
     margin: 0 auto;
   }

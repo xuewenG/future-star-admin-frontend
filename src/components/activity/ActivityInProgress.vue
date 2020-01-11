@@ -20,7 +20,7 @@
             <el-button type="primary" size="small" @click="editDetails(activity)" round>编辑详情</el-button>
           </el-col>
           <el-col :span="4">
-            <el-button type="primary" size="small" @click="showParticipants()" round>活动成员</el-button>
+            <el-button type="primary" size="small" @click="showParticipants(activity)" round>活动成员</el-button>
           </el-col>
         </el-row>
         <el-row>
