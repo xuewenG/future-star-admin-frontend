@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h4 v-if="count === 0">暂无已结束班级</h4>
     <el-col :span="12" v-for="item in classes" v-show="item.state===4" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
@@ -33,22 +32,8 @@
 <script>
 export default {
   name: 'EndedClasses',
-  created () {
-    if (this.classes) {
-      for (let i = 0; i < this.classes.length; i++) {
-        if (this.classes[i].state === 4) {
-          this.count++
-        }
-      }
-    }
-  },
   props: {
     classes: [Array, String]
-  },
-  data () {
-    return {
-      count: 1
-    }
   },
   methods: {
     lookOverClassDetail: async function (currentClass) {
@@ -58,16 +43,6 @@ export default {
     lookOverStudentInClass: async function (currentClass) {
       await this.$store.dispatch('changeCurrentClass', currentClass)
       await this.$router.push('/student-in-class')
-    }
-  },
-  watch: {
-    classes () {
-      this.count = 0
-      for (let i = 0; i < this.classes.length; i++) {
-        if (this.classes[i].state === 4) {
-          this.count++
-        }
-      }
     }
   },
   filters: {

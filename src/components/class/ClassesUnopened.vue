@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h4 v-if="count === 0">暂无待招生班级</h4>
     <el-col :span="12" v-for="item in classes" v-show="item.state===0" :key="item.id">
       <el-card  shadow="never">
         <el-row slot="header" type="flex" align="middle">
@@ -33,20 +32,6 @@
 <script>
 export default {
   name: 'UnopenedClasses',
-  created () {
-    if (this.classes) {
-      for (let i = 0; i < this.classes.length; i++) {
-        if (this.classes[i].state === 0) {
-          this.count++
-        }
-      }
-    }
-  },
-  data () {
-    return {
-      count: 1
-    }
-  },
   props: {
     classes: [Array, String]
   },
@@ -60,7 +45,6 @@ export default {
         if (response.data.code === '2000') {
           currentClass.state = 1
           await that.$store.dispatch('changeClasses', that.classes)
-          that.count--
           that.$message({
             type: 'success',
             message: '开启招生成功',
@@ -69,7 +53,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '网络繁忙，请稍后重试',
+            message: '服务器繁忙，请稍后重试',
             duration: 2000
           })
         }
@@ -77,7 +61,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络繁忙，请稍后重试',
+          message: '服务器繁忙，请稍后重试',
           duration: 2000
         })
       })
@@ -85,16 +69,6 @@ export default {
     lookOverClassDetail: async function (currentClass) {
       await this.$store.dispatch('changeCurrentClass', currentClass)
       await this.$router.push('/class-detail')
-    }
-  },
-  watch: {
-    classes () {
-      this.count = 0
-      for (let i = 0; i < this.classes.length; i++) {
-        if (this.classes[i].state === 0) {
-          this.count++
-        }
-      }
     }
   },
   filters: {
