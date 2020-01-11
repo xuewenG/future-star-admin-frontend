@@ -113,7 +113,7 @@ export default {
     }
   },
   methods: {
-    goBack: function () {
+    goBack () {
       this.$router.go(-1)
     },
     showAllInfo (alumniInfo) {
@@ -158,7 +158,7 @@ export default {
         })
       })
     },
-    // findAllSemester: function () {
+    // findAllSemester  () {
     //   let params = {
     //     page_size: this.page_size,
     //     page: this.currentSemesterPage
@@ -195,7 +195,7 @@ export default {
     //     })
     //   })
     // },
-    // findAllClass: function () {
+    // findAllClass  () {
     //   this.clazzOptions = []
     //   this.clazz = null
     //   if (this.semester === null) {
