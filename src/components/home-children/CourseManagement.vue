@@ -108,20 +108,9 @@ export default {
         if (semesters.length === 0) {
           that.createNewSemester = true
         }
-      } else {
-        that.$message({
-          type: 'error',
-          message: '网络繁忙，请稍后重试',
-          duration: 2000
-        })
       }
     }).catch(function (error) {
       console.log(error)
-      that.$message({
-        type: 'error',
-        message: '网络繁忙，请稍后重试',
-        duration: 2000
-      })
     })
   },
   methods: {
