@@ -82,7 +82,7 @@ export default {
         }
       })
     },
-    startEnrolling: function (currentActivity) {
+    startEnrolling (currentActivity) {
       let that = this
       let url = '/activity/activity/' + currentActivity.id
       that.axios.put(url, {
@@ -114,7 +114,7 @@ export default {
         })
       })
     },
-    closeActivity: function (currentActivity) {
+    closeActivity (currentActivity) {
       let that = this
       let url = '/activity/activity/' + currentActivity.id
       that.axios.put(url, {
@@ -146,11 +146,11 @@ export default {
         })
       })
     },
-    editDetails: function (currentActivity) {
+    editDetails (currentActivity) {
       this.$store.dispatch('changeCurrentActivity', currentActivity)
       this.$router.push('/edit-activity')
     },
-    showDetails: function (currentActivity) {
+    showDetails (currentActivity) {
       this.$store.dispatch('changeCurrentActivity', currentActivity)
       this.$router.push('/show-activity-details')
     }

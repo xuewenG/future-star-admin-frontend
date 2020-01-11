@@ -185,7 +185,7 @@ export default {
     }
   },
   methods: {
-    goBack: function () {
+    goBack () {
       this.$router.go(-1)
     },
     findAllInformation () {

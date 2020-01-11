@@ -427,7 +427,7 @@ export default {
     }
   },
   methods: {
-    goBack: function () {
+    goBack () {
       this.$router.go(-1)
       this.$store.dispatch('changeInfoOfAnAlumni', this.currentAlumni)
     },
@@ -456,7 +456,7 @@ export default {
     handleRemove (file, fileList) {
       console.log('文件删除')
     },
-    findAllInformation: function () {
+    findAllInformation () {
       let that = this
       let results = that.$store.getters.getInfoOfAnAlumni
       if (results) {
@@ -489,7 +489,7 @@ export default {
         }
       }
     },
-    confirmChange: function () {
+    confirmChange () {
       let that = this
       let alumni = that.student
       let mapping = {

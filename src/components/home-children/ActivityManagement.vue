@@ -57,10 +57,10 @@ export default {
     that.activeName = that.$store.getters.getActiveNameOfActivity
   },
   methods: {
-    changeActiveName: function (tab) {
+    changeActiveName (tab) {
       this.$store.dispatch('changeActiveNameOfActivity', tab.name)
     },
-    createActivity: function () {
+    createActivity () {
       this.$router.push('/create-activity')
     }
   }

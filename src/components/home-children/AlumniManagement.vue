@@ -132,7 +132,7 @@ export default {
     }
   },
   methods: {
-    findAllAlumni: function () {
+    findAllAlumni () {
       let that = this
       let params = {
         page_size: that.page_size,
@@ -166,7 +166,7 @@ export default {
         })
       })
     },
-    findAllSemester: function () {
+    findAllSemester () {
       let that = this
       let params = {
         page_size: that.page_size,
@@ -204,7 +204,7 @@ export default {
         })
       })
     },
-    findAllClass: function () {
+    findAllClass () {
       let that = this
       that.clazzOptions = []
       that.clazz = null
