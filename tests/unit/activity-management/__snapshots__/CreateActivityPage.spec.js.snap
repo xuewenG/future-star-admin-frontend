@@ -16,10 +16,6 @@ exports[`CreateActivityPage 快照测试 1`] = `
       <!---->
       <div class="el-card__body">
         <div class="description">- 活动信息 -</div>
-        <div class="el-image">
-          <div class="el-image__placeholder"></div>
-          <!---->
-        </div>
         <form class="el-form activity-table">
           <div class="line">
             <div class="el-divider el-divider--horizontal">
@@ -27,7 +23,7 @@ exports[`CreateActivityPage 快照测试 1`] = `
             </div>
           </div>
           <div class="top-distance el-row">
-            <div class="el-col el-col-8 el-col-offset-5"><i class="el-icon-tickets">&nbsp;活动名称：</i>
+            <div class="el-col el-col-10 el-col-offset-6"><i class="el-icon-tickets">&nbsp;活动名称：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
                 <div class="el-input-group__prepend">活动名称:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
@@ -40,7 +36,7 @@ exports[`CreateActivityPage 快照测试 1`] = `
             </div>
           </div>
           <div class="top-distance el-row">
-            <div class="el-col el-col-6 el-col-offset-5"><i class="el-icon-watch">&nbsp;报名开始时间：</i>
+            <div class="el-col el-col-6 el-col-offset-6"><i class="el-icon-watch">&nbsp;报名开始时间：</i>
               <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--date">
                 <!----><input type="text" autocomplete="off" name="" placeholder="请选择开始时间" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-date"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----><!----><!----><!----></span>
                 <!----></span>
@@ -58,7 +54,7 @@ exports[`CreateActivityPage 快照测试 1`] = `
             </div>
           </div>
           <div class="top-distance el-row">
-            <div class="el-col el-col-6 el-col-offset-5"><i class="el-icon-watch">&nbsp;活动时间：</i>
+            <div class="el-col el-col-6 el-col-offset-6"><i class="el-icon-watch">&nbsp;活动时间：</i>
               <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--date">
                 <!----><input type="text" autocomplete="off" name="" placeholder="请选择日期时间" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-date"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----><!----><!----><!----></span>
                 <!----></span>
@@ -100,7 +96,7 @@ exports[`CreateActivityPage 快照测试 1`] = `
             </div>
           </div>
           <div class="top-distance el-row">
-            <div class="el-col el-col-6 el-col-offset-5"><i class="el-icon-location-information">&nbsp;活动地点：</i>
+            <div class="el-col el-col-6 el-col-offset-6"><i class="el-icon-location-information">&nbsp;活动地点：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
                 <div class="el-input-group__prepend">活动地点：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
@@ -124,7 +120,7 @@ exports[`CreateActivityPage 快照测试 1`] = `
             </div>
           </div>
           <div class="top-distance el-row">
-            <div class="el-col el-col-6 el-col-offset-5"><i class="el-icon-money">&nbsp;收费情况：</i>
+            <div class="el-col el-col-6 el-col-offset-6"><i class="el-icon-money">&nbsp;收费情况：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
                 <div class="el-input-group__prepend">收费情况：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="4" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
@@ -148,7 +144,7 @@ exports[`CreateActivityPage 快照测试 1`] = `
             </div>
           </div>
           <div class="top-distance el-row">
-            <div class="el-col el-col-14 el-col-offset-5"><i class="el-icon-fork-spoon">&nbsp;活动日程：</i>
+            <div class="el-col el-col-14 el-col-offset-6"><i class="el-icon-fork-spoon">&nbsp;活动日程：</i>
               <div class="el-textarea el-input--medium el-input-group el-input-group--prepend"><textarea autocomplete="off" placeholder="请输入内容" maxlength="100" class="el-textarea__inner" style="min-height: -8px; height: -16px;"></textarea><span class="el-input__count">0/100</span></div>
             </div>
           </div>
