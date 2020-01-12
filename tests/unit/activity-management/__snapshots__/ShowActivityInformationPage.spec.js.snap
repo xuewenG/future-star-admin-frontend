@@ -17,39 +17,37 @@ exports[`ShowActivityInformationPage 快照测试 1`] = `
     <div class="el-card info-card is-never-shadow">
       <!---->
       <div class="el-card__body">
-        <div class="el-row">
-          <div class="center-position el-col el-col-24">
-            <div class="block"><span class="el-avatar el-avatar--circle" style="height: 130px; width: 130px; line-height: 130px;"></span></div>
-          </div>
-        </div>
         <form class="el-form info-table">
-          <div class="line">
+          <div>
             <div class="el-divider el-divider--horizontal">
               <!---->
             </div>
           </div>
           <div class="description">- 活动信息 -</div>
           <div class="top-distance el-row">
-            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-user">&nbsp;活动名称：</i> <label></label></div>
-            <div class="el-col el-col-7"><i class="el-icon-male">&nbsp;报名开始时间：</i> <label></label></div>
-            <div class="el-col el-col-7"><i class="el-icon-timer">&nbsp;报名结束时间：</i> <label></label></div>
+            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-present">&nbsp;活动名称：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-alarm-clock">&nbsp;报名开始时间：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-alarm-clock">&nbsp;报名结束时间：</i> <label></label></div>
           </div>
           <div class="top-distance el-row">
-            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-mobile-phone">&nbsp;活动时间：</i> <label></label></div>
-            <div class="el-col el-col-7"><i class="el-icon-document">&nbsp;面向人群：</i> </div>
-            <div class="el-col el-col-7"><i class="el-icon-school">&nbsp;活动地点：</i> <label></label></div>
+            <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-timer">&nbsp;活动时间：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-unlock">&nbsp;面向人群：</i> </div>
+            <div class="el-col el-col-7"><i class="el-icon-map-location">&nbsp;活动地点：</i> <label></label></div>
           </div>
           <div class="top-distance el-row">
             <div class="el-col el-col-7 el-col-offset-2"><i class="el-icon-location-information">&nbsp;限制人数：</i> <label></label></div>
-            <div class="el-col el-col-7"><i class="el-icon-chat-dot-round">&nbsp;收费情况：</i> <label></label></div>
-            <div class="el-col el-col-7"><i class="el-icon-edit-outline">&nbsp;主办方：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-coin">&nbsp;收费情况：</i> <label></label></div>
+            <div class="el-col el-col-7"><i class="el-icon-mic">&nbsp;主办方：</i> <label></label></div>
           </div>
           <div class="top-distance el-row">
-            <div class="el-col el-col-21 el-col-offset-2"><i class="el-icon-reading">&nbsp;活动日程：</i> <label></label></div>
+            <div class="el-col el-col-22 el-col-offset-2"><i class="el-icon-reading">&nbsp;活动日程：</i> <label></label></div>
+          </div>
+          <div class="top-distance el-row is-align-center">
+            <div class="el-col el-col-24" align="center"><img width="400px;"></div>
           </div>
         </form>
         <div class="el-row">
-          <div class="center-position el-col el-col-24"><button type="button" class="el-button el-button--primary">
+          <div class="center-position el-col el-col-24"><button type="button" class="el-button el-button--primary is-round">
               <!----><i class="el-icon-edit"></i><span>
             编辑
           </span></button></div>

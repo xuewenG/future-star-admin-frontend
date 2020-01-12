@@ -17,7 +17,11 @@ exports[`EditExistingActivityPage 快照测试 1`] = `
       <div class="el-card__body">
         <div class="el-row">
           <div class="center-position el-col el-col-24">
-            <div class="block"><span class="el-avatar el-avatar--circle" style="height: 130px; width: 130px; line-height: 130px;"></span></div>
+            <div class="block">
+              <div class="avatar-uploader">
+                <div tabindex="0" class="el-upload el-upload--text"><img width="140px" alt="avatar" class="clazz-image"><input type="file" name="file" class="el-upload__input"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="line">
@@ -30,7 +34,7 @@ exports[`EditExistingActivityPage 快照测试 1`] = `
           <div class="top-distance el-row">
             <div class="el-col el-col-8 el-col-offset-5"><i class="el-icon-tickets">&nbsp;活动名称：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
-                <div class="el-input-group__prepend">活动名称:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
+                <div class="el-input-group__prepend">名称:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
             0/20
           </span></span></span>
@@ -103,7 +107,7 @@ exports[`EditExistingActivityPage 快照测试 1`] = `
           <div class="top-distance el-row">
             <div class="el-col el-col-6 el-col-offset-5"><i class="el-icon-location-information">&nbsp;活动地点：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
-                <div class="el-input-group__prepend">活动地点：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
+                <div class="el-input-group__prepend">城市：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
             0/20
           </span></span></span>
@@ -114,7 +118,7 @@ exports[`EditExistingActivityPage 快照测试 1`] = `
             </div>
             <div class="el-col el-col-6 el-col-offset-2"><i class="el-icon-crop">&nbsp;限制人数：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
-                <div class="el-input-group__prepend">限制人数：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="3" class="el-input__inner">
+                <div class="el-input-group__prepend">人数：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="3" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
             0/3
           </span></span></span>
@@ -127,7 +131,7 @@ exports[`EditExistingActivityPage 快照测试 1`] = `
           <div class="top-distance el-row">
             <div class="el-col el-col-6 el-col-offset-5"><i class="el-icon-money">&nbsp;收费情况：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
-                <div class="el-input-group__prepend">收费情况：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="4" class="el-input__inner">
+                <div class="el-input-group__prepend">金额(¥)：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="4" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
             0/4
           </span></span></span>
@@ -138,7 +142,7 @@ exports[`EditExistingActivityPage 快照测试 1`] = `
             </div>
             <div class="el-col el-col-6 el-col-offset-2"><i class="el-icon-s-finance">&nbsp;主办方：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
-                <div class="el-input-group__prepend">主办方：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="50" class="el-input__inner">
+                <div class="el-input-group__prepend">名称：</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="50" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
             0/50
           </span></span></span>
@@ -150,7 +154,14 @@ exports[`EditExistingActivityPage 快照测试 1`] = `
           </div>
           <div class="top-distance el-row">
             <div class="el-col el-col-14 el-col-offset-5"><i class="el-icon-fork-spoon">&nbsp;活动日程：</i>
-              <div class="el-textarea el-input--medium el-input-group el-input-group--prepend"><textarea autocomplete="off" placeholder="请输入内容" maxlength="100" class="el-textarea__inner" style="min-height: -8px; height: -16px;"></textarea><span class="el-input__count">0/100</span></div>
+              <div class="el-textarea el-input--medium el-input-group el-input-group--prepend"><textarea autocomplete="off" placeholder="请输入内容" maxlength="100" class="el-textarea__inner" style="min-height: -16px; height: -32px;"></textarea><span class="el-input__count">0/100</span></div>
+            </div>
+          </div>
+          <div class="top-distance el-row">
+            <div class="block">
+              <div align="center" class="avatar-uploader">
+                <div tabindex="0" class="el-upload el-upload--text"><img width="400px" alt="avatar" class="clazz-image"><input type="file" name="file" class="el-upload__input"></div>
+              </div>
             </div>
           </div>
           <div class="el-row">
