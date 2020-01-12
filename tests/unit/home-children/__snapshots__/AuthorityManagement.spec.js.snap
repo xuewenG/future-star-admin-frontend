@@ -1,20 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AuthorityManagement 快照测试 1`] = `
-<section class="el-container is-vertical">
-  <header class="el-header" style="height: 60px;">
+<section class="el-container">
+  <main class="el-main">
     <div class="el-row">
-      <div class="el-col el-col-3">
-        <h3>已有管理员列表</h3>
+      <div class="list-title el-col el-col-13">
+        <h3>管理员列表</h3>
       </div>
-      <div class="el-col el-col-2"><a href="#/add-administrator" class=""><button type="button" class="el-button el-button--primary el-button--small is-round">
-            <!---->
-            <!----><span>添加管理员</span></button></a></div>
+      <div class="add-button-tar el-col el-col-4 el-col-offset-6"><a href="#/add-administrator" class=""><i class="el-icon-circle-plus-outline add-button"></i></a></div>
     </div>
-  </header>
-  <div class="el-row">
-    <main class="el-main">
-      <div class="el-table el-table--fit el-table--striped el-table--scrollable-x" id="table-center">
+    <div class="el-row">
+      <div class="el-divider el-divider--horizontal">
+        <!---->
+      </div>
+      <div class="el-table el-table--fit el-table--striped el-table--scrollable-x el-loading-parent--relative" id="table-center">
         <div class="hidden-columns">
           <div></div>
           <div></div>
@@ -25,35 +24,35 @@ exports[`AuthorityManagement 快照测试 1`] = `
           <div></div>
         </div>
         <div class="el-table__header-wrapper">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1232px;">
+          <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1040px;">
             <colgroup>
-              <col name="el-table_1_column_1" width="145">
-              <col name="el-table_1_column_2" width="145">
-              <col name="el-table_1_column_3" width="200">
-              <col name="el-table_1_column_4" width="200">
-              <col name="el-table_1_column_5" width="200">
-              <col name="el-table_1_column_6" width="200">
-              <col name="el-table_1_column_7" width="142">
+              <col name="el-table_1_column_1" width="130">
+              <col name="el-table_1_column_2" width="70">
+              <col name="el-table_1_column_3" width="190">
+              <col name="el-table_1_column_4" width="190">
+              <col name="el-table_1_column_5" width="190">
+              <col name="el-table_1_column_6" width="190">
+              <col name="el-table_1_column_7" width="80">
             </colgroup>
             <thead class="">
               <tr class="">
-                <th colspan="1" rowspan="1" class="el-table_1_column_1     is-hidden is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-hidden is-leaf">
                   <div class="cell">姓名</div>
                 </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_2     is-leaf">
+                <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf">
                   <div class="cell">账号</div>
                 </th>
                 <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-leaf">
-                  <div class="cell">招生管理权限</div>
+                  <div class="cell">招生权限</div>
                 </th>
                 <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-leaf">
-                  <div class="cell">课程管理权限</div>
+                  <div class="cell">课程权限</div>
                 </th>
                 <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
-                  <div class="cell">校友活动管理权限</div>
+                  <div class="cell">校友活动权限</div>
                 </th>
                 <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-leaf">
-                  <div class="cell">校友资料管理权限</div>
+                  <div class="cell">校友资料权限</div>
                 </th>
                 <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-leaf">
                   <div class="cell">操作</div>
@@ -63,55 +62,55 @@ exports[`AuthorityManagement 快照测试 1`] = `
           </table>
         </div>
         <div class="el-table__body-wrapper is-scrolling-left">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1232px;">
+          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1040px;">
             <colgroup>
-              <col name="el-table_1_column_1" width="145">
-              <col name="el-table_1_column_2" width="145">
-              <col name="el-table_1_column_3" width="200">
-              <col name="el-table_1_column_4" width="200">
-              <col name="el-table_1_column_5" width="200">
-              <col name="el-table_1_column_6" width="200">
-              <col name="el-table_1_column_7" width="142">
+              <col name="el-table_1_column_1" width="130">
+              <col name="el-table_1_column_2" width="70">
+              <col name="el-table_1_column_3" width="190">
+              <col name="el-table_1_column_4" width="190">
+              <col name="el-table_1_column_5" width="190">
+              <col name="el-table_1_column_6" width="190">
+              <col name="el-table_1_column_7" width="80">
             </colgroup>
             <tbody>
               <!---->
             </tbody>
           </table>
-          <div class="el-table__empty-block" style="height: 100%; width: 1232px;"><span class="el-table__empty-text">暂无数据</span></div>
+          <div class="el-table__empty-block" style="height: 100%; width: 1040px;"><span class="el-table__empty-text">暂无数据</span></div>
           <!---->
         </div>
         <!---->
-        <div class="el-table__fixed" style="width: 145px;">
+        <div class="el-table__fixed" style="width: 130px;">
           <div class="el-table__fixed-header-wrapper">
-            <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1232px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1040px;">
               <colgroup>
-                <col name="el-table_1_column_1" width="145">
-                <col name="el-table_1_column_2" width="145">
-                <col name="el-table_1_column_3" width="200">
-                <col name="el-table_1_column_4" width="200">
-                <col name="el-table_1_column_5" width="200">
-                <col name="el-table_1_column_6" width="200">
-                <col name="el-table_1_column_7" width="142">
+                <col name="el-table_1_column_1" width="130">
+                <col name="el-table_1_column_2" width="70">
+                <col name="el-table_1_column_3" width="190">
+                <col name="el-table_1_column_4" width="190">
+                <col name="el-table_1_column_5" width="190">
+                <col name="el-table_1_column_6" width="190">
+                <col name="el-table_1_column_7" width="80">
               </colgroup>
               <thead class="">
                 <tr class="">
-                  <th colspan="1" rowspan="1" class="el-table_1_column_1     is-leaf">
+                  <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf">
                     <div class="cell">姓名</div>
                   </th>
-                  <th colspan="1" rowspan="1" class="el-table_1_column_2     is-hidden is-leaf">
+                  <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-hidden is-leaf">
                     <div class="cell">账号</div>
                   </th>
                   <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-hidden is-leaf">
-                    <div class="cell">招生管理权限</div>
+                    <div class="cell">招生权限</div>
                   </th>
                   <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-hidden is-leaf">
-                    <div class="cell">课程管理权限</div>
+                    <div class="cell">课程权限</div>
                   </th>
                   <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-hidden is-leaf">
-                    <div class="cell">校友活动管理权限</div>
+                    <div class="cell">校友活动权限</div>
                   </th>
                   <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-hidden is-leaf">
-                    <div class="cell">校友资料管理权限</div>
+                    <div class="cell">校友资料权限</div>
                   </th>
                   <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-hidden is-leaf">
                     <div class="cell">操作</div>
@@ -121,15 +120,15 @@ exports[`AuthorityManagement 快照测试 1`] = `
             </table>
           </div>
           <div class="el-table__fixed-body-wrapper" style="top: 0px;">
-            <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1232px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1040px;">
               <colgroup>
-                <col name="el-table_1_column_1" width="145">
-                <col name="el-table_1_column_2" width="145">
-                <col name="el-table_1_column_3" width="200">
-                <col name="el-table_1_column_4" width="200">
-                <col name="el-table_1_column_5" width="200">
-                <col name="el-table_1_column_6" width="200">
-                <col name="el-table_1_column_7" width="142">
+                <col name="el-table_1_column_1" width="130">
+                <col name="el-table_1_column_2" width="70">
+                <col name="el-table_1_column_3" width="190">
+                <col name="el-table_1_column_4" width="190">
+                <col name="el-table_1_column_5" width="190">
+                <col name="el-table_1_column_6" width="190">
+                <col name="el-table_1_column_7" width="80">
               </colgroup>
               <tbody>
                 <!---->
@@ -142,18 +141,25 @@ exports[`AuthorityManagement 快照测试 1`] = `
         <!---->
         <!---->
         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+        <div class="el-loading-mask el-loading-fade-enter el-loading-fade-enter-active" style="">
+          <div class="el-loading-spinner"><svg viewBox="25 25 50 50" class="circular">
+              <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+            </svg>
+            <!---->
+          </div>
+        </div>
       </div>
-    </main>
-  </div>
-  <div class="el-row is-justify-center el-row--flex">
-    <div class="el-pagination"><button type="button" disabled="disabled" class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
-      <ul class="el-pager">
-        <li class="number active">1</li>
-        <!---->
-        <!---->
-        <!---->
-      </ul><button type="button" disabled="disabled" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button><span class="el-pagination__jump">前往<div class="el-input el-pagination__editor is-in-pagination"><!----><input type="number" autocomplete="off" min="1" max="1" class="el-input__inner"><!----><!----><!----><!----></div>页</span>
     </div>
-  </div>
+    <div class="el-row is-justify-center el-row--flex">
+      <div class="page-button el-pagination"><button type="button" disabled="disabled" class="btn-prev"><i class="el-icon el-icon-arrow-left"></i></button>
+        <ul class="el-pager">
+          <li class="number active">1</li>
+          <!---->
+          <!---->
+          <!---->
+        </ul><button type="button" disabled="disabled" class="btn-next"><i class="el-icon el-icon-arrow-right"></i></button><span class="el-pagination__jump">前往<div class="el-input el-pagination__editor is-in-pagination"><!----><input type="number" autocomplete="off" min="1" max="1" class="el-input__inner"><!----><!----><!----><!----></div>页</span>
+      </div>
+    </div>
+  </main>
 </section>
 `;

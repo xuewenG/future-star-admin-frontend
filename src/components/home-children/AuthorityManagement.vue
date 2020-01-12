@@ -1,40 +1,40 @@
 <template>
   <el-container>
-    <el-header>
+    <el-main>
       <el-row>
-        <el-col :span="3">
-          <h3>已有管理员列表</h3>
+        <el-col :span="13" class="list-title">
+          <h3>管理员列表</h3>
         </el-col>
-          <el-col :span="2">
-            <router-link to="/add-administrator">
-              <el-button type="primary" size="small" round>添加管理员</el-button>
-            </router-link>
-          </el-col>
+        <el-col :span="4" offset="6" class="add-button-tar">
+          <router-link to="/add-administrator" >
+            <i class="el-icon-circle-plus-outline add-button"></i>
+          </router-link>
+        </el-col>
       </el-row>
-    </el-header>
-    <el-row>
-      <el-main>
+      <el-row>
+        <el-divider/>
         <el-table
           :data="tableData"
-          :highlight-current-row="true"
-          :fit="true"
+          v-loading="loading"
           id="table-center"
           stripe>
           <el-table-column
             fixed
             prop="name"
+            align="center"
             label="姓名"
             :width="infoWidth">
           </el-table-column>
           <el-table-column
             prop="account"
             label="账号"
-            :width="infoWidth">
+            align="center"
+            width="70%">
           </el-table-column>
           <el-table-column
-            label="招生管理权限"
-            align="center"
-            :width="permissionWidth">
+            label="招生权限"
+            :width="privilegeWidth"
+            align="center">
             <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.privilege.enrollment"
@@ -44,9 +44,9 @@
             </template>
           </el-table-column>
           <el-table-column
-            label="课程管理权限"
-            align="center"
-            :width="permissionWidth">
+            label="课程权限"
+            :width="privilegeWidth"
+            align="center">
             <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.privilege.semester"
@@ -56,9 +56,9 @@
             </template>
           </el-table-column>
           <el-table-column
-            label="校友活动管理权限"
-            align="center"
-            :width="permissionWidth">
+            label="校友活动权限"
+            :width="privilegeWidth"
+            align="center">
             <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.privilege.activity"
@@ -68,9 +68,9 @@
             </template>
           </el-table-column>
           <el-table-column
-            label="校友资料管理权限"
-            align="center"
-            :width="permissionWidth">
+            label="校友资料权限"
+            :width="privilegeWidth"
+            align="center">
             <template slot-scope="scope">
               <el-switch
                 v-model="scope.row.privilege.student"
@@ -81,15 +81,14 @@
           </el-table-column>
           <el-table-column
             align="center"
-            label="操作"
-            :width="operationWidth">
+            label="操作">
             <template slot-scope="scope">
               <el-button
                 type="primary"
                 size="small"
                 @click="saveInfo(scope.row)"
                 :disabled="scope.row.privilege.super===1"
-                circle>
+                round>
                 保存
               </el-button>
               <el-button
@@ -97,23 +96,25 @@
                 size="small"
                 @click="deleteManager(scope.row, scope.$index)"
                 :disabled="scope.row.privilege.super===1"
-                circle>
+                round>
                 删除
               </el-button>
             </template>
           </el-table-column>
         </el-table>
-      </el-main>
-    </el-row>
-    <el-row type="flex" justify="center">
-      <el-pagination
-        @current-change="CurrentPageChange"
-        :current-page.sync="currentPage"
-        :page-size="pageSize"
-        layout="prev, pager, next, jumper"
-        :total="total">
-      </el-pagination>
-    </el-row>
+
+      </el-row>
+      <el-row type="flex" justify="center">
+        <el-pagination
+          class="page-button"
+          @current-change="CurrentPageChange"
+          :current-page.sync="currentPage"
+          :page-size="pageSize"
+          layout="prev, pager, next, jumper"
+          :total="total">
+        </el-pagination>
+      </el-row>
+    </el-main>
   </el-container>
 </template>
 
@@ -123,12 +124,15 @@ export default {
   data () {
     return {
       permissionWidth: 200,
-      infoWidth: 145,
+      accountWidth: 60,
+      infoWidth: 130,
+      privilegeWidth: 190,
       operationWidth: 142,
       permissionActiveColor: '#13ce66',
       pageSize: 10,
       currentPage: 1,
       total: 0,
+      loading: true,
       tableData: [
       ]
     }
@@ -158,6 +162,7 @@ export default {
           }
           that.total = response.data.data.count
           that.tableData = administrators
+          that.loading = false
         } else {
           that.$message({
             type: 'error',
@@ -247,6 +252,14 @@ export default {
 </script>
 
 <style scoped>
+  .admin-table {
+    margin: 40px 20px;
+  }
+
+  .page-button {
+    margin-top: 2%;
+  }
+
   .el-main {
     padding: 0;
     margin: 0;
@@ -255,6 +268,21 @@ export default {
   .el-header {
     padding: 0;
     margin: 0;
+  }
+
+  .add-button-tar {
+    margin-top: 2%;
+    text-align: right;
+  }
+
+  .add-button {
+    font-size: 30px;
+    color: #272324;
+  }
+
+  .list-title {
+    font-size: 25px;
+    text-align: right;
   }
 
   h3 {
