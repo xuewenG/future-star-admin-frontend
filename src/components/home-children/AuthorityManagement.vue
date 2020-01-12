@@ -276,7 +276,7 @@ export default {
 
   .add-button {
     font-size: 30px;
-    color: #272324;
+    color: #409eff;
   }
 
   .list-title {
