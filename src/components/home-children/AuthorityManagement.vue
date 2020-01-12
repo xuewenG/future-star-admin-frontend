@@ -3,7 +3,7 @@
     <el-main>
       <el-row>
         <el-col :span="13" class="list-title">
-          <h3>管理员列表</h3>
+          <h4>- 管理员列表 -</h4>
         </el-col>
         <el-col :span="4" offset="6" class="add-button-tar">
           <router-link to="/add-administrator" >
@@ -102,7 +102,6 @@
             </template>
           </el-table-column>
         </el-table>
-
       </el-row>
       <el-row type="flex" justify="center">
         <el-pagination
@@ -285,7 +284,7 @@ export default {
     text-align: right;
   }
 
-  h3 {
+  h4 {
     color: #707070;
   }
 </style>
