@@ -21,16 +21,23 @@
           </el-col>
         </el-row>
         <el-row>
-          报名起止日期：{{ activity.enroll_start_time }} —— {{ activity.enroll_end_time }}
-        </el-row>
-        <el-row>
-          活动人数：{{activity.current_people_number}} / {{ activity.people_number_limit }}
-        </el-row>
-        <el-row>
-          活动状态：报名中
-        </el-row>
-        <el-row>
-          活动流程：{{ activity.arrangement | ellipsis }}
+          <el-col span="12">
+            <el-row>
+              报名起止日期：{{ activity.enroll_start_time }} —— {{ activity.enroll_end_time }}
+            </el-row>
+            <el-row>
+              活动人数：{{activity.current_people_number}} / {{ activity.people_number_limit }}
+            </el-row>
+            <el-row>
+              活动状态：报名中
+            </el-row>
+            <el-row>
+              活动流程：{{ activity.arrangement | ellipsis }}
+            </el-row>
+          </el-col>
+          <el-col span="12" align="center">
+            <img :src="activity.image" width="140px">
+          </el-col>
         </el-row>
       </el-card>
     </el-col>
