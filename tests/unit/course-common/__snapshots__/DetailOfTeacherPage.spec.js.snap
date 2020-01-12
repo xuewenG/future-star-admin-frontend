@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailOfTeacherPage 快照测试 1`] = `
+<section class="el-container is-vertical">
+  <header class="el-header" style="height: 60px;">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">讲师信息</div>
+    </div>
+  </header>
+  <main class="el-main">
+    <div class="el-divider el-divider--horizontal">
+      <div class="el-divider__text is-center">讲师信息</div>
+    </div>
+    <div class="el-col el-col-8" shadow="never">
+      <div class="el-card is-never-shadow">
+        <div class="el-card__header">
+          <div class="el-row is-align-middle el-row--flex">
+            <div class="el-col el-col-3"><span class="el-avatar el-avatar--small el-avatar--circle"></span></div>
+            <div class="el-col el-col-18">
+
+            </div>
+            <div class="el-col el-col-3 el-col-push-1"><button type="button" class="el-button el-icon-edit-outline el-button--primary el-button--small is-circle">
+                <!---->
+                <!---->
+                <!----></button></div>
+          </div>
+        </div>
+        <div class="el-card__body">
+          <div class="el-row">
+            头衔：
+          </div>
+          <div class="el-row">
+            简介：
+          </div>
+          <div class="el-row">
+            联系方式：
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+`;

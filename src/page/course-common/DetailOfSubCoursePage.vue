@@ -142,8 +142,9 @@ export default {
   },
   created () {
     this.course = this.$store.getters.getCurrentCourse
-    console.log(this.course)
-    this.getContent()
+    if (this.axios) {
+      this.getContent()
+    }
   },
   methods: {
     goBack: function () {

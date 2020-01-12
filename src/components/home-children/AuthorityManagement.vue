@@ -5,7 +5,7 @@
         <el-col :span="13" class="list-title">
           <h4>- 管理员列表 -</h4>
         </el-col>
-        <el-col :span="4" offset="6" class="add-button-tar">
+        <el-col :span="4" :offset="6" class="add-button-tar">
           <router-link to="/add-administrator" >
             <i class="el-icon-circle-plus-outline add-button"></i>
           </router-link>

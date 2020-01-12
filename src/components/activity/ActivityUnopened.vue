@@ -21,7 +21,7 @@
           </el-col>
         </el-row>
         <el-row>
-          <el-col span="12">
+          <el-col :span="12">
             <el-row>
               报名起止日期：{{ activity.enroll_start_time }} —— {{ activity.enroll_end_time }}
             </el-row>
@@ -35,7 +35,7 @@
               活动流程：{{ activity.arrangement | ellipsis }}
             </el-row>
           </el-col>
-          <el-col span="12" align="center">
+          <el-col :span="12" align="center">
             <img :src="activity.image" width="140px">
           </el-col>
         </el-row>

@@ -17,7 +17,7 @@
             <el-col :span="10" align="center">
               <img :src="currentClass.image" style="width: 320px;">
             </el-col>
-            <el-col :span="12" offset="2">
+            <el-col :span="12" :offset="2">
               <div class="info">
                 起止时间： {{ currentClass.start_time }} ---- {{ currentClass.end_time }}
               </div>
@@ -70,23 +70,9 @@ export default {
   name: 'CourseClassDetailPage',
   data () {
     return {
-      currentClass: {
-        id: '2',
-        name: '素质教育专题班',
-        introduction: '这里是一个加了长文本省略号替代的班级介绍',
-        start_time: '2019/12/20',
-        end_time: '2019/12/21',
-        timeRange: ['2019/12/20', '2019/12/21'],
-        current_people_number: '0',
-        people_number_limit: '15',
-        state: 0
-      },
-      courses: [
-        {
-          id: '0',
-          name: ''
-        }
-      ]
+      currentClass: {},
+      courses: [],
+      loading: true
     }
   },
   created () {
@@ -100,10 +86,10 @@ export default {
       }
     }).then(async function (response) {
       if (response.data.code === '2000') {
-        console.log(response)
         let courses = response.data.data.results
         await that.$store.dispatch('changeCourses', courses)
         that.courses = courses
+        that.loading = false
       } else {
         that.$message({
           type: 'error',
@@ -128,7 +114,7 @@ export default {
     },
     lookOverCourseDetail: async function (course) {
       await this.$store.dispatch('changeCurrentCourse', course)
-      await this.$router.push('/course-detail')
+      await this.$router.push('/edit-course-info')
     },
     lookOverSubCourses: async function (course) {
       await this.$store.dispatch('changeCurrentCourse', course)
@@ -136,11 +122,38 @@ export default {
     },
     lookOverTeachers: async function (course) {
       await this.$store.dispatch('changeCurrentCourse', course)
-      await this.$router.push('/teacher-detail')
+      await this.$router.push('/edit-teacher-info')
+
+      // await this.$router.push('/teacher-detail')
     },
     editClassInfo: async function () {
       await this.$store.dispatch('changeCurrentClass', this.currentClass)
       await this.$router.push('/edit-class-info')
+    },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.currentClass.image = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改班级封面成功',
+        type: 'success' })
+    },
+    handleRemove (file, fileList) {
+      console.log('文件删除')
     }
   }
 }
@@ -161,6 +174,33 @@ export default {
   }
 
   .info {
-    margin: 0 0 8px;
+    margin: 0 0 13px;
+    font-size: 18px;
+  }
+
+  .course-detail {
+    margin: 5%;
+  }
+
+  .detail-title {
+    font-size: 20px;
+    color: #606266;
+  }
+
+  .clazz-title {
+    font-size: 23px;
+    color: #606266;
+  }
+
+  .clazz-introduction {
+    margin: 1% 2%;
+  }
+
+  .course-card {
+    margin: 3% 7% 0;
+  }
+
+  .add-button {
+    margin-top: 5%;
   }
 </style>

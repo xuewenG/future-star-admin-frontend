@@ -119,6 +119,38 @@ export default {
       this.course.begin_time = ''
       this.course.end_time = ''
     },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.course.image = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改班级图片成功',
+        type: 'success' })
+    },
+    uploadIconSuccess (response, file, fileList) {
+      this.course.icon = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改班级图标成功',
+        type: 'success' })
+    },
+    handleRemove (file, fileList) {
+      console.log('文件删除')
+    },
     saveCourseInfo: async function () {
       let that = this
       let url = '/course/course/' + that.course.id
@@ -159,5 +191,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .activity-card {
+    width: 70%;
+    margin: auto;
+  }
 </style>

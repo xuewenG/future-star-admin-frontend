@@ -71,6 +71,31 @@ export default {
       this.semester.subject = ''
       this.semester.introduction = ''
     },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.semester.icon = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改学期图标成功',
+        type: 'success' })
+    },
+    handleRemove (file, fileList) {
+      console.log('文件删除')
+    },
     editSemesterInfo: function () {
       let that = this
       let url = '/semester/semester/' + this.semester.id
@@ -115,4 +140,5 @@ export default {
   .activity-table {
     margin: 40px 20px;
   }
+
 </style>

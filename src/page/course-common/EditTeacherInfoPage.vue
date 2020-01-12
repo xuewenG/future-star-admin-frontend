@@ -60,24 +60,43 @@ export default {
   name: 'EditTeacherInfoPage',
   data () {
     return {
-      teacher:
-        {
-          id: '1',
-          name: '陈某人',
-          avatar: 'http://dmimg.5054399.com/allimg/pkm/pk/22.jpg',
-          title: '计蒜鸽UFO',
-          introduction: 'I come from university',
-          contact_way: '1981468862@qq.com'
-        }
+      teacher: {}
     }
   },
   created () {
-    let course = this.$store.getters.getCurrentCourse
-    this.teacher = course.teacher
+    if (this.$store.getters.getCurrentCourse) {
+      let course = this.$store.getters.getCurrentCourse
+      this.teacher = course.teacher
+    }
   },
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.teacher.avatar = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改讲师头像成功',
+        type: 'success' })
+    },
+    handleRemove (file, fileList) {
+      console.log('文件删除')
     },
     clearText: function () {
       this.teacher.name = ''

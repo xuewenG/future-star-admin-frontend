@@ -12,7 +12,7 @@ exports[`DetailOfClassPage 快照测试 1`] = `
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-card activity-card is-never-shadow">
+    <div class="el-card activity-card is-never-shadow el-loading-parent--relative">
       <div class="el-card__header">
         <div class="el-row">
           <div class="el-col el-col-24" align="center">
@@ -47,32 +47,16 @@ exports[`DetailOfClassPage 快照测试 1`] = `
             </div>
           </div>
         </div>
-        <div class="el-card course-card is-never-shadow">
-          <!---->
-          <div class="el-card__body">
-            <div class="el-row">
-              <div class="el-col el-col-2"><img width="35px"></div>
-              <div class="el-col el-col-4">
-
-              </div>
-              <div class="el-col el-col-9">
-                ()
-              </div>
-              <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
-                  <!---->
-                  <!----><span>课程详情</span></button></div>
-              <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
-                  <!---->
-                  <!----><span>课程目录</span></button></div>
-              <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
-                  <!---->
-                  <!----><span>讲师信息</span></button></div>
-            </div>
-          </div>
-        </div>
         <div class="add-button el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-round">
             <!---->
             <!----><span>添加课程</span></button></div>
+      </div>
+      <div class="el-loading-mask el-loading-fade-enter el-loading-fade-enter-active" style="">
+        <div class="el-loading-spinner"><svg viewBox="25 25 50 50" class="circular">
+            <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
+          </svg>
+          <!---->
+        </div>
       </div>
     </div>
   </main>
