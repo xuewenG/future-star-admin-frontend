@@ -1,122 +1,70 @@
 <template>
   <el-container>
-    <el-main >
-      <el-page-header @back="goBack()" content="课程目录"></el-page-header>
-      <el-divider/>
-      <el-card shadow="never">
-        <el-tabs class="top-tab" v-model="activeName" @tab-click="handleClick" addable @edit="handleTabsEdit">
-          <el-tab-pane v-for="item in results"
-                       :key="item.id"
-                       :label="item.content_name"
-                       :name="item.content_name">
-            <div class="sort">
-              <el-divider>
-                <el-input
-                  size="medium"
-                  placeholder="请输入内容"
-                  v-model="content_name"
-                  show-word-limit>
-                  <template slot="prepend">子课程:</template>
-                  <el-button slot="append" @click="updateContent">确定修改</el-button>
-                </el-input>
-              </el-divider>
+    <el-main>
+      <el-page-header @back="goBack()" content="修改班级信息"></el-page-header>
+      <el-divider></el-divider>
+      <el-card class="activity-card" shadow="never">
+        <el-form class="activity-table" label-width="150px">
+          <el-form-item class="activity-title" label="班级名称：">
+            <el-input type="text" v-model="currentClass.name"></el-input>
+          </el-form-item>
+          <el-row>
+            <el-col :span="8">
+              <el-form-item label="限制人数：">
+                <el-input type="text" v-model="currentClass.people_number_limit"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-form-item label="起止时间：">
+            <el-col :span="7">
+              <el-date-picker
+                v-model="currentClass.start_time"
+                type="date"
+                placeholder="选择日期">
+              </el-date-picker>
+            </el-col>
+            <el-col :span="2" align="center">
+              至
+            </el-col>
+            <el-col :span="8">
+              <el-date-picker
+                v-model="currentClass.end_time"
+                type="date"
+                placeholder="选择日期">
+              </el-date-picker>
+            </el-col>
+          </el-form-item>
+          <el-form-item label="班级介绍：">
+            <el-input
+              :autosize="{ minRows: 6, maxRows: 30}"
+              v-model="currentClass.introduction"
+              type="textarea"/>
+          </el-form-item>
+          <el-form-item label="班级封面：">
+            <div class="block">
+              <el-upload
+                class="avatar-uploader"
+                action="https://jsonplaceholder.typicode.com/posts/"
+                :show-file-list="false"
+                :http-request="uploadImg"
+                :on-success="uploadImgSuccess"
+                :on-remove="handleRemove">
+                <img v-if="currentClass.image" :src="currentClass.image" class="clazz-image" alt="avatar">
+                <i v-else class="el-icon-plus avatar-uploader-icon">添加班级封面</i>
+              </el-upload>
             </div>
-            <div class="main-resource">
-              <el-timeline>
-                <el-timeline-item placement="top" size="large" type="info">
-                  <i class="el-icon-edit"> — 速记 —</i>
-                  <el-card class="card">
-                    <el-row style="margin-top: 10px;">
-                      <div style="text-align: center;">
-                        <el-input type="textarea"
-                                  v-model="note.word"
-                                  placeholder="请输入内容"
-                                  :autosize="{ minRows: 2, maxRows: 4}"></el-input>
-                      </div>
-                    </el-row>
-                  </el-card>
-                </el-timeline-item>
-                <el-timeline-item placement="top" type="info">
-                  <i class="el-icon-paperclip"> — 课程资料 —</i>
-                  <el-card class="card" >
-                    <el-row style="margin-top: 30px;">
-                      <el-col :span="8" class="resource-icon">
-                        <a :href="resource.url">
-                          <i class="el-icon-folder"></i>
-                        </a>
-                      </el-col>
-                      <el-col :span="1">
-                        <div style="font-size: 45px;">
-                          <el-divider direction="vertical"></el-divider>
-                        </div>
-                      </el-col>
-                      <el-col :span="1"  style="margin: 3% 0 0 5%;">
-                        <div >
-                          <el-upload
-                            class="uploader"
-                            action="https://jsonplaceholder.typicode.com/posts/"
-                            :show-file-list="false"
-                            :http-request="uploadImg"
-                            :on-success="uploadResourceSuccess"
-                            :on-remove="handleRemove">
-                            <el-button size="mini" type="primary">点击上传</el-button>
-                          </el-upload>
-                        </div>
-                      </el-col>
-                    </el-row>
-                  </el-card>
-                </el-timeline-item>
-                <el-timeline-item placement="top" type="info" size="large">
-                  <i class="el-icon-data-board"> — 视频 —</i>
-                  <el-card class="card">
-                    <el-row style="margin-top: 30px;">
-                      <el-col :span="14" :offset="2">
-                        <video :src="video.url" width="400px" controls></video>
-                      </el-col>
-                      <el-col :span="1">
-                        <div style="font-size: 70px;">
-                          <el-divider direction="vertical"></el-divider>
-                        </div>
-                      </el-col>
-                      <el-col :span="4" class="video-icon">
-                        <a :href="video.url">
-                          <i class="el-icon-video-play"> {{video.name}}</i>
-                        </a>
-                        <div style="text-align: center;">
-                          <el-upload
-                            class="uploader"
-                            action="https://jsonplaceholder.typicode.com/posts/"
-                            :show-file-list="false"
-                            :http-request="uploadImg"
-                            :on-success="uploadVideoSuccess"
-                            :on-remove="handleRemove">
-                            <el-button size="mini" type="primary">点击上传</el-button>
-                          </el-upload>
-                        </div>
-                      </el-col>
-                      <el-col :span="3" class="resource-icon">
-
-                      </el-col>
-                    </el-row>
-                  </el-card>
-                  <div class="delete_button">
-                    <template>
-                      <el-popconfirm
-                        title="确定删除条目吗？"
-                        @onConfirm="deleteContent"
-                      >
-                        <el-button size="medium"
-                                   type="danger"
-                                   slot="reference"
-                        >删除</el-button>
-                      </el-popconfirm>
-                    </template>
-                  </div>
-                </el-timeline-item>
-              </el-timeline>
-            </div>
-          </el-tab-pane>
-        </el-tabs>
+          </el-form-item>
+          <el-form-item>
+            <el-row type="flex" justify="center" class="operation-button">
+              <el-col :span="8">
+                <el-button type="primary" round @click="saveClassInfo">保存</el-button>
+              </el-col>
+              <el-col :span="8">
+                <el-button round @click="clearText">清空</el-button>
+              </el-col>
+            </el-row>
+          </el-form-item>
+        </el-form>
       </el-card>
     </el-main>
   </el-container>
@@ -204,5 +152,9 @@ export default {
 
   .activity-table {
     margin: 40px 20px;
+  }
+
+  .clazz-image {
+    width: 300px;
   }
 </style>
