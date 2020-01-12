@@ -1,32 +1,42 @@
 <template>
   <el-container>
-    <el-header>
-      <el-page-header @back="goBack" content="修改讲师信息"></el-page-header>
-    </el-header>
     <el-main>
+      <el-page-header @back="goBack()" content="讲师信息"></el-page-header>
+      <el-divider/>
       <el-card shadow="never">
         <el-form>
           <el-row>
+            <el-form-item align="center">
+              <el-upload
+                class="avatar-uploader"
+                action="https://jsonplaceholder.typicode.com/posts/"
+                :show-file-list="false"
+                :http-request="uploadImg"
+                :on-success="uploadImgSuccess"
+                :on-remove="handleRemove"
+              >
+                <img v-if="teacher.avatar" :src="teacher.avatar"  width=240px class="image" alt="image">
+                <i v-else class="el-icon-plus avatar-uploader-icon">添加头像</i>
+              </el-upload>
+            </el-form-item>
             <el-form-item label="讲师名：">
               <el-input v-model="teacher.name"></el-input>
             </el-form-item>
           </el-row>
-          <el-form-item label="讲师头像：">
-            <el-input v-model="teacher.avatar"></el-input>
-          </el-form-item>
           <el-row>
             <el-form-item label="讲师头衔：">
               <el-input v-model="teacher.title"></el-input>
             </el-form-item>
           </el-row>
           <el-row>
-            <el-form-item label="讲师简介：">
-              <el-input v-model="teacher.introduction"></el-input>
+            <el-form-item label="讲师联系方式：">
+              <el-input v-model="teacher.contact_way"></el-input>
             </el-form-item>
           </el-row>
           <el-row>
-            <el-form-item label="讲师联系方式：">
-              <el-input v-model="teacher.contact_way"></el-input>
+            <el-form-item label="讲师简介：">
+              <el-input type="textarea" v-model="teacher.introduction"
+                        :autosize="{ minRows: 2, maxRows: 8}"></el-input>
             </el-form-item>
           </el-row>
           <el-form-item>
@@ -50,24 +60,43 @@ export default {
   name: 'EditTeacherInfoPage',
   data () {
     return {
-      teacher:
-        {
-          id: '1',
-          name: '陈某人',
-          avatar: 'http://dmimg.5054399.com/allimg/pkm/pk/22.jpg',
-          title: '计蒜鸽UFO',
-          introduction: 'I come from university',
-          contact_way: '1981468862@qq.com'
-        }
+      teacher: {}
     }
   },
   created () {
-    let course = this.$store.getters.getCurrentCourse
-    this.teacher = course.teacher
+    if (this.$store.getters.getCurrentCourse) {
+      let course = this.$store.getters.getCurrentCourse
+      this.teacher = course.teacher
+    }
   },
   methods: {
     goBack: function () {
       this.$router.go(-1)
+    },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.teacher.avatar = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改讲师头像成功',
+        type: 'success' })
+    },
+    handleRemove (file, fileList) {
+      console.log('文件删除')
     },
     clearText: function () {
       this.teacher.name = ''

@@ -8,44 +8,32 @@
       <el-card
         class="info-card"
         shadow="never">
-        <el-row>
-          <el-col
-            :span="24"
-            class="center-position">
-            <div class="block">
-              <el-avatar
-                :size="130"
-                :src="currentActivity.image">
-              </el-avatar>
-            </div>
-          </el-col>
-        </el-row>
         <el-form class="info-table" label-width="130px">
-          <div class="line">
+          <div>
             <el-divider></el-divider>
           </div>
           <div class="description">- 活动信息 -</div>
           <el-row class="top-distance">
             <el-col :span="width" :offset="2">
-              <i class="el-icon-user">&nbsp;活动名称：</i>
+              <i class="el-icon-present">&nbsp;活动名称：</i>
               <label>{{ currentActivity.name }}</label>
             </el-col>
             <el-col :span="width">
-              <i class="el-icon-male">&nbsp;报名开始时间：</i>
+              <i class="el-icon-alarm-clock">&nbsp;报名开始时间：</i>
               <label>{{ currentActivity.enroll_start_time }}</label>
             </el-col>
             <el-col :span="width">
-              <i class="el-icon-timer">&nbsp;报名结束时间：</i>
+              <i class="el-icon-alarm-clock">&nbsp;报名结束时间：</i>
               <label>{{ currentActivity.enroll_end_time }}</label>
             </el-col>
           </el-row>
           <el-row class="top-distance">
             <el-col :span="width" :offset="offset">
-              <i class="el-icon-mobile-phone">&nbsp;活动时间：</i>
+              <i class="el-icon-timer">&nbsp;活动时间：</i>
               <label>{{ currentActivity.start_time }}</label>
             </el-col>
             <el-col :span="width">
-              <i class="el-icon-document">&nbsp;面向人群：</i>
+              <i class="el-icon-unlock">&nbsp;面向人群：</i>
               <label v-for="item in clazzOptions"
                      :key="item.clazz"
                      :label="item.label"
@@ -53,7 +41,7 @@
               </label>
             </el-col>
             <el-col :span="width">
-              <i class="el-icon-school">&nbsp;活动地点：</i>
+              <i class="el-icon-map-location">&nbsp;活动地点：</i>
               <label >{{ currentActivity.address }}</label>
             </el-col>
           </el-row>
@@ -63,20 +51,27 @@
               <label>{{ currentActivity.people_number_limit }}</label>
             </el-col>
             <el-col :span="width">
-              <i class="el-icon-chat-dot-round">&nbsp;收费情况：</i>
+              <i class="el-icon-coin">&nbsp;收费情况：</i>
               <label>{{ currentActivity.price }}</label>
             </el-col>
             <el-col :span="width">
-              <i class="el-icon-edit-outline">&nbsp;主办方：</i>
+              <i class="el-icon-mic">&nbsp;主办方：</i>
               <label >{{ currentActivity.organizer }}</label>
             </el-col>
           </el-row>
           <el-row class="top-distance">
             <el-col
-              :span="21"
+              :span="22"
               :offset="offset">
               <i class="el-icon-reading">&nbsp;活动日程：</i>
               <label>{{ currentActivity.arrangement }}</label>
+            </el-col>
+          </el-row>
+          <el-row class="top-distance" align="center">
+            <el-col
+              :span="24"
+              align="center">
+              <img :src="currentActivity.image" width="400px;">
             </el-col>
           </el-row>
         </el-form>
@@ -87,6 +82,7 @@
             <el-button
               type="primary"
               icon="el-icon-edit"
+              round
               @click="editDetails()">
               编辑
             </el-button>
@@ -160,10 +156,6 @@ export default {
 
   .center-position {
     text-align: center;
-  }
-
-  .line {
-    margin: 0 10%;
   }
 
   .block {

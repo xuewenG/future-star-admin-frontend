@@ -9,10 +9,15 @@
             :span="24"
             class="center-position">
             <div class="block">
-              <el-avatar
-                :size="130"
-                :src="currentActivity.image">
-              </el-avatar>
+              <el-upload
+                class="avatar-uploader"
+                action="https://jsonplaceholder.typicode.com/posts/"
+                :show-file-list="false"
+                :http-request="uploadImg"
+                :on-success="uploadIconSuccess"
+                :on-remove="handleRemove">
+                <img width="140px" :src="currentActivity.icon" class="clazz-image" alt="avatar">
+              </el-upload>
             </div>
           </el-col>
         </el-row>
@@ -31,7 +36,7 @@
                 v-model="currentActivity.name"
                 maxlength="20"
                 show-word-limit>
-                <template slot="prepend">活动名称:</template>
+                <template slot="prepend">名称:</template>
               </el-input>
             </el-col>
           </el-row>
@@ -90,7 +95,7 @@
                 v-model="currentActivity.address"
                 maxlength="20"
                 show-word-limit>
-                <template slot="prepend">活动地点：</template>
+                <template slot="prepend">城市：</template>
               </el-input>
             </el-col>
             <el-col :span="6" :offset="2">
@@ -102,7 +107,7 @@
                 v-model="currentActivity.people_number_limit"
                 maxlength="3"
                 show-word-limit>
-                <template slot="prepend">限制人数：</template>
+                <template slot="prepend">人数：</template>
               </el-input>
             </el-col>
           </el-row>
@@ -116,7 +121,7 @@
                 v-model="currentActivity.price"
                 maxlength="4"
                 show-word-limit>
-                <template slot="prepend">收费情况：</template>
+                <template slot="prepend">金额(¥)：</template>
               </el-input>
             </el-col>
             <el-col :span="6" :offset="2">
@@ -128,7 +133,7 @@
                 v-model="currentActivity.organizer"
                 maxlength="50"
                 show-word-limit>
-                <template slot="prepend">主办方：</template>
+                <template slot="prepend">名称：</template>
               </el-input>
             </el-col>
           </el-row>
@@ -142,10 +147,24 @@
                 v-model="currentActivity.arrangement"
                 maxlength="100"
                 show-word-limit
-                :autosize="{ minRows: 2, maxRows: 4}">
+                :autosize="{ minRows: 4, maxRows: 8}">
                 <template slot="prepend">活动日程：</template>
               </el-input>
             </el-col>
+          </el-row>
+          <el-row class="top-distance">
+            <div class="block">
+              <el-upload
+                align="center"
+                class="avatar-uploader"
+                action="https://jsonplaceholder.typicode.com/posts/"
+                :show-file-list="false"
+                :http-request="uploadImg"
+                :on-success="uploadImgSuccess"
+                :on-remove="handleRemove">
+                <img width="400px" :src="currentActivity.image" class="clazz-image" alt="avatar">
+              </el-upload>
+            </div>
           </el-row>
           <el-row>
             <el-col :span="24" class="button">
@@ -220,6 +239,38 @@ export default {
         }
         that.$forceUpdate()
       })
+    },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.currentActivity.image = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改活动图片成功',
+        type: 'success' })
+    },
+    uploadIconSuccess (response, file, fileList) {
+      this.currentActivity.icon = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改活动图标成功',
+        type: 'success' })
+    },
+    handleRemove (file, fileList) {
+      console.log('文件删除')
     },
     editActivity () {
       let params = {

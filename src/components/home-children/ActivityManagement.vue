@@ -1,16 +1,16 @@
 <template>
   <el-container>
-    <el-header>
+    <el-main>
       <el-row>
-        <el-col :span="3">
-          <h3>已有活动列表</h3>
+        <el-col :span="13" class="list-title">
+          <h4>- 活动列表 -</h4>
         </el-col>
-        <el-col :span="1">
-          <el-button type="primary" size="mini" class="el-icon-plus" @click="createActivity()" round>新建活动</el-button>
+        <el-col :span="4" :offset="6" class="add-button-tar">
+          <router-link to="/create-activity" >
+            <i class="el-icon-circle-plus-outline add-button"></i>
+          </router-link>
         </el-col>
       </el-row>
-    </el-header>
-    <el-main>
       <el-tabs v-model="activeName" @tab-click="changeActiveName">
         <el-tab-pane label="未开放" name="first">
           <activity-unopened/>
@@ -59,17 +59,43 @@ export default {
   methods: {
     changeActiveName (tab) {
       this.$store.dispatch('changeActiveNameOfActivity', tab.name)
-    },
-    createActivity () {
-      this.$router.push('/create-activity')
     }
   }
 }
 </script>
 
 <style scoped>
-  .add-activity {
-    width: 80px;
-    height: 80px;
+
+  .add-button {
+    font-size: 30px;
+    color: #409eff;
+  }
+
+  .list-title {
+    font-size: 25px;
+    text-align: right;
+  }
+
+  .add-button-tar {
+    margin-top: 2%;
+    text-align: right;
+  }
+
+  .el-main {
+    padding: 0;
+    margin: 0;
+  }
+
+  .admin-table {
+    margin: 40px 20px;
+  }
+
+  .el-header {
+    padding: 0;
+    margin: 0;
+  }
+
+  h4 {
+    color: #707070;
   }
 </style>

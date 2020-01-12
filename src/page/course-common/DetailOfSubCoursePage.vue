@@ -2,8 +2,8 @@
   <el-container>
     <el-main >
       <el-page-header @back="goBack()" content="课程目录"></el-page-header>
-      <el-divider></el-divider>
-      <el-card class="main-page">
+      <el-divider/>
+      <el-card shadow="never">
         <el-tabs class="top-tab" v-model="activeName" @tab-click="handleClick" addable @edit="handleTabsEdit">
           <el-tab-pane v-for="item in results"
                        :key="item.id"
@@ -20,15 +20,6 @@
                   <el-button slot="append" @click="updateContent">确定修改</el-button>
                 </el-input>
               </el-divider>
-              <div style="margin: 10% 60% 0 0;">
-                <el-input
-                  size="medium"
-                  placeholder="请输入内容"
-                  v-model="sort"
-                  show-word-limit>
-                  <template slot="prepend">班课类别:</template>
-                </el-input>
-              </div>
             </div>
             <div class="main-resource">
               <el-timeline>
@@ -37,7 +28,10 @@
                   <el-card class="card">
                     <el-row style="margin-top: 10px;">
                       <div style="text-align: center;">
-                        <el-input type="textarea" v-model="note.word" placeholder="请输入内容"></el-input>
+                        <el-input type="textarea"
+                                  v-model="note.word"
+                                  placeholder="请输入内容"
+                                  :autosize="{ minRows: 2, maxRows: 4}"></el-input>
                       </div>
                     </el-row>
                   </el-card>
@@ -48,7 +42,7 @@
                     <el-row style="margin-top: 30px;">
                       <el-col :span="8" class="resource-icon">
                         <a :href="resource.url">
-                          <i class="el-icon-folder"> {{resource.name}}</i>
+                          <i class="el-icon-folder"></i>
                         </a>
                       </el-col>
                       <el-col :span="1">
@@ -148,8 +142,9 @@ export default {
   },
   created () {
     this.course = this.$store.getters.getCurrentCourse
-    console.log(this.course)
-    this.getContent()
+    if (this.axios) {
+      this.getContent()
+    }
   },
   methods: {
     goBack: function () {

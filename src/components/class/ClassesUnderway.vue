@@ -16,18 +16,25 @@
             <el-button type="primary" size="small" @click="enrollmentAudit(item)" round>毕业审核</el-button>
           </el-col>
         </el-row>
-        <el-row class="info">
-          起止日期：{{ item.start_time }}—— {{ item.end_time }}
-        </el-row>
-        <el-row class="info">
-          招生人数：{{ item.current_people_number }} / {{ item.people_number_limit }}
-        </el-row>
-        <el-row class="info">
-          班级状态：进行中
-        </el-row>
-        <el-row class="info">
-          班级简介：{{ item.introduction | ellipsis }}
-        </el-row>
+        <el-col :span="12">
+          <el-row class="info">
+            起止日期：{{ item.start_time }}—— {{ item.end_time }}
+          </el-row>
+          <el-row class="info">
+            招生人数：{{ item.current_people_number }} / {{ item.people_number_limit }}
+          </el-row>
+          <el-row class="info">
+            班级状态：进行中
+          </el-row>
+          <el-row class="info">
+            班级简介：{{ item.introduction | ellipsis }}
+          </el-row>
+        </el-col>
+        <el-col :span="12" align="center">
+          <el-row style="margin-bottom: 3%;">
+            <img :src="item.image" width="160px;">
+          </el-row>
+        </el-col>
       </el-card>
     </el-col>
   </div>

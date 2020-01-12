@@ -12,62 +12,54 @@
           prop="student.name"
           align="center"
           label="姓名"
-          sortable
-          :width="shortTextWidth">
+          fixed=""
+          sortabl>
         </el-table-column>
         <el-table-column
           prop="student.gender"
           align="center"
           label="性别"
-          sortable
-          :width="shortTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="student.birthday"
           align="center"
           label="出生日期"
-          sortable
-          :width="longTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="student.phone_number"
           align="center"
           label="联系电话"
-          sortable
-          :width="longTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="student.wx"
           align="center"
           label="微信号"
-          sortable
-          :width="longTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="student.email"
           align="center"
           label="邮箱"
-          sortable
-          :width="longTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="student.city"
           align="center"
           label="所在城市"
-          sortable
-          :width="longTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="state"
           align="center"
           label="状态"
-          sortable
-          :width="shortTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           align="center"
-          label="详情"
-          :width="operationWidth">
+          label="详情">
           <template slot-scope="scope">
             <el-button
               type="primary"

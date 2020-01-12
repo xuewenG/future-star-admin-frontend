@@ -2,7 +2,7 @@
   <el-container>
     <el-main>
       <el-page-header @back="goBack" content="班级学员"></el-page-header>
-      <el-divider></el-divider>
+      <el-divider/>
       <el-table
         :data="tableData"
         :highlight-current-row="true"
@@ -12,53 +12,45 @@
           prop="name"
           align="center"
           label="姓名"
-          sortable
-          :width="shortTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="gender"
           align="center"
           label="性别"
-          sortable
-          :width="shortTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="birthday"
           align="center"
           label="出生日期"
-          sortable
-          :width="longTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="phone_number"
           align="center"
           label="联系电话"
-          sortable
-          :width="longTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           prop="wx"
           align="center"
-          label="微信号"
-          :width="longTextWidth">
+          label="微信号">
         </el-table-column>
         <el-table-column
           prop="email"
           align="center"
-          label="邮箱"
-          :width="longTextWidth">
+          label="邮箱">
         </el-table-column>
         <el-table-column
           prop="city"
           align="center"
           label="所在城市"
-          sortable
-          :width="longTextWidth">
+          sortable>
         </el-table-column>
         <el-table-column
           align="center"
-          label="详情"
-          :width="operationWidth">
+          label="详情">
           <template slot-scope="scope">
             <el-button
               type="primary"

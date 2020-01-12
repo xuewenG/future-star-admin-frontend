@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailOfSubCoursePage 快照测试 1`] = `
+<section class="el-container">
+  <main class="el-main">
+    <div class="el-page-header">
+      <div class="el-page-header__left"><i class="el-icon-back"></i>
+        <div class="el-page-header__title">返回</div>
+      </div>
+      <div class="el-page-header__content">课程目录</div>
+    </div>
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
+    <div class="el-card is-never-shadow">
+      <!---->
+      <div class="el-card__body">
+        <div class="top-tab el-tabs el-tabs--top">
+          <div class="el-tabs__header is-top"><span tabindex="0" class="el-tabs__new-tab"><i class="el-icon-plus"></i></span>
+            <div class="el-tabs__nav-wrap is-top">
+              <div class="el-tabs__nav-scroll">
+                <div role="tablist" class="el-tabs__nav is-top" style="transform: translateX(-0px);">
+                  <div class="el-tabs__active-bar is-top" style="width: 0px; transform: translateX(0px); webkit-transform: translateX(0px);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="el-tabs__content"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+`;

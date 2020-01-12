@@ -44,9 +44,9 @@ exports[`EditClassInfoPage 快照测试 1`] = `
               </div>
             </div>
           </div>
-          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">班级起止时间：</label>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">起止时间：</label>
             <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="el-col el-col-8">
+              <div class="el-col el-col-7">
                 <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--date">
                   <!----><input type="text" autocomplete="off" name="" placeholder="选择日期" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-date"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----><!----><!----><!----></span>
                   <!----></span>
@@ -54,7 +54,7 @@ exports[`EditClassInfoPage 快照测试 1`] = `
                   <!---->
                 </div>
               </div>
-              <div class="el-col el-col-2">
+              <div class="el-col el-col-2" align="center">
                 至
               </div>
               <div class="el-col el-col-8">
@@ -76,14 +76,24 @@ exports[`EditClassInfoPage 快照测试 1`] = `
               <!---->
             </div>
           </div>
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">班级封面：</label>
+            <div class="el-form-item__content" style="margin-left: 150px;">
+              <div class="block">
+                <div class="avatar-uploader">
+                  <div tabindex="0" class="el-upload el-upload--text"><i class="el-icon-plus avatar-uploader-icon">添加班级封面</i><input type="file" name="file" class="el-upload__input"></div>
+                </div>
+              </div>
+              <!---->
+            </div>
+          </div>
           <div class="el-form-item">
             <!---->
             <div class="el-form-item__content" style="margin-left: 150px;">
               <div class="operation-button el-row is-justify-center el-row--flex">
-                <div class="el-col el-col-8"><button type="button" class="el-button el-button--primary">
+                <div class="el-col el-col-8"><button type="button" class="el-button el-button--primary is-round">
                     <!---->
                     <!----><span>保存</span></button></div>
-                <div class="el-col el-col-8"><button type="button" class="el-button el-button--default">
+                <div class="el-col el-col-8"><button type="button" class="el-button el-button--default is-round">
                     <!---->
                     <!----><span>清空</span></button></div>
               </div>

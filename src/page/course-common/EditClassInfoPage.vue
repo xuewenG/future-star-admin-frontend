@@ -15,15 +15,15 @@
               </el-form-item>
             </el-col>
           </el-row>
-          <el-form-item label="班级起止时间：">
-            <el-col :span="8">
+          <el-form-item label="起止时间：">
+            <el-col :span="7">
               <el-date-picker
                 v-model="currentClass.start_time"
                 type="date"
                 placeholder="选择日期">
               </el-date-picker>
             </el-col>
-            <el-col :span="2">
+            <el-col :span="2" align="center">
               至
             </el-col>
             <el-col :span="8">
@@ -40,13 +40,27 @@
               v-model="currentClass.introduction"
               type="textarea"/>
           </el-form-item>
+          <el-form-item label="班级封面：">
+            <div class="block">
+              <el-upload
+                class="avatar-uploader"
+                action="https://jsonplaceholder.typicode.com/posts/"
+                :show-file-list="false"
+                :http-request="uploadImg"
+                :on-success="uploadImgSuccess"
+                :on-remove="handleRemove">
+                <img v-if="currentClass.image" :src="currentClass.image" class="clazz-image" alt="avatar">
+                <i v-else class="el-icon-plus avatar-uploader-icon">添加班级封面</i>
+              </el-upload>
+            </div>
+          </el-form-item>
           <el-form-item>
             <el-row type="flex" justify="center" class="operation-button">
               <el-col :span="8">
-                <el-button type="primary" @click="saveClassInfo">保存</el-button>
+                <el-button type="primary" round @click="saveClassInfo">保存</el-button>
               </el-col>
               <el-col :span="8">
-                <el-button @click="clearText">清空</el-button>
+                <el-button round @click="clearText">清空</el-button>
               </el-col>
             </el-row>
           </el-form-item>
@@ -138,5 +152,9 @@ export default {
 
   .activity-table {
     margin: 40px 20px;
+  }
+
+  .clazz-image {
+    width: 300px;
   }
 </style>

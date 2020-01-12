@@ -7,7 +7,7 @@ exports[`EditSemesterInfoPage 快照测试 1`] = `
       <div class="el-page-header__left"><i class="el-icon-back"></i>
         <div class="el-page-header__title">返回</div>
       </div>
-      <div class="el-page-header__content">修改学期信息</div>
+      <div class="el-page-header__content">学期信息</div>
     </div>
     <div class="el-divider el-divider--horizontal">
       <!---->
@@ -16,8 +16,16 @@ exports[`EditSemesterInfoPage 快照测试 1`] = `
       <!---->
       <div class="el-card__body">
         <form class="el-form activity-table">
-          <div class="el-form-item activity-title"><label class="el-form-item__label" style="width: 150px;">学期主题：</label>
-            <div class="el-form-item__content" style="margin-left: 150px;">
+          <div class="el-form-item activity-title"><label class="el-form-item__label" style="width: 140px;">学期图标：</label>
+            <div class="el-form-item__content" style="margin-left: 140px;">
+              <div class="avatar-uploader">
+                <div tabindex="0" class="el-upload el-upload--text"><i class="el-icon-plus avatar-uploader-icon">添加学期图片</i><input type="file" name="file" class="el-upload__input"></div>
+              </div>
+              <!---->
+            </div>
+          </div>
+          <div class="el-form-item activity-title"><label class="el-form-item__label" style="width: 140px;">学期主题：</label>
+            <div class="el-form-item__content" style="margin-left: 140px;">
               <div class="short-text el-input">
                 <!----><input type="text" autocomplete="off" placeholder="请输入本学期主题" class="el-input__inner">
                 <!---->
@@ -28,8 +36,8 @@ exports[`EditSemesterInfoPage 快照测试 1`] = `
               <!---->
             </div>
           </div>
-          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">学期介绍：</label>
-            <div class="el-form-item__content" style="margin-left: 150px;">
+          <div class="el-form-item"><label class="el-form-item__label" style="width: 140px;">学期介绍：</label>
+            <div class="el-form-item__content" style="margin-left: 140px;">
               <div class="long-text el-textarea"><textarea autocomplete="off" placeholder="请输入本学期介绍" class="el-textarea__inner" style="min-height: -24px; height: -120px;"></textarea>
                 <!---->
               </div>
@@ -38,7 +46,7 @@ exports[`EditSemesterInfoPage 快照测试 1`] = `
           </div>
           <div class="el-form-item">
             <!---->
-            <div class="el-form-item__content" style="margin-left: 150px;">
+            <div class="el-form-item__content" style="margin-left: 140px;">
               <div class="el-row is-justify-space-around el-row--flex">
                 <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary">
                     <!---->

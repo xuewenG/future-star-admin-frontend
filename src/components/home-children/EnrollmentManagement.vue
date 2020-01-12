@@ -17,6 +17,9 @@
   <el-container v-else-if="semester.state===0">
     <el-header>
       <el-row type="flex" align="middle">
+        <el-col :span="1" >
+          <img :src="semester.icon" width="50px;">
+        </el-col>
         <el-col :span="4">
           <h3>{{ semester.subject }}</h3>
         </el-col>

@@ -22,6 +22,9 @@
           <el-row>
             课程介绍： {{ course.introduction }}
           </el-row>
+          <el-row>
+            课程介绍： {{ course.sort }}
+          </el-row>
         </el-card>
       </el-row>
     </el-main>

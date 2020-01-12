@@ -150,7 +150,7 @@ export default {
     lookOverSemesterDetail: async function () {
       this.changeCurrentSemester()
       await this.$store.dispatch('changeCurrentSemester', this.semester)
-      await this.$router.push('/semester-detail')
+      await this.$router.push('/edit-semester-info')
     },
     changeActiveName: async function (tab) {
       await this.$store.dispatch('changeActiveNameOfCourse', tab.name)

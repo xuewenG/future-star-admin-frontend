@@ -39,20 +39,14 @@ export default {
   data () {
     return {
       course: '',
-      teacher:
-        {
-          id: '1',
-          name: '陈某人',
-          avatar: 'http://dmimg.5054399.com/allimg/pkm/pk/22.jpg',
-          title: '计蒜鸽UFO',
-          introduction: 'I come from university',
-          contact_way: '1981468862@qq.com'
-        }
+      teacher: {}
     }
   },
   created () {
-    this.course = this.$store.getters.getCurrentCourse
-    this.teacher = this.course.teacher
+    if (this.course) {
+      this.course = this.$store.getters.getCurrentCourse
+      this.teacher = this.course.teacher
+    }
   },
   methods: {
     goBack: function () {

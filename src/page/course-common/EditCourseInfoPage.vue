@@ -1,24 +1,55 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack" content="修改课程信息"></el-page-header>
+      <el-page-header @back="goBack" content="课程信息"></el-page-header>
       <el-divider/>
-      <el-card shadow="never">
+      <el-card shadow="never" class="activity-card">
         <el-form label-width="150px">
+          <el-form-item label="课程图标：">
+            <el-upload
+              class="avatar-uploader"
+              action="https://jsonplaceholder.typicode.com/posts/"
+              :show-file-list="false"
+              :http-request="uploadImg"
+              :on-success="uploadIconSuccess"
+              :on-remove="handleRemove"
+            >
+              <img v-if="course.icon" :src="course.icon"  width=100px class="image" alt="image">
+              <i v-else class="el-icon-plus avatar-uploader-icon">添加课程图标</i>
+            </el-upload>
+          </el-form-item>
+          <el-form-item label="课程图片：">
+            <el-upload
+              class="avatar-uploader"
+              action="https://jsonplaceholder.typicode.com/posts/"
+              :show-file-list="false"
+              :http-request="uploadImg"
+              :on-success="uploadImgSuccess"
+              :on-remove="handleRemove"
+            >
+              <img v-if="course.image" :src="course.image"  width=500px class="image" alt="image">
+              <i v-else class="el-icon-plus avatar-uploader-icon">添加课程图片</i>
+            </el-upload>
+          </el-form-item>
           <el-form-item label="课程名称：">
             <el-input
               v-model="course.name">
             </el-input>
           </el-form-item>
+          <el-form-item label="课程类别：">
+            <el-input
+              v-model="course.sort">
+            </el-input>
+          </el-form-item>
           <el-form-item label="班级起止时间：">
-            <el-col :span="6">
+            <el-col :span="7">
               <el-date-picker
                 v-model="course.begin_time"
                 type="date"
                 placeholder="选择日期">
               </el-date-picker>
             </el-col>
-            <el-col :span="2">
+            <el-col :span="2" align="center">
               至
             </el-col>
             <el-col :span="8">
@@ -88,6 +119,38 @@ export default {
       this.course.begin_time = ''
       this.course.end_time = ''
     },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.course.image = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改班级图片成功',
+        type: 'success' })
+    },
+    uploadIconSuccess (response, file, fileList) {
+      this.course.icon = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改班级图标成功',
+        type: 'success' })
+    },
+    handleRemove (file, fileList) {
+      console.log('文件删除')
+    },
     saveCourseInfo: async function () {
       let that = this
       let url = '/course/course/' + that.course.id
@@ -128,5 +191,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .activity-card {
+    width: 70%;
+    margin: auto;
+  }
 </style>
