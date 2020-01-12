@@ -1,16 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddAdministratorPage 快照测试 1`] = `
-<section class="el-container is-vertical">
-  <header class="el-header" style="height: 60px;">
+<section class="el-container">
+  <main class="el-main">
     <div class="el-page-header">
       <div class="el-page-header__left"><i class="el-icon-back"></i>
         <div class="el-page-header__title">返回</div>
       </div>
       <div class="el-page-header__content">添加管理员</div>
     </div>
-  </header>
-  <main class="el-main">
+    <div class="el-divider el-divider--horizontal">
+      <!---->
+    </div>
     <div class="table-center">
       <div class="el-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-transition">
         <div class="hidden-columns">
@@ -24,16 +25,16 @@ exports[`AddAdministratorPage 快照测试 1`] = `
           <div></div>
         </div>
         <div class="el-table__header-wrapper">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1380px;">
+          <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 640px;">
             <colgroup>
-              <col name="el-table_1_column_1" width="160">
-              <col name="el-table_1_column_2" width="160">
-              <col name="el-table_1_column_3" width="160">
-              <col name="el-table_1_column_4" width="180">
-              <col name="el-table_1_column_5" width="180">
-              <col name="el-table_1_column_6" width="180">
-              <col name="el-table_1_column_7" width="180">
-              <col name="el-table_1_column_8" width="180">
+              <col name="el-table_1_column_1" width="80">
+              <col name="el-table_1_column_2" width="80">
+              <col name="el-table_1_column_3" width="80">
+              <col name="el-table_1_column_4" width="80">
+              <col name="el-table_1_column_5" width="80">
+              <col name="el-table_1_column_6" width="80">
+              <col name="el-table_1_column_7" width="80">
+              <col name="el-table_1_column_8" width="80">
             </colgroup>
             <thead class="">
               <tr class="">
@@ -66,16 +67,16 @@ exports[`AddAdministratorPage 快照测试 1`] = `
           </table>
         </div>
         <div class="el-table__body-wrapper is-scrolling-left">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1380px;">
+          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 640px;">
             <colgroup>
-              <col name="el-table_1_column_1" width="160">
-              <col name="el-table_1_column_2" width="160">
-              <col name="el-table_1_column_3" width="160">
-              <col name="el-table_1_column_4" width="180">
-              <col name="el-table_1_column_5" width="180">
-              <col name="el-table_1_column_6" width="180">
-              <col name="el-table_1_column_7" width="180">
-              <col name="el-table_1_column_8" width="180">
+              <col name="el-table_1_column_1" width="80">
+              <col name="el-table_1_column_2" width="80">
+              <col name="el-table_1_column_3" width="80">
+              <col name="el-table_1_column_4" width="80">
+              <col name="el-table_1_column_5" width="80">
+              <col name="el-table_1_column_6" width="80">
+              <col name="el-table_1_column_7" width="80">
+              <col name="el-table_1_column_8" width="80">
             </colgroup>
             <tbody>
               <tr class="el-table__row">
@@ -159,18 +160,18 @@ exports[`AddAdministratorPage 快照测试 1`] = `
           <!---->
         </div>
         <!---->
-        <div class="el-table__fixed" style="width: 160px;">
+        <div class="el-table__fixed" style="width: 80px;">
           <div class="el-table__fixed-header-wrapper">
-            <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1380px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 640px;">
               <colgroup>
-                <col name="el-table_1_column_1" width="160">
-                <col name="el-table_1_column_2" width="160">
-                <col name="el-table_1_column_3" width="160">
-                <col name="el-table_1_column_4" width="180">
-                <col name="el-table_1_column_5" width="180">
-                <col name="el-table_1_column_6" width="180">
-                <col name="el-table_1_column_7" width="180">
-                <col name="el-table_1_column_8" width="180">
+                <col name="el-table_1_column_1" width="80">
+                <col name="el-table_1_column_2" width="80">
+                <col name="el-table_1_column_3" width="80">
+                <col name="el-table_1_column_4" width="80">
+                <col name="el-table_1_column_5" width="80">
+                <col name="el-table_1_column_6" width="80">
+                <col name="el-table_1_column_7" width="80">
+                <col name="el-table_1_column_8" width="80">
               </colgroup>
               <thead class="">
                 <tr class="">
@@ -203,16 +204,16 @@ exports[`AddAdministratorPage 快照测试 1`] = `
             </table>
           </div>
           <div class="el-table__fixed-body-wrapper" style="top: 0px;">
-            <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1380px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 640px;">
               <colgroup>
-                <col name="el-table_1_column_1" width="160">
-                <col name="el-table_1_column_2" width="160">
-                <col name="el-table_1_column_3" width="160">
-                <col name="el-table_1_column_4" width="180">
-                <col name="el-table_1_column_5" width="180">
-                <col name="el-table_1_column_6" width="180">
-                <col name="el-table_1_column_7" width="180">
-                <col name="el-table_1_column_8" width="180">
+                <col name="el-table_1_column_1" width="80">
+                <col name="el-table_1_column_2" width="80">
+                <col name="el-table_1_column_3" width="80">
+                <col name="el-table_1_column_4" width="80">
+                <col name="el-table_1_column_5" width="80">
+                <col name="el-table_1_column_6" width="80">
+                <col name="el-table_1_column_7" width="80">
+                <col name="el-table_1_column_8" width="80">
               </colgroup>
               <tbody>
                 <tr class="el-table__row">
@@ -300,23 +301,21 @@ exports[`AddAdministratorPage 快照测试 1`] = `
         <!---->
         <div class="el-table__column-resize-proxy" style="display: none;"></div>
       </div>
+      <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button continue-add-button el-button--primary el-button--medium is-round">
+          <!---->
+          <!----><span>继续添加</span></button></div>
+      <div class="el-divider el-divider--horizontal">
+        <!---->
+      </div>
+      <div class="el-row is-justify-center el-row--flex">
+        <div class="el-col el-col-6 el-col-push-2"><button type="button" class="el-button el-button--primary el-button--medium is-round">
+            <!---->
+            <!----><span>一键提交</span></button></div>
+        <div class="el-col el-col-6 el-col-push-2"><button type="button" class="el-button el-button--plain el-button--medium is-round">
+            <!---->
+            <!----><span>一键清空</span></button></div>
+      </div>
     </div>
   </main>
-  <footer class="el-footer" style="height: 60px;">
-    <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-round">
-        <!---->
-        <!----><span>继续添加</span></button></div>
-    <div class="el-divider el-divider--horizontal">
-      <!---->
-    </div>
-    <div class="el-row is-justify-center el-row--flex">
-      <div class="el-col el-col-6 el-col-push-2"><button type="button" class="el-button el-button--primary el-button--medium is-round">
-          <!---->
-          <!----><span>一键提交</span></button></div>
-      <div class="el-col el-col-6 el-col-push-2"><button type="button" class="el-button el-button--plain el-button--medium is-round">
-          <!---->
-          <!----><span>一键清空</span></button></div>
-    </div>
-  </footer>
 </section>
 `;
