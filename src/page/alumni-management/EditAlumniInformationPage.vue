@@ -15,7 +15,7 @@
                 :on-success="uploadImgSuccess"
                 :on-remove="handleRemove">
                 <img v-if="student.avatar_url" :src="student.avatar_url" class="avatar" alt="avatar">
-                <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+                <i v-else class="el-icon-plus avatar-uploader-icon">添加校友头像</i>
               </el-upload>
             </div>
           </el-col>
@@ -126,7 +126,7 @@
                 size="medium"
                 placeholder="请输入内容"
                 v-model="student.city"
-                maxlength="10"
+                maxlength="20"
                 show-word-limit>
                 <template slot="prepend">城市名:</template>
               </el-input>
