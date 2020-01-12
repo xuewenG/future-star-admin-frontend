@@ -26,7 +26,7 @@
           <el-input class='search-input' v-model="keyword" @change="search()" placeholder="请输入姓名"/>
         </el-col>
         <el-col :span="4" :offset="1">
-          <el-button type="primary" icon="el-icon-search" @click="search()">搜索</el-button>
+          <el-button type="primary" icon="el-icon-search" @click="search()" round>搜索</el-button>
         </el-col>
       </el-row>
       <el-divider/>
@@ -72,21 +72,27 @@
         </el-table-column>
         <el-table-column
           align="center"
-          label="操作">
+          label="全部信息">
           <template slot-scope="scope">
             <el-button
               type="primary"
               size="small"
-              icon="el-icon-more"
               @click="showAllInfo(scope.row)"
-              circle>
+              round>
+              详情
             </el-button>
+          </template>
+        </el-table-column>
+        <el-table-column
+          align="center"
+          label="操作">
+          <template slot-scope="scope">
             <el-button
               type="danger"
               size="small"
-              icon="el-icon-delete"
               @click="deleteAlumni(scope.row, scope.$index)"
-              circle>
+              round>
+              删除
             </el-button>
           </template>
         </el-table-column>
