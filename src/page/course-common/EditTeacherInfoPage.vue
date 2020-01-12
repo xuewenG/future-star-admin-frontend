@@ -1,32 +1,42 @@
 <template>
   <el-container>
-    <el-header>
-      <el-page-header @back="goBack" content="修改讲师信息"></el-page-header>
-    </el-header>
     <el-main>
+      <el-page-header @back="goBack()" content="讲师信息"></el-page-header>
+      <el-divider/>
       <el-card shadow="never">
         <el-form>
           <el-row>
+            <el-form-item align="center">
+              <el-upload
+                class="avatar-uploader"
+                action="https://jsonplaceholder.typicode.com/posts/"
+                :show-file-list="false"
+                :http-request="uploadImg"
+                :on-success="uploadImgSuccess"
+                :on-remove="handleRemove"
+              >
+                <img v-if="teacher.avatar" :src="teacher.avatar"  width=240px class="image" alt="image">
+                <i v-else class="el-icon-plus avatar-uploader-icon">添加头像</i>
+              </el-upload>
+            </el-form-item>
             <el-form-item label="讲师名：">
               <el-input v-model="teacher.name"></el-input>
             </el-form-item>
           </el-row>
-          <el-form-item label="讲师头像：">
-            <el-input v-model="teacher.avatar"></el-input>
-          </el-form-item>
           <el-row>
             <el-form-item label="讲师头衔：">
               <el-input v-model="teacher.title"></el-input>
             </el-form-item>
           </el-row>
           <el-row>
-            <el-form-item label="讲师简介：">
-              <el-input v-model="teacher.introduction"></el-input>
+            <el-form-item label="讲师联系方式：">
+              <el-input v-model="teacher.contact_way"></el-input>
             </el-form-item>
           </el-row>
           <el-row>
-            <el-form-item label="讲师联系方式：">
-              <el-input v-model="teacher.contact_way"></el-input>
+            <el-form-item label="讲师简介：">
+              <el-input type="textarea" v-model="teacher.introduction"
+                        :autosize="{ minRows: 2, maxRows: 8}"></el-input>
             </el-form-item>
           </el-row>
           <el-form-item>

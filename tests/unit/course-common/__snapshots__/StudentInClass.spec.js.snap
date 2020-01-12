@@ -24,16 +24,16 @@ exports[`StudentInClass 快照测试 1`] = `
         <div></div>
       </div>
       <div class="el-table__header-wrapper">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 1230px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 640px;">
           <colgroup>
-            <col name="el-table_1_column_1" width="100">
-            <col name="el-table_1_column_2" width="100">
-            <col name="el-table_1_column_3" width="180">
-            <col name="el-table_1_column_4" width="180">
-            <col name="el-table_1_column_5" width="180">
-            <col name="el-table_1_column_6" width="180">
-            <col name="el-table_1_column_7" width="180">
-            <col name="el-table_1_column_8" width="130">
+            <col name="el-table_1_column_1" width="80">
+            <col name="el-table_1_column_2" width="80">
+            <col name="el-table_1_column_3" width="80">
+            <col name="el-table_1_column_4" width="80">
+            <col name="el-table_1_column_5" width="80">
+            <col name="el-table_1_column_6" width="80">
+            <col name="el-table_1_column_7" width="80">
+            <col name="el-table_1_column_8" width="80">
           </colgroup>
           <thead class="">
             <tr class="">
@@ -66,22 +66,22 @@ exports[`StudentInClass 快照测试 1`] = `
         </table>
       </div>
       <div class="el-table__body-wrapper is-scrolling-left">
-        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 1230px;">
+        <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 640px;">
           <colgroup>
-            <col name="el-table_1_column_1" width="100">
-            <col name="el-table_1_column_2" width="100">
-            <col name="el-table_1_column_3" width="180">
-            <col name="el-table_1_column_4" width="180">
-            <col name="el-table_1_column_5" width="180">
-            <col name="el-table_1_column_6" width="180">
-            <col name="el-table_1_column_7" width="180">
-            <col name="el-table_1_column_8" width="130">
+            <col name="el-table_1_column_1" width="80">
+            <col name="el-table_1_column_2" width="80">
+            <col name="el-table_1_column_3" width="80">
+            <col name="el-table_1_column_4" width="80">
+            <col name="el-table_1_column_5" width="80">
+            <col name="el-table_1_column_6" width="80">
+            <col name="el-table_1_column_7" width="80">
+            <col name="el-table_1_column_8" width="80">
           </colgroup>
           <tbody>
             <!---->
           </tbody>
         </table>
-        <div class="el-table__empty-block" style="height: 100%; width: 1230px;"><span class="el-table__empty-text">暂无数据</span></div>
+        <div class="el-table__empty-block" style="height: 100%; width: 640px;"><span class="el-table__empty-text">暂无数据</span></div>
         <!---->
       </div>
       <!---->

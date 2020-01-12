@@ -34,6 +34,9 @@ exports[`DetailOfCoursePage 快照测试 1`] = `
           <div class="el-row">
             课程介绍：
           </div>
+          <div class="el-row">
+            课程介绍：
+          </div>
         </div>
       </div>
     </div>

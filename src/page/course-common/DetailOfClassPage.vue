@@ -3,42 +3,61 @@
     <el-main>
       <el-page-header @back="goBack()" content="班级详情"></el-page-header>
       <el-divider/>
-      <el-card class="activity-card" shadow="never">
-        <el-row slot="header">
-          <el-col :span="15">
-            班级名称： {{ currentClass.name }}
+      <el-card class="activity-card" shadow="never" v-loading="loading">
+        <el-row slot="header" >
+          <el-col :span="24" align="center">
+            <div class="clazz-title"> - {{ currentClass.name }} - </div>
           </el-col>
-          <el-col :span="3">
-            <el-button type="primary" size="mini" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
+          <el-col :span="24" align="right">
+            <el-button type="primary" size="medium" icon="el-icon-edit-outline" @click="editClassInfo" circle></el-button>
           </el-col>
         </el-row>
-        <el-row class="info">
-          起止时间： {{ currentClass.start_time }} ---- {{ currentClass.end_time }}
-        </el-row>
-        <el-row class="info">
-          班级人数： {{ currentClass.current_people_number }} / {{ currentClass.people_number_limit }}
-        </el-row>
-        <el-row class="info">
-          班级介绍： {{ currentClass.introduction }}
-        </el-row>
-        <el-divider content-position="center">课程详情</el-divider>
-        <el-card v-for="course in courses" :key="course.id" shadow="never">
+        <div class="clazz-introduction">
           <el-row>
-            <el-col :span="15">
-              课程名：{{ course.name }}
+            <el-col :span="10" align="center">
+              <img :src="currentClass.image" style="width: 320px;">
+            </el-col>
+            <el-col :span="12" offset="2">
+              <div class="info">
+                起止时间： {{ currentClass.start_time }} ---- {{ currentClass.end_time }}
+              </div>
+              <div class="info">
+                班级人数： {{ currentClass.current_people_number }} / {{ currentClass.people_number_limit }}
+              </div>
+              <div class="info">
+                班级介绍： {{ currentClass.introduction }}
+              </div>
+            </el-col>
+          </el-row>
+        </div>
+        <div class="course-detail">
+          <el-divider content-position="center">
+            <h3 class="detail-title">课程详情</h3>
+          </el-divider>
+        </div>
+        <el-card v-for="course in courses" :key="course.id" shadow="never" class="course-card">
+          <el-row>
+            <el-col :span="2">
+              <img :src="course.icon" width="35px">
+            </el-col>
+            <el-col :span="4">
+              {{ course.name }}
+            </el-col>
+            <el-col :span="9">
+              ({{course.sort}})
             </el-col>
             <el-col :span="3">
               <el-button type="primary" size="small" @click="lookOverCourseDetail(course)" round>课程详情</el-button>
             </el-col>
             <el-col :span="3">
-              <el-button type="primary" size="small" @click="lookOverSubCourses(course)" round>课程资源</el-button>
+              <el-button type="primary" size="small" @click="lookOverSubCourses(course)" round>课程目录</el-button>
             </el-col>
             <el-col :span="3">
-              <el-button type="primary" size="small" @click="lookOverTeachers(course)" round>课程讲师</el-button>
+              <el-button type="primary" size="small" @click="lookOverTeachers(course)" round>讲师信息</el-button>
             </el-col>
           </el-row>
         </el-card>
-        <el-row type="flex" justify="center">
+        <el-row type="flex" justify="center" class="add-button">
           <el-button type="primary" size="small" @click="addCourse" round>添加课程</el-button>
         </el-row>
       </el-card>

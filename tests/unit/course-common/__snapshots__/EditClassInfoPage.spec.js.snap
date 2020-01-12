@@ -7,90 +7,26 @@ exports[`EditClassInfoPage 快照测试 1`] = `
       <div class="el-page-header__left"><i class="el-icon-back"></i>
         <div class="el-page-header__title">返回</div>
       </div>
-      <div class="el-page-header__content">修改班级信息</div>
+      <div class="el-page-header__content">课程目录</div>
     </div>
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-card activity-card is-never-shadow">
+    <div class="el-card is-never-shadow">
       <!---->
       <div class="el-card__body">
-        <form class="el-form activity-table">
-          <div class="el-form-item activity-title"><label class="el-form-item__label" style="width: 150px;">班级名称：</label>
-            <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="el-input">
-                <!----><input type="text" autocomplete="off" class="el-input__inner">
-                <!---->
-                <!---->
-                <!---->
-                <!---->
-              </div>
-              <!---->
-            </div>
-          </div>
-          <div class="el-row">
-            <div class="el-col el-col-8">
-              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">限制人数：</label>
-                <div class="el-form-item__content" style="margin-left: 150px;">
-                  <div class="el-input">
-                    <!----><input type="text" autocomplete="off" class="el-input__inner">
-                    <!---->
-                    <!---->
-                    <!---->
-                    <!---->
-                  </div>
-                  <!---->
+        <div class="top-tab el-tabs el-tabs--top">
+          <div class="el-tabs__header is-top"><span tabindex="0" class="el-tabs__new-tab"><i class="el-icon-plus"></i></span>
+            <div class="el-tabs__nav-wrap is-top">
+              <div class="el-tabs__nav-scroll">
+                <div role="tablist" class="el-tabs__nav is-top" style="transform: translateX(-0px);">
+                  <div class="el-tabs__active-bar is-top" style="width: 0px; transform: translateX(0px); webkit-transform: translateX(0px);"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">班级起止时间：</label>
-            <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="el-col el-col-8">
-                <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--date">
-                  <!----><input type="text" autocomplete="off" name="" placeholder="选择日期" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-date"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----><!----><!----><!----></span>
-                  <!----></span>
-                  <!---->
-                  <!---->
-                </div>
-              </div>
-              <div class="el-col el-col-2">
-                至
-              </div>
-              <div class="el-col el-col-8">
-                <div class="el-date-editor el-input el-input--prefix el-input--suffix el-date-editor--date">
-                  <!----><input type="text" autocomplete="off" name="" placeholder="选择日期" class="el-input__inner"><span class="el-input__prefix"><i class="el-input__icon el-icon-date"></i><!----></span><span class="el-input__suffix"><span class="el-input__suffix-inner"><i class="el-input__icon"></i><!----><!----><!----><!----></span>
-                  <!----></span>
-                  <!---->
-                  <!---->
-                </div>
-              </div>
-              <!---->
-            </div>
-          </div>
-          <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">班级介绍：</label>
-            <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="el-textarea"><textarea autocomplete="off" class="el-textarea__inner" style="min-height: -24px; height: -120px;"></textarea>
-                <!---->
-              </div>
-              <!---->
-            </div>
-          </div>
-          <div class="el-form-item">
-            <!---->
-            <div class="el-form-item__content" style="margin-left: 150px;">
-              <div class="operation-button el-row is-justify-center el-row--flex">
-                <div class="el-col el-col-8"><button type="button" class="el-button el-button--primary">
-                    <!---->
-                    <!----><span>保存</span></button></div>
-                <div class="el-col el-col-8"><button type="button" class="el-button el-button--default">
-                    <!---->
-                    <!----><span>清空</span></button></div>
-              </div>
-              <!---->
-            </div>
-          </div>
-        </form>
+          <div class="el-tabs__content"></div>
+        </div>
       </div>
     </div>
   </main>

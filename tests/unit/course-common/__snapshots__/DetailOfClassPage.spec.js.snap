@@ -15,47 +15,62 @@ exports[`DetailOfClassPage 快照测试 1`] = `
     <div class="el-card activity-card is-never-shadow">
       <div class="el-card__header">
         <div class="el-row">
-          <div class="el-col el-col-15">
-            班级名称：
+          <div class="el-col el-col-24" align="center">
+            <div class="clazz-title"> - - </div>
           </div>
-          <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--mini is-circle">
+          <div class="el-col el-col-24" align="right"><button type="button" class="el-button el-button--primary el-button--medium is-circle">
               <!----><i class="el-icon-edit-outline"></i>
               <!----></button></div>
         </div>
       </div>
       <div class="el-card__body">
-        <div class="info el-row">
-          起止时间： ----
+        <div class="clazz-introduction">
+          <div class="el-row">
+            <div class="el-col el-col-10" align="center"><img style="width: 320px;"></div>
+            <div class="el-col el-col-12 el-col-offset-2">
+              <div class="info">
+                起止时间： ----
+              </div>
+              <div class="info">
+                班级人数： /
+              </div>
+              <div class="info">
+                班级介绍：
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="info el-row">
-          班级人数： /
+        <div class="course-detail">
+          <div class="el-divider el-divider--horizontal">
+            <div class="el-divider__text is-center">
+              <h3 class="detail-title">课程详情</h3>
+            </div>
+          </div>
         </div>
-        <div class="info el-row">
-          班级介绍：
-        </div>
-        <div class="el-divider el-divider--horizontal">
-          <div class="el-divider__text is-center">课程详情</div>
-        </div>
-        <div class="el-card is-never-shadow">
+        <div class="el-card course-card is-never-shadow">
           <!---->
           <div class="el-card__body">
             <div class="el-row">
-              <div class="el-col el-col-15">
-                课程名：
+              <div class="el-col el-col-2"><img width="35px"></div>
+              <div class="el-col el-col-4">
+
+              </div>
+              <div class="el-col el-col-9">
+                ()
               </div>
               <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
                   <!---->
                   <!----><span>课程详情</span></button></div>
               <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
                   <!---->
-                  <!----><span>课程资源</span></button></div>
+                  <!----><span>课程目录</span></button></div>
               <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary el-button--small is-round">
                   <!---->
-                  <!----><span>课程讲师</span></button></div>
+                  <!----><span>讲师信息</span></button></div>
             </div>
           </div>
         </div>
-        <div class="el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-round">
+        <div class="add-button el-row is-justify-center el-row--flex"><button type="button" class="el-button el-button--primary el-button--small is-round">
             <!---->
             <!----><span>添加课程</span></button></div>
       </div>

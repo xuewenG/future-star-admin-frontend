@@ -1,10 +1,22 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="修改学期信息"></el-page-header>
+      <el-page-header @back="goBack()" content="学期信息"></el-page-header>
       <el-divider/>
       <el-card class="activity-card" shadow="never">
-        <el-form class="activity-table" label-width="150px">
+        <el-form class="activity-table" label-width="140px">
+          <el-form-item class="activity-title" label="学期图标：">
+            <el-upload
+              class="avatar-uploader"
+              action="https://jsonplaceholder.typicode.com/posts/"
+              :show-file-list="false"
+              :http-request="uploadImg"
+              :on-success="uploadImgSuccess"
+              :on-remove="handleRemove">
+              <img v-if="semester.icon" :src="semester.icon" class="image" alt="image">
+              <i v-else class="el-icon-plus avatar-uploader-icon">添加学期图片</i>
+            </el-upload>
+          </el-form-item>
           <el-form-item class="activity-title" label="学期主题：">
             <el-input
               v-model="semester.subject"
