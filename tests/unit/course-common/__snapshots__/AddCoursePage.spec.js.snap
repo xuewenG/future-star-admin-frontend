@@ -116,18 +116,6 @@ exports[`AddCoursePage 快照测试 1`] = `
                   </div>
                 </div>
               </div>
-              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">讲师头像：</label>
-                <div class="el-form-item__content" style="margin-left: 150px;">
-                  <div class="el-input">
-                    <!----><input type="text" autocomplete="off" class="el-input__inner">
-                    <!---->
-                    <!---->
-                    <!---->
-                    <!---->
-                  </div>
-                  <!---->
-                </div>
-              </div>
               <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">讲师头衔：</label>
                 <div class="el-form-item__content" style="margin-left: 150px;">
                   <div class="el-input">
