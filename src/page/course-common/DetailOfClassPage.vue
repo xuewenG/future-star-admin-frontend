@@ -105,8 +105,12 @@ export default {
     })
   },
   methods: {
-    goBack: function () {
-      this.$router.go(-1)
+    goBack: async function () {
+      if (this.currentClass.state === 0 || this.currentClass.state === 1) {
+        await this.$router.push('/home/enrollment')
+      } else {
+        await this.$router.push('/home/course')
+      }
     },
     addCourse: async function () {
       await this.$store.dispatch('changeCurrentClass', this.currentClass)
