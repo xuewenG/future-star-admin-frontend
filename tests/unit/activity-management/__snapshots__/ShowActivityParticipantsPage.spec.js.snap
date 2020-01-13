@@ -44,7 +44,7 @@ exports[`ShowActivityParticipantsPage 快照测试 1`] = `
                 <div class="cell">微信号</div>
               </th>
               <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-leaf">
-                <div class="cell">操作</div>
+                <div class="cell">详细信息</div>
               </th>
             </tr>
           </thead>
