@@ -2,35 +2,6 @@
   <el-container>
     <el-main>
       <el-page-header @back="goBack()" content="已参与校友名单"/>
-      <!--      <el-divider></el-divider>-->
-      <!--      <el-row>-->
-      <!--        <el-col :span="4" :offset="3">-->
-      <!--          <el-select class="selection" v-model="semester" @change="findAllClass()" filterable placeholder="请选择学期">-->
-      <!--            <el-option-->
-      <!--              v-for="semesters in semesterOptions"-->
-      <!--              :key="semesters.id"-->
-      <!--              :label="semesters.label"-->
-      <!--              :value="semesters.semester">-->
-      <!--            </el-option>-->
-      <!--          </el-select>-->
-      <!--        </el-col>-->
-      <!--        <el-col :span="4">-->
-      <!--          <el-select class="selection" v-model="clazz" :disabled="class_state" @change="search()" filterable placeholder="请选择班级">-->
-      <!--            <el-option-->
-      <!--              v-for="classes in clazzOptions"-->
-      <!--              :key="classes.clazz"-->
-      <!--              :label="classes.label"-->
-      <!--              :value="classes.clazz">-->
-      <!--            </el-option>-->
-      <!--          </el-select>-->
-      <!--        </el-col>-->
-      <!--        <el-col :span="6">-->
-      <!--          <el-input class='search-input' v-model="keyword" @change="search()" placeholder="请输入搜索内容"/>-->
-      <!--        </el-col>-->
-      <!--        <el-col :span="4" :offset="1">-->
-      <!--          <el-button type="primary" icon="el-icon-search" @click="search()">搜索</el-button>-->
-      <!--        </el-col>-->
-      <!--      </el-row>-->
       <el-divider></el-divider>
       <el-table
         :data="tableData"
@@ -58,7 +29,7 @@
         </el-table-column>
         <el-table-column
           align="center"
-          label="操作">
+          label="详细信息">
           <template  slot-scope="scope">
             <el-button
               type="primary"
