@@ -150,9 +150,9 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
             </div>
             <div class="el-col el-col-5 el-col-offset-2"><i class="el-icon-school">&nbsp;毕业院校：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
-                <div class="el-input-group__prepend">学校名:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="10" class="el-input__inner">
+                <div class="el-input-group__prepend">学校名:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="45" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
-            0/10
+            0/45
           </span></span></span>
                 <!----></span>
                 <!---->
@@ -163,9 +163,9 @@ exports[`EditAlumniInformationPage 快照测试 1`] = `
           <div class="el-row" style="margin-top: 30px;">
             <div class="el-col el-col-5 el-col-offset-2"><i class="el-icon-location-information">&nbsp;城市：</i>
               <div class="el-input el-input--medium el-input-group el-input-group--prepend">
-                <div class="el-input-group__prepend">城市名:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="20" class="el-input__inner">
+                <div class="el-input-group__prepend">城市名:</div><input type="text" autocomplete="off" placeholder="请输入内容" maxlength="45" class="el-input__inner">
                 <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><!----><!----><!----><span class="el-input__count"><span class="el-input__count-inner">
-            0/20
+            0/45
           </span></span></span>
                 <!----></span>
                 <!---->
