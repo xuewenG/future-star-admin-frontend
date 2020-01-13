@@ -111,7 +111,7 @@
                 size="medium"
                 placeholder="请输入内容"
                 v-model="student.school"
-                maxlength="10"
+                maxlength="45"
                 show-word-limit>
                 <template slot="prepend">学校名:</template>
               </el-input>
@@ -126,7 +126,7 @@
                 size="medium"
                 placeholder="请输入内容"
                 v-model="student.city"
-                maxlength="20"
+                maxlength="45"
                 show-word-limit>
                 <template slot="prepend">城市名:</template>
               </el-input>
