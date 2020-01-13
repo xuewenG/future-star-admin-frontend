@@ -75,7 +75,7 @@
           :width="operationWidth">
           <template slot-scope="scope">
             <el-popover
-              :disabled="scope.row.state!=='待审核'"
+              :disabled="scope.row.state!=='在校'"
               trigger="click">
               <el-button
                 type="success"
@@ -93,7 +93,7 @@
                 type="primary"
                 size="mini"
                 slot="reference"
-                :disabled="scope.row.state!=='待审核'"
+                :disabled="scope.row.state!=='在校'"
                 round>
                 审核
               </el-button>
