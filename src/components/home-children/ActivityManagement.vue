@@ -82,7 +82,7 @@ export default {
   }
 
   .el-main {
-    padding: 0;
+    padding: 1px;
     margin: 0;
   }
 
