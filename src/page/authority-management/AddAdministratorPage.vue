@@ -128,8 +128,8 @@ export default {
     }
   },
   methods: {
-    goBack: function () {
-      this.$router.go(-1)
+    goBack: async function () {
+      await this.$router.push('/home/authority')
     },
     addAdministrator (administrator) {
       administrator.privilege.enrollment = administrator.privilege.enrollment ? 1 : 2

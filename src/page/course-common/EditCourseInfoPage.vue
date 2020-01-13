@@ -105,8 +105,8 @@ export default {
     }
   },
   methods: {
-    goBack: function () {
-      this.$router.go(-1)
+    goBack: async function () {
+      await this.$router.push('/class-detail')
     },
     clearText: function () {
       this.course.name = ''

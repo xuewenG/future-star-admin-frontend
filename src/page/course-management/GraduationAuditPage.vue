@@ -135,8 +135,8 @@ export default {
     await this.getStudents()
   },
   methods: {
-    goBack: function () {
-      this.$router.go(-1)
+    goBack: async function () {
+      await this.$router.push('/home/course')
     },
     dealWithTableData: function () {
       for (let i = 0; i < this.tableData.length; i++) {
