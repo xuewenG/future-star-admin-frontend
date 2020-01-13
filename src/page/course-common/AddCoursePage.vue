@@ -64,10 +64,10 @@
         <el-form-item>
           <el-row type="flex" justify="space-around">
             <el-col :span="3">
-              <el-button type="primary" @click="createCourse">创建</el-button>
+              <el-button type="primary" @click="createCourse" round>创建</el-button>
             </el-col>
             <el-col :span="3">
-              <el-button @click="clearText">清空</el-button>
+              <el-button @click="clearText" round>清空</el-button>
             </el-col>
           </el-row>
         </el-form-item>

@@ -11,9 +11,7 @@
               action="https://jsonplaceholder.typicode.com/posts/"
               :show-file-list="false"
               :http-request="uploadImg"
-              :on-success="uploadIconSuccess"
-              :on-remove="handleRemove"
-            >
+              :on-success="uploadIconSuccess">
               <img v-if="course.icon" :src="course.icon"  width=100px class="image" alt="image">
               <i v-else class="el-icon-plus avatar-uploader-icon">添加课程图标</i>
             </el-upload>
@@ -24,9 +22,7 @@
               action="https://jsonplaceholder.typicode.com/posts/"
               :show-file-list="false"
               :http-request="uploadImg"
-              :on-success="uploadImgSuccess"
-              :on-remove="handleRemove"
-            >
+              :on-success="uploadImgSuccess">
               <img v-if="course.image" :src="course.image"  width=500px class="image" alt="image">
               <i v-else class="el-icon-plus avatar-uploader-icon">添加课程图片</i>
             </el-upload>
@@ -72,12 +68,12 @@
               type="textarea"/>
           </el-form-item>
           <el-form-item>
-            <el-row type="flex" justify="center" class="operation-button">
-              <el-col :span="8">
-                <el-button type="primary" @click="saveCourseInfo">保存</el-button>
+            <el-row type="flex" justify="space-around">
+              <el-col :span="3">
+                <el-button type="primary" @click="saveCourseInfo" round>保存</el-button>
               </el-col>
-              <el-col :span="8">
-                <el-button @click="clearText">清空</el-button>
+              <el-col :span="3">
+                <el-button @click="clearText" round>清空</el-button>
               </el-col>
             </el-row>
           </el-form-item>
@@ -145,11 +141,8 @@ export default {
       this.course.icon = response.data.url
       this.$message({
         showClose: true,
-        message: '修改班级图标成功',
+        message: '修改课程图标成功',
         type: 'success' })
-    },
-    handleRemove (file, fileList) {
-      console.log('文件删除')
     },
     saveCourseInfo: async function () {
       let that = this

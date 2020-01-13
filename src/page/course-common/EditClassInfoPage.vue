@@ -47,19 +47,18 @@
                 action="https://jsonplaceholder.typicode.com/posts/"
                 :show-file-list="false"
                 :http-request="uploadImg"
-                :on-success="uploadImgSuccess"
-                :on-remove="handleRemove">
+                :on-success="uploadImgSuccess">
                 <img v-if="currentClass.image" :src="currentClass.image" class="clazz-image" alt="avatar">
                 <i v-else class="el-icon-plus avatar-uploader-icon">添加班级封面</i>
               </el-upload>
             </div>
           </el-form-item>
           <el-form-item>
-            <el-row type="flex" justify="center" class="operation-button">
-              <el-col :span="8">
+            <el-row type="flex" justify="space-around">
+              <el-col :span="3">
                 <el-button type="primary" round @click="saveClassInfo">保存</el-button>
               </el-col>
-              <el-col :span="8">
+              <el-col :span="3">
                 <el-button round @click="clearText">清空</el-button>
               </el-col>
             </el-row>
@@ -104,6 +103,28 @@ export default {
       this.currentClass.people_number_limit = ''
       this.currentClass.timeRange = ''
       this.currentClass.introduction = ''
+    },
+    uploadImg (f) {
+      let param = new FormData()
+      let url = '/file/upload'
+      param.append('file', f.file)
+      let config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      }
+      this.axios.post(url, param, config)
+        .then(response => {
+          f.onSuccess(response.data)
+        })
+        .catch(() => {
+          f.onError()
+        })
+    },
+    uploadImgSuccess (response, file, fileList) {
+      this.currentClass.image = response.data.url
+      this.$message({
+        showClose: true,
+        message: '修改班级图片成功',
+        type: 'success' })
     },
     saveClassInfo: async function () {
       let that = this

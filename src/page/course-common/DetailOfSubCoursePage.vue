@@ -455,19 +455,9 @@ export default {
 </script>
 
 <style scoped>
-  .main-page {
-    width: 90%;
-    height: 1100px;
-    margin: 5% auto;
-  }
-
   .delete_button {
     margin-top: 50px;
     text-align: center;
-  }
-
-  .txt {
-    font-size: 15px;
   }
 
   .main-resource {
@@ -475,7 +465,6 @@ export default {
   }
 
   .top-tab {
-    height: 200px;
     margin: 3%;
   }
 

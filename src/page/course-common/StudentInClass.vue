@@ -138,17 +138,4 @@ export default {
 </script>
 
 <style scoped>
-  .search-input {
-    display: inline-block;
-    width: 350px;
-    margin-right: 20px;
-  }
-
-  .pagination {
-    margin-left: 250px;
-  }
-
-  .el-main {
-    margin: 0 auto;
-  }
 </style>

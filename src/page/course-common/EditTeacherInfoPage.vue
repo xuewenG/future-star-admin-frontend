@@ -40,12 +40,12 @@
             </el-form-item>
           </el-row>
           <el-form-item>
-            <el-row type="flex" justify="space-around" class="operation-button">
+            <el-row type="flex" justify="space-around">
               <el-col :span="3">
-                <el-button type="primary" @click="saveTeacherInfo">保存</el-button>
+                <el-button type="primary" @click="saveTeacherInfo" round>保存</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button @click="clearText">清空</el-button>
+                <el-button @click="clearText" round>清空</el-button>
               </el-col>
             </el-row>
           </el-form-item>
@@ -139,5 +139,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

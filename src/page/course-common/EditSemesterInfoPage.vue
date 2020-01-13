@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="学期信息"></el-page-header>
+      <el-page-header @back="goBack()" content="学期详情"></el-page-header>
       <el-divider/>
       <el-card class="activity-card" shadow="never">
         <el-form class="activity-table" label-width="140px">
@@ -36,10 +36,10 @@
           <el-form-item>
             <el-row type="flex" justify="space-around">
               <el-col :span="3">
-                <el-button type="primary" @click="editSemesterInfo">保存</el-button>
+                <el-button type="primary" @click="editSemesterInfo" round>保存</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button @click="clearText">清空</el-button>
+                <el-button @click="clearText" round>清空</el-button>
               </el-col>
             </el-row>
           </el-form-item>

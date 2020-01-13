@@ -12,8 +12,7 @@
           prop="student.name"
           align="center"
           label="姓名"
-          fixed=""
-          sortabl>
+          sortable>
         </el-table-column>
         <el-table-column
           prop="student.gender"
@@ -259,7 +258,4 @@ export default {
 </script>
 
 <style scoped>
-  .el-main {
-    margin: 0 auto;
-  }
 </style>

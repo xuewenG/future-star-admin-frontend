@@ -194,7 +194,7 @@ export default {
   }
 
   .main-contain-class {
-    padding: 0;
+    padding: 1px;
     margin: 0;
   }
 
