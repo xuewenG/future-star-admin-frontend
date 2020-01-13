@@ -292,7 +292,4 @@ export default {
 </script>
 
 <style scoped>
-  .el-main {
-    margin: 0 auto;
-  }
 </style>
