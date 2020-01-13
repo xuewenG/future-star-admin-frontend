@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="新建学期"></el-page-header>
+      <el-page-header @back="goBack" content="创建学期"></el-page-header>
       <el-divider/>
       <el-card class="activity-card" shadow="never">
         <el-form class="activity-table" label-width="150px">
@@ -20,12 +20,12 @@
             </el-input>
           </el-form-item>
           <el-form-item>
-            <el-row type="flex" justify="center" class="operation-button">
-              <el-col :span="8">
-                <el-button type="primary" @click="addSemester">创建</el-button>
+            <el-row type="flex" justify="space-around">
+              <el-col :span="3">
+                <el-button type="primary" @click="addSemester" round>创建</el-button>
               </el-col>
-              <el-col :span="8">
-                <el-button @click="clearText">清空</el-button>
+              <el-col :span="3">
+                <el-button @click="clearText" round>清空</el-button>
               </el-col>
             </el-row>
           </el-form-item>
@@ -110,9 +110,5 @@ export default {
 
   .activity-table {
     margin: 40px 20px;
-  }
-
-  .operation-button {
-    margin-top: 25px;
   }
 </style>

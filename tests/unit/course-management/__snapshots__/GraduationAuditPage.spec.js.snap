@@ -12,9 +12,9 @@ exports[`GraduationAuditPage 快照测试 1`] = `
     <div class="el-divider el-divider--horizontal">
       <!---->
     </div>
-    <div class="el-table el-table--fit el-table--striped el-table--scrollable-x">
+    <div class="el-table el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover">
       <div class="hidden-columns">
-        <div sortabl=""></div>
+        <div></div>
         <div></div>
         <div></div>
         <div></div>
@@ -41,8 +41,8 @@ exports[`GraduationAuditPage 快照测试 1`] = `
           </colgroup>
           <thead class="">
             <tr class="">
-              <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-hidden is-leaf">
-                <div class="cell">姓名</div>
+              <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf is-sortable">
+                <div class="cell">姓名<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
               </th>
               <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-leaf is-sortable">
                 <div class="cell">性别<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
@@ -97,79 +97,7 @@ exports[`GraduationAuditPage 快照测试 1`] = `
         <!---->
       </div>
       <!---->
-      <div class="el-table__fixed" style="width: 80px;">
-        <div class="el-table__fixed-header-wrapper">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 800px;">
-            <colgroup>
-              <col name="el-table_1_column_1" width="80">
-              <col name="el-table_1_column_2" width="80">
-              <col name="el-table_1_column_3" width="80">
-              <col name="el-table_1_column_4" width="80">
-              <col name="el-table_1_column_5" width="80">
-              <col name="el-table_1_column_6" width="80">
-              <col name="el-table_1_column_7" width="80">
-              <col name="el-table_1_column_8" width="80">
-              <col name="el-table_1_column_9" width="80">
-              <col name="el-table_1_column_10" width="80">
-            </colgroup>
-            <thead class="">
-              <tr class="">
-                <th colspan="1" rowspan="1" class="el-table_1_column_1  is-center   is-leaf">
-                  <div class="cell">姓名</div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_2  is-center   is-hidden is-leaf is-sortable">
-                  <div class="cell">性别<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_3  is-center   is-hidden is-leaf is-sortable">
-                  <div class="cell">出生日期<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_4  is-center   is-hidden is-leaf is-sortable">
-                  <div class="cell">联系电话<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_5  is-center   is-hidden is-leaf is-sortable">
-                  <div class="cell">微信号<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_6  is-center   is-hidden is-leaf is-sortable">
-                  <div class="cell">邮箱<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_7  is-center   is-hidden is-leaf is-sortable">
-                  <div class="cell">所在城市<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_8  is-center   is-hidden is-leaf is-sortable">
-                  <div class="cell">状态<span class="caret-wrapper"><i class="sort-caret ascending"></i><i class="sort-caret descending"></i></span></div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_9  is-center   is-hidden is-leaf">
-                  <div class="cell">详情</div>
-                </th>
-                <th colspan="1" rowspan="1" class="el-table_1_column_10  is-center   is-hidden is-leaf">
-                  <div class="cell">审核</div>
-                </th>
-              </tr>
-            </thead>
-          </table>
-        </div>
-        <div class="el-table__fixed-body-wrapper" style="top: 0px;">
-          <table cellspacing="0" cellpadding="0" border="0" class="el-table__body" style="width: 800px;">
-            <colgroup>
-              <col name="el-table_1_column_1" width="80">
-              <col name="el-table_1_column_2" width="80">
-              <col name="el-table_1_column_3" width="80">
-              <col name="el-table_1_column_4" width="80">
-              <col name="el-table_1_column_5" width="80">
-              <col name="el-table_1_column_6" width="80">
-              <col name="el-table_1_column_7" width="80">
-              <col name="el-table_1_column_8" width="80">
-              <col name="el-table_1_column_9" width="80">
-              <col name="el-table_1_column_10" width="80">
-            </colgroup>
-            <tbody>
-              <!---->
-            </tbody>
-          </table>
-          <!---->
-        </div>
-        <!---->
-      </div>
+      <!---->
       <!---->
       <!---->
       <div class="el-table__column-resize-proxy" style="display: none;"></div>

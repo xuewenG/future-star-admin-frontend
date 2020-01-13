@@ -17,17 +17,14 @@
   <el-container v-else-if="semester.state===0">
     <el-header>
       <el-row type="flex" align="middle">
-        <el-col :span="1" >
-          <img :src="semester.icon" width="50px;">
-        </el-col>
         <el-col :span="4">
           <h3>{{ semester.subject }}</h3>
         </el-col>
         <el-col :span="2">
-          <el-button type="primary" size="small" @click="lookOverSemesterDetail" round>学期详情</el-button>
+          <el-button type="primary" size="small" @click="editSemesterInfo" round>学期详情</el-button>
         </el-col>
         <el-col :span="2">
-          <el-button type="primary" size="small" @click="addClass" round>添加班级</el-button>
+          <el-button type="primary" size="small" @click="addClass" round>创建班级</el-button>
         </el-col>
         <el-col :span="2">
           <el-button type="danger" size="small" @click="closeSemester" round>关闭学期</el-button>
@@ -138,9 +135,9 @@ export default {
       await this.$store.dispatch('changeCurrentSemester', this.semester)
       await this.$router.push('/add-class')
     },
-    lookOverSemesterDetail: async function () {
+    editSemesterInfo: async function () {
       await this.$store.dispatch('changeCurrentSemester', this.semester)
-      await this.$router.push('/semester-detail')
+      await this.$router.push('/edit-semester-info')
     },
     changeActiveName: async function (tab) {
       await this.$store.dispatch('changeActiveNameOfEnrollment', tab.name)
@@ -184,7 +181,7 @@ export default {
   }
 
   .main-contain-class {
-    padding: 0;
+    padding: 1px;
     margin: 0;
   }
 

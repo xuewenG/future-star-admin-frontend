@@ -97,7 +97,6 @@ export default {
   },
   created () {
     this.currentApplyInformation = this.$store.getters.getCurrentApplyInformation
-    console.log(this.currentApplyInformation)
   },
   methods: {
     goBack: function () {
