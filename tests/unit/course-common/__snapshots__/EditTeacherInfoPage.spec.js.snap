@@ -80,11 +80,11 @@ exports[`EditTeacherInfoPage 快照测试 1`] = `
           <div class="el-form-item">
             <!---->
             <div class="el-form-item__content">
-              <div class="operation-button el-row is-justify-space-around el-row--flex">
-                <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary">
+              <div class="el-row is-justify-space-around el-row--flex">
+                <div class="el-col el-col-3"><button type="button" class="el-button el-button--primary is-round">
                     <!---->
                     <!----><span>保存</span></button></div>
-                <div class="el-col el-col-3"><button type="button" class="el-button el-button--default">
+                <div class="el-col el-col-3"><button type="button" class="el-button el-button--default is-round">
                     <!---->
                     <!----><span>清空</span></button></div>
               </div>
