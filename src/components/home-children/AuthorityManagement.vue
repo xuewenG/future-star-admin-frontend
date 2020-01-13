@@ -218,7 +218,6 @@ export default {
           student: administrator.privilege.student
         }
       }).then(function (response) {
-        console.log(response)
         if (response.data.code === '2000') {
           that.$message({
             type: 'success',

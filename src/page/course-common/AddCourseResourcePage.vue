@@ -21,8 +21,6 @@
         <el-upload
           ref="upload"
           action="https://jsonplaceholder.typicode.com/posts/"
-          :on-preview="handlePreview"
-          :on-remove="handleRemove"
           :file-list="fileList"
           :auto-upload="false">
             <el-button slot="trigger" size="small" type="primary">选取课程资料</el-button>
@@ -64,12 +62,6 @@ export default {
   methods: {
     submitUpload () {
       this.$refs.upload.submit()
-    },
-    handleRemove (file, fileList) {
-      console.log(file, fileList)
-    },
-    handlePreview (file) {
-      console.log(file)
     }
   }
 }
