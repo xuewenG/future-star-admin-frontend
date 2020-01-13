@@ -59,9 +59,6 @@
               </el-form-item>
             </el-col>
           </el-row>
-          <el-form-item label="讲师头像：">
-            <el-input v-model="course.teacher.avatar"></el-input>
-          </el-form-item>
           <el-form-item label="讲师头衔：">
             <el-input v-model="course.teacher.title"></el-input>
           </el-form-item>
