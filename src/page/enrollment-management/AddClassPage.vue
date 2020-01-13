@@ -89,7 +89,6 @@ export default {
         current_people_number: 0
       }).then(function (response) {
         if (response.data.code === '2000') {
-          console.log(response)
           that.$message({
             type: 'success',
             message: '创建成功',

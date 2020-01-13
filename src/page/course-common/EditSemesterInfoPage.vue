@@ -11,8 +11,7 @@
               action="https://jsonplaceholder.typicode.com/posts/"
               :show-file-list="false"
               :http-request="uploadImg"
-              :on-success="uploadImgSuccess"
-              :on-remove="handleRemove">
+              :on-success="uploadImgSuccess">
               <img v-if="semester.icon" :src="semester.icon" class="image" alt="image">
               <i v-else class="el-icon-plus avatar-uploader-icon">添加学期图片</i>
             </el-upload>
@@ -92,9 +91,6 @@ export default {
         showClose: true,
         message: '修改学期图标成功',
         type: 'success' })
-    },
-    handleRemove (file, fileList) {
-      console.log('文件删除')
     },
     editSemesterInfo: function () {
       let that = this

@@ -57,8 +57,7 @@
                             action="https://jsonplaceholder.typicode.com/posts/"
                             :show-file-list="false"
                             :http-request="uploadImg"
-                            :on-success="uploadResourceSuccess"
-                            :on-remove="handleRemove">
+                            :on-success="uploadResourceSuccess">
                             <el-button size="mini" type="primary">点击上传</el-button>
                           </el-upload>
                         </div>
@@ -88,8 +87,7 @@
                             action="https://jsonplaceholder.typicode.com/posts/"
                             :show-file-list="false"
                             :http-request="uploadImg"
-                            :on-success="uploadVideoSuccess"
-                            :on-remove="handleRemove">
+                            :on-success="uploadVideoSuccess">
                             <el-button size="mini" type="primary">点击上传</el-button>
                           </el-upload>
                         </div>
@@ -103,8 +101,7 @@
                     <template>
                       <el-popconfirm
                         title="确定删除条目吗？"
-                        @onConfirm="deleteContent"
-                      >
+                        @onConfirm="deleteContent">
                         <el-button size="medium"
                                    type="danger"
                                    slot="reference"
@@ -183,9 +180,6 @@ export default {
         type: 'success' })
       this.$forceUpdate()
     },
-    handleRemove (file, fileList) {
-      console.log('文件删除')
-    },
     getContent () {
       let course = this.course
       let params = {
@@ -198,7 +192,6 @@ export default {
         if (response.data.code === '2000') {
           if (response.data.data.results.length !== 0) {
             this.results = response.data.data.results
-            console.log(response.data.data)
             let resource = this.results[this.index].resources
             this.sort = this.results[this.index].sort
             this.content_name = this.results[this.index].content_name
@@ -208,7 +201,6 @@ export default {
               let resourceType = resource[i].type
               if (resourceType === 0) {
                 this.note = resource[i]
-                console.log(this.note)
               } else if (resourceType === 1) {
                 this.resource = resource[i]
               } else {

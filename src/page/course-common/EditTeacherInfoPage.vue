@@ -12,9 +12,7 @@
                 action="https://jsonplaceholder.typicode.com/posts/"
                 :show-file-list="false"
                 :http-request="uploadImg"
-                :on-success="uploadImgSuccess"
-                :on-remove="handleRemove"
-              >
+                :on-success="uploadImgSuccess">
                 <img v-if="teacher.avatar" :src="teacher.avatar"  width=240px class="image" alt="image">
                 <i v-else class="el-icon-plus avatar-uploader-icon">添加头像</i>
               </el-upload>
@@ -94,9 +92,6 @@ export default {
         showClose: true,
         message: '修改讲师头像成功',
         type: 'success' })
-    },
-    handleRemove (file, fileList) {
-      console.log('文件删除')
     },
     clearText: function () {
       this.teacher.name = ''

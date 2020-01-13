@@ -151,9 +151,6 @@ export default {
         showClose: true,
         message: '修改班级封面成功',
         type: 'success' })
-    },
-    handleRemove (file, fileList) {
-      console.log('文件删除')
     }
   }
 }
