@@ -74,14 +74,14 @@ export default {
         period_semester: that.$store.getters.getSemesters.length + 1,
         subject: that.semester.subject,
         introduction: that.semester.introduction
-      }).then(function (response) {
+      }).then(async function (response) {
         if (response.data.code === '2000') {
+          await that.$router.push('/home/enrollment')
           that.$message({
             type: 'success',
             message: '创建新学期成功',
             duration: 2000
           })
-          that.$router.push('/home/enrollment')
         } else {
           that.$message({
             type: 'error',

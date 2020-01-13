@@ -174,7 +174,7 @@ export default {
           this.tableData[i].state = '待审核'
         } else if (this.tableData[i].state === 1) {
           this.tableData[i].state = '已拒绝'
-        } else if (this.tableData[i].state === 2) {
+        } else if (this.tableData[i].state === 2 || this.tableData[i].state === 3 || this.tableData[i].state === 4) {
           this.tableData[i].state = '已通过'
         }
       }

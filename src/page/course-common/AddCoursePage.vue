@@ -1,17 +1,28 @@
 <template>
   <el-container>
     <el-main>
-      <el-page-header @back="goBack()" content="新建课程"></el-page-header>
+      <el-page-header @back="goBack" content="新建课程"></el-page-header>
       <el-divider></el-divider>
       <el-card shadow="never">
         <el-form label-width="150px">
         <el-divider>课程信息</el-divider>
         <el-card shadow="never">
-            <el-form-item label="课程名称：">
-              <el-input
-                v-model="course.name">
-              </el-input>
-            </el-form-item>
+          <el-row>
+            <el-col :span="12">
+              <el-form-item label="课程名称：">
+                <el-input
+                  v-model="course.name">
+                </el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="8">
+              <el-form-item label="类别：">
+                <el-input
+                  v-model="course.sort">
+                </el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
             <el-form-item label="课程起止时间：">
               <el-date-picker
                 type="daterange"
@@ -85,6 +96,7 @@ export default {
       currentClass: {},
       course: {
         name: '',
+        sort: '',
         introduction: '',
         location: '',
         timeRange: '',
@@ -128,6 +140,7 @@ export default {
       that.axios.post('/course/course', {
         clazz: that.currentClass.id,
         name: that.course.name,
+        sort: that.course.sort,
         introduction: that.course.introduction,
         begin_time: startTime,
         end_time: endTime,

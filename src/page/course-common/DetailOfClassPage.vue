@@ -57,7 +57,7 @@
             </el-col>
           </el-row>
         </el-card>
-        <el-row type="flex" justify="center" class="add-button">
+        <el-row type="flex" justify="center" class="add-button" v-show="currentClass.state!==4">
           <el-button type="primary" size="small" @click="addCourse" round>添加课程</el-button>
         </el-row>
       </el-card>

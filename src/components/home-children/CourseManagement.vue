@@ -1,20 +1,5 @@
 <template>
-  <el-container v-if="createNewSemester">
-    <el-header>
-      <el-row>
-        <h3>暂无进行中学期，点击下方按钮添加新学期</h3>
-      </el-row>
-    </el-header>
-    <el-main>
-      <el-row type="flex" justify="center">
-        <router-link to="/add-semester">
-          <el-image :src="require('../../assets/addIcon.png')">
-          </el-image>
-        </router-link>
-      </el-row>
-    </el-main>
-  </el-container>
-  <el-container v-else>
+  <el-container>
     <el-header>
       <el-row type="flex" align="middle">
         <el-col :span="5">
@@ -69,7 +54,6 @@ export default {
       activeName: 'first',
       semester: '',
       total: 0,
-      createNewSemester: false,
       classes: []
     }
   },
@@ -93,9 +77,6 @@ export default {
         }
         that.semesters = semesters
         that.getClasses()
-        if (semesters.length === 0) {
-          that.createNewSemester = true
-        }
       }
     }).catch(function (error) {
       console.log(error)
