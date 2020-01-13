@@ -36,7 +36,7 @@
             </el-row>
           </el-col>
           <el-col :span="12" align="center">
-            <img :src="activity.image" width="140px">
+            <img :src="activity.image" width="140px" height="140px">
           </el-col>
         </el-row>
       </el-card>
