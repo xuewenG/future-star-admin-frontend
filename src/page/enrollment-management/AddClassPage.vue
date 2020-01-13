@@ -87,8 +87,9 @@ export default {
         end_time: that.currentClass.timeRange[1].toLocaleDateString().replace(/\//g, '-'),
         people_number_limit: that.currentClass.people_number_limit,
         current_people_number: 0
-      }).then(function (response) {
+      }).then(async function (response) {
         if (response.data.code === '2000') {
+          await that.$router.push('/home/enrollment')
           that.$message({
             type: 'success',
             message: '创建成功',

@@ -22,16 +22,34 @@ exports[`AddCoursePage 快照测试 1`] = `
           <div class="el-card is-never-shadow">
             <!---->
             <div class="el-card__body">
-              <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">课程名称：</label>
-                <div class="el-form-item__content" style="margin-left: 150px;">
-                  <div class="el-input">
-                    <!----><input type="text" autocomplete="off" class="el-input__inner">
-                    <!---->
-                    <!---->
-                    <!---->
-                    <!---->
+              <div class="el-row">
+                <div class="el-col el-col-12">
+                  <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">课程名称：</label>
+                    <div class="el-form-item__content" style="margin-left: 150px;">
+                      <div class="el-input">
+                        <!----><input type="text" autocomplete="off" class="el-input__inner">
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                      </div>
+                      <!---->
+                    </div>
                   </div>
-                  <!---->
+                </div>
+                <div class="el-col el-col-8">
+                  <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">类别：</label>
+                    <div class="el-form-item__content" style="margin-left: 150px;">
+                      <div class="el-input">
+                        <!----><input type="text" autocomplete="off" class="el-input__inner">
+                        <!---->
+                        <!---->
+                        <!---->
+                        <!---->
+                      </div>
+                      <!---->
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="el-form-item"><label class="el-form-item__label" style="width: 150px;">课程起止时间：</label>

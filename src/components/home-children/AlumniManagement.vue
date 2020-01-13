@@ -159,7 +159,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '网络繁忙，请稍候重试',
+            message: '服务器繁忙，请稍候重试',
             duration: 2000
           })
         }
@@ -167,7 +167,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络繁忙，请稍候重试',
+          message: '服务器繁忙，请稍候重试',
           duration: 2000
         })
       })
@@ -197,7 +197,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '网络繁忙，请稍候重试',
+            message: '服务器繁忙，请稍候重试',
             duration: 2000
           })
         }
@@ -205,7 +205,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络繁忙，请稍候重试',
+          message: '服务器繁忙，请稍候重试',
           duration: 2000
         })
       })
@@ -238,7 +238,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '网络繁忙，请稍候重试',
+            message: '服务器繁忙，请稍候重试',
             duration: 2000
           })
         }
@@ -246,7 +246,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络繁忙，请稍候重试',
+          message: '服务器繁忙，请稍候重试',
           duration: 2000
         })
       })
@@ -292,7 +292,7 @@ export default {
         } else {
           that.$message({
             type: 'error',
-            message: '网络繁忙，请稍候重试',
+            message: '服务器繁忙，请稍候重试',
             duration: 2000
           })
         }
@@ -300,7 +300,7 @@ export default {
         console.log(error)
         that.$message({
           type: 'error',
-          message: '网络繁忙，请稍候重试',
+          message: '服务器繁忙，请稍候重试',
           duration: 2000
         })
       })

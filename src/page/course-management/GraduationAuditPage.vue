@@ -140,7 +140,7 @@ export default {
     },
     dealWithTableData: function () {
       for (let i = 0; i < this.tableData.length; i++) {
-        if (this.tableData[i].state === 2) {
+        if (this.tableData[i].state === 2 || this.tableData[i].state === 1 || this.tableData[i].state === 0) {
           this.tableData[i].state = '在校'
         } else if (this.tableData[i].state === 3) {
           this.tableData[i].state = '毕业'
